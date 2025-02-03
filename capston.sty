@@ -1,0 +1,133 @@
+\usepackage[utf8]{inputenc}
+\usepackage{ipsum}
+\usepackage{graphicx}
+\usepackage{geometry}% for setting page dimensions
+\usepackage{amsmath}
+\usepackage{mathptmx} % Times New Roman font
+% Set page margins
+\usepackage{float}
+\usepackage{setspace} % For line spacing
+\usepackage{ragged2e} % For justified text
+\usepackage{indentfirst} % For first-line indentation
+\usepackage{anyfontsize}
+\usepackage{array,longtable}
+\usepackage{fontawesome}
+\usepackage{hyperref}
+\usepackage{ragged2e} % For better control over text alignment
+\usepackage{titlesec} % For customizing section headings
+\usepackage[Lenny]{fncychap}
+\usepackage{cleveref}
+\usepackage{listings}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{tcolorbox} % For alternating background colors
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{adjustbox}
+\usepackage{subcaption}
+
+\usepackage{subfiles} % Add this line
+
+\bibliographystyle{ieeetr} % Choose your preferred citation style
+
+
+
+\geometry{left=3cm, right=2.5cm, top=3cm, bottom=3cm}
+\setlength{\parindent}{1cm} % Set the first line indentation to 1 cm
+%size of the thesis
+\makeatletter
+\renewcommand\large{\@setfontsize\large{14pt}{18pt}}
+\renewcommand\Huge{\@setfontsize\Huge{18pt}{22pt}}
+\makeatother
+
+% Define custom maketitle command
+\newcommand{\universityname}{CYPRUS INTERNATIONAL UNIVERSITY}
+\newcommand{\facultyname}{FACULTY OF ENGINEERING }
+\newcommand{\departmentname}{DEPARTMENT OF ELECTRICAL AND ELECTRONIC ENGINEERING}
+\newcommand{\projecttitle}{DIGITAL TECHNOLOGIES IN INDUSTRY}
+\newcommand{\supe}{ASST. PROF. DR. ZİYA DEREBOYLU}
+\newcommand{\supm}{Asst. Prof. Dr. ALİ SHEFIK}
+\newcommand{\reportdate}{\today}
+\newcommand{\reportplace}{Nicosia, NORTH CYPRUS}
+\newcommand{\logo}{\includegraphics[width=6cm]{doc/logo.png}}
+
+% Customize section headings
+\titleformat{\section}{\normalfont\fontsize{14}{18}\bfseries\uppercase}{\thesection}{1em}{} % 14 pt, bold, uppercase
+\titleformat{\subsection}{\normalfont\fontsize{12}{14}\bfseries}{\thesubsection}{1em}{} % 12 pt, bold
+\titleformat{\subsubsection}{\normalfont\fontsize{12}{14}\underline}{\thesubsubsection}{1em}{} % 12 pt, underlined
+
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+\definecolor{maroon}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+
+
+% Define XML-
+% \lstdefinestyle{xmlstyle}{
+%     language=XML,                   % Specify the language for highlighting
+%     basicstyle=\ttfamily\footnotesize,     % Set font and size
+%     columns=fullflexible,
+%     keywordstyle=\color{maroon}\bfseries, % Keywords in blue and bold
+%     stringstyle=\color{blue},        % Strings in red
+%     commentstyle=\color{codegreen},      % Comments in green
+%     frame=shadowbox,                   % Draw a box around the code
+%     numbers=left,                   % Display line numbers on the left
+%     numberstyle=\tiny\color{codegray}, % Style for line numbers
+%     stepnumber=1,                   % Line number increment
+%     numbersep=5pt,                  % Space between line numbers and code
+%     breaklines=true,                % Automatically wrap long lines
+%     showstringspaces=false,         % Hide ␣ for spaces
+%     %caption={Example XML Code},     % Add a caption for the listing
+%     %label={lst:xml_example},        % Add a label for referencing
+%     morestring=[s]{"}{"},
+%     morecomment=[s]{!--}{--},
+%     %morecomment=[s]{?}{?},
+%     moredelim=[s][\color{black}]{>}{<},
+%     moredelim=[s][\color{red}]{\ }{=},
+%     identifierstyle=\color{maroon}
+%     %morekeywords={link, inertial, visual, collision,joint,parent,child,ros,gazebo, plugin,sensor,}
+% }
+
+\lstdefinestyle{xmlstyle}{
+    language=XML,
+    basicstyle=\ttfamily\footnotesize,
+    columns=fullflexible,
+    keywordstyle=\color{maroon}\bfseries, % For reserved keywords (if defined)
+    stringstyle=\color{blue},             % Attribute values (e.g., "value")
+    commentstyle=\color{codegreen},       
+    frame=shadowbox,
+    numbers=left,
+    numberstyle=\tiny\color{codegray},
+    stepnumber=1,
+    numbersep=5pt,
+    breaklines=true,
+    showstringspaces=false,
+    % Tags and attributes
+    tagstyle=\color{maroon},              % Color for XML tags (e.g., <tag>)
+    moredelim=[s][\color{black}]{>}{<},   % Color tag delimiters
+    moredelim=[s][\color{red}]{=}{=},     % Color "=" in attributes
+    morecomment=[s]{!--}{--},             
+    morestring=[b]",
+    % Highlight specific attributes or tags (optional)
+    emph={id, name, version},
+    emphstyle=\color{maroon}\bfseries,
+    literate={\ =}{{\textcolor{backcolour}{=}}}1 % Color "=" without spaces
+}
+
+% moredelim=[s][\color{red}]{\ }{=},
+% stringstyle=\color{blue},
+% identifierstyle=\color{maroon},
+% }
+
+
+
+
+
+

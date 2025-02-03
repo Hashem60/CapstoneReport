@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: ieeetr.bst
+A level-1 auxiliary file: sublatex/hashem/ROS.aux
+A level-1 auxiliary file: sublatex/hashem/urdf.aux
+A level-1 auxiliary file: sublatex/felly/felly.aux
+A level-1 auxiliary file: sublatex/Opryrmi/Opryrmi.aux
+Database file #1: references.bib
+Warning--entry type for "ros_urdf_xml" isn't style-file defined
+--line 95 of file references.bib
+You've used 6 entries,
+            1876 wiz_defined-function locations,
+            521 strings with 4570 characters,
+and the built_in function-call counts, 1420 in all, are:
+= -- 146
+> -- 39
+< -- 0
++ -- 16
+- -- 10
+* -- 92
+:= -- 204
+add.period$ -- 7
+call.type$ -- 6
+change.case$ -- 5
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 73
+empty$ -- 150
+format.name$ -- 10
+if$ -- 350
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 6
+newline$ -- 22
+num.names$ -- 6
+pop$ -- 22
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 46
+stack$ -- 0
+substring$ -- 86
+swap$ -- 25
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 18
+width$ -- 7
+write$ -- 61
+(There was 1 warning)

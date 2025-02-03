@@ -1,0 +1,33 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces one of the Old AGV picture}}{1}{figure.caption.1}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Smart AGV in Industry 4.0}}{3}{figure.caption.2}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Ubuntu 20.04}}{5}{figure.caption.3}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces ROS filesystem level}}{7}{figure.caption.4}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces List of files inside the package}}{8}{figure.caption.5}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Structure of a typical C++ ROS package}}{8}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Structure of package.xml}}{10}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Structure of the package.xml metapackage}}{11}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Structure of the ROS graph layer}}{14}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Graph of communication between nodes using topics}}{15}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Communication between the ROS master and Hello World publisher and subscriber}}{21}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Terminal messages while running the roscore command}}{25}{figure.caption.14}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces A visualization of the URDF link\cite {joseph2018mastering}}}{30}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces A visualization of the URDF joint\cite {joseph2018mastering}}}{31}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces A visualization of a robot model with joints and links\cite {joseph2018mastering}}}{32}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces A visualization of a robot model with Rviz}}{39}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The joint level of the platform lifting mechanism}}{40}{figure.caption.20}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Add caption here}}{54}{figure.caption.21}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Caption 1}}{55}{figure.caption.22}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Caption 1}}{55}{figure.caption.23}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Caption 1}}{56}{figure.caption.24}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Caption 1}}{56}{figure.caption.25}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Add caption here}}{57}{figure.caption.26}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Add caption here}}{59}{figure.caption.27}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

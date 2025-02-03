@@ -1,0 +1,22 @@
+\begin{thebibliography}{1}
+
+\bibitem{joseph2018mastering}
+L.~Joseph and J.~Cacace, {\em Mastering ROS for Robotics Programming: Design, build, and simulate complex robots using the Robot Operating System}.
+\newblock Packt Publishing Ltd, 2018.
+
+\bibitem{das2016design}
+S.~K. Das, ``Design and methodology of line follower automated guided vehicle-a review,'' {\em International Journal of Science Technology \& Engineering}, vol.~2, no.~10, pp.~9--13, 2016.
+
+\bibitem{moshayedi2019agv}
+A.~J. Moshayedi, L.~Jinsong, and L.~Liao, ``Agv (automated guided vehicle) robot: Mission and obstacles in design and performance,'' {\em Journal of Simulation and Analysis of Novel Technologies in Mechanical Engineering}, vol.~12, no.~4, pp.~5--18, 2019.
+
+\bibitem{reveliotis2000conflict}
+S.~A. Reveliotis, ``Conflict resolution in agv systems,'' {\em Iie Transactions}, vol.~32, no.~7, pp.~647--659, 2000.
+
+\bibitem{shengfang2006research}
+L.~Shengfang and H.~Xingzhe, ``Research on the agv based robot system used in substation inspection,'' in {\em 2006 International Conference on Power System Technology}, pp.~1--4, IEEE, 2006.
+
+\bibitem{ros_urdf_xml}
+R.~Wiki, ``urdf/xml - ros wiki,'' 2023.
+
+\end{thebibliography}

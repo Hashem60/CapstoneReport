@@ -1,0 +1,92 @@
+\contentsline {chapter}{\numberline {1}introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Theory of AGV Design}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}ROS}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Why should we use ROS?}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Understanding the ROS filesystem level}{6}{section.3.2}%
+\contentsline {section}{\numberline {3.3}ROS packages}{8}{section.3.3}%
+\contentsline {section}{\numberline {3.4}ROS metapackages}{10}{section.3.4}%
+\contentsline {section}{\numberline {3.5}ROS messages}{11}{section.3.5}%
+\contentsline {section}{\numberline {3.6}The ROS services}{13}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Understanding the ROS computation graph level}{13}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Nodes}{14}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Master}{14}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Parameter server}{14}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}Topics}{14}{subsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.7.5}Logging}{15}{subsection.3.7.5}%
+\contentsline {section}{\numberline {3.8}ROS nodes}{15}{section.3.8}%
+\contentsline {section}{\numberline {3.9}ROS messages}{17}{section.3.9}%
+\contentsline {section}{\numberline {3.10}ROS topics}{18}{section.3.10}%
+\contentsline {section}{\numberline {3.11}ROS services}{18}{section.3.11}%
+\contentsline {section}{\numberline {3.12}ROS bagfiles}{19}{section.3.12}%
+\contentsline {section}{\numberline {3.13}The ROS master}{20}{section.3.13}%
+\contentsline {section}{\numberline {3.14}ROS parameter}{21}{section.3.14}%
+\contentsline {section}{\numberline {3.15}ROS distributions}{24}{section.3.15}%
+\contentsline {section}{\numberline {3.16}Running the ROS master and the ROS parameter server}{25}{section.3.16}%
+\contentsline {subsection}{\numberline {3.16.1}Checking the roscore command's output}{28}{subsection.3.16.1}%
+\contentsline {chapter}{\numberline {4}URDF}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Understanding robot modeling using URDF}{29}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}link:}{29}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}joint:}{30}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}robot:}{30}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}gazebo:}{31}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Adding physical and collision properties to a URDF model}{31}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Transmission:}{33}{subsection.4.1.6}%
+\contentsline {section}{\numberline {4.2}Creating URDF model}{34}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Understanding robot modeling using xacro}{35}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Using properties}{35}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Using the math expression}{36}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Using macros}{37}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Including other xacro files}{37}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Visualizing the 3D robot model in RViz}{37}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Interacting with joints in Rviz}{39}{subsection.4.3.1}%
+\contentsline {chapter}{\numberline {5}NAVIGATION}{41}{chapter.5}%
+\contentsline {section}{\numberline {5.1}For Line Detection and Following:}{42}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Camera-based Vision Method:}{42}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}1.2 Control Algorithm for Line Following}{43}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}1.3 Integrating the Line Following with the Simulator}{44}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}For Building Map}{44}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}LIDAR}{44}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}QR Code Scanning}{44}{subsection.5.2.2}%
+\contentsline {chapter}{\numberline {6}Realistic constraints}{45}{chapter.6}%
+\contentsline {section}{\numberline {6.1}computational-power-and-resources}{45}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}cpu-and-gpu-limitations}{45}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}memory-ram-constraints}{45}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}real-time-performance}{46}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}complexity-of-the-simulated-environment}{46}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}size-and-detail-of-the-simulation}{46}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}dynamic-objects-and-movements}{46}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}simulating-sensor-data}{46}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}a.-sensor-data-processing-load}{46}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}real-time-sensor-fusion}{47}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}algorithmic-constraints}{47}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}a.-computational-cost-of-slam}{47}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}b.-path-planning-and-decision-making}{47}{subsection.6.4.2}%
+\contentsline {section}{\numberline {6.5}simulation-software-limitations}{48}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}simulation-engine-efficiency}{48}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}parallelization-and-multithreading}{48}{subsection.6.5.2}%
+\contentsline {section}{\numberline {6.6}simulating-real-time-constraints}{49}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}real-time-control-vs.-simulation-speed}{49}{subsection.6.6.1}%
+\contentsline {chapter}{\numberline {7}GEAR BOX DESIGN}{50}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Literature Survay}{50}{section.7.1}%
+\contentsline {section}{\numberline {7.2} Realistic Constraints}{51}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Technical Constraints}{51}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Material Constraints}{52}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Manufacturing Constraints}{52}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.2.4}Economic Constraints}{52}{subsection.7.2.4}%
+\contentsline {subsection}{\numberline {7.2.5}Environmental Constraints}{53}{subsection.7.2.5}%
+\contentsline {subsection}{\numberline {7.2.6}Human Constraints}{53}{subsection.7.2.6}%
+\contentsline {section}{\numberline {7.3}Methodology}{53}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Dimensions}{53}{subsection.7.3.1}%
+\contentsline {section}{\numberline {7.4}3D Modeling}{54}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Middle Drive Wheels:}{54}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Gearbox:}{54}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}Shafts and Bearings:}{54}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.4}Housing:}{55}{subsection.7.4.4}%
+\contentsline {subsection}{\numberline {7.4.5}Assembly}{56}{subsection.7.4.5}%
+\contentsline {section}{\numberline {7.5}Calculation and Analysis}{56}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}GEARBOX CALCULATION}{56}{subsection.7.5.1}%
+\contentsline {section}{\numberline {7.6}Motion Analysis:}{59}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Conclusion}{60}{section.7.7}%
+\contentsline {chapter}{\numberline {8}METHODS USED TO DESIGN THE PROJECT }{61}{chapter.8}%
+\contentsline {chapter}{\numberline {9}CONCLUSION AND FUTURE WORKS}{62}{chapter.9}%
+\contentsline {section}{\numberline {9.1}COST}{62}{section.9.1}%
