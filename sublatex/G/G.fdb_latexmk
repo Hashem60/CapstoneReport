@@ -1,0 +1,17 @@
+# Fdb version 4
+["pdflatex"] 1738551245.44522 "c:/Users/me/Desktop/SM8/Capstone Project/report/latexRep/sublatex/G/G.tex" "sublatex/G/G.pdf" "G" 1738551246.13534 2
+  "../../main.tex" 0 -1 0 ""
+  "c:/Users/me/Desktop/SM8/Capstone Project/report/latexRep/sublatex/G/G.tex" 1738549404 29550 c98bbf5da0c60fe03933f671ea93d7a7 ""
+  "c:/texlive/2024/texmf-dist/tex/latex/import/import.sty" 1718499738 6201 0ad8b5da8e12f60a88d546b2198a56f2 ""
+  "c:/texlive/2024/texmf-dist/tex/latex/subfiles/subfiles.cls" 1718505799 1507 57de335d88fde4e5c924dfed577fdb74 ""
+  "c:/texlive/2024/texmf-dist/web2c/texmf.cnf" 1718494529 42000 d4442d41499783a67244425458021966 ""
+  "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1718508570 8238165 0e49fa94844ee7a81977a547f0ebd5b2 ""
+  "c:/texlive/2024/texmf.cnf" 1718508367 713 e69b156964470283e0530f5060668171 ""
+  "sublatex/G/../../main.tex" 1738548388 16598 4ec4acc1ea167b079dc973629387668f ""
+  "sublatex/G/G.aux" 1738551244 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "sublatex/G/G.tex" 1738549404 29550 c98bbf5da0c60fe03933f671ea93d7a7 ""
+  (generated)
+  "sublatex/G/G.aux"
+  "sublatex/G/G.log"
+  "sublatex/G/G.pdf"
+  (rewritten before read)
