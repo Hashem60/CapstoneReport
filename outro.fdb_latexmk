@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1738677866.73576 "c:/Users/me/Documents/CapstoneReport/outro.tex" "outro.pdf" "outro" 1738677869.29545 0
-  "c:/Users/me/Documents/CapstoneReport/outro.tex" 1738677856 6183 cca9a0de7b7e0786c61deaeb5c5cd4e9 ""
+["pdflatex"] 1738685911.5372 "c:/Users/me/Documents/CapstoneReport/outro.tex" "outro.pdf" "outro" 1738685914.29719 0
+  "c:/Users/me/Documents/CapstoneReport/outro.tex" 1738685904 6183 cca9a0de7b7e0786c61deaeb5c5cd4e9 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1718497630 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome/fontawesomeone.enc" 1718498387 1687 f004baecce60175c6453d0e3f808cf20 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1718498405 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -231,10 +231,10 @@
   "compont/speaker.png" 1718736160 21759 f9913ef42c4e1cbe1950d84bb76daca9 ""
   "compont/stopeSW.png" 1718736096 16849 9a5972f9203e72bb00ad5636858f0277 ""
   "compont/voltageShifter.png" 1718736077 20332 c39895a43235161b4e09a0ba1e0dd178 ""
-  "main.tex" 1738677833 1072 659057f857858b1ca9903529ee6e4042 ""
-  "outro.aux" 1738677869 597 1a0db5473ab3c22e601a1a00cd030164 "pdflatex"
-  "outro.out" 1738677869 65 0187b2ea157a68b0c95cbc71dd86a659 "pdflatex"
-  "outro.tex" 1738677856 6183 cca9a0de7b7e0786c61deaeb5c5cd4e9 ""
+  "main.tex" 1738679589 1176 7734dbcc0da79b9d20c795e301d2afe0 ""
+  "outro.aux" 1738685914 597 1a0db5473ab3c22e601a1a00cd030164 "pdflatex"
+  "outro.out" 1738685914 65 0187b2ea157a68b0c95cbc71dd86a659 "pdflatex"
+  "outro.tex" 1738685904 6183 cca9a0de7b7e0786c61deaeb5c5cd4e9 ""
   (generated)
   "outro.aux"
   "outro.log"
