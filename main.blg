@@ -2,16 +2,17 @@ This is BibTeX, Version 0.99d (TeX Live 2024)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: ieeetr.bst
+A level-1 auxiliary file: sublatex/Opryrmi/Opryrmi.aux
+A level-1 auxiliary file: sublatex/Gregoire/Gregoire.aux
 A level-1 auxiliary file: sublatex/hashem/ROS.aux
 A level-1 auxiliary file: sublatex/hashem/urdf.aux
 A level-1 auxiliary file: sublatex/felly/felly.aux
-A level-1 auxiliary file: sublatex/Opryrmi/Opryrmi.aux
 Database file #1: references.bib
 Warning--entry type for "ros_urdf_xml" isn't style-file defined
---line 95 of file references.bib
+--line 97 of file references.bib
 You've used 6 entries,
             1876 wiz_defined-function locations,
-            521 strings with 4570 characters,
+            522 strings with 4600 characters,
 and the built_in function-call counts, 1420 in all, are:
 = -- 146
 > -- 39

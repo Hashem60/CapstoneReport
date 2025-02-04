@@ -15,6 +15,7 @@
 \usepackage{hyperref}
 \usepackage{ragged2e} % For better control over text alignment
 \usepackage{titlesec} % For customizing section headings
+\usepackage{ulem}
 \usepackage[Lenny]{fncychap}
 \usepackage{cleveref}
 \usepackage{listings}
@@ -51,12 +52,19 @@
 \newcommand{\reportplace}{Nicosia, NORTH CYPRUS}
 \newcommand{\logo}{\includegraphics[width=6cm]{doc/logo.png}}
 
+\setcounter{secnumdepth}{3}
 % Customize section headings
 \titleformat{\section}{\normalfont\fontsize{14}{18}\bfseries\uppercase}{\thesection}{1em}{} % 14 pt, bold, uppercase
 \titleformat{\subsection}{\normalfont\fontsize{12}{14}\bfseries}{\thesubsection}{1em}{} % 12 pt, bold
-\titleformat{\subsubsection}{\normalfont\fontsize{12}{14}\underline}{\thesubsubsection}{1em}{} % 12 pt, underlined
+% Define subsubsection formatting
+\titleformat{\subsubsection}
+    {\normalfont\fontsize{12}{14}\selectfont\raggedright} % 12pt, left-aligned
+    {\thesubsubsection\quad} % Label (e.g., "1.1.1") with a small space after it
+    {0em} % No additional space between label and title
+    {\uline} % Underline the title text (using ulem)
 
-
+\onehalfspacing % Set line spacing to 1.5
+\justifying % Justify tex
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
