@@ -4,7 +4,6 @@
 - [Overview](#overview)
 - [Files and Structure](#files-and-structure)
 - [How to Access the Report](#how-to-access-the-report)
-- [Contact Information](#contact-information)
 - [LaTeX Document Class: `extreport`](#latex-document-class-extreport)
 - [Sectioning Hierarchy](#sectioning-hierarchy)
 
@@ -49,8 +48,6 @@ For example:
 
 ## Contact Information
 
-If you have any questions or need further clarification, please feel free to reach out to us at:
-- Email: [your-email@example.com](mailto:your-email@example.com)
 - GitHub Issues: You can also open an issue in this repository.
 
 ---
