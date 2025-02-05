@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  6 FEB 2025 01:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  6 FEB 2025 01:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -918,7 +918,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--95
 
 ]
 
-[6
+[1
 
 ]
 Chapter 1.
@@ -927,16 +927,16 @@ LaTeX Font Info:    Trying to load font information for OT1+phv on input line 11
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
 
-LaTeX Warning: Citation `das2016design' on page 1 undefined on input line 134.
+LaTeX Warning: Citation `das2016design' on page 2 undefined on input line 134.
 
 
-LaTeX Warning: Citation `moshayedi2019agv' on page 1 undefined on input line 137.
+LaTeX Warning: Citation `moshayedi2019agv' on page 2 undefined on input line 137.
 
 
-LaTeX Warning: Citation `reveliotis2000conflict' on page 1 undefined on input line 143.
+LaTeX Warning: Citation `reveliotis2000conflict' on page 2 undefined on input line 143.
 
 
-LaTeX Warning: Citation `moshayedi2019agv' on page 1 undefined on input line 149.
+LaTeX Warning: Citation `moshayedi2019agv' on page 2 undefined on input line 149.
 
 <doc/oldestAGV.jpg, id=68, 602.25pt x 448.67625pt>
 File: doc/oldestAGV.jpg Graphic file (type jpg)
@@ -944,15 +944,15 @@ File: doc/oldestAGV.jpg Graphic file (type jpg)
 Package pdftex.def Info: doc/oldestAGV.jpg  used on input line 153.
 (pdftex.def)             Requested size: 220.50887pt x 164.28236pt.
 
-LaTeX Warning: Citation `shengfang2006research' on page 1 undefined on input line 182.
+LaTeX Warning: Citation `shengfang2006research' on page 2 undefined on input line 182.
 
 
 
-[1
+[2
 
  <./doc/oldestAGV.jpg>]
 
-[2]
+[3]
 Chapter 2.
 <doc/smart_agv.jpg, id=78, 591.8913pt x 278.60085pt>
 File: doc/smart_agv.jpg Graphic file (type jpg)
@@ -961,7 +961,7 @@ Package pdftex.def Info: doc/smart_agv.jpg  used on input line 189.
 (pdftex.def)             Requested size: 441.01773pt x 207.58975pt.
 
 
-[3
+[4
 
  <./doc/smart_agv.jpg>] (./intro.aux)
  ***********
@@ -977,14 +977,14 @@ Package rerunfilecheck Info: File `intro.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  34092 strings out of 473600
- 617731 string characters out of 5732737
+ 617730 string characters out of 5732737
  1932908 words of memory out of 5000000
  56430 multiletter control sequences out of 15000+600000
  583369 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 138i,7n,162p,2827b,448s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 138i,7n,162p,2827b,447s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on intro.pdf (12 pages, 378897 bytes).
+Output written on intro.pdf (12 pages, 378859 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  80 compressed objects within 1 object stream
