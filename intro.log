@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  4 FEB 2025 16:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  6 FEB 2025 01:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -828,7 +828,7 @@ Package hyperref Info: Link coloring OFF on input line 2.
 \c@lstlisting=\count355
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<doc/logo.png, id=15, 620.3175pt x 654.445pt>
+<doc/logo.png, id=19, 620.3175pt x 654.445pt>
 File: doc/logo.png Graphic file (type png)
 <use doc/logo.png>
 Package pdftex.def Info: doc/logo.png  used on input line 5.
@@ -917,30 +917,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--95
 [5
 
 ]
+
+[6
+
+]
 Chapter 1.
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 117.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 118.
 (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
 
-LaTeX Warning: Citation `das2016design' on page 1 undefined on input line 133.
+LaTeX Warning: Citation `das2016design' on page 1 undefined on input line 134.
 
 
-LaTeX Warning: Citation `moshayedi2019agv' on page 1 undefined on input line 136.
+LaTeX Warning: Citation `moshayedi2019agv' on page 1 undefined on input line 137.
 
 
-LaTeX Warning: Citation `reveliotis2000conflict' on page 1 undefined on input line 142.
+LaTeX Warning: Citation `reveliotis2000conflict' on page 1 undefined on input line 143.
 
 
-LaTeX Warning: Citation `moshayedi2019agv' on page 1 undefined on input line 148.
+LaTeX Warning: Citation `moshayedi2019agv' on page 1 undefined on input line 149.
 
-<doc/oldestAGV.jpg, id=59, 602.25pt x 448.67625pt>
+<doc/oldestAGV.jpg, id=68, 602.25pt x 448.67625pt>
 File: doc/oldestAGV.jpg Graphic file (type jpg)
 <use doc/oldestAGV.jpg>
-Package pdftex.def Info: doc/oldestAGV.jpg  used on input line 152.
+Package pdftex.def Info: doc/oldestAGV.jpg  used on input line 153.
 (pdftex.def)             Requested size: 220.50887pt x 164.28236pt.
 
-LaTeX Warning: Citation `shengfang2006research' on page 1 undefined on input line 181.
+LaTeX Warning: Citation `shengfang2006research' on page 1 undefined on input line 182.
 
 
 
@@ -950,10 +954,10 @@ LaTeX Warning: Citation `shengfang2006research' on page 1 undefined on input lin
 
 [2]
 Chapter 2.
-<doc/smart_agv.jpg, id=69, 591.8913pt x 278.60085pt>
+<doc/smart_agv.jpg, id=78, 591.8913pt x 278.60085pt>
 File: doc/smart_agv.jpg Graphic file (type jpg)
 <use doc/smart_agv.jpg>
-Package pdftex.def Info: doc/smart_agv.jpg  used on input line 188.
+Package pdftex.def Info: doc/smart_agv.jpg  used on input line 189.
 (pdftex.def)             Requested size: 441.01773pt x 207.58975pt.
 
 
@@ -969,21 +973,21 @@ L3 programming layer <2024-05-27>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `intro.out' has not changed.
-(rerunfilecheck)             Checksum: A4BB704820CC5C94CC1DFC83F2D70932;255.
+(rerunfilecheck)             Checksum: EE1B3D7978A6216AC1DAF0EB74C030AE;381.
  ) 
 Here is how much of TeX's memory you used:
- 34084 strings out of 473600
- 617646 string characters out of 5732737
+ 34092 strings out of 473600
+ 617731 string characters out of 5732737
  1932908 words of memory out of 5000000
- 56425 multiletter control sequences out of 15000+600000
- 580729 words of font info for 73 fonts, out of 8000000 for 9000
+ 56430 multiletter control sequences out of 15000+600000
+ 583369 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 138i,7n,162p,2827b,447s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 138i,7n,162p,2827b,448s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on intro.pdf (11 pages, 378427 bytes).
+Output written on intro.pdf (12 pages, 378897 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 44 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 105 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
+ 52 words of extra memory for PDF output out of 10000 (max. 10000000)
 
