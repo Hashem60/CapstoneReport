@@ -1,0 +1,29 @@
+\begin{thebibliography}{1}
+
+\bibitem{koenig2004design}
+N.~Koenig and A.~Howard, ``Design and use paradigms for gazebo, an open-source multi-robot simulator,'' in {\em IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, (Sendai, Japan), pp.~2149--2154, IEEE, Sep 2004.
+
+\bibitem{smith2016}
+R.~L. Smith, ``Open dynamics engine.'' \url{https://bitbucket.org/odedevs/ode/}, 2016.
+\newblock Online.
+
+\bibitem{bullet2016}
+R.-T.~P. Simulation, ``Bullet physics library.'' \url{http://bulletphysics.org/wordpress/}, 2016.
+\newblock Online.
+
+\bibitem{simbody2016}
+``Simbody: Multibody physics api.'' \url{https://simtk.org/home/simbody/}, 2016.
+\newblock Online.
+
+\bibitem{dart2016}
+G.~T.~G. Lab and H.~R. Lab, ``Dart (dynamic animation and robotics toolkit).'' \url{http://dartsim.github.io/}, 2016.
+\newblock Online.
+
+\bibitem{ogre2016}
+OGRE3D, ``Object-oriented graphics rendering engine.'' \url{http://www.ogre3d.org/}, 2016.
+\newblock Online.
+
+\bibitem{lera2014mobile}
+F.~R. Lera, F.~C. Garcia, G.~Esteban, and V.~Matellan, ``Mobile robot performance in robotics challenges: Analyzing a simulated indoor scenario and its translation to real-world,'' in {\em Proc. 2014 Second International Conference on Artificial Intelligence, Modelling and Simulation}, pp.~149--154, 2014.
+
+\end{thebibliography}

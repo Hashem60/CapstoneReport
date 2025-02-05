@@ -81,49 +81,63 @@
 \contentsline {section}{\numberline {5.15}ROS distributions}{50}{section.5.15}%
 \contentsline {section}{\numberline {5.16}Running the ROS master and the ROS parameter server}{51}{section.5.16}%
 \contentsline {subsection}{\numberline {5.16.1}Checking the roscore command's output}{54}{subsection.5.16.1}%
-\contentsline {chapter}{\numberline {6}URDF}{55}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Understanding robot modeling using URDF}{55}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}link:}{55}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}joint:}{56}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}robot:}{56}{subsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.1.4}gazebo:}{57}{subsection.6.1.4}%
-\contentsline {subsection}{\numberline {6.1.5}Adding physical and collision properties to a URDF model}{57}{subsection.6.1.5}%
-\contentsline {subsection}{\numberline {6.1.6}Transmission:}{59}{subsection.6.1.6}%
-\contentsline {section}{\numberline {6.2}Creating URDF model}{60}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Understanding robot modeling using xacro}{61}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Using properties}{61}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Using the math expression}{62}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Using macros}{63}{subsection.6.2.4}%
-\contentsline {subsection}{\numberline {6.2.5}Including other xacro files}{63}{subsection.6.2.5}%
-\contentsline {section}{\numberline {6.3}Visualizing the 3D robot model in RViz}{63}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Interacting with joints in Rviz}{65}{subsection.6.3.1}%
-\contentsline {chapter}{\numberline {7}NAVIGATION}{67}{chapter.7}%
-\contentsline {section}{\numberline {7.1}For Line Detection and Following:}{68}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Camera-based Vision Method:}{68}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}1.2 Control Algorithm for Line Following}{69}{subsection.7.1.2}%
-\contentsline {subsection}{\numberline {7.1.3}1.3 Integrating the Line Following with the Simulator}{70}{subsection.7.1.3}%
-\contentsline {section}{\numberline {7.2}For Building Map}{70}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}LIDAR}{70}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}QR Code Scanning}{70}{subsection.7.2.2}%
-\contentsline {chapter}{\numberline {8}Realistic constraints}{71}{chapter.8}%
-\contentsline {section}{\numberline {8.1}computational-power-and-resources}{71}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}cpu-and-gpu-limitations}{71}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}memory-ram-constraints}{71}{subsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.1.3}real-time-performance}{72}{subsection.8.1.3}%
-\contentsline {section}{\numberline {8.2}complexity-of-the-simulated-environment}{72}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}size-and-detail-of-the-simulation}{72}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}dynamic-objects-and-movements}{72}{subsection.8.2.2}%
-\contentsline {section}{\numberline {8.3}simulating-sensor-data}{72}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}a.-sensor-data-processing-load}{72}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}real-time-sensor-fusion}{73}{subsection.8.3.2}%
-\contentsline {section}{\numberline {8.4}algorithmic-constraints}{73}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}a.-computational-cost-of-slam}{73}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}b.-path-planning-and-decision-making}{73}{subsection.8.4.2}%
-\contentsline {section}{\numberline {8.5}simulation-software-limitations}{74}{section.8.5}%
-\contentsline {subsection}{\numberline {8.5.1}simulation-engine-efficiency}{74}{subsection.8.5.1}%
-\contentsline {subsection}{\numberline {8.5.2}parallelization-and-multithreading}{74}{subsection.8.5.2}%
-\contentsline {section}{\numberline {8.6}simulating-real-time-constraints}{75}{section.8.6}%
-\contentsline {subsection}{\numberline {8.6.1}real-time-control-vs.-simulation-speed}{75}{subsection.8.6.1}%
-\contentsline {chapter}{\numberline {9}METHODS USED TO DESIGN THE PROJECT }{76}{chapter.9}%
-\contentsline {chapter}{\numberline {10}CONCLUSION AND FUTURE WORKS}{77}{chapter.10}%
-\contentsline {section}{\numberline {10.1}COST}{77}{section.10.1}%
+\contentsline {chapter}{\numberline {6}SIMULATION ENVIRONMENT}{55}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introduction to the Simulation Environment}{55}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Tools and Framework}{56}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Gazebo}{56}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}RViz}{63}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Implementation of the Simulation Environment}{64}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Robot Model ( URDF/SDF )}{65}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}World Design}{65}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}Environment Layout}{66}{subsubsection.6.3.2.1}%
+\contentsline {subsubsection}{\numberline {6.3.2.2}Physics Configuration}{84}{subsubsection.6.3.2.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.3}Realism Enhancements}{84}{subsubsection.6.3.2.3}%
+\contentsline {subsection}{\numberline {6.3.3}Control and sensor Integration}{84}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Validation of the simulation}{84}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Challenges and Solutions}{84}{section.6.5}%
+\contentsline {chapter}{\numberline {7}URDF}{85}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Understanding robot modeling using URDF}{85}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}link:}{85}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}joint:}{86}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}robot:}{86}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}gazebo:}{87}{subsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.1.5}Adding physical and collision properties to a URDF model}{87}{subsection.7.1.5}%
+\contentsline {subsection}{\numberline {7.1.6}Transmission:}{89}{subsection.7.1.6}%
+\contentsline {section}{\numberline {7.2}Creating URDF model}{90}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Understanding robot modeling using xacro}{91}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Using properties}{91}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Using the math expression}{92}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.2.4}Using macros}{93}{subsection.7.2.4}%
+\contentsline {subsection}{\numberline {7.2.5}Including other xacro files}{93}{subsection.7.2.5}%
+\contentsline {section}{\numberline {7.3}Visualizing the 3D robot model in RViz}{93}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Interacting with joints in Rviz}{95}{subsection.7.3.1}%
+\contentsline {chapter}{\numberline {8}NAVIGATION}{97}{chapter.8}%
+\contentsline {section}{\numberline {8.1}For Line Detection and Following:}{98}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Camera-based Vision Method:}{98}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}1.2 Control Algorithm for Line Following}{99}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}1.3 Integrating the Line Following with the Simulator}{100}{subsection.8.1.3}%
+\contentsline {section}{\numberline {8.2}For Building Map}{100}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}LIDAR}{100}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}QR Code Scanning}{100}{subsection.8.2.2}%
+\contentsline {chapter}{\numberline {9}Realistic constraints}{101}{chapter.9}%
+\contentsline {section}{\numberline {9.1}computational-power-and-resources}{101}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}cpu-and-gpu-limitations}{101}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}memory-ram-constraints}{101}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}real-time-performance}{102}{subsection.9.1.3}%
+\contentsline {section}{\numberline {9.2}complexity-of-the-simulated-environment}{102}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}size-and-detail-of-the-simulation}{102}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}dynamic-objects-and-movements}{102}{subsection.9.2.2}%
+\contentsline {section}{\numberline {9.3}simulating-sensor-data}{102}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}a.-sensor-data-processing-load}{102}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}real-time-sensor-fusion}{103}{subsection.9.3.2}%
+\contentsline {section}{\numberline {9.4}algorithmic-constraints}{103}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}a.-computational-cost-of-slam}{103}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}b.-path-planning-and-decision-making}{103}{subsection.9.4.2}%
+\contentsline {section}{\numberline {9.5}simulation-software-limitations}{104}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}simulation-engine-efficiency}{104}{subsection.9.5.1}%
+\contentsline {subsection}{\numberline {9.5.2}parallelization-and-multithreading}{104}{subsection.9.5.2}%
+\contentsline {section}{\numberline {9.6}simulating-real-time-constraints}{105}{section.9.6}%
+\contentsline {subsection}{\numberline {9.6.1}real-time-control-vs.-simulation-speed}{105}{subsection.9.6.1}%
+\contentsline {chapter}{\numberline {10}METHODS USED TO DESIGN THE PROJECT }{106}{chapter.10}%
+\contentsline {chapter}{\numberline {11}CONCLUSION AND FUTURE WORKS}{107}{chapter.11}%
+\contentsline {section}{\numberline {11.1}COST}{107}{section.11.1}%
