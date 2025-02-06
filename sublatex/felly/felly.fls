@@ -1,8 +1,8 @@
-PWD c:/Users/me/Desktop/SM8/Capstone Project/report/latexRep
+PWD c:/Users/me/Documents/CapstoneReport
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/me/Desktop/SM8/Capstone Project/report/latexRep/sublatex/felly/felly.tex
+INPUT c:/Users/me/Documents/CapstoneReport/sublatex/felly/felly.tex
 OUTPUT sublatex/felly/felly.log
 INPUT c:/texlive/2024/texmf-dist/tex/latex/subfiles/subfiles.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/subfiles/subfiles.cls

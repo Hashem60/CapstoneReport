@@ -476,6 +476,12 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8c.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmr8c.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT ./sublatex/Opryrmi/media/image1.png
 INPUT ./sublatex/Opryrmi/media/image1.png
 INPUT sublatex/Opryrmi/media/image1.png
@@ -506,8 +512,6 @@ INPUT ./sublatex/Opryrmi/media/image6.png
 INPUT sublatex/Opryrmi/media/image6.png
 INPUT ./sublatex/Opryrmi/media/image6.png
 INPUT ./sublatex/Opryrmi/media/image6.png
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
@@ -517,13 +521,13 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT ./sublatex/Opryrmi/media/image7.png
 INPUT ./sublatex/Opryrmi/media/image7.png
 INPUT sublatex/Opryrmi/media/image7.png
@@ -536,9 +540,6 @@ INPUT ./sublatex/Gregoire/Gregoire.tex
 INPUT ./sublatex/Gregoire/Gregoire.tex
 INPUT sublatex/Gregoire/Gregoire.tex
 INPUT sublatex/Gregoire/Gregoire.tex
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/omlptm.fd
 INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/omlptm.fd
 INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/omlptm.fd
@@ -608,7 +609,6 @@ INPUT ./sublatex/hashem/img/rosgraph.jpg
 INPUT sublatex/hashem/img/rosgraph.jpg
 INPUT ./sublatex/hashem/img/rosgraph.jpg
 INPUT ./sublatex/hashem/img/rosgraph.jpg
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
 INPUT ./sublatex/hashem/img/rqt_graph.jpg
 INPUT sublatex/hashem/img/rqt_graph.jpg
 INPUT ./sublatex/hashem/img/rqt_graph.jpg

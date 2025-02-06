@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  4 FEB 2025 18:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  6 FEB 2025 19:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -834,7 +834,7 @@ LaTeX Font Info:    Trying to load font information for OT1+phv on input line 3.
 (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 36.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 14.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -843,130 +843,170 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+Overfull \hbox (14.75868pt too wide) in paragraph at lines 24--24
+|[]\OT1/ptm/b/n/14 CRITICAL EL-E-MENTS OF AGV DE-SIGN: DRIVE WHEELS, GEAR
+ []
+
+
+LaTeX Warning: Citation `groover2016automation' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: Citation `jazar2019road' on page 2 undefined on input line 35.
+
+
+LaTeX Warning: Citation `ashby1994materials' on page 2 undefined on input line 65.
+
+
 
 [2]
 
 [3]
-<../../sublatex/Opryrmi/media/image1.png, id=115, 469.755pt x 266.79675pt>
-File: ../../sublatex/Opryrmi/media/image1.png Graphic file (type png)
-<use ../../sublatex/Opryrmi/media/image1.png>
-Package pdftex.def Info: ../../sublatex/Opryrmi/media/image1.png  used on input line 213.
-(pdftex.def)             Requested size: 441.01773pt x 250.4755pt.
-
 
 [4]
-
-[5 <../../sublatex/Opryrmi/media/image1.png>]
-<../../sublatex/Opryrmi/media/image2.png, id=131, 274.626pt x 152.9715pt>
-File: ../../sublatex/Opryrmi/media/image2.png Graphic file (type png)
-<use ../../sublatex/Opryrmi/media/image2.png>
-Package pdftex.def Info: ../../sublatex/Opryrmi/media/image2.png  used on input line 232.
-(pdftex.def)             Requested size: 352.81552pt x 196.52406pt.
-<../../sublatex/Opryrmi/media/image3.png, id=132, 366.77025pt x 155.3805pt>
-File: ../../sublatex/Opryrmi/media/image3.png Graphic file (type png)
-<use ../../sublatex/Opryrmi/media/image3.png>
-Package pdftex.def Info: ../../sublatex/Opryrmi/media/image3.png  used on input line 263.
-(pdftex.def)             Requested size: 352.81552pt x 149.47415pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../../sublatex/Opryrmi/media/image4.png, id=133, 469.755pt x 228.25275pt>
-File: ../../sublatex/Opryrmi/media/image4.png Graphic file (type png)
-<use ../../sublatex/Opryrmi/media/image4.png>
-Package pdftex.def Info: ../../sublatex/Opryrmi/media/image4.png  used on input line 274.
-(pdftex.def)             Requested size: 352.81552pt x 171.43292pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../../sublatex/Opryrmi/media/image5.png, id=134, 380.622pt x 225.2415pt>
-File: ../../sublatex/Opryrmi/media/image5.png Graphic file (type png)
-<use ../../sublatex/Opryrmi/media/image5.png>
-Package pdftex.def Info: ../../sublatex/Opryrmi/media/image5.png  used on input line 284.
-(pdftex.def)             Requested size: 352.81552pt x 208.79878pt.
-
-
-[6 <../../sublatex/Opryrmi/media/image2.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[7 <../../sublatex/Opryrmi/media/image3.png> <../../sublatex/Opryrmi/media/image4.png>]
-<../../sublatex/Opryrmi/media/image6.png, id=150, 469.755pt x 204.765pt>
-File: ../../sublatex/Opryrmi/media/image6.png Graphic file (type png)
-<use ../../sublatex/Opryrmi/media/image6.png>
-Package pdftex.def Info: ../../sublatex/Opryrmi/media/image6.png  used on input line 311.
-(pdftex.def)             Requested size: 469.75386pt x 204.76448pt.
-
-Overfull \hbox (28.73613pt too wide) in paragraph at lines 311--312
- [][] 
+Overfull \hbox (9.52829pt too wide) in paragraph at lines 177--178
+[]\OT1/ptm/m/it/12 Manufacturing Costs: \OT1/ptm/m/n/12 CNC ma-chin-ing, in-jec-tion mold-ing, and forg-ing are cost-intensive
  []
 
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 325.
-(c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+
+
+[5]
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 197.
+ (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 325.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 197.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 325.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 197.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 325.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 197.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 325.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 197.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 325.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 197.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 325.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 197.
 
 
-[8 <../../sublatex/Opryrmi/media/image5.png> <../../sublatex/Opryrmi/media/image6.png>]
+[6]
 
-[9]
+[7]
+<../../sublatex/Opryrmi/media/image1.png, id=147, 469.755pt x 266.79675pt>
+File: ../../sublatex/Opryrmi/media/image1.png Graphic file (type png)
+<use ../../sublatex/Opryrmi/media/image1.png>
+Package pdftex.def Info: ../../sublatex/Opryrmi/media/image1.png  used on input line 270.
+(pdftex.def)             Requested size: 441.01773pt x 250.4755pt.
 
-[10]
-<../../sublatex/Opryrmi/media/image7.png, id=173, 457.10776pt x 257.16075pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[8]
+<../../sublatex/Opryrmi/media/image2.png, id=163, 274.626pt x 152.9715pt>
+File: ../../sublatex/Opryrmi/media/image2.png Graphic file (type png)
+<use ../../sublatex/Opryrmi/media/image2.png>
+Package pdftex.def Info: ../../sublatex/Opryrmi/media/image2.png  used on input line 289.
+(pdftex.def)             Requested size: 352.81552pt x 196.52406pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../../sublatex/Opryrmi/media/image3.png, id=164, 366.77025pt x 155.3805pt>
+File: ../../sublatex/Opryrmi/media/image3.png Graphic file (type png)
+<use ../../sublatex/Opryrmi/media/image3.png>
+Package pdftex.def Info: ../../sublatex/Opryrmi/media/image3.png  used on input line 320.
+(pdftex.def)             Requested size: 352.81552pt x 149.47415pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../../sublatex/Opryrmi/media/image4.png, id=165, 469.755pt x 228.25275pt>
+File: ../../sublatex/Opryrmi/media/image4.png Graphic file (type png)
+<use ../../sublatex/Opryrmi/media/image4.png>
+Package pdftex.def Info: ../../sublatex/Opryrmi/media/image4.png  used on input line 331.
+(pdftex.def)             Requested size: 352.81552pt x 171.43292pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../../sublatex/Opryrmi/media/image5.png, id=166, 380.622pt x 225.2415pt>
+File: ../../sublatex/Opryrmi/media/image5.png Graphic file (type png)
+<use ../../sublatex/Opryrmi/media/image5.png>
+Package pdftex.def Info: ../../sublatex/Opryrmi/media/image5.png  used on input line 341.
+(pdftex.def)             Requested size: 352.81552pt x 208.79878pt.
+
+
+[9 <../../sublatex/Opryrmi/media/image1.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[10 <../../sublatex/Opryrmi/media/image2.png> <../../sublatex/Opryrmi/media/image3.png>]
+<../../sublatex/Opryrmi/media/image6.png, id=181, 469.755pt x 204.765pt>
+File: ../../sublatex/Opryrmi/media/image6.png Graphic file (type png)
+<use ../../sublatex/Opryrmi/media/image6.png>
+Package pdftex.def Info: ../../sublatex/Opryrmi/media/image6.png  used on input line 368.
+(pdftex.def)             Requested size: 469.75386pt x 204.76448pt.
+
+Overfull \hbox (28.73613pt too wide) in paragraph at lines 368--369
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[11 <../../sublatex/Opryrmi/media/image4.png> <../../sublatex/Opryrmi/media/image5.png>]
+
+[12 <../../sublatex/Opryrmi/media/image6.png>]
+
+[13]
+<../../sublatex/Opryrmi/media/image7.png, id=205, 457.10776pt x 257.16075pt>
 File: ../../sublatex/Opryrmi/media/image7.png Graphic file (type png)
 <use ../../sublatex/Opryrmi/media/image7.png>
-Package pdftex.def Info: ../../sublatex/Opryrmi/media/image7.png  used on input line 398.
+Package pdftex.def Info: ../../sublatex/Opryrmi/media/image7.png  used on input line 455.
 (pdftex.def)             Requested size: 457.10663pt x 257.16011pt.
 
-Overfull \hbox (16.0889pt too wide) in paragraph at lines 398--399
+Overfull \hbox (16.0889pt too wide) in paragraph at lines 455--456
  [][] 
  []
 
 
 
-[11 <../../sublatex/Opryrmi/media/image7.png>]
+[14 <../../sublatex/Opryrmi/media/image7.png>]
 
-[12] (./Opryrmi.aux)
+[15] (./Opryrmi.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Opryrmi.out' has not changed.
-(rerunfilecheck)             Checksum: F0B40019A97EBED7768EF499771A6F40;3169.
+(rerunfilecheck)             Checksum: 04CB36F117293D14E8BDE09F5DEE57B4;4646.
  ) 
 Here is how much of TeX's memory you used:
- 34200 strings out of 473600
- 621251 string characters out of 5732737
- 1936908 words of memory out of 5000000
- 56501 multiletter control sequences out of 15000+600000
- 583556 words of font info for 82 fonts, out of 8000000 for 9000
+ 34221 strings out of 473600
+ 621459 string characters out of 5732737
+ 1934908 words of memory out of 5000000
+ 56507 multiletter control sequences out of 15000+600000
+ 584186 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 138i,10n,162p,2846b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 138i,10n,162p,2846b,543s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Opryrmi.pdf (12 pages, 614696 bytes).
+Output written on Opryrmi.pdf (15 pages, 628760 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 188 compressed objects within 2 object streams
- 50 named destinations out of 1000 (max. 500000)
- 224 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 269 PDF objects out of 1000 (max. 8388607)
+ 219 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 248 words of extra memory for PDF output out of 10000 (max. 10000000)
 

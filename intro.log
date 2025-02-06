@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  6 FEB 2025 01:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  6 FEB 2025 17:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -828,7 +828,7 @@ Package hyperref Info: Link coloring OFF on input line 2.
 \c@lstlisting=\count355
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<doc/logo.png, id=19, 620.3175pt x 654.445pt>
+<doc/logo.png, id=23, 620.3175pt x 654.445pt>
 File: doc/logo.png Graphic file (type png)
 <use doc/logo.png>
 Package pdftex.def Info: doc/logo.png  used on input line 5.
@@ -938,7 +938,7 @@ LaTeX Warning: Citation `reveliotis2000conflict' on page 2 undefined on input li
 
 LaTeX Warning: Citation `moshayedi2019agv' on page 2 undefined on input line 149.
 
-<doc/oldestAGV.jpg, id=68, 602.25pt x 448.67625pt>
+<doc/oldestAGV.jpg, id=73, 602.25pt x 448.67625pt>
 File: doc/oldestAGV.jpg Graphic file (type jpg)
 <use doc/oldestAGV.jpg>
 Package pdftex.def Info: doc/oldestAGV.jpg  used on input line 153.
@@ -953,15 +953,19 @@ LaTeX Warning: Citation `shengfang2006research' on page 2 undefined on input lin
  <./doc/oldestAGV.jpg>]
 
 [3]
+
+[4
+
+]
 Chapter 2.
-<doc/smart_agv.jpg, id=78, 591.8913pt x 278.60085pt>
+<doc/smart_agv.jpg, id=87, 591.8913pt x 278.60085pt>
 File: doc/smart_agv.jpg Graphic file (type jpg)
 <use doc/smart_agv.jpg>
-Package pdftex.def Info: doc/smart_agv.jpg  used on input line 189.
+Package pdftex.def Info: doc/smart_agv.jpg  used on input line 190.
 (pdftex.def)             Requested size: 441.01773pt x 207.58975pt.
 
 
-[4
+[5
 
  <./doc/smart_agv.jpg>] (./intro.aux)
  ***********
@@ -973,21 +977,21 @@ L3 programming layer <2024-05-27>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `intro.out' has not changed.
-(rerunfilecheck)             Checksum: EE1B3D7978A6216AC1DAF0EB74C030AE;381.
+(rerunfilecheck)             Checksum: 202B963C0BB26D6E957E16F669C364A1;528.
  ) 
 Here is how much of TeX's memory you used:
- 34092 strings out of 473600
- 617730 string characters out of 5732737
+ 34095 strings out of 473600
+ 617750 string characters out of 5732737
  1932908 words of memory out of 5000000
- 56430 multiletter control sequences out of 15000+600000
+ 56431 multiletter control sequences out of 15000+600000
  583369 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  138i,7n,162p,2827b,447s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on intro.pdf (12 pages, 378859 bytes).
+Output written on intro.pdf (13 pages, 379320 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 52 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 115 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 18 named destinations out of 1000 (max. 500000)
+ 60 words of extra memory for PDF output out of 10000 (max. 10000000)
 
