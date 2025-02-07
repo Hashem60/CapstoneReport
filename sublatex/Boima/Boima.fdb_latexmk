@@ -1,11 +1,11 @@
 # Fdb version 4
-["pdflatex"] 1738965090.11515 "c:/Users/me/Documents/CapstoneReport/sublatex/Boima/Boima.tex" "Boima.pdf" "Boima" 1738965092.77303 0
+["pdflatex"] 1738970001.65883 "c:/Users/me/Documents/CapstoneReport/sublatex/Boima/Boima.tex" "Boima.pdf" "Boima" 1738970004.2272 0
   "../../capston.sty" 1738932094 5447 3428f34bc1c161240a77e4568d9b61b4 ""
-  "../../main.tex" 1738950271 1387 32bac374183b6a8911ea2db2e7d74025 ""
-  "Boima.aux" 1738965092 14822 b0a46ad5d8238de6a0e754059939d318 "pdflatex"
-  "Boima.out" 1738965092 6872 270c35ba1bb1d75c72ae8c018299427f "pdflatex"
-  "Boima.tex" 1738965089 55253 0c96ae2824a18d1e44987d12c2bcc7b2 ""
-  "c:/Users/me/Documents/CapstoneReport/sublatex/Boima/Boima.tex" 1738965089 55253 0c96ae2824a18d1e44987d12c2bcc7b2 ""
+  "../../main.tex" 1738965292 1455 55a3812453ebb842908c81d2b85a77a9 ""
+  "Boima.aux" 1738970003 15778 c28dd68bc27621e1c357bed8f8c520ea "pdflatex"
+  "Boima.out" 1738970003 6872 270c35ba1bb1d75c72ae8c018299427f "pdflatex"
+  "Boima.tex" 1738969998 55107 1e603e9fc04b31a13bf05b5c1712a2e8 ""
+  "c:/Users/me/Documents/CapstoneReport/sublatex/Boima/Boima.tex" 1738969998 55107 1e603e9fc04b31a13bf05b5c1712a2e8 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1718497630 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1718498405 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvr7t.tfm" 1718499382 2520 53e01eef820ca829e42c1333c3fd02b9 ""
@@ -248,6 +248,12 @@
   "img/image105.jpg" 1738934992 85914 ca2777714d64e343c0e4c45a709edab6 ""
   "img/image107.jpg" 1738934992 80053 73c6ea6cb73a618f6cb6a1a790a0ccc3 ""
   "img/image110.jpg" 1738934992 20155 e2fd324280b63aa440dfe59636d02f71 ""
+  "img/image112.jpg" 1738934992 12993 d2028cbdf4e94d9d8b089a7a24214ce6 ""
+  "img/image114.png" 1738934992 36626 8e821c0e7af8cfa6335924e9e224f7b8 ""
+  "img/image116.png" 1738934992 25075 8550e9efe0f5c2ecdb537d024763ef0c ""
+  "img/image118.png" 1738934992 53207 e87b7f44842384e1bfd47ff69a41b74e ""
+  "img/image120.jpg" 1738934993 13656 0f3e45253ac7566f385dda57a0c7aeec ""
+  "img/image122.jpg" 1738934993 31255 f51f49bb608b1752aa5af364833bb8de ""
   (generated)
   "Boima.aux"
   "Boima.log"

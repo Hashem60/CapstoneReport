@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  7 FEB 2025 23:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  8 FEB 2025 01:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -948,7 +948,7 @@ LaTeX Font Info:    Trying to load font information for OT1+phv on input line 11
 (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
-<doc/oldestAGV.jpg, id=1222, 602.25pt x 448.67625pt>
+<doc/oldestAGV.jpg, id=1234, 602.25pt x 448.67625pt>
 File: doc/oldestAGV.jpg Graphic file (type jpg)
 <use doc/oldestAGV.jpg>
 Package pdftex.def Info: doc/oldestAGV.jpg  used on input line 153.
@@ -965,7 +965,7 @@ Package pdftex.def Info: doc/oldestAGV.jpg  used on input line 153.
 
 ]
 Chapter 2.
-<doc/smart_agv.jpg, id=1242, 591.8913pt x 278.60085pt>
+<doc/smart_agv.jpg, id=1254, 591.8913pt x 278.60085pt>
 File: doc/smart_agv.jpg Graphic file (type jpg)
 <use doc/smart_agv.jpg>
 Package pdftex.def Info: doc/smart_agv.jpg  used on input line 190.
@@ -991,7 +991,7 @@ Chapter 3.
 ]
 
 [8]
-<sublatex/parfait/fig/battery.jpg, id=1259, 501.875pt x 501.875pt>
+<sublatex/parfait/fig/battery.jpg, id=1271, 501.875pt x 501.875pt>
 File: sublatex/parfait/fig/battery.jpg Graphic file (type jpg)
 <use sublatex/parfait/fig/battery.jpg>
 Package pdftex.def Info: sublatex/parfait/fig/battery.jpg  used on input line 73.
@@ -999,7 +999,7 @@ Package pdftex.def Info: sublatex/parfait/fig/battery.jpg  used on input line 73
 
 
 [9 <./sublatex/parfait/fig/battery.jpg>]
-<sublatex/parfait/fig/voltage_regulator.jpg, id=1267, 1405.25pt x 1405.25pt>
+<sublatex/parfait/fig/voltage_regulator.jpg, id=1279, 1405.25pt x 1405.25pt>
 File: sublatex/parfait/fig/voltage_regulator.jpg Graphic file (type jpg)
 <use sublatex/parfait/fig/voltage_regulator.jpg>
 Package pdftex.def Info: sublatex/parfait/fig/voltage_regulator.jpg  used on input line 113.
@@ -1008,7 +1008,7 @@ LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 1
  (c:/texlive/2024/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-<sublatex/parfait/fig/motor_booster.jpg, id=1270, 1004.75375pt x 1004.75375pt>
+<sublatex/parfait/fig/motor_booster.jpg, id=1282, 1004.75375pt x 1004.75375pt>
 File: sublatex/parfait/fig/motor_booster.jpg Graphic file (type jpg)
 <use sublatex/parfait/fig/motor_booster.jpg>
 Package pdftex.def Info: sublatex/parfait/fig/motor_booster.jpg  used on input line 144.
@@ -1018,7 +1018,7 @@ Package pdftex.def Info: sublatex/parfait/fig/motor_booster.jpg  used on input l
 [10{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./sublatex/parfait/fig/voltage_regulator.jpg>]
 
 [11 <./sublatex/parfait/fig/motor_booster.jpg>]
-<sublatex/parfait/fig/actuator_booster.jpg, id=1282, 903.375pt x 903.375pt>
+<sublatex/parfait/fig/actuator_booster.jpg, id=1294, 903.375pt x 903.375pt>
 File: sublatex/parfait/fig/actuator_booster.jpg Graphic file (type jpg)
 <use sublatex/parfait/fig/actuator_booster.jpg>
 Package pdftex.def Info: sublatex/parfait/fig/actuator_booster.jpg  used on input line 187.
@@ -1047,7 +1047,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
 [13]
-<sublatex/parfait/fig/nema_motor.png, id=1300, 491.8375pt x 480.79625pt>
+<sublatex/parfait/fig/nema_motor.png, id=1312, 491.8375pt x 480.79625pt>
 File: sublatex/parfait/fig/nema_motor.png Graphic file (type png)
 <use sublatex/parfait/fig/nema_motor.png>
 Package pdftex.def Info: sublatex/parfait/fig/nema_motor.png  used on input line 278.
@@ -1063,7 +1063,7 @@ Overfull \hbox (17.35219pt too wide) in paragraph at lines 325--330
 []\OT1/ptm/m/n/12 The lift-ing mech-a-nism of the au-to-mated guided ve-hi-cle (AGV) uti-lizes a high-performance
  []
 
-<sublatex/parfait/fig/linear_actuator.jpg, id=1306, 909.3975pt x 833.1125pt>
+<sublatex/parfait/fig/linear_actuator.jpg, id=1318, 909.3975pt x 833.1125pt>
 File: sublatex/parfait/fig/linear_actuator.jpg Graphic file (type jpg)
 <use sublatex/parfait/fig/linear_actuator.jpg>
 Package pdftex.def Info: sublatex/parfait/fig/linear_actuator.jpg  used on input line 333.
@@ -1073,7 +1073,7 @@ Package pdftex.def Info: sublatex/parfait/fig/linear_actuator.jpg  used on input
 [15]
 
 [16 <./sublatex/parfait/fig/linear_actuator.jpg>]
-<sublatex/parfait/fig/stepper_driver.png, id=1317, 486.81876pt x 486.81876pt>
+<sublatex/parfait/fig/stepper_driver.png, id=1329, 486.81876pt x 486.81876pt>
 File: sublatex/parfait/fig/stepper_driver.png Graphic file (type png)
 <use sublatex/parfait/fig/stepper_driver.png>
 Package pdftex.def Info: sublatex/parfait/fig/stepper_driver.png  used on input line 388.
@@ -1096,7 +1096,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 418--418
 
 
 [17 <./sublatex/parfait/fig/stepper_driver.png>]
-<sublatex/parfait/fig/40_amp_driver.jpg, id=1324, 803.0pt x 536.0025pt>
+<sublatex/parfait/fig/40_amp_driver.jpg, id=1336, 803.0pt x 536.0025pt>
 File: sublatex/parfait/fig/40_amp_driver.jpg Graphic file (type jpg)
 <use sublatex/parfait/fig/40_amp_driver.jpg>
 Package pdftex.def Info: sublatex/parfait/fig/40_amp_driver.jpg  used on input line 440.
@@ -1116,12 +1116,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 459--459
 
 
 [19 <./sublatex/parfait/fig/40_amp_driver.jpg>]
-<sublatex/parfait/fig/tof_sensor.png, id=1333, 442.65375pt x 240.9pt>
+<sublatex/parfait/fig/tof_sensor.png, id=1345, 442.65375pt x 240.9pt>
 File: sublatex/parfait/fig/tof_sensor.png Graphic file (type png)
 <use sublatex/parfait/fig/tof_sensor.png>
 Package pdftex.def Info: sublatex/parfait/fig/tof_sensor.png  used on input line 498.
 (pdftex.def)             Requested size: 198.45662pt x 108.00333pt.
-<sublatex/parfait/fig/4_cells.png, id=1334, 393.47pt x 348.30125pt>
+<sublatex/parfait/fig/4_cells.png, id=1346, 393.47pt x 348.30125pt>
 File: sublatex/parfait/fig/4_cells.png Graphic file (type png)
 <use sublatex/parfait/fig/4_cells.png>
 Package pdftex.def Info: sublatex/parfait/fig/4_cells.png  used on input line 510.
@@ -1129,12 +1129,12 @@ Package pdftex.def Info: sublatex/parfait/fig/4_cells.png  used on input line 51
 
 
 [20 <./sublatex/parfait/fig/tof_sensor.png>]
-<sublatex/parfait/fig/load_cell_amplifier.png, id=1342, 488.82625pt x 377.41pt>
+<sublatex/parfait/fig/load_cell_amplifier.png, id=1354, 488.82625pt x 377.41pt>
 File: sublatex/parfait/fig/load_cell_amplifier.png Graphic file (type png)
 <use sublatex/parfait/fig/load_cell_amplifier.png>
 Package pdftex.def Info: sublatex/parfait/fig/load_cell_amplifier.png  used on input line 520.
 (pdftex.def)             Requested size: 198.45662pt x 153.22453pt.
-<sublatex/parfait/fig/lidar.png, id=1343, 426.59375pt x 426.59375pt>
+<sublatex/parfait/fig/lidar.png, id=1355, 426.59375pt x 426.59375pt>
 File: sublatex/parfait/fig/lidar.png Graphic file (type png)
 <use sublatex/parfait/fig/lidar.png>
 Package pdftex.def Info: sublatex/parfait/fig/lidar.png  used on input line 534.
@@ -1142,12 +1142,12 @@ Package pdftex.def Info: sublatex/parfait/fig/lidar.png  used on input line 534.
 
 
 [21 <./sublatex/parfait/fig/4_cells.png> <./sublatex/parfait/fig/load_cell_amplifier.png>]
-<sublatex/parfait/fig/huskylens.png, id=1350, 528.97626pt x 386.44376pt>
+<sublatex/parfait/fig/huskylens.png, id=1362, 528.97626pt x 386.44376pt>
 File: sublatex/parfait/fig/huskylens.png Graphic file (type png)
 <use sublatex/parfait/fig/huskylens.png>
 Package pdftex.def Info: sublatex/parfait/fig/huskylens.png  used on input line 549.
 (pdftex.def)             Requested size: 220.50887pt x 161.09056pt.
-<sublatex/parfait/fig/imu.jpg, id=1351, 903.375pt x 903.375pt>
+<sublatex/parfait/fig/imu.jpg, id=1363, 903.375pt x 903.375pt>
 File: sublatex/parfait/fig/imu.jpg Graphic file (type jpg)
 <use sublatex/parfait/fig/imu.jpg>
 Package pdftex.def Info: sublatex/parfait/fig/imu.jpg  used on input line 564.
@@ -1155,12 +1155,12 @@ Package pdftex.def Info: sublatex/parfait/fig/imu.jpg  used on input line 564.
 
 
 [22 <./sublatex/parfait/fig/lidar.png> <./sublatex/parfait/fig/huskylens.png>]
-<sublatex/parfait/fig/qr_scanner.png, id=1359, 566.115pt x 406.51875pt>
+<sublatex/parfait/fig/qr_scanner.png, id=1371, 566.115pt x 406.51875pt>
 File: sublatex/parfait/fig/qr_scanner.png Graphic file (type png)
 <use sublatex/parfait/fig/qr_scanner.png>
 Package pdftex.def Info: sublatex/parfait/fig/qr_scanner.png  used on input line 573.
 (pdftex.def)             Requested size: 220.50887pt x 158.34317pt.
-<sublatex/parfait/fig/array.png, id=1360, 617.30624pt x 423.5825pt>
+<sublatex/parfait/fig/array.png, id=1372, 617.30624pt x 423.5825pt>
 File: sublatex/parfait/fig/array.png Graphic file (type png)
 <use sublatex/parfait/fig/array.png>
 Package pdftex.def Info: sublatex/parfait/fig/array.png  used on input line 582.
@@ -1168,7 +1168,7 @@ Package pdftex.def Info: sublatex/parfait/fig/array.png  used on input line 582.
 
 
 [23 <./sublatex/parfait/fig/imu.jpg> <./sublatex/parfait/fig/qr_scanner.png>]
-<sublatex/parfait/fig/raspberry.png, id=1367, 586.19pt x 419.5675pt>
+<sublatex/parfait/fig/raspberry.png, id=1379, 586.19pt x 419.5675pt>
 File: sublatex/parfait/fig/raspberry.png Graphic file (type png)
 <use sublatex/parfait/fig/raspberry.png>
 Package pdftex.def Info: sublatex/parfait/fig/raspberry.png  used on input line 606.
@@ -1176,12 +1176,12 @@ Package pdftex.def Info: sublatex/parfait/fig/raspberry.png  used on input line 
 
 
 [24 <./sublatex/parfait/fig/array.png> <./sublatex/parfait/fig/raspberry.png>]
-<sublatex/parfait/fig/esp32.png, id=1375, 5.7816pt x 5.02277pt>
+<sublatex/parfait/fig/esp32.png, id=1387, 5.7816pt x 5.02277pt>
 File: sublatex/parfait/fig/esp32.png Graphic file (type png)
 <use sublatex/parfait/fig/esp32.png>
 Package pdftex.def Info: sublatex/parfait/fig/esp32.png  used on input line 633.
 (pdftex.def)             Requested size: 220.50887pt x 191.57747pt.
-<sublatex/parfait/fig/bluetooth.jpg, id=1376, 752.8125pt x 752.8125pt>
+<sublatex/parfait/fig/bluetooth.jpg, id=1388, 752.8125pt x 752.8125pt>
 File: sublatex/parfait/fig/bluetooth.jpg Graphic file (type jpg)
 <use sublatex/parfait/fig/bluetooth.jpg>
 Package pdftex.def Info: sublatex/parfait/fig/bluetooth.jpg  used on input line 642.
@@ -1209,12 +1209,12 @@ Chapter 4.
 [29]
 
 [30]
-<sublatex/Boima/img/image1.jpg, id=1408, 638.385pt x 435.12563pt>
+<sublatex/Boima/img/image1.jpg, id=1420, 638.385pt x 435.12563pt>
 File: sublatex/Boima/img/image1.jpg Graphic file (type jpg)
 <use sublatex/Boima/img/image1.jpg>
 Package pdftex.def Info: sublatex/Boima/img/image1.jpg  used on input line 213.
 (pdftex.def)             Requested size: 264.61333pt x 180.3613pt.
-<sublatex/Boima/img/image003.png, id=1409, 1098.1025pt x 671.50874pt>
+<sublatex/Boima/img/image003.png, id=1421, 1098.1025pt x 671.50874pt>
 File: sublatex/Boima/img/image003.png Graphic file (type png)
 <use sublatex/Boima/img/image003.png>
 Package pdftex.def Info: sublatex/Boima/img/image003.png  used on input line 236.
@@ -1224,7 +1224,7 @@ Package pdftex.def Info: sublatex/Boima/img/image003.png  used on input line 236
 [31 <./sublatex/Boima/img/image1.jpg> <./sublatex/Boima/img/image003.png>]
 
 [32]
-<sublatex/Boima/img/image005.png, id=1425, 821.0675pt x 821.0675pt>
+<sublatex/Boima/img/image005.png, id=1437, 821.0675pt x 821.0675pt>
 File: sublatex/Boima/img/image005.png Graphic file (type png)
 <use sublatex/Boima/img/image005.png>
 Package pdftex.def Info: sublatex/Boima/img/image005.png  used on input line 321.
@@ -1238,7 +1238,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [33]
 
 [34 <./sublatex/Boima/img/image005.png>]
-<sublatex/Boima/img/image015.png, id=1438, 598.235pt x 339.2675pt>
+<sublatex/Boima/img/image015.png, id=1450, 598.235pt x 339.2675pt>
 File: sublatex/Boima/img/image015.png Graphic file (type png)
 <use sublatex/Boima/img/image015.png>
 Package pdftex.def Info: sublatex/Boima/img/image015.png  used on input line 393.
@@ -1263,7 +1263,7 @@ Overfull \hbox (1.33905pt too wide) in paragraph at lines 416--428
 
 
 [36]
-<sublatex/Boima/img/image017.png, id=1453, 294.993pt x 223.7085pt>
+<sublatex/Boima/img/image017.png, id=1465, 294.993pt x 223.7085pt>
 File: sublatex/Boima/img/image017.png Graphic file (type png)
 <use sublatex/Boima/img/image017.png>
 Package pdftex.def Info: sublatex/Boima/img/image017.png  used on input line 457.
@@ -1282,7 +1282,7 @@ Overfull \hbox (3.42256pt too wide) in paragraph at lines 515--525
 [39]
 
 [40]
-<sublatex/Boima/img/image037.png, id=1482, 834.86906pt x 266.49562pt>
+<sublatex/Boima/img/image037.png, id=1494, 834.86906pt x 266.49562pt>
 File: sublatex/Boima/img/image037.png Graphic file (type png)
 <use sublatex/Boima/img/image037.png>
 Package pdftex.def Info: sublatex/Boima/img/image037.png  used on input line 663.
@@ -1309,32 +1309,32 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 [46]
-<sublatex/Boima/img/image073.png, id=1523, 505.89pt x 216.05719pt>
+<sublatex/Boima/img/image073.png, id=1535, 505.89pt x 216.05719pt>
 File: sublatex/Boima/img/image073.png Graphic file (type png)
 <use sublatex/Boima/img/image073.png>
 Package pdftex.def Info: sublatex/Boima/img/image073.png  used on input line 1023.
 (pdftex.def)             Requested size: 264.61333pt x 113.01302pt.
-<sublatex/Boima/img/image075.png, id=1524, 277.035pt x 152.82094pt>
+<sublatex/Boima/img/image075.png, id=1536, 277.035pt x 152.82094pt>
 File: sublatex/Boima/img/image075.png Graphic file (type png)
 <use sublatex/Boima/img/image075.png>
 Package pdftex.def Info: sublatex/Boima/img/image075.png  used on input line 1028.
 (pdftex.def)             Requested size: 264.61333pt x 145.96954pt.
-<sublatex/Boima/img/image077.png, id=1525, 218.31563pt x 118.19156pt>
+<sublatex/Boima/img/image077.png, id=1537, 218.31563pt x 118.19156pt>
 File: sublatex/Boima/img/image077.png Graphic file (type png)
 <use sublatex/Boima/img/image077.png>
 Package pdftex.def Info: sublatex/Boima/img/image077.png  used on input line 1035.
 (pdftex.def)             Requested size: 198.45662pt x 107.44086pt.
-<sublatex/Boima/img/image079.png, id=1526, 240.9pt x 160.34906pt>
+<sublatex/Boima/img/image079.png, id=1538, 240.9pt x 160.34906pt>
 File: sublatex/Boima/img/image079.png Graphic file (type png)
 <use sublatex/Boima/img/image079.png>
 Package pdftex.def Info: sublatex/Boima/img/image079.png  used on input line 1040.
 (pdftex.def)             Requested size: 198.45662pt x 132.1012pt.
-<sublatex/Boima/img/image082.jpg, id=1527, 254.75175pt x 166.82326pt>
+<sublatex/Boima/img/image082.jpg, id=1539, 254.75175pt x 166.82326pt>
 File: sublatex/Boima/img/image082.jpg Graphic file (type jpg)
 <use sublatex/Boima/img/image082.jpg>
 Package pdftex.def Info: sublatex/Boima/img/image082.jpg  used on input line 1047.
 (pdftex.def)             Requested size: 198.45662pt x 129.9587pt.
-<sublatex/Boima/img/image083.jpg, id=1528, 245.3895pt x 134.028pt>
+<sublatex/Boima/img/image083.jpg, id=1540, 245.3895pt x 134.028pt>
 File: sublatex/Boima/img/image083.jpg Graphic file (type jpg)
 <use sublatex/Boima/img/image083.jpg>
 Package pdftex.def Info: sublatex/Boima/img/image083.jpg  used on input line 1052.
@@ -1346,27 +1346,27 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [47 <./sublatex/Boima/img/image073.png> <./sublatex/Boima/img/image075.png>]
-<sublatex/Boima/img/image093.jpg, id=1536, 77.1975pt x 61.758pt>
+<sublatex/Boima/img/image093.jpg, id=1548, 77.1975pt x 61.758pt>
 File: sublatex/Boima/img/image093.jpg Graphic file (type jpg)
 <use sublatex/Boima/img/image093.jpg>
 Package pdftex.def Info: sublatex/Boima/img/image093.jpg  used on input line 1073.
 (pdftex.def)             Requested size: 132.30666pt x 105.8579pt.
-<sublatex/Boima/img/image095.jpg, id=1537, 49.932pt x 39.7485pt>
+<sublatex/Boima/img/image095.jpg, id=1549, 49.932pt x 39.7485pt>
 File: sublatex/Boima/img/image095.jpg Graphic file (type jpg)
 <use sublatex/Boima/img/image095.jpg>
 Package pdftex.def Info: sublatex/Boima/img/image095.jpg  used on input line 1080.
 (pdftex.def)             Requested size: 132.30666pt x 105.34392pt.
-<sublatex/Boima/img/image097.jpg, id=1538, 40.4055pt x 32.193pt>
+<sublatex/Boima/img/image097.jpg, id=1550, 40.4055pt x 32.193pt>
 File: sublatex/Boima/img/image097.jpg Graphic file (type jpg)
 <use sublatex/Boima/img/image097.jpg>
 Package pdftex.def Info: sublatex/Boima/img/image097.jpg  used on input line 1087.
 (pdftex.def)             Requested size: 132.30666pt x 105.45316pt.
-<sublatex/Boima/img/image099.jpg, id=1539, 51.246pt x 41.0625pt>
+<sublatex/Boima/img/image099.jpg, id=1551, 51.246pt x 41.0625pt>
 File: sublatex/Boima/img/image099.jpg Graphic file (type jpg)
 <use sublatex/Boima/img/image099.jpg>
 Package pdftex.def Info: sublatex/Boima/img/image099.jpg  used on input line 1093.
 (pdftex.def)             Requested size: 109.1508pt x 87.46681pt.
-<sublatex/Boima/img/image101.jpg, id=1540, 41.7195pt x 33.1785pt>
+<sublatex/Boima/img/image101.jpg, id=1552, 41.7195pt x 33.1785pt>
 File: sublatex/Boima/img/image101.jpg Graphic file (type jpg)
 <use sublatex/Boima/img/image101.jpg>
 Package pdftex.def Info: sublatex/Boima/img/image101.jpg  used on input line 1100.
@@ -1380,7 +1380,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [48 <./sublatex/Boima/img/image077.png> <./sublatex/Boima/img/image079.png> <./sublatex/Boima/img/image082.jpg> <./sublatex/Boima/img/image083.jpg>]
 
 [49 <./sublatex/Boima/img/image093.jpg> <./sublatex/Boima/img/image095.jpg> <./sublatex/Boima/img/image097.jpg> <./sublatex/Boima/img/image099.jpg> <./sublatex/Boima/img/image101.jpg>]
-<sublatex/Boima/img/image103.jpg, id=1563, 330.1425pt x 178.3755pt>
+<sublatex/Boima/img/image103.jpg, id=1575, 330.1425pt x 178.3755pt>
 File: sublatex/Boima/img/image103.jpg Graphic file (type jpg)
 <use sublatex/Boima/img/image103.jpg>
 Package pdftex.def Info: sublatex/Boima/img/image103.jpg  used on input line 1189.
@@ -1389,7 +1389,7 @@ Package pdftex.def Info: sublatex/Boima/img/image103.jpg  used on input line 118
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<sublatex/Boima/img/image105.jpg, id=1564, 281.196pt x 187.245pt>
+<sublatex/Boima/img/image105.jpg, id=1576, 281.196pt x 187.245pt>
 File: sublatex/Boima/img/image105.jpg Graphic file (type jpg)
 <use sublatex/Boima/img/image105.jpg>
 Package pdftex.def Info: sublatex/Boima/img/image105.jpg  used on input line 1207.
@@ -1402,7 +1402,7 @@ Overfull \hbox (7.09064pt too wide) in paragraph at lines 1212--1221
 []\OT1/ptm/m/n/12 The dis-place-ment anal-y-sis re-sults in-di-cate that un-der a de-for-ma-tion scale fac-tor of 15.0324,
  []
 
-<sublatex/Boima/img/image107.jpg, id=1565, 269.0415pt x 179.361pt>
+<sublatex/Boima/img/image107.jpg, id=1577, 269.0415pt x 179.361pt>
 File: sublatex/Boima/img/image107.jpg Graphic file (type jpg)
 <use sublatex/Boima/img/image107.jpg>
 Package pdftex.def Info: sublatex/Boima/img/image107.jpg  used on input line 1224.
@@ -1418,7 +1418,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [51 <./sublatex/Boima/img/image103.jpg> <./sublatex/Boima/img/image105.jpg>]
 
 [52 <./sublatex/Boima/img/image107.jpg>]
-<sublatex/Boima/img/image110.jpg, id=1579, 205.9695pt x 230.0595pt>
+<sublatex/Boima/img/image110.jpg, id=1591, 205.9695pt x 230.0595pt>
 File: sublatex/Boima/img/image110.jpg Graphic file (type jpg)
 <use sublatex/Boima/img/image110.jpg>
 Package pdftex.def Info: sublatex/Boima/img/image110.jpg  used on input line 1303.
@@ -1430,26 +1430,81 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 [53]
+<sublatex/Boima/img/image112.jpg, id=1596, 318.59026pt x 173.448pt>
+File: sublatex/Boima/img/image112.jpg Graphic file (type jpg)
+<use sublatex/Boima/img/image112.jpg>
+Package pdftex.def Info: sublatex/Boima/img/image112.jpg  used on input line 1334.
+(pdftex.def)             Requested size: 441.01773pt x 240.11806pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 
 [54 <./sublatex/Boima/img/image110.jpg>]
-Overfull \hbox (7.24893pt too wide) in paragraph at lines 1399--1405
+<sublatex/Boima/img/image114.png, id=1601, 210.7875pt x 165.61874pt>
+File: sublatex/Boima/img/image114.png Graphic file (type png)
+<use sublatex/Boima/img/image114.png>
+Package pdftex.def Info: sublatex/Boima/img/image114.png  used on input line 1352.
+(pdftex.def)             Requested size: 264.61333pt x 207.915pt.
+<sublatex/Boima/img/image116.png, id=1602, 217.41225pt x 163.20975pt>
+File: sublatex/Boima/img/image116.png Graphic file (type png)
+<use sublatex/Boima/img/image116.png>
+Package pdftex.def Info: sublatex/Boima/img/image116.png  used on input line 1358.
+(pdftex.def)             Requested size: 264.61333pt x 198.64738pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<sublatex/Boima/img/image118.png, id=1603, 266.79675pt x 141.52875pt>
+File: sublatex/Boima/img/image118.png Graphic file (type png)
+<use sublatex/Boima/img/image118.png>
+Package pdftex.def Info: sublatex/Boima/img/image118.png  used on input line 1364.
+(pdftex.def)             Requested size: 441.01773pt x 233.95937pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<sublatex/Boima/img/image120.jpg, id=1604, 285.4665pt x 194.52675pt>
+File: sublatex/Boima/img/image120.jpg Graphic file (type jpg)
+<use sublatex/Boima/img/image120.jpg>
+Package pdftex.def Info: sublatex/Boima/img/image120.jpg  used on input line 1370.
+(pdftex.def)             Requested size: 441.01773pt x 300.55162pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[55 <./sublatex/Boima/img/image112.jpg> <./sublatex/Boima/img/image114.png>]
+<sublatex/Boima/img/image122.jpg, id=1610, 331.2375pt x 183.084pt>
+File: sublatex/Boima/img/image122.jpg Graphic file (type jpg)
+<use sublatex/Boima/img/image122.jpg>
+Package pdftex.def Info: sublatex/Boima/img/image122.jpg  used on input line 1387.
+(pdftex.def)             Requested size: 441.01773pt x 243.7752pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[56 <./sublatex/Boima/img/image116.png> <./sublatex/Boima/img/image118.png>]
+
+[57 <./sublatex/Boima/img/image120.jpg> <./sublatex/Boima/img/image122.jpg>]
+Overfull \hbox (7.24893pt too wide) in paragraph at lines 1400--1406
 \OT1/ptm/m/n/12 con-di-tions, demon-strat-ing seam-less in-te-gra-tion with scis-sor lift op-er-a-tions and ef-fec-tive weight
  []
 
 
 
-[55]
+[58])
 
-[56])
-
-[57]
+[59]
 \openout2 = `sublatex/Opryrmi/Opryrmi.aux'.
 
  (./sublatex/Opryrmi/Opryrmi.tex
 Chapter 5.
 
 
-[58
+[60
 
 
 
@@ -1461,23 +1516,23 @@ Overfull \hbox (14.75868pt too wide) in paragraph at lines 24--24
 
 
 
-[59]
-
-[60]
-
 [61]
+
+[62]
+
+[63]
 Overfull \hbox (9.52829pt too wide) in paragraph at lines 177--178
 []\OT1/ptm/m/it/12 Manufacturing Costs: \OT1/ptm/m/n/12 CNC ma-chin-ing, in-jec-tion mold-ing, and forg-ing are cost-intensive
  []
 
 
 
-[62]
-
-[63]
-
 [64]
-<sublatex/Opryrmi/media/image1.png, id=1643, 469.755pt x 266.79675pt>
+
+[65]
+
+[66]
+<sublatex/Opryrmi/media/image1.png, id=1672, 469.755pt x 266.79675pt>
 File: sublatex/Opryrmi/media/image1.png Graphic file (type png)
 <use sublatex/Opryrmi/media/image1.png>
 Package pdftex.def Info: sublatex/Opryrmi/media/image1.png  used on input line 270.
@@ -1488,8 +1543,8 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[65]
-<sublatex/Opryrmi/media/image2.png, id=1657, 274.626pt x 152.9715pt>
+[67]
+<sublatex/Opryrmi/media/image2.png, id=1686, 274.626pt x 152.9715pt>
 File: sublatex/Opryrmi/media/image2.png Graphic file (type png)
 <use sublatex/Opryrmi/media/image2.png>
 Package pdftex.def Info: sublatex/Opryrmi/media/image2.png  used on input line 289.
@@ -1498,7 +1553,7 @@ Package pdftex.def Info: sublatex/Opryrmi/media/image2.png  used on input line 2
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<sublatex/Opryrmi/media/image3.png, id=1658, 366.77025pt x 155.3805pt>
+<sublatex/Opryrmi/media/image3.png, id=1687, 366.77025pt x 155.3805pt>
 File: sublatex/Opryrmi/media/image3.png Graphic file (type png)
 <use sublatex/Opryrmi/media/image3.png>
 Package pdftex.def Info: sublatex/Opryrmi/media/image3.png  used on input line 320.
@@ -1506,7 +1561,7 @@ Package pdftex.def Info: sublatex/Opryrmi/media/image3.png  used on input line 3
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<sublatex/Opryrmi/media/image4.png, id=1659, 469.755pt x 228.25275pt>
+<sublatex/Opryrmi/media/image4.png, id=1688, 469.755pt x 228.25275pt>
 File: sublatex/Opryrmi/media/image4.png Graphic file (type png)
 <use sublatex/Opryrmi/media/image4.png>
 Package pdftex.def Info: sublatex/Opryrmi/media/image4.png  used on input line 331.
@@ -1514,21 +1569,21 @@ Package pdftex.def Info: sublatex/Opryrmi/media/image4.png  used on input line 3
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<sublatex/Opryrmi/media/image5.png, id=1660, 380.622pt x 225.2415pt>
+<sublatex/Opryrmi/media/image5.png, id=1689, 380.622pt x 225.2415pt>
 File: sublatex/Opryrmi/media/image5.png Graphic file (type png)
 <use sublatex/Opryrmi/media/image5.png>
 Package pdftex.def Info: sublatex/Opryrmi/media/image5.png  used on input line 341.
 (pdftex.def)             Requested size: 352.81552pt x 208.79878pt.
 
 
-[66 <./sublatex/Opryrmi/media/image1.png>]
+[68 <./sublatex/Opryrmi/media/image1.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[67 <./sublatex/Opryrmi/media/image2.png> <./sublatex/Opryrmi/media/image3.png>]
-<sublatex/Opryrmi/media/image6.png, id=1672, 469.755pt x 204.765pt>
+[69 <./sublatex/Opryrmi/media/image2.png> <./sublatex/Opryrmi/media/image3.png>]
+<sublatex/Opryrmi/media/image6.png, id=1701, 469.755pt x 204.765pt>
 File: sublatex/Opryrmi/media/image6.png Graphic file (type png)
 <use sublatex/Opryrmi/media/image6.png>
 Package pdftex.def Info: sublatex/Opryrmi/media/image6.png  used on input line 368.
@@ -1543,12 +1598,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[68 <./sublatex/Opryrmi/media/image4.png> <./sublatex/Opryrmi/media/image5.png>]
+[70 <./sublatex/Opryrmi/media/image4.png> <./sublatex/Opryrmi/media/image5.png>]
 
-[69 <./sublatex/Opryrmi/media/image6.png>]
+[71 <./sublatex/Opryrmi/media/image6.png>]
 
-[70]
-<sublatex/Opryrmi/media/image7.png, id=1689, 457.10776pt x 257.16075pt>
+[72]
+<sublatex/Opryrmi/media/image7.png, id=1718, 457.10776pt x 257.16075pt>
 File: sublatex/Opryrmi/media/image7.png Graphic file (type png)
 <use sublatex/Opryrmi/media/image7.png>
 Package pdftex.def Info: sublatex/Opryrmi/media/image7.png  used on input line 455.
@@ -1560,31 +1615,31 @@ Overfull \hbox (16.0889pt too wide) in paragraph at lines 455--456
 
 
 
-[71 <./sublatex/Opryrmi/media/image7.png>])
+[73 <./sublatex/Opryrmi/media/image7.png>])
 
-[72]
+[74]
 \openout2 = `sublatex/Gregoire/Gregoire.aux'.
 
  (./sublatex/Gregoire/Gregoire.tex
 Chapter 6.
 
 
-[73
+[75
 
 
 
 
 ]
 
-[74]
-
-[75]
-
 [76]
 
 [77]
 
 [78]
+
+[79]
+
+[80]
 LaTeX Font Info:    Trying to load font information for OML+ptm on input line 282.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
@@ -1593,12 +1648,12 @@ LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 282.
 
 
-[79]
-
-[80]
-
 [81]
-<sublatex/Gregoire/img/img1.jpg, id=1760, 1003.75pt x 1505.625pt>
+
+[82]
+
+[83]
+<sublatex/Gregoire/img/img1.jpg, id=1790, 1003.75pt x 1505.625pt>
 File: sublatex/Gregoire/img/img1.jpg Graphic file (type jpg)
 <use sublatex/Gregoire/img/img1.jpg>
 Package pdftex.def Info: sublatex/Gregoire/img/img1.jpg  used on input line 413.
@@ -1608,32 +1663,32 @@ Overfull \vbox (11.70479pt too high) has occurred while \output is active []
 
 
 
-[82 <./sublatex/Gregoire/img/img1.jpg>]
+[84 <./sublatex/Gregoire/img/img1.jpg>]
 
-[83]
+[85]
 Underfull \hbox (badness 10000) in paragraph at lines 497--501
 
  []
 
 
 
-[84])
+[86])
 
-[85]
+[87]
 
-[86]
+[88]
 \openout2 = `sublatex/hashem/ROS.aux'.
 
  (./sublatex/hashem/ROS.tex
 Chapter 7.
-<sublatex/hashem/img/ubuntu.png, id=1795, 2127.95pt x 1084.05pt>
+<sublatex/hashem/img/ubuntu.png, id=1825, 2127.95pt x 1084.05pt>
 File: sublatex/hashem/img/ubuntu.png Graphic file (type png)
 <use sublatex/hashem/img/ubuntu.png>
 Package pdftex.def Info: sublatex/hashem/img/ubuntu.png  used on input line 22.
 (pdftex.def)             Requested size: 308.71106pt x 157.25766pt.
 
 
-[87
+[89
 
 
 
@@ -1645,30 +1700,30 @@ Overfull \hbox (15.01227pt too wide) in paragraph at lines 38--46
 
 
 
-[88 <./sublatex/hashem/img/ubuntu.png (PNG copy)>]
-<sublatex/hashem/img/filesystem.jpg, id=1807, 238.64984pt x 166.77692pt>
+[90 <./sublatex/hashem/img/ubuntu.png (PNG copy)>]
+<sublatex/hashem/img/filesystem.jpg, id=1836, 238.64984pt x 166.77692pt>
 File: sublatex/hashem/img/filesystem.jpg Graphic file (type jpg)
 <use sublatex/hashem/img/filesystem.jpg>
 Package pdftex.def Info: sublatex/hashem/img/filesystem.jpg  used on input line 90.
 (pdftex.def)             Requested size: 238.64925pt x 166.77649pt.
 
 
-[89]
-<sublatex/hashem/img/rosfile.jpg, id=1812, 119.44624pt x 134.5025pt>
+[91]
+<sublatex/hashem/img/rosfile.jpg, id=1841, 119.44624pt x 134.5025pt>
 File: sublatex/hashem/img/rosfile.jpg Graphic file (type jpg)
 <use sublatex/hashem/img/rosfile.jpg>
 Package pdftex.def Info: sublatex/hashem/img/rosfile.jpg  used on input line 122.
 (pdftex.def)             Requested size: 119.44594pt x 134.50215pt.
-<sublatex/hashem/img/rospkg.jpg, id=1813, 319.7162pt x 194.02924pt>
+<sublatex/hashem/img/rospkg.jpg, id=1842, 319.7162pt x 194.02924pt>
 File: sublatex/hashem/img/rospkg.jpg Graphic file (type jpg)
 <use sublatex/hashem/img/rospkg.jpg>
 Package pdftex.def Info: sublatex/hashem/img/rospkg.jpg  used on input line 130.
 (pdftex.def)             Requested size: 319.71541pt x 194.02875pt.
 
 
-[90 <./sublatex/hashem/img/filesystem.jpg>]
+[92 <./sublatex/hashem/img/filesystem.jpg>]
 
-[91 <./sublatex/hashem/img/rosfile.jpg> <./sublatex/hashem/img/rospkg.jpg>] (c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+[93 <./sublatex/hashem/img/rosfile.jpg> <./sublatex/hashem/img/rospkg.jpg>] (c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/05/25 1.10b listings language file
 ) (c:/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
@@ -1677,7 +1732,7 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 184.
 
 
-[92] (c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+[94] (c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/05/25 1.10b listings language file
 ) (c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/05/25 1.10b listings language file
@@ -1688,112 +1743,112 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--226
 
 
 
-[93]
-
-[94]
-
 [95]
-<sublatex/hashem/img/rosgraph.jpg, id=1899, 292.12294pt x 211.48485pt>
+
+[96]
+
+[97]
+<sublatex/hashem/img/rosgraph.jpg, id=1928, 292.12294pt x 211.48485pt>
 File: sublatex/hashem/img/rosgraph.jpg Graphic file (type jpg)
 <use sublatex/hashem/img/rosgraph.jpg>
 Package pdftex.def Info: sublatex/hashem/img/rosgraph.jpg  used on input line 370.
 (pdftex.def)             Requested size: 292.12221pt x 211.48433pt.
 
 
-[96]
+[98]
 
-[97 <./sublatex/hashem/img/rosgraph.jpg>]
-<sublatex/hashem/img/rqt_graph.jpg, id=1918, 392.59337pt x 154.95445pt>
+[99 <./sublatex/hashem/img/rosgraph.jpg>]
+<sublatex/hashem/img/rqt_graph.jpg, id=1947, 392.59337pt x 154.95445pt>
 File: sublatex/hashem/img/rqt_graph.jpg Graphic file (type jpg)
 <use sublatex/hashem/img/rqt_graph.jpg>
 Package pdftex.def Info: sublatex/hashem/img/rqt_graph.jpg  used on input line 411.
 (pdftex.def)             Requested size: 392.5924pt x 154.95407pt.
 
 
-[98 <./sublatex/hashem/img/rqt_graph.jpg>]
+[100 <./sublatex/hashem/img/rqt_graph.jpg>]
 
-[99]
+[101]
 Overfull \hbox (20.50926pt too wide) in paragraph at lines 439--440
 \OT1/ptm/m/n/12 std[]msgs/msg/String.msg when we are us-ing the roscpp client, we must in-clude std[]msgs/String.h
  []
 
 
 
-[100]
-
-[101]
-
 [102]
 
 [103]
-<sublatex/hashem/img/helloWorld.jpg, id=1948, 362.0989pt x 259.68521pt>
+
+[104]
+
+[105]
+<sublatex/hashem/img/helloWorld.jpg, id=1977, 362.0989pt x 259.68521pt>
 File: sublatex/hashem/img/helloWorld.jpg Graphic file (type jpg)
 <use sublatex/hashem/img/helloWorld.jpg>
 Package pdftex.def Info: sublatex/hashem/img/helloWorld.jpg  used on input line 519.
 (pdftex.def)             Requested size: 362.098pt x 259.68457pt.
 
 
-[104 <./sublatex/hashem/img/helloWorld.jpg>]
+[106 <./sublatex/hashem/img/helloWorld.jpg>]
 Overfull \hbox (0.72815pt too wide) in paragraph at lines 568--569
 \OT1/ptm/m/n/12 pa-ram-e-ters by us-ing the \OT1/ptm/b/n/12 dy-namic[]reconfigure \OT1/ptm/m/n/12 pack-age ([]$\OT1/cmtt/m/n/12 http : / / wiki . ros . org / dynamic _
  []
 
 
 
-[105]
+[107]
 
-[106]
-<sublatex/hashem/img/noetic.png, id=1964, 633.94737pt x 816.10158pt>
+[108]
+<sublatex/hashem/img/noetic.png, id=1993, 633.94737pt x 816.10158pt>
 File: sublatex/hashem/img/noetic.png Graphic file (type png)
 <use sublatex/hashem/img/noetic.png>
 Package pdftex.def Info: sublatex/hashem/img/noetic.png  used on input line 606.
 (pdftex.def)             Requested size: 73.74655pt x 94.92686pt.
-<sublatex/hashem/img/noetic_c.png, id=1965, 45.16875pt x 45.16875pt>
+<sublatex/hashem/img/noetic_c.png, id=1994, 45.16875pt x 45.16875pt>
 File: sublatex/hashem/img/noetic_c.png Graphic file (type png)
 <use sublatex/hashem/img/noetic_c.png>
 Package pdftex.def Info: sublatex/hashem/img/noetic_c.png  used on input line 607.
 (pdftex.def)             Requested size: 32.77832pt x 32.77853pt.
-<sublatex/hashem/img/melodic_with_bg.png, id=1966, 510.2262pt x 507.3354pt>
+<sublatex/hashem/img/melodic_with_bg.png, id=1995, 510.2262pt x 507.3354pt>
 File: sublatex/hashem/img/melodic_with_bg.png Graphic file (type png)
 <use sublatex/hashem/img/melodic_with_bg.png>
 Package pdftex.def Info: sublatex/hashem/img/melodic_with_bg.png  used on input line 611.
 (pdftex.def)             Requested size: 73.74655pt x 73.32564pt.
-<sublatex/hashem/img/melodic.png, id=1967, 45.16875pt x 45.16875pt>
+<sublatex/hashem/img/melodic.png, id=1996, 45.16875pt x 45.16875pt>
 File: sublatex/hashem/img/melodic.png Graphic file (type png)
 <use sublatex/hashem/img/melodic.png>
 Package pdftex.def Info: sublatex/hashem/img/melodic.png  used on input line 612.
 (pdftex.def)             Requested size: 32.77832pt x 32.77853pt.
-<sublatex/hashem/img/lunar_with_bg.png, id=1968, 3203.97pt x 3243.11626pt>
+<sublatex/hashem/img/lunar_with_bg.png, id=1997, 3203.97pt x 3243.11626pt>
 File: sublatex/hashem/img/lunar_with_bg.png Graphic file (type png)
 <use sublatex/hashem/img/lunar_with_bg.png>
 Package pdftex.def Info: sublatex/hashem/img/lunar_with_bg.png  used on input line 616.
 (pdftex.def)             Requested size: 73.74655pt x 74.62474pt.
-<sublatex/hashem/img/lunar.png, id=1969, 40.15pt x 45.16875pt>
+<sublatex/hashem/img/lunar.png, id=1998, 40.15pt x 45.16875pt>
 File: sublatex/hashem/img/lunar.png Graphic file (type png)
 <use sublatex/hashem/img/lunar.png>
 Package pdftex.def Info: sublatex/hashem/img/lunar.png  used on input line 617.
 (pdftex.def)             Requested size: 32.77832pt x 36.87663pt.
-<sublatex/hashem/img/kinetic.png, id=1970, 2525.435pt x 2091.815pt>
+<sublatex/hashem/img/kinetic.png, id=1999, 2525.435pt x 2091.815pt>
 File: sublatex/hashem/img/kinetic.png Graphic file (type png)
 <use sublatex/hashem/img/kinetic.png>
 Package pdftex.def Info: sublatex/hashem/img/kinetic.png  used on input line 621.
 (pdftex.def)             Requested size: 73.74655pt x 61.06006pt.
-<sublatex/hashem/img/kinetic (1).png, id=1971, 37.54286pt x 42.23572pt>
+<sublatex/hashem/img/kinetic (1).png, id=2000, 37.54286pt x 42.23572pt>
 File: sublatex/hashem/img/kinetic (1).png Graphic file (type png)
 <use sublatex/hashem/img/kinetic (1).png>
 Package pdftex.def Info: sublatex/hashem/img/kinetic (1).png  used on input line 622.
 (pdftex.def)             Requested size: 32.77832pt x 36.87881pt.
 
 
-[107 <./sublatex/hashem/img/noetic.png> <./sublatex/hashem/img/noetic_c.png> <./sublatex/hashem/img/melodic_with_bg.png> <./sublatex/hashem/img/melodic.png> <./sublatex/hashem/img/lunar_with_bg.png> <./sublatex/hashem/img/lunar.png> <./sublatex/hashem/img/kinetic.png> <./sublatex/hashem/img/kinetic (1).png>]
-<sublatex/hashem/img/roscore.jpg, id=1985, 311.58513pt x 200.01039pt>
+[109 <./sublatex/hashem/img/noetic.png> <./sublatex/hashem/img/noetic_c.png> <./sublatex/hashem/img/melodic_with_bg.png> <./sublatex/hashem/img/melodic.png> <./sublatex/hashem/img/lunar_with_bg.png> <./sublatex/hashem/img/lunar.png> <./sublatex/hashem/img/kinetic.png> <./sublatex/hashem/img/kinetic (1).png>]
+<sublatex/hashem/img/roscore.jpg, id=2014, 311.58513pt x 200.01039pt>
 File: sublatex/hashem/img/roscore.jpg Graphic file (type jpg)
 <use sublatex/hashem/img/roscore.jpg>
 Package pdftex.def Info: sublatex/hashem/img/roscore.jpg  used on input line 650.
 (pdftex.def)             Requested size: 311.58435pt x 200.00989pt.
 
 
-[108 <./sublatex/hashem/img/roscore.jpg>]
+[110 <./sublatex/hashem/img/roscore.jpg>]
 Overfull \hbox (3.27074pt too wide) in paragraph at lines 657--658
 \OT1/ptm/m/n/12 played in the Ter-mi-nal. These pa-ram-e-ters are dis-played when it ex-e-cutes \OT1/cmtt/m/n/12 roscore.xml\OT1/ptm/m/n/12 .
  []
@@ -1810,11 +1865,11 @@ Overfull \hbox (22.18654pt too wide) in paragraph at lines 679--680
 
 
 
-[109]
-
-[110])
-
 [111]
+
+[112])
+
+[113]
 \openout2 = `sublatex/parfait/simulation_environment.aux'.
 
  (./sublatex/parfait/simulation_environment.tex
@@ -1826,126 +1881,122 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--19
 
 
 
-[112
+[114
 
 
 
 
 ]
-<sublatex/parfait/fig/gazebo_logo.png, id=2035, 785.334pt x 383.834pt>
+<sublatex/parfait/fig/gazebo_logo.png, id=2064, 785.334pt x 383.834pt>
 File: sublatex/parfait/fig/gazebo_logo.png Graphic file (type png)
 <use sublatex/parfait/fig/gazebo_logo.png>
 Package pdftex.def Info: sublatex/parfait/fig/gazebo_logo.png  used on input line 37.
 (pdftex.def)             Requested size: 308.71106pt x 150.88359pt.
 
 
-[113 <./sublatex/parfait/fig/gazebo_logo.png>]
+[115 <./sublatex/parfait/fig/gazebo_logo.png>]
 Overfull \hbox (1.82626pt too wide) in paragraph at lines 47--52
 \OT1/ptm/m/n/12 Gazebo em-ploys the Object-Oriented Graph-ics Ren-der-ing En-gine (OGRE) [[]18[]] for 3D graph-
  []
 
-<sublatex/parfait/fig/gazebo_empty_world.png, id=2047, 1309.89375pt x 743.77875pt>
+<sublatex/parfait/fig/gazebo_empty_world.png, id=2076, 1309.89375pt x 743.77875pt>
 File: sublatex/parfait/fig/gazebo_empty_world.png Graphic file (type png)
 <use sublatex/parfait/fig/gazebo_empty_world.png>
 Package pdftex.def Info: sublatex/parfait/fig/gazebo_empty_world.png  used on input line 59.
 (pdftex.def)             Requested size: 441.01773pt x 250.41866pt.
 
 
-[114 <./sublatex/parfait/fig/gazebo_empty_world.png>]
+[116 <./sublatex/parfait/fig/gazebo_empty_world.png>]
 
-[115]
-<sublatex/parfait/fig/turtlebot3_waffle.png, id=2085, 1307.88625pt x 744.7825pt>
+[117]
+<sublatex/parfait/fig/turtlebot3_waffle.png, id=2114, 1307.88625pt x 744.7825pt>
 File: sublatex/parfait/fig/turtlebot3_waffle.png Graphic file (type png)
 <use sublatex/parfait/fig/turtlebot3_waffle.png>
 Package pdftex.def Info: sublatex/parfait/fig/turtlebot3_waffle.png  used on input line 119.
 (pdftex.def)             Requested size: 441.01773pt x 251.13164pt.
 
 
-[116 <./sublatex/parfait/fig/turtlebot3_waffle.png>]
-<sublatex/parfait/fig/gui_left_tab.png, id=2092, 554.07pt x 710.655pt>
+[118 <./sublatex/parfait/fig/turtlebot3_waffle.png>]
+<sublatex/parfait/fig/gui_left_tab.png, id=2122, 554.07pt x 710.655pt>
 File: sublatex/parfait/fig/gui_left_tab.png Graphic file (type png)
 <use sublatex/parfait/fig/gui_left_tab.png>
 Package pdftex.def Info: sublatex/parfait/fig/gui_left_tab.png  used on input line 159.
 (pdftex.def)             Requested size: 242.5611pt x 311.10599pt.
 
 
-[117 <./sublatex/parfait/fig/gui_left_tab.png>]
-<sublatex/parfait/fig/gui_lower_part.png, id=2099, 1207.51125pt x 164.615pt>
+[119 <./sublatex/parfait/fig/gui_left_tab.png>]
+<sublatex/parfait/fig/gui_lower_part.png, id=2129, 1207.51125pt x 164.615pt>
 File: sublatex/parfait/fig/gui_lower_part.png Graphic file (type png)
 <use sublatex/parfait/fig/gui_lower_part.png>
 Package pdftex.def Info: sublatex/parfait/fig/gui_lower_part.png  used on input line 182.
 (pdftex.def)             Requested size: 441.01773pt x 60.12039pt.
-<sublatex/parfait/fig/gui_top_part.png, id=2101, 1275.76625pt x 271.0125pt>
+<sublatex/parfait/fig/gui_top_part.png, id=2131, 1275.76625pt x 271.0125pt>
 File: sublatex/parfait/fig/gui_top_part.png Graphic file (type png)
 <use sublatex/parfait/fig/gui_top_part.png>
 Package pdftex.def Info: sublatex/parfait/fig/gui_top_part.png  used on input line 211.
 (pdftex.def)             Requested size: 352.81552pt x 74.9484pt.
 
 
-[118 <./sublatex/parfait/fig/gui_lower_part.png>]
-<sublatex/parfait/fig/seesaw_example.png, id=2108, 1241.63875pt x 745.78625pt>
+[120 <./sublatex/parfait/fig/gui_lower_part.png>]
+<sublatex/parfait/fig/seesaw_example.png, id=2137, 1241.63875pt x 745.78625pt>
 File: sublatex/parfait/fig/seesaw_example.png Graphic file (type png)
 <use sublatex/parfait/fig/seesaw_example.png>
 Package pdftex.def Info: sublatex/parfait/fig/seesaw_example.png  used on input line 237.
 (pdftex.def)             Requested size: 264.61333pt x 158.92982pt.
 
 
-[119 <./sublatex/parfait/fig/gui_top_part.png> <./sublatex/parfait/fig/seesaw_example.png>]
-<sublatex/parfait/fig/rviz_logo.png, id=2116, 401.5pt x 260.975pt>
+[121 <./sublatex/parfait/fig/gui_top_part.png> <./sublatex/parfait/fig/seesaw_example.png>]
+<sublatex/parfait/fig/rviz_logo.png, id=2145, 401.5pt x 260.975pt>
 File: sublatex/parfait/fig/rviz_logo.png Graphic file (type png)
 <use sublatex/parfait/fig/rviz_logo.png>
 Package pdftex.def Info: sublatex/parfait/fig/rviz_logo.png  used on input line 253.
 (pdftex.def)             Requested size: 286.65883pt x 186.34085pt.
 
 
-[120 <./sublatex/parfait/fig/rviz_logo.png>]
-<sublatex/parfait/fig/competition_area_layout_teknofest.png, id=2123, 473.77pt x 398.48875pt>
+[122 <./sublatex/parfait/fig/rviz_logo.png>]
+<sublatex/parfait/fig/competition_area_layout_teknofest.png, id=2152, 473.77pt x 398.48875pt>
 File: sublatex/parfait/fig/competition_area_layout_teknofest.png Graphic file (type png)
 <use sublatex/parfait/fig/competition_area_layout_teknofest.png>
 Package pdftex.def Info: sublatex/parfait/fig/competition_area_layout_teknofest.png  used on input line 300.
 (pdftex.def)             Requested size: 308.71106pt x 259.66522pt.
 
 
-[121]
+[123]
 
-[122 <./sublatex/parfait/fig/competition_area_layout_teknofest.png>]
-<sublatex/parfait/fig/white_floor.png, id=2135, 1306.8825pt x 743.77875pt>
+[124 <./sublatex/parfait/fig/competition_area_layout_teknofest.png>]
+<sublatex/parfait/fig/white_floor.png, id=2165, 1306.8825pt x 743.77875pt>
 File: sublatex/parfait/fig/white_floor.png Graphic file (type png)
 <use sublatex/parfait/fig/white_floor.png>
 Package pdftex.def Info: sublatex/parfait/fig/white_floor.png  used on input line 342.
 (pdftex.def)             Requested size: 441.01773pt x 250.98611pt.
 
 
-[123 <./sublatex/parfait/fig/white_floor.png>]
-<sublatex/parfait/fig/qr_code_tag.png, id=2142, 940.51375pt x 529.98pt>
+[125 <./sublatex/parfait/fig/white_floor.png>]
+<sublatex/parfait/fig/qr_code_tag.png, id=2172, 940.51375pt x 529.98pt>
 File: sublatex/parfait/fig/qr_code_tag.png Graphic file (type png)
 <use sublatex/parfait/fig/qr_code_tag.png>
 Package pdftex.def Info: sublatex/parfait/fig/qr_code_tag.png  used on input line 389.
 (pdftex.def)             Requested size: 441.01773pt x 248.51645pt.
 
 
-[124]
-
-[125 <./sublatex/parfait/fig/qr_code_tag.png>]
-
 [126]
-<sublatex/parfait/fig/walls.png, id=2230, 1309.89375pt x 735.74875pt>
+
+[127 <./sublatex/parfait/fig/qr_code_tag.png>]
+
+[128]
+<sublatex/parfait/fig/walls.png, id=2259, 1309.89375pt x 735.74875pt>
 File: sublatex/parfait/fig/walls.png Graphic file (type png)
 <use sublatex/parfait/fig/walls.png>
 Package pdftex.def Info: sublatex/parfait/fig/walls.png  used on input line 465.
 (pdftex.def)             Requested size: 441.01773pt x 247.71509pt.
-<sublatex/parfait/fig/load.png, id=2231, 1309.89375pt x 739.76375pt>
+<sublatex/parfait/fig/load.png, id=2260, 1309.89375pt x 739.76375pt>
 File: sublatex/parfait/fig/load.png Graphic file (type png)
 <use sublatex/parfait/fig/load.png>
 Package pdftex.def Info: sublatex/parfait/fig/load.png  used on input line 472.
 (pdftex.def)             Requested size: 441.01773pt x 249.06688pt.
 
 
-[127 <./sublatex/parfait/fig/walls.png> <./sublatex/parfait/fig/load.png>]
-
-[128]
-
-[129]
+[129 <./sublatex/parfait/fig/walls.png> <./sublatex/parfait/fig/load.png>]
 
 [130]
 
@@ -1962,34 +2013,38 @@ Package pdftex.def Info: sublatex/parfait/fig/load.png  used on input line 472.
 [136]
 
 [137]
-<sublatex/parfait/fig/intersection_zone_c_station_2.png, id=2614, 1003.75pt x 1003.75pt>
+
+[138]
+
+[139]
+<sublatex/parfait/fig/intersection_zone_c_station_2.png, id=2644, 1003.75pt x 1003.75pt>
 File: sublatex/parfait/fig/intersection_zone_c_station_2.png Graphic file (type png)
 <use sublatex/parfait/fig/intersection_zone_c_station_2.png>
 Package pdftex.def Info: sublatex/parfait/fig/intersection_zone_c_station_2.png  used on input line 944.
 (pdftex.def)             Requested size: 176.40439pt x 176.39404pt.
 
 
-[138]
-<sublatex/parfait/fig/competition_area_no_light.png, id=2659, 962.59625pt x 542.025pt>
+[140]
+<sublatex/parfait/fig/competition_area_no_light.png, id=2688, 962.59625pt x 542.025pt>
 File: sublatex/parfait/fig/competition_area_no_light.png Graphic file (type png)
 <use sublatex/parfait/fig/competition_area_no_light.png>
 Package pdftex.def Info: sublatex/parfait/fig/competition_area_no_light.png  used on input line 966.
 (pdftex.def)             Requested size: 441.01773pt x 248.3255pt.
 
 
-[139 <./sublatex/parfait/fig/intersection_zone_c_station_2.png>]
-<sublatex/parfait/fig/competition_area_light.png, id=2666, 931.48pt x 523.9575pt>
+[141 <./sublatex/parfait/fig/intersection_zone_c_station_2.png>]
+<sublatex/parfait/fig/competition_area_light.png, id=2695, 931.48pt x 523.9575pt>
 File: sublatex/parfait/fig/competition_area_light.png Graphic file (type png)
 <use sublatex/parfait/fig/competition_area_light.png>
 Package pdftex.def Info: sublatex/parfait/fig/competition_area_light.png  used on input line 979.
 (pdftex.def)             Requested size: 441.01773pt x 248.06691pt.
 
 
-[140 <./sublatex/parfait/fig/competition_area_no_light.png> <./sublatex/parfait/fig/competition_area_light.png>])
+[142 <./sublatex/parfait/fig/competition_area_no_light.png> <./sublatex/parfait/fig/competition_area_light.png>])
 
-[141]
+[143]
 
-[142
+[144
 
 
 
@@ -2003,7 +2058,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--21
 
  []
 
-<sublatex/hashem/img/link1.jpg, id=2684, 187.33145pt x 126.78947pt>
+<sublatex/hashem/img/link1.jpg, id=2713, 187.33145pt x 126.78947pt>
 File: sublatex/hashem/img/link1.jpg Graphic file (type jpg)
 <use sublatex/hashem/img/link1.jpg>
 Package pdftex.def Info: sublatex/hashem/img/link1.jpg  used on input line 34.
@@ -2018,11 +2073,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--45
 
 
 
-[143
+[145
 
 
 ]
-<sublatex/hashem/img/joint1.jpg, id=2697, 281.65942pt x 268.43143pt>
+<sublatex/hashem/img/joint1.jpg, id=2726, 281.65942pt x 268.43143pt>
 File: sublatex/hashem/img/joint1.jpg Graphic file (type jpg)
 <use sublatex/hashem/img/joint1.jpg>
 Package pdftex.def Info: sublatex/hashem/img/joint1.jpg  used on input line 60.
@@ -2034,8 +2089,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--70
 
 
 
-[144 <./sublatex/hashem/img/link1.jpg>]
-<sublatex/hashem/img/robot1.jpg, id=2719, 272.12778pt x 334.58333pt>
+[146 <./sublatex/hashem/img/link1.jpg>]
+<sublatex/hashem/img/robot1.jpg, id=2749, 272.12778pt x 334.58333pt>
 File: sublatex/hashem/img/robot1.jpg Graphic file (type jpg)
 <use sublatex/hashem/img/robot1.jpg>
 Package pdftex.def Info: sublatex/hashem/img/robot1.jpg  used on input line 83.
@@ -2047,27 +2102,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--93
 
 
 
-[145 <./sublatex/hashem/img/joint1.jpg>]
+[147 <./sublatex/hashem/img/joint1.jpg>]
 
-[146 <./sublatex/hashem/img/robot1.jpg>]
+[148 <./sublatex/hashem/img/robot1.jpg>]
 Overfull \hbox (4.03505pt too wide) in paragraph at lines 164--170
 \OT1/ptm/m/n/12 the ac-tu-a-tor (mo-tor mo-tor[]1). It uses the Sim-ple-Trans-mis-sion type. [][][][][]:
  []
 
 
 
-[147]
-
-[148]
-
 [149]
+
+[150]
+
+[151]
 Overfull \hbox (16.2351pt too wide) in paragraph at lines 290--292
 []\OT1/ptm/m/n/12 Here, the value 0.9, is re-placed with "base[]length", and "0.85" is re-placed with "base[]width". 
  []
 
 
 
-[150]
+[152]
 LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 322.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
@@ -2076,7 +2131,7 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 322.
 
 
-[151]
+[153]
 Overfull \hbox (0.44032pt too wide) in paragraph at lines 358--359
 []\OT1/ptm/m/n/12 The \OT1/cmtt/m/n/12 <node> \OT1/ptm/m/n/12 tag launches the \OT1/cmtt/m/n/12 robot[]state[]publisher \OT1/ptm/m/n/12 node. This node reads the robot's
  []
@@ -2092,65 +2147,65 @@ Package pdftex.def Info: sublatex/hashem/img/robot1.jpg  used on input line 374.
 (pdftex.def)             Requested size: 272.1271pt x 334.5825pt.
 
 
-[152]
+[154]
 
-[153]
+[155]
 File: sublatex/hashem/img/link1.jpg Graphic file (type jpg)
 <use sublatex/hashem/img/link1.jpg>
 Package pdftex.def Info: sublatex/hashem/img/link1.jpg  used on input line 416.
 (pdftex.def)             Requested size: 187.33098pt x 126.78915pt.
 )
 
-[154]
+[156]
 \openout2 = `sublatex/felly/felly.aux'.
 
  (./sublatex/felly/felly.tex
 Chapter 10.
 
 
-[155
+[157
 
 
 
 
 ]
 
-[156]
+[158]
 Overfull \hbox (15.79019pt too wide) in paragraph at lines 171--173
 []\OT1/ptm/m/n/12 The \OT1/ptm/b/n/12 PID (Proportional-Integral-Derivative) \OT1/ptm/m/n/12 con-troller is com-monly used in line-following
  []
 
 
 
-[157]
+[159]
 
-[158]
+[160]
 Chapter 11.
 
 
-[159
+[161
 
 ]
 
-[160]
+[162]
 Overfull \hbox (3.43253pt too wide) in paragraph at lines 345--353
 \OT1/ptm/m/n/12 Fil-ters, Graph-SLAM, or par-ti-cle fil-ters) are com-pu-ta-tion-ally ex-pen-sive, es-pe-cially when
  []
 
 
 
-[161]
-
-[162])
-
 [163]
+
+[164])
+
+[165]
 Chapter 12.
 (./outro.tex
 LaTeX Font Info:    Trying to load font information for U+fontawesomeone on input line 10.
  (c:/texlive/2024/texmf-dist/tex/latex/fontawesome/ufontawesomeone.fd
 File: ufontawesomeone.fd 2016/05/22 Font definitions for U/fontawesomeone.
 )
-<compont/rasp.png, id=2928, 177.66376pt x 120.45pt>
+<compont/rasp.png, id=2957, 177.66376pt x 120.45pt>
 File: compont/rasp.png Graphic file (type png)
 <use compont/rasp.png>
 Package pdftex.def Info: compont/rasp.png  used on input line 10.
@@ -2160,7 +2215,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--11
 []|\OT1/ptm/m/n/12 ESP32-S3-DevKitC-1-N8R8
  []
 
-<compont/esp32.png, id=2930, 167.62625pt x 117.43875pt>
+<compont/esp32.png, id=2959, 167.62625pt x 117.43875pt>
 File: compont/esp32.png Graphic file (type png)
 <use compont/esp32.png>
 Package pdftex.def Info: compont/esp32.png  used on input line 11.
@@ -2170,22 +2225,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--12
 \OT1/ptm/m/n/12 V4.1 0-8.0A 24-48VDC
  []
 
-<compont/Clsd-Lood-Drive.png, id=2932, 163.61125pt x 128.48pt>
+<compont/Clsd-Lood-Drive.png, id=2961, 163.61125pt x 128.48pt>
 File: compont/Clsd-Lood-Drive.png Graphic file (type png)
 <use compont/Clsd-Lood-Drive.png>
 Package pdftex.def Info: compont/Clsd-Lood-Drive.png  used on input line 12.
 (pdftex.def)             Requested size: 71.13037pt x 56.9058pt.
-<compont/Ws120.png, id=2934, 169.63374pt x 114.4275pt>
+<compont/Ws120.png, id=2963, 169.63374pt x 114.4275pt>
 File: compont/Ws120.png Graphic file (type png)
 <use compont/Ws120.png>
 Package pdftex.def Info: compont/Ws120.png  used on input line 13.
 (pdftex.def)             Requested size: 71.13179pt x 56.90456pt.
-<compont/Ws50.png, id=2936, 125.46875pt x 115.43124pt>
+<compont/Ws50.png, id=2965, 125.46875pt x 115.43124pt>
 File: compont/Ws50.png Graphic file (type png)
 <use compont/Ws50.png>
 Package pdftex.def Info: compont/Ws50.png  used on input line 14.
 (pdftex.def)             Requested size: 71.13501pt x 56.90526pt.
-<compont/Loadeh711.png, id=2938, 199.74625pt x 126.4725pt>
+<compont/Loadeh711.png, id=2967, 199.74625pt x 126.4725pt>
 File: compont/Loadeh711.png Graphic file (type png)
 <use compont/Loadeh711.png>
 Package pdftex.def Info: compont/Loadeh711.png  used on input line 15.
@@ -2195,7 +2250,7 @@ Underfull \hbox (badness 1478) in paragraph at lines 16--16
 []|\OT1/ptm/m/n/12 BTS7960B 40 Amp Mo-tor
  []
 
-<compont/BTS-Driver.png, id=2940, 135.50626pt x 126.4725pt>
+<compont/BTS-Driver.png, id=2969, 135.50626pt x 126.4725pt>
 File: compont/BTS-Driver.png Graphic file (type png)
 <use compont/BTS-Driver.png>
 Package pdftex.def Info: compont/BTS-Driver.png  used on input line 16.
@@ -2205,7 +2260,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--17
 []|\OT1/ptm/m/n/12 Barcode Scan-ner Mod-ule
  []
 
-<compont/barcode.png, id=2942, 140.525pt x 114.4275pt>
+<compont/barcode.png, id=2971, 140.525pt x 114.4275pt>
 File: compont/barcode.png Graphic file (type png)
 <use compont/barcode.png>
 Package pdftex.def Info: compont/barcode.png  used on input line 17.
@@ -2215,12 +2270,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--18
 []|\OT1/ptm/m/n/12 QTRXL-MD-01A Re-
  []
 
-<compont/QTRX.png, id=2944, 136.51pt x 117.43875pt>
+<compont/QTRX.png, id=2973, 136.51pt x 117.43875pt>
 File: compont/QTRX.png Graphic file (type png)
 <use compont/QTRX.png>
 Package pdftex.def Info: compont/QTRX.png  used on input line 18.
 (pdftex.def)             Requested size: 71.13141pt x 56.90575pt.
-<compont/Husky.png, id=2946, 169.63374pt x 119.44624pt>
+<compont/Husky.png, id=2975, 169.63374pt x 119.44624pt>
 File: compont/Husky.png Graphic file (type png)
 <use compont/Husky.png>
 Package pdftex.def Info: compont/Husky.png  used on input line 19.
@@ -2235,27 +2290,27 @@ Underfull \hbox (badness 2261) in paragraph at lines 20--20
 \OT1/ptm/m/n/12 MPU9255 IMU and Baro-
  []
 
-<compont/IMU.png, id=2948, 146.5475pt x 124.465pt>
+<compont/IMU.png, id=2977, 146.5475pt x 124.465pt>
 File: compont/IMU.png Graphic file (type png)
 <use compont/IMU.png>
 Package pdftex.def Info: compont/IMU.png  used on input line 20.
 (pdftex.def)             Requested size: 71.13133pt x 56.90704pt.
-<compont/LIDAR.png, id=2950, 126.4725pt x 118.4425pt>
+<compont/LIDAR.png, id=2979, 126.4725pt x 118.4425pt>
 File: compont/LIDAR.png Graphic file (type png)
 <use compont/LIDAR.png>
 Package pdftex.def Info: compont/LIDAR.png  used on input line 21.
 (pdftex.def)             Requested size: 71.13287pt x 56.90416pt.
-<compont/voltageShifter.png, id=2952, 141.52875pt x 112.42pt>
+<compont/voltageShifter.png, id=2981, 141.52875pt x 112.42pt>
 File: compont/voltageShifter.png Graphic file (type png)
 <use compont/voltageShifter.png>
 Package pdftex.def Info: compont/voltageShifter.png  used on input line 22.
 (pdftex.def)             Requested size: 71.13347pt x 56.9063pt.
-<compont/TOF.png, id=2954, 146.5475pt x 113.42375pt>
+<compont/TOF.png, id=2983, 146.5475pt x 113.42375pt>
 File: compont/TOF.png Graphic file (type png)
 <use compont/TOF.png>
 Package pdftex.def Info: compont/TOF.png  used on input line 23.
 (pdftex.def)             Requested size: 71.13133pt x 56.90556pt.
-<compont/UV-soldir.png, id=2956, 200.75pt x 131.49126pt>
+<compont/UV-soldir.png, id=2985, 200.75pt x 131.49126pt>
 File: compont/UV-soldir.png Graphic file (type png)
 <use compont/UV-soldir.png>
 Package pdftex.def Info: compont/UV-soldir.png  used on input line 24.
@@ -2270,17 +2325,17 @@ Underfull \hbox (badness 1789) in paragraph at lines 25--25
 \OT1/ptm/m/n/12 age Reg-u-la-tor for Mul-ti-ple
  []
 
-<compont/5vregulator.png, id=2958, 119.44624pt x 112.42pt>
+<compont/5vregulator.png, id=2987, 119.44624pt x 112.42pt>
 File: compont/5vregulator.png Graphic file (type png)
 <use compont/5vregulator.png>
 Package pdftex.def Info: compont/5vregulator.png  used on input line 25.
 (pdftex.def)             Requested size: 71.13062pt x 56.9063pt.
-<compont/heatSinc.png, id=2960, 182.6825pt x 117.43875pt>
+<compont/heatSinc.png, id=2989, 182.6825pt x 117.43875pt>
 File: compont/heatSinc.png Graphic file (type png)
 <use compont/heatSinc.png>
 Package pdftex.def Info: compont/heatSinc.png  used on input line 26.
 (pdftex.def)             Requested size: 71.13159pt x 56.90575pt.
-<compont/relay.png, id=2962, 132.495pt x 121.45375pt>
+<compont/relay.png, id=2991, 132.495pt x 121.45375pt>
 File: compont/relay.png Graphic file (type png)
 <use compont/relay.png>
 Package pdftex.def Info: compont/relay.png  used on input line 27.
@@ -2300,7 +2355,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--28
 \OT1/ptm/m/n/12 2Nm(283.28oz.in) with
  []
 
-<compont/mainMotor.png, id=2964, 153.57375pt x 131.49126pt>
+<compont/mainMotor.png, id=2993, 153.57375pt x 131.49126pt>
 File: compont/mainMotor.png Graphic file (type png)
 <use compont/mainMotor.png>
 Package pdftex.def Info: compont/mainMotor.png  used on input line 28.
@@ -2315,12 +2370,12 @@ Underfull \hbox (badness 1721) in paragraph at lines 29--29
 \OT1/ptm/m/n/12 20arc-min for 10mm Shaft
  []
 
-<compont/gearBox.png, id=2966, 133.49875pt x 123.46124pt>
+<compont/gearBox.png, id=2995, 133.49875pt x 123.46124pt>
 File: compont/gearBox.png Graphic file (type png)
 <use compont/gearBox.png>
 Package pdftex.def Info: compont/gearBox.png  used on input line 29.
 (pdftex.def)             Requested size: 71.1349pt x 56.90588pt.
-<compont/11to8Adaptor.png, id=2968, 98.3675pt x 123.46124pt>
+<compont/11to8Adaptor.png, id=2997, 98.3675pt x 123.46124pt>
 File: compont/11to8Adaptor.png Graphic file (type png)
 <use compont/11to8Adaptor.png>
 Package pdftex.def Info: compont/11to8Adaptor.png  used on input line 30.
@@ -2330,7 +2385,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--31
 []|\OT1/ptm/m/n/12 Single Out-put Shaft for
  []
 
-<compont/Worm-GearBox.png, id=2970, 136.51pt x 104.39pt>
+<compont/Worm-GearBox.png, id=2999, 136.51pt x 104.39pt>
 File: compont/Worm-GearBox.png Graphic file (type png)
 <use compont/Worm-GearBox.png>
 Package pdftex.def Info: compont/Worm-GearBox.png  used on input line 31.
@@ -2344,32 +2399,32 @@ File: compont/Worm-GearBox.png Graphic file (type png)
 <use compont/Worm-GearBox.png>
 Package pdftex.def Info: compont/Worm-GearBox.png  used on input line 32.
 (pdftex.def)             Requested size: 71.13141pt x 56.90654pt.
-<compont/Damper.png, id=2973, 118.4425pt x 114.4275pt>
+<compont/Damper.png, id=3002, 118.4425pt x 114.4275pt>
 File: compont/Damper.png Graphic file (type png)
 <use compont/Damper.png>
 Package pdftex.def Info: compont/Damper.png  used on input line 33.
 (pdftex.def)             Requested size: 71.1329pt x 56.90456pt.
-<compont/bracket-motor.png, id=2975, 115.43124pt x 111.41624pt>
+<compont/bracket-motor.png, id=3004, 115.43124pt x 111.41624pt>
 File: compont/bracket-motor.png Graphic file (type png)
 <use compont/bracket-motor.png>
 Package pdftex.def Info: compont/bracket-motor.png  used on input line 34.
 (pdftex.def)             Requested size: 71.13158pt x 56.90483pt.
-<compont/Flang.png, id=2977, 159.59625pt x 126.4725pt>
+<compont/Flang.png, id=3006, 159.59625pt x 126.4725pt>
 File: compont/Flang.png Graphic file (type png)
 <use compont/Flang.png>
 Package pdftex.def Info: compont/Flang.png  used on input line 35.
 (pdftex.def)             Requested size: 71.13089pt x 56.9063pt.
-<compont/motor-cable.png, id=2979, 132.495pt x 122.4575pt>
+<compont/motor-cable.png, id=3008, 132.495pt x 122.4575pt>
 File: compont/motor-cable.png Graphic file (type png)
 <use compont/motor-cable.png>
 Package pdftex.def Info: compont/motor-cable.png  used on input line 36.
 (pdftex.def)             Requested size: 71.13177pt x 56.90477pt.
-<compont/TP-link.png, id=2981, 79.29625pt x 87.32625pt>
+<compont/TP-link.png, id=3010, 79.29625pt x 87.32625pt>
 File: compont/TP-link.png Graphic file (type png)
 <use compont/TP-link.png>
 Package pdftex.def Info: compont/TP-link.png  used on input line 37.
 (pdftex.def)             Requested size: 71.13725pt x 56.90662pt.
-<compont/raspb-LCD.png, id=2983, 176.66pt x 120.45pt>
+<compont/raspb-LCD.png, id=3012, 176.66pt x 120.45pt>
 File: compont/raspb-LCD.png Graphic file (type png)
 <use compont/raspb-LCD.png>
 Package pdftex.def Info: compont/raspb-LCD.png  used on input line 38.
@@ -2379,7 +2434,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--39
 []|\OT1/ptm/m/n/12 Nema 8R 5W 87dB
  []
 
-<compont/speaker.png, id=2985, 142.5325pt x 126.4725pt>
+<compont/speaker.png, id=3014, 142.5325pt x 126.4725pt>
 File: compont/speaker.png Graphic file (type png)
 <use compont/speaker.png>
 Package pdftex.def Info: compont/speaker.png  used on input line 39.
@@ -2389,12 +2444,12 @@ Underfull \hbox (badness 2253) in paragraph at lines 40--40
 []|\OT1/ptm/m/n/12 Nema RS232 to Blue-tooth
  []
 
-<compont/BLU-Adaptor.png, id=2987, 186.6975pt x 133.49875pt>
+<compont/BLU-Adaptor.png, id=3016, 186.6975pt x 133.49875pt>
 File: compont/BLU-Adaptor.png Graphic file (type png)
 <use compont/BLU-Adaptor.png>
 Package pdftex.def Info: compont/BLU-Adaptor.png  used on input line 40.
 (pdftex.def)             Requested size: 71.13095pt x 56.9063pt.
-<compont/battery.png, id=2989, 143.53625pt x 126.4725pt>
+<compont/battery.png, id=3018, 143.53625pt x 126.4725pt>
 File: compont/battery.png Graphic file (type png)
 <use compont/battery.png>
 Package pdftex.def Info: compont/battery.png  used on input line 41.
@@ -2409,27 +2464,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--42
 \OT1/ptm/m/n/12 12V/2A Full Au-to-matic
  []
 
-<compont/charger.png, id=2991, 136.51pt x 133.49875pt>
+<compont/charger.png, id=3020, 136.51pt x 133.49875pt>
 File: compont/charger.png Graphic file (type png)
 <use compont/charger.png>
 Package pdftex.def Info: compont/charger.png  used on input line 42.
 (pdftex.def)             Requested size: 71.13141pt x 56.9063pt.
-<compont/EX1.png, id=2993, 139.52126pt x 113.42375pt>
+<compont/EX1.png, id=3022, 139.52126pt x 113.42375pt>
 File: compont/EX1.png Graphic file (type png)
 <use compont/EX1.png>
 Package pdftex.def Info: compont/EX1.png  used on input line 43.
 (pdftex.def)             Requested size: 71.13359pt x 56.90556pt.
-<compont/EX2.png, id=2995, 193.72375pt x 117.43875pt>
+<compont/EX2.png, id=3024, 193.72375pt x 117.43875pt>
 File: compont/EX2.png Graphic file (type png)
 <use compont/EX2.png>
 Package pdftex.def Info: compont/EX2.png  used on input line 44.
 (pdftex.def)             Requested size: 71.13275pt x 56.90575pt.
-<compont/LinearAC.png, id=2997, 142.5325pt x 116.435pt>
+<compont/LinearAC.png, id=3026, 142.5325pt x 116.435pt>
 File: compont/LinearAC.png Graphic file (type png)
 <use compont/LinearAC.png>
 Package pdftex.def Info: compont/LinearAC.png  used on input line 45.
 (pdftex.def)             Requested size: 71.13123pt x 56.9044pt.
-<compont/150W.png, id=2999, 151.56625pt x 128.48pt>
+<compont/150W.png, id=3028, 151.56625pt x 128.48pt>
 File: compont/150W.png Graphic file (type png)
 <use compont/150W.png>
 Package pdftex.def Info: compont/150W.png  used on input line 46.
@@ -2439,17 +2494,17 @@ Underfull \hbox (badness 7133) in paragraph at lines 47--47
 []|\OT1/ptm/m/n/12 Motorobit DC-DC 1500W
  []
 
-<compont/1500W.png, id=3001, 127.47626pt x 128.48pt>
+<compont/1500W.png, id=3030, 127.47626pt x 128.48pt>
 File: compont/1500W.png Graphic file (type png)
 <use compont/1500W.png>
 Package pdftex.def Info: compont/1500W.png  used on input line 47.
 (pdftex.def)             Requested size: 71.13528pt x 56.9058pt.
-<compont/multiplexer.png, id=3003, 124.96687pt x 93.34875pt>
+<compont/multiplexer.png, id=3032, 124.96687pt x 93.34875pt>
 File: compont/multiplexer.png Graphic file (type png)
 <use compont/multiplexer.png>
 Package pdftex.def Info: compont/multiplexer.png  used on input line 48.
 (pdftex.def)             Requested size: 71.1346pt x 56.90561pt.
-<compont/LimitSW.png, id=3005, 139.52126pt x 121.45375pt>
+<compont/LimitSW.png, id=3034, 139.52126pt x 121.45375pt>
 File: compont/LimitSW.png Graphic file (type png)
 <use compont/LimitSW.png>
 Package pdftex.def Info: compont/LimitSW.png  used on input line 49.
@@ -2459,20 +2514,20 @@ Underfull \hbox (badness 1147) in paragraph at lines 50--50
 []|\OT1/ptm/m/n/12 Drn956 16mm Acil - Stop
  []
 
-<compont/stopeSW.png, id=3007, 143.53625pt x 138.5175pt>
+<compont/stopeSW.png, id=3036, 143.53625pt x 138.5175pt>
 File: compont/stopeSW.png Graphic file (type png)
 <use compont/stopeSW.png>
 Package pdftex.def Info: compont/stopeSW.png  used on input line 50.
 (pdftex.def)             Requested size: 71.13278pt x 56.90456pt.
-[164
+[166
 
 
 
-{c:/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome/fontawesomeone.enc} <./compont/rasp.png> <./compont/esp32.png> <./compont/Clsd-Lood-Drive.png> <./compont/Ws120.png> <./compont/Ws50.png> <./compont/Loadeh711.png>] [165 <./compont/BTS-Driver.png> <./compont/barcode.png> <./compont/QTRX.png> <./compont/Husky.png> <./compont/IMU.png> <./compont/LIDAR.png> <./compont/voltageShifter.png> <./compont/TOF.png> <./compont/UV-soldir.png> <./compont/5vregulator.png>] [166 <./compont/heatSinc.png> <./compont/relay.png> <./compont/mainMotor.png> <./compont/gearBox.png> <./compont/11to8Adaptor.png> <./compont/Worm-GearBox.png> <./compont/Damper.png> <./compont/bracket-motor.png> <./compont/Flang.png>] [167 <./compont/motor-cable.png> <./compont/TP-link.png> <./compont/raspb-LCD.png> <./compont/speaker.png> <./compont/BLU-Adaptor.png> <./compont/battery.png> <./compont/charger.png> <./compont/EX1.png> <./compont/EX2.png> <./compont/LinearAC.png>])
+{c:/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome/fontawesomeone.enc} <./compont/rasp.png> <./compont/esp32.png> <./compont/Clsd-Lood-Drive.png> <./compont/Ws120.png> <./compont/Ws50.png> <./compont/Loadeh711.png>] [167 <./compont/BTS-Driver.png> <./compont/barcode.png> <./compont/QTRX.png> <./compont/Husky.png> <./compont/IMU.png> <./compont/LIDAR.png> <./compont/voltageShifter.png> <./compont/TOF.png> <./compont/UV-soldir.png> <./compont/5vregulator.png>] [168 <./compont/heatSinc.png> <./compont/relay.png> <./compont/mainMotor.png> <./compont/gearBox.png> <./compont/11to8Adaptor.png> <./compont/Worm-GearBox.png> <./compont/Damper.png> <./compont/bracket-motor.png> <./compont/Flang.png>] [169 <./compont/motor-cable.png> <./compont/TP-link.png> <./compont/raspb-LCD.png> <./compont/speaker.png> <./compont/BLU-Adaptor.png> <./compont/battery.png> <./compont/charger.png> <./compont/EX1.png> <./compont/EX2.png> <./compont/LinearAC.png>])
 
-[168 <./compont/150W.png> <./compont/1500W.png> <./compont/multiplexer.png> <./compont/LimitSW.png> <./compont/stopeSW.png>] (./sublatex/Gregoire/appendGregoire.tex) (./main.bbl
+[170 <./compont/150W.png> <./compont/1500W.png> <./compont/multiplexer.png> <./compont/LimitSW.png> <./compont/stopeSW.png>] (./sublatex/Gregoire/appendGregoire.tex) (./main.bbl
 
-[169
+[171
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 35--37
@@ -2481,7 +2536,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--37
 
 
 
-[170
+[172
 
 ]
 Underfull \hbox (badness 6396) in paragraph at lines 52--54
@@ -2490,9 +2545,9 @@ Underfull \hbox (badness 6396) in paragraph at lines 52--54
 
 
 
-[171])
+[173])
 
-[172] (./main.aux (./sublatex/parfait/ECI.aux) (./sublatex/Boima/Boima.aux) (./sublatex/Opryrmi/Opryrmi.aux) (./sublatex/Gregoire/Gregoire.aux) (./sublatex/hashem/ROS.aux) (./sublatex/parfait/simulation_environment.aux) (./sublatex/hashem/urdf.aux) (./sublatex/felly/felly.aux))
+[174] (./main.aux (./sublatex/parfait/ECI.aux) (./sublatex/Boima/Boima.aux) (./sublatex/Opryrmi/Opryrmi.aux) (./sublatex/Gregoire/Gregoire.aux) (./sublatex/hashem/ROS.aux) (./sublatex/parfait/simulation_environment.aux) (./sublatex/hashem/urdf.aux) (./sublatex/felly/felly.aux))
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
@@ -2501,18 +2556,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: E4C6511043D24C06D9829CF63D9D98B1;32754.
  ) 
 Here is how much of TeX's memory you used:
- 38235 strings out of 473600
- 701232 string characters out of 5732737
+ 38303 strings out of 473600
+ 703253 string characters out of 5732737
  2154908 words of memory out of 5000000
- 59026 multiletter control sequences out of 15000+600000
+ 59080 multiletter control sequences out of 15000+600000
  602841 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  118i,16n,145p,2786b,2548s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (187 pages, 10556934 bytes).
+Output written on main.pdf (189 pages, 10704257 bytes).
 PDF statistics:
- 3495 PDF objects out of 3580 (max. 8388607)
- 2977 compressed objects within 30 object streams
- 1286 named destinations out of 1440 (max. 500000)
- 2377 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3525 PDF objects out of 3580 (max. 8388607)
+ 2996 compressed objects within 30 object streams
+ 1294 named destinations out of 1440 (max. 500000)
+ 2407 words of extra memory for PDF output out of 10000 (max. 10000000)
 
