@@ -3,6 +3,7 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: ieeetr.bst
 A level-1 auxiliary file: sublatex/parfait/ECI.aux
+A level-1 auxiliary file: sublatex/Boima/Boima.aux
 A level-1 auxiliary file: sublatex/Opryrmi/Opryrmi.aux
 A level-1 auxiliary file: sublatex/Gregoire/Gregoire.aux
 A level-1 auxiliary file: sublatex/hashem/ROS.aux
@@ -18,7 +19,7 @@ Warning--entry type for "AMC_AGV_Benefits" isn't style-file defined
 --line 345 of file references.bib
 You've used 20 entries,
             1876 wiz_defined-function locations,
-            595 strings with 6555 characters,
+            596 strings with 6579 characters,
 and the built_in function-call counts, 4373 in all, are:
 = -- 456
 > -- 114

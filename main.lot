@@ -9,14 +9,26 @@
 \contentsline {table}{\numberline {3.6}{\ignorespaces Specifications of the Closed-Loop Stepper Driver}}{18}{table.caption.15}%
 \contentsline {table}{\numberline {3.7}{\ignorespaces Features and Specifications of the IBT-2 Motor Driver Module}}{19}{table.caption.17}%
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Parameters and their descriptions}}{33}{table.caption.31}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Component Details and Weights}}{36}{table.caption.34}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Forces acting on scissor lift components at various angles of operation}}{38}{table.caption.36}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Mechanical advantage analysis results at different scissor lift angles, showing the relationship between input and output forces}}{39}{table.caption.37}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Height, angle, and platform length at different stages.}}{40}{table.caption.38}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Parameters, their relations, and corresponding values.}}{41}{table.caption.40}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Lift position, height, center of mass coordinates, and total mass.}}{42}{table.caption.41}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Instantaneous center (IC) locations and angular velocities at different positions.}}{44}{table.caption.42}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces Measured velocities of the scissor lift mechanism at different height ranges showing the gradual decrease in velocity as the lift extends upward}}{45}{table.caption.43}%
+\contentsline {table}{\numberline {4.10}{\ignorespaces Actuator cylinder extension measurements showing the initial and final lengths required for full range of motion}}{47}{table.caption.44}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Primitive types and their serialization in C++ and Python.}}{64}{table.caption.43}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces ROS Distributions Table}}{76}{table.caption.47}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces Essential Dependencies for Simulating a URDF in Gazebo}}{117}{table.caption.68}%
+\contentsline {table}{\numberline {8.1}{\ignorespaces Primitive types and their serialization in C++ and Python.}}{92}{table.caption.61}%
+\contentsline {table}{\numberline {8.3}{\ignorespaces ROS Distributions Table}}{104}{table.caption.65}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {10.1}{\ignorespaces Essential Dependencies for Simulating a URDF in Gazebo}}{145}{table.caption.86}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {11.1}{\ignorespaces here is the list of components}}{133}{table.11.1}%
+\contentsline {table}{\numberline {13.1}{\ignorespaces here is the list of components}}{161}{table.13.1}%

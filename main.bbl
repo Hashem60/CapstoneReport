@@ -1,9 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{joseph2018mastering}
-L.~Joseph and J.~Cacace, {\em Mastering ROS for Robotics Programming: Design, build, and simulate complex robots using the Robot Operating System}.
-\newblock Packt Publishing Ltd, 2018.
-
 \bibitem{das2016design}
 S.~K. Das, ``Design and methodology of line follower automated guided vehicle-a review,'' {\em International Journal of Science Technology \& Engineering}, vol.~2, no.~10, pp.~9--13, 2016.
 
@@ -40,6 +36,10 @@ R.~N. Jazar and R.~N. Jazar, ``Road dynamics,'' {\em Advanced Vehicle Dynamics},
 
 \bibitem{ashby1994materials}
 M.~F. Ashby, ``Materials selection in mechanical design,'' {\em Metallurgia Italiana}, vol.~86, pp.~475--475, 1994.
+
+\bibitem{joseph2018mastering}
+L.~Joseph and J.~Cacace, {\em Mastering ROS for Robotics Programming: Design, build, and simulate complex robots using the Robot Operating System}.
+\newblock Packt Publishing Ltd, 2018.
 
 \bibitem{koenig2004design}
 N.~Koenig and A.~Howard, ``Design and use paradigms for gazebo, an open-source multi-robot simulator,'' in {\em IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, (Sendai, Japan), pp.~2149--2154, IEEE, Sep 2004.
