@@ -29,53 +29,55 @@
 \contentsline {figure}{\numberline {4.4}{\ignorespaces load distribution coefficients at point 1 and 2}}{35}{figure.caption.33}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Forces acting on the scissor lift}}{37}{figure.caption.35}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces 2D Autocad model of the scissor lift Dimensions}}{41}{figure.caption.39}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces front and rear view of the mechanism}}{47}{figure.caption.45}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces top and bottom platforms}}{48}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces \subref {a} Plain bearings that provide smooth sliding motion and wear resistance at pivot points \subref {b} Rolling elements that reduce friction between moving parts and support radial and axial loads \subref {c} Cylindrical components that transfer rotational motion and support rotating elements in the mechanism \subref {d} \& \subref {e} Bolts, nuts, and pins used to secure components and allow for maintenance }}{49}{figure.caption.48}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Result for the stress analysis}}{51}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces result for displacement analysis}}{51}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces results for static strain analysis}}{52}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces AGV chassis structure}}{54}{figure.caption.52}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Add caption here}}{66}{figure.caption.53}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Caption 1}}{67}{figure.caption.54}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Caption 1}}{67}{figure.caption.55}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Caption 1}}{68}{figure.caption.56}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Caption 1}}{68}{figure.caption.57}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Add caption here}}{69}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Add caption here}}{71}{figure.caption.59}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Add caption here}}{63}{figure.caption.47}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Caption 1}}{64}{figure.caption.48}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Caption 1}}{64}{figure.caption.49}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Caption 1}}{65}{figure.caption.50}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Caption 1}}{65}{figure.caption.51}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Add caption here}}{66}{figure.caption.52}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Add caption here}}{68}{figure.caption.53}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces caption here not added by Gregory}}{82}{figure.caption.60}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces caption here not added by Gregory}}{79}{figure.caption.54}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Ubuntu 20.04}}{88}{figure.caption.61}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces ROS filesystem level}}{90}{figure.caption.62}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces List of files inside the package}}{91}{figure.caption.63}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Structure of a typical C++ ROS package}}{91}{figure.caption.64}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Structure of package.xml}}{93}{figure.caption.65}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Structure of the package.xml metapackage}}{94}{figure.caption.66}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Structure of the ROS graph layer}}{97}{figure.caption.68}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Graph of communication between nodes using topics}}{98}{figure.caption.69}%
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Communication between the ROS master and Hello World publisher and subscriber}}{104}{figure.caption.70}%
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Terminal messages while running the roscore command}}{108}{figure.caption.72}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Ubuntu 20.04}}{85}{figure.caption.55}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces ROS filesystem level}}{87}{figure.caption.56}%
-\contentsline {figure}{\numberline {8.3}{\ignorespaces List of files inside the package}}{88}{figure.caption.57}%
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Structure of a typical C++ ROS package}}{88}{figure.caption.58}%
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Structure of package.xml}}{90}{figure.caption.59}%
-\contentsline {figure}{\numberline {8.6}{\ignorespaces Structure of the package.xml metapackage}}{91}{figure.caption.60}%
-\contentsline {figure}{\numberline {8.7}{\ignorespaces Structure of the ROS graph layer}}{94}{figure.caption.62}%
-\contentsline {figure}{\numberline {8.8}{\ignorespaces Graph of communication between nodes using topics}}{95}{figure.caption.63}%
-\contentsline {figure}{\numberline {8.9}{\ignorespaces Communication between the ROS master and Hello World publisher and subscriber}}{101}{figure.caption.64}%
-\contentsline {figure}{\numberline {8.10}{\ignorespaces Terminal messages while running the roscore command}}{105}{figure.caption.66}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Gazebo Simulator}}{113}{figure.caption.73}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Empty world in Gazebo}}{114}{figure.caption.74}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces TurtleBot3 Waffle spawned in empty world}}{116}{figure.caption.75}%
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Gazebo Graphical User Interface left side pannel}}{117}{figure.caption.76}%
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Gazebo Graphical User Interface lower part}}{118}{figure.caption.77}%
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Gazebo Graphical User Interface top part}}{119}{figure.caption.78}%
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Example of force applied on one side of a seesaw in gazebo}}{119}{figure.caption.79}%
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Rviz (Ros Visualization)}}{120}{figure.caption.80}%
+\contentsline {figure}{\numberline {8.9}{\ignorespaces Teknofest competition real map layout}}{122}{figure.caption.81}%
+\contentsline {figure}{\numberline {8.10}{\ignorespaces White wooden floor with black lines in gazebo}}{123}{figure.caption.82}%
+\contentsline {figure}{\numberline {8.11}{\ignorespaces Example of Qr Code tag before a loading point}}{125}{figure.caption.83}%
+\contentsline {figure}{\numberline {8.12}{\ignorespaces Competition aera bounded by ad hoardings}}{127}{figure.caption.84}%
+\contentsline {figure}{\numberline {8.13}{\ignorespaces Competition area line interrupted by permanent obstacle}}{127}{figure.caption.85}%
+\contentsline {figure}{\numberline {8.14}{\ignorespaces Qr code tag placed at the intersection of line of the zone C and the station 2 }}{139}{figure.caption.86}%
+\contentsline {figure}{\numberline {8.15}{\ignorespaces Effect of lighting conditions in simulation environment}}{140}{figure.caption.87}%
+\contentsline {figure}{\numberline {8.16}{\ignorespaces Effect of lighting conditions in simulation environment}}{140}{figure.caption.88}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Gazebo Simulator}}{110}{figure.caption.67}%
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Empty world in Gazebo}}{111}{figure.caption.68}%
-\contentsline {figure}{\numberline {9.3}{\ignorespaces TurtleBot3 Waffle spawned in empty world}}{113}{figure.caption.69}%
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Gazebo Graphical User Interface left side pannel}}{114}{figure.caption.70}%
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Gazebo Graphical User Interface lower part}}{115}{figure.caption.71}%
-\contentsline {figure}{\numberline {9.6}{\ignorespaces Gazebo Graphical User Interface top part}}{116}{figure.caption.72}%
-\contentsline {figure}{\numberline {9.7}{\ignorespaces Example of force applied on one side of a seesaw in gazebo}}{116}{figure.caption.73}%
-\contentsline {figure}{\numberline {9.8}{\ignorespaces Rviz (Ros Visualization)}}{117}{figure.caption.74}%
-\contentsline {figure}{\numberline {9.9}{\ignorespaces Teknofest competition real map layout}}{119}{figure.caption.75}%
-\contentsline {figure}{\numberline {9.10}{\ignorespaces White wooden floor with black lines in gazebo}}{120}{figure.caption.76}%
-\contentsline {figure}{\numberline {9.11}{\ignorespaces Example of Qr Code tag before a loading point}}{122}{figure.caption.77}%
-\contentsline {figure}{\numberline {9.12}{\ignorespaces Competition aera bounded by ad hoardings}}{124}{figure.caption.78}%
-\contentsline {figure}{\numberline {9.13}{\ignorespaces Competition area line interrupted by permanent obstacle}}{124}{figure.caption.79}%
-\contentsline {figure}{\numberline {9.14}{\ignorespaces Qr code tag placed at the intersection of line of the zone C and the station 2 }}{136}{figure.caption.80}%
-\contentsline {figure}{\numberline {9.15}{\ignorespaces Effect of lighting conditions in simulation environment}}{137}{figure.caption.81}%
-\contentsline {figure}{\numberline {9.16}{\ignorespaces Effect of lighting conditions in simulation environment}}{137}{figure.caption.82}%
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {10.1}{\ignorespaces A visualization of the URDF link\cite {joseph2018mastering}}}{141}{figure.caption.83}%
-\contentsline {figure}{\numberline {10.2}{\ignorespaces A visualization of the URDF joint\cite {joseph2018mastering}}}{142}{figure.caption.84}%
-\contentsline {figure}{\numberline {10.3}{\ignorespaces A visualization of a robot model with joints and links\cite {joseph2018mastering}}}{143}{figure.caption.85}%
-\contentsline {figure}{\numberline {10.4}{\ignorespaces A visualization of a robot model with Rviz}}{150}{figure.caption.87}%
-\contentsline {figure}{\numberline {10.5}{\ignorespaces The joint level of the platform lifting mechanism}}{151}{figure.caption.88}%
+\contentsline {figure}{\numberline {9.1}{\ignorespaces A visualization of the URDF link\cite {joseph2018mastering}}}{144}{figure.caption.89}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces A visualization of the URDF joint\cite {joseph2018mastering}}}{145}{figure.caption.90}%
+\contentsline {figure}{\numberline {9.3}{\ignorespaces A visualization of a robot model with joints and links\cite {joseph2018mastering}}}{146}{figure.caption.91}%
+\contentsline {figure}{\numberline {9.4}{\ignorespaces A visualization of a robot model with Rviz}}{153}{figure.caption.93}%
+\contentsline {figure}{\numberline {9.5}{\ignorespaces The joint level of the platform lifting mechanism}}{154}{figure.caption.94}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

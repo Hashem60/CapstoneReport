@@ -572,10 +572,10 @@ Where:
   \begin{tcolorbox}[
     colback=red!5!white,colframe=red!75!black,
     title={\textbf{Mechanical advantage analysis}},
-    fonttitle=\bfseries, coltitle=white, width=\linewidth]
+    fonttitle=\bfseries, coltitle=white, width=0.98\linewidth]
   \begin{tabular}{|c|c|c|c|c|}
       \hline \rowcolor{red!20}
-      $\alpha$ (degrees) & Height (m) & Mechanical Advantage & Input Force (kN) & Output Force (kN) \\ \hline
+      $\alpha$ (degrees) & Height (m) & Mechanical Advantage &InputF(kN) & OutputF(kN) \\ \hline
       22 & 0.242 & 2.84 & 0.432 & 1.226 \\ \hline
       24 & 0.263 & 2.61 & 0.470 & 1.226 \\ \hline
       26 & 0.284 & 2.41 & 0.509 & 1.226 \\ \hline
@@ -1017,123 +1017,98 @@ mechanism, including precise component dimensions, assembly
 relationships, and kinematic analysis. The 3D model provided valuable
 insights into the spatial relationships between components and helped
 validate the design\textquotesingle s functionality.
-
 \begin{figure}[h]
 \centering
+\begin{subfigure}[b]{0.6\textwidth}
 \includegraphics[width=\textwidth]{img/image073.png}
 \caption{front and rear view of the mechanism}
-\end{figure}
-
-\begin{figure}
-\centering
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.6\textwidth}
 \includegraphics[width=\textwidth]{img/image075.png}
 \caption{top and bottom platforms}
+\end{subfigure}
 \end{figure}
+\begin{figure}[h]
+\centering
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{img/image077.png}
+  \caption{hinge (pin support)}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{img/image079.png}
+  \caption{\textbf{subfigure 9}:actuator cylinder}
+\end{subfigure}
+\end{figure}
+\begin{figure}
+\centering
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{img/image082.jpg}
+  \caption{single level scissor lift}
+\end{subfigure}
+\hfil
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{img/image083.jpg}
+  \caption{single level scissor lift}
+\end{subfigure}
+\end{figure}
+\newpage
+\subsection{Machine components (Scissor
+lifts)}\label{machine-components-scissor-lifts}
 
-% \begin{figure}
-% \centering
-% \includegraphics[width=2.34722in,height=1.27344in]{img/image9.png}
-% \caption{\textbf{Figure 8}:hinge (pin support)}
-% \end{figure}
+The key machine components of the scissor lift mechanism include several
+critical elements that work together to ensure reliable operation. The
+main structural components consist of the scissor arms, pivot joints,
+and platform assembly, each engineered to specific tolerances and
+material specifications. The actuator system, comprising electric
+components, provides the necessary force for lifting operations while
+maintaining precise control over the platform\textquotesingle s
+position.
+\begin{figure}[h]
+\centering
 
-% \begin{figure}
-% \centering
-% \includegraphics[width=2.64583in,height=1.76389in]{img/image10.png}
-% \caption{\textbf{Figure 9}:actuator cylinder}
-% \end{figure}
-
-% \begin{figure}
-% \centering
-% \includegraphics[width=3.52778in,height=2.30556in]{img/image11.jpeg}
-% \caption{\textbf{Figure 10}:single level scissor lift}
-% \end{figure}
-
-% \begin{figure}
-% \centering
-% \includegraphics[width=3.38657in,height=1.84722in]{img/image12.jpeg}
-% \caption{\textbf{Figure 11}:single level scissor lift}
-% \end{figure}
-
-% \subsection{Machine components (Scissor
-% lifts)}\label{machine-components-scissor-lifts}
-
-% The key machine components of the scissor lift mechanism include several
-% critical elements that work together to ensure reliable operation. The
-% main structural components consist of the scissor arms, pivot joints,
-% and platform assembly, each engineered to specific tolerances and
-% material specifications. The actuator system, comprising electric
-% components, provides the necessary force for lifting operations while
-% maintaining precise control over the platform\textquotesingle s
-% position.
-
-% \begin{longtable}[]{@{}
-%   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1804}}
-%   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8196}}@{}}
-% \caption{\textbf{Table 11}: Key components of the scissor lift mechanism
-% and their functional descriptions}\tabularnewline
-% \toprule\noalign{}
-% \begin{minipage}[b]{\linewidth}\raggedright
-% \textbf{Component}
-% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-% \textbf{Description}
-% \end{minipage} \\
-% \midrule\noalign{}
-% \endfirsthead
-% \toprule\noalign{}
-% \begin{minipage}[b]{\linewidth}\raggedright
-% \textbf{Component}
-% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-% \textbf{Description}
-% \end{minipage} \\
-% \midrule\noalign{}
-% \endhead
-% \bottomrule\noalign{}
-% \endlastfoot
-% Scissor Arms
-
-% \includegraphics[width=0.83278in,height=0.44444in]{img/image13.jpeg} &
-% Main structural members forming the \textquotesingle X\textquotesingle{}
-% pattern, typically made of steel or aluminum for strength and
-% durability \\
-% Hinge
-
-% \includegraphics[width=0.85262in,height=0.45139in]{img/image14.jpeg} &
-% Mechanical components that provide rotational freedom while restricting
-% translational movement at joint connections \\
-% Platform
-
-% \includegraphics[width=0.79167in,height=0.42081in]{img/image15.jpeg} &
-% Upper surface designed to support the load, including reinforcement
-% structures and safety rails \\
-% Linear Actuator
-
-% \includegraphics[width=0.80821in,height=0.40972in]{img/image16.jpeg} &
-% Electric motor-driven mechanism that provides the force for lifting and
-% lowering operations \\
-% Bushing
-
-% \includegraphics[width=0.83333in,height=0.59701in]{img/image17.jpeg} &
-% Plain bearings that provide smooth sliding motion and wear resistance at
-% pivot points \\
-% Bearing
-
-% \includegraphics[width=0.83333in,height=0.54146in]{img/image18.jpeg} &
-% Rolling elements that reduce friction between moving parts and support
-% radial and axial loads \\
-% Shaft
-
-% \includegraphics[width=0.82639in,height=0.4375in]{img/image19.jpeg} &
-% Cylindrical components that transfer rotational motion and support
-% rotating elements in the mechanism \\
-% Fasteners
-
-% \includegraphics[width=1.07562in,height=0.56944in]{img/image20.jpeg}
-
-% \includegraphics[width=0.86574in,height=0.45833in]{img/image21.jpeg} &
-% Bolts, nuts, and pins used to secure components and allow for
-% maintenance \\
-% \end{longtable}
-
+\begin{subfigure}[b]{0.30\textwidth}
+  \centering
+  \includegraphics[width=1\textwidth]{img/image093.jpg}
+  \caption[short]{}
+  \label{a}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.30\textwidth}
+  \centering
+  \includegraphics[width=1\textwidth]{img/image095.jpg}
+  \caption[short]{}
+  \label{b}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.30\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{img/image097.jpg}
+  \caption[short]{}
+  \label{c}
+\end{subfigure}
+\begin{subfigure}[b]{0.495\textwidth}
+  \centering
+  \includegraphics[width=0.5\textwidth]{img/image099.jpg}
+  \caption[short]{}
+  \label{d}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.495\textwidth}
+  \centering
+  \includegraphics[width=0.5\textwidth]{img/image101.jpg}
+  \caption[short]{}
+  \label{e}
+\end{subfigure}
+\caption{
+\subref{a} Plain bearings that provide smooth sliding motion and wear resistance at pivot points\\
+\subref{b} Rolling elements that reduce friction between moving parts and support radial and axial loads\\
+\subref{c} Cylindrical components that transfer rotational motion and support rotating elements in the mechanism\\
+\subref{d} \& \subref{e} Bolts, nuts, and pins used to secure components and allow for maintenance\\
+} 
+\end{figure}
+\newpage
 \subsection{Method of assembly}\label{method-of-assembly}
 
 The assembly process for the scissor lift mechanism follows a systematic
@@ -1209,11 +1184,11 @@ The results from these simulations were used to optimize the design and
 ensure that all components operate within their safe stress limits under
 normal operating conditions.
 
-% \begin{figure}
-% \centering
-% \includegraphics[width=4.55556in,height=2.46049in]{media/image22.jpeg}
-% \caption{\textbf{Figure 12}:Result for the stress analysis}
-% \end{figure}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{img/image103.jpg}
+\caption{Result for the stress analysis}
+\end{figure}
 
 The stress analysis results show the scissor lift mechanism in solid
 blue, with von Mises stress values close to the yield strength
@@ -1227,11 +1202,12 @@ load. The stress analysis of the lift was simulated with a single
 material for all the parts (Aluminum alloy 1066) so that a comparison
 can be made between the von mises stress and the yield strength.
 
-% \begin{figure}
-% \centering
-% \includegraphics[width=3.875in,height=2.58195in]{media/image23.jpeg}
-% \caption{\textbf{Figure 13}:result for displacement analysis}
-% \end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{img/image105.jpg}
+  \caption{result for displacement analysis}
+  \end{figure}
+  
 
 The displacement analysis results indicate that under a deformation
 scale factor of 15.0324, the maximum displacement occurs at the edge of
@@ -1243,11 +1219,12 @@ simulated with a two material for all the parts (Aluminum alloy 1066 and
 AISI Steel alloy) so that the region of max displacement can be
 identified.
 
-% \begin{figure}
-% \centering
-% \includegraphics[width=3.71032in,height=2.47222in]{media/image24.jpeg}
-% \caption{\textbf{Figure 14}:results for static strain analysis}
-% \end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{img/image107.jpg}
+  \caption{results for static strain analysis}
+  \end{figure}
+  
 
 The strain analysis results, visualized in blue throughout the
 structure, demonstrate that the scissor lift design operates well within
@@ -1263,6 +1240,7 @@ of the lift was simulated with a two material for all the parts
 (Aluminum alloy 1066 and AISI Steel alloy) so that the region of max
 strain can be identified.
 
+\newpage
 \section{AGV Chassis Design and Analysis
 Report}\label{agv-chassis-design-and-analysis-report}
 
@@ -1320,11 +1298,12 @@ The primary framework consists of:
   Fastening System: High-grade bolts with specified torque requirements
 \end{itemize}
 
-% \begin{figure}
-% \centering
-% \includegraphics[width=2.85417in,height=3.18306in]{media/image25.jpeg}
-% \caption{Figure 15: AGV chassis structure}
-% \end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.5\textwidth]{img/image110.jpg}
+  \caption{AGV chassis structure}
+  \end{figure}
+  
 
 \subsection{Component Integration}\label{component-integration}
 
@@ -1457,7 +1436,7 @@ areas, and enhanced joint design for optimal load distribution. This
 thorough analysis ensures the chassis maintains structural integrity and
 operational safety under specified load conditions.
 
-\chapter{\texorpdfstring{\textbf{CONCLUSION AND FUTURE
+\section{\texorpdfstring{\textbf{CONCLUSION AND FUTURE
 WORKS}}{CONCLUSION AND FUTURE WORKS}}\label{conclusion-and-future-works}
 
 This chapter has presented a comprehensive analysis of the AGV system
@@ -1500,56 +1479,4 @@ the AGV system will become more versatile, efficient, and safer, better
 serving the needs of modern industrial applications while maintaining
 its fundamental role in automated material transport and handling.
 
-% \chapter{APPENDIX}\label{appendix}
-
-% \chapter{}\label{section}
-
-% \chapter{REFERENCES}\label{references}
-
-% \begin{enumerate}
-% \def\labelenumi{\arabic{enumi}.}
-% \item
-%   METTLER TOLEDO Group
-% \item
-%   EUGENIU ZAINESCU: \emph{CALCULATION OF SINGLE LEVEL SCISSOR LIFT,
-%   2019.}
-% \item
-%   TIMKEN: \emph{DEEP GROOVE BALL BEARING CATALOG.}
-% \item
-%   R. C. Hibbeler: \emph{Engineering Mechanics Statics and Dynamics
-%   Fourteenth edition, 2016.}
-% \item
-%   MCLE 476 LECTURES: \emph{INTRODUCTION MECHANISMS AND KINEMATICS}
-% \item
-%   Eagle: \emph{aluminum catalogs-}
-% \item
-%   P. D. Smith and J. R. Wilson: \emph{"Design and Analysis of Automated
-%   Guided Vehicles,"} Journal of Industrial Engineering, vol. 45, no. 3,
-%   pp. 156-172, 2024.
-% \item
-%   R. Kumar: \emph{"Structural Analysis Using SolidWorks Simulation,"}
-%   Mechanical Design Engineering Handbook, 2nd ed. Academic Press, 2024.
-% \item
-%   M. Thompson: \emph{"Advanced Scissor Lift Mechanisms: Design and
-%   Implementation,"} International Journal of Mechanical Engineering,
-%   vol. 12, no. 4, pp. 78-92, 2023.
-% \item
-%   H. Chen and L. Zhang: \emph{"Load Analysis in AGV Chassis Design,"}
-%   Robotics and Automation Systems, vol. 33, pp. 245-260, 2024.
-% \item
-%   B. Anderson: \emph{"Material Selection for Industrial AGV
-%   Applications,"} Materials Today: Proceedings, vol. 28, pp. 1123-1135,
-%   2024.
-% \item
-%   K. Roberts: \emph{"Safety Standards in Automated Material Handling
-%   Systems,"} Industrial Safety Guidelines, 5th ed. Springer, 2023.
-% \item
-%   D. Williams and S. Brown: \emph{"Stress Analysis Techniques in
-%   Manufacturing Design,"} Manufacturing Technology Today, vol. 15, no.
-%   2, pp. 112-128, 2024.
-% \item
-%   T. Johnson: \emph{"Modern AGV Systems: Design Principles and
-%   Applications,"} Automation Engineering Review, vol. 8, no. 1, pp.
-%   45-62, 2024.
-% \end{enumerate}
 \end{document}

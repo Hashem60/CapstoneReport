@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  7 FEB 2025 19:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  7 FEB 2025 23:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -854,12 +854,12 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 [3]
 
 [4]
-<img/image1.jpg, id=185, 638.385pt x 435.12563pt>
+<img/image1.jpg, id=189, 638.385pt x 435.12563pt>
 File: img/image1.jpg Graphic file (type jpg)
 <use img/image1.jpg>
 Package pdftex.def Info: img/image1.jpg  used on input line 213.
 (pdftex.def)             Requested size: 264.61333pt x 180.3613pt.
-<img/image003.png, id=186, 1098.1025pt x 671.50874pt>
+<img/image003.png, id=190, 1098.1025pt x 671.50874pt>
 File: img/image003.png Graphic file (type png)
 <use img/image003.png>
 Package pdftex.def Info: img/image003.png  used on input line 236.
@@ -892,7 +892,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 
 
 [6]
-<img/image005.png, id=205, 821.0675pt x 821.0675pt>
+<img/image005.png, id=209, 821.0675pt x 821.0675pt>
 File: img/image005.png Graphic file (type png)
 <use img/image005.png>
 Package pdftex.def Info: img/image005.png  used on input line 321.
@@ -906,7 +906,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [7]
 
 [8 <./img/image005.png>]
-<img/image015.png, id=220, 598.235pt x 339.2675pt>
+<img/image015.png, id=224, 598.235pt x 339.2675pt>
 File: img/image015.png Graphic file (type png)
 <use img/image015.png>
 Package pdftex.def Info: img/image015.png  used on input line 393.
@@ -931,7 +931,7 @@ Overfull \hbox (1.33905pt too wide) in paragraph at lines 416--428
 
 
 [10]
-<img/image017.png, id=237, 294.993pt x 223.7085pt>
+<img/image017.png, id=241, 294.993pt x 223.7085pt>
 File: img/image017.png Graphic file (type png)
 <use img/image017.png>
 Package pdftex.def Info: img/image017.png  used on input line 457.
@@ -946,16 +946,11 @@ Overfull \hbox (3.42256pt too wide) in paragraph at lines 515--525
 
 
 [12]
-Overfull \hbox (42.62895pt too wide) in paragraph at lines 576--586
-[][] 
- []
-
-
 
 [13]
 
 [14]
-<img/image037.png, id=270, 834.86906pt x 266.49562pt>
+<img/image037.png, id=274, 834.86906pt x 266.49562pt>
 File: img/image037.png Graphic file (type png)
 <use img/image037.png>
 Package pdftex.def Info: img/image037.png  used on input line 663.
@@ -982,67 +977,160 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 [20]
-<img/image073.png, id=316, 505.89pt x 216.05719pt>
+<img/image073.png, id=320, 505.89pt x 216.05719pt>
 File: img/image073.png Graphic file (type png)
 <use img/image073.png>
 Package pdftex.def Info: img/image073.png  used on input line 1023.
-(pdftex.def)             Requested size: 441.01773pt x 188.35394pt.
-<img/image075.png, id=317, 277.035pt x 152.82094pt>
+(pdftex.def)             Requested size: 264.61333pt x 113.01302pt.
+<img/image075.png, id=321, 277.035pt x 152.82094pt>
 File: img/image075.png Graphic file (type png)
 <use img/image075.png>
-Package pdftex.def Info: img/image075.png  used on input line 1029.
-(pdftex.def)             Requested size: 441.01773pt x 243.28024pt.
+Package pdftex.def Info: img/image075.png  used on input line 1028.
+(pdftex.def)             Requested size: 264.61333pt x 145.96954pt.
+<img/image077.png, id=322, 218.31563pt x 118.19156pt>
+File: img/image077.png Graphic file (type png)
+<use img/image077.png>
+Package pdftex.def Info: img/image077.png  used on input line 1035.
+(pdftex.def)             Requested size: 198.45662pt x 107.44086pt.
+<img/image079.png, id=323, 240.9pt x 160.34906pt>
+File: img/image079.png Graphic file (type png)
+<use img/image079.png>
+Package pdftex.def Info: img/image079.png  used on input line 1040.
+(pdftex.def)             Requested size: 198.45662pt x 132.1012pt.
+<img/image082.jpg, id=324, 254.75175pt x 166.82326pt>
+File: img/image082.jpg Graphic file (type jpg)
+<use img/image082.jpg>
+Package pdftex.def Info: img/image082.jpg  used on input line 1047.
+(pdftex.def)             Requested size: 198.45662pt x 129.9587pt.
+<img/image083.jpg, id=325, 245.3895pt x 134.028pt>
+File: img/image083.jpg Graphic file (type jpg)
+<use img/image083.jpg>
+Package pdftex.def Info: img/image083.jpg  used on input line 1052.
+(pdftex.def)             Requested size: 198.45662pt x 108.39847pt.
 
 
-[21 <./img/image073.png>]
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22 <./img/image075.png>]
-Overfull \hbox (7.09064pt too wide) in paragraph at lines 1236--1245
+
+
+[21 <./img/image073.png> <./img/image075.png>]
+<img/image093.jpg, id=334, 77.1975pt x 61.758pt>
+File: img/image093.jpg Graphic file (type jpg)
+<use img/image093.jpg>
+Package pdftex.def Info: img/image093.jpg  used on input line 1073.
+(pdftex.def)             Requested size: 132.30666pt x 105.8579pt.
+<img/image095.jpg, id=335, 49.932pt x 39.7485pt>
+File: img/image095.jpg Graphic file (type jpg)
+<use img/image095.jpg>
+Package pdftex.def Info: img/image095.jpg  used on input line 1080.
+(pdftex.def)             Requested size: 132.30666pt x 105.34392pt.
+<img/image097.jpg, id=336, 40.4055pt x 32.193pt>
+File: img/image097.jpg Graphic file (type jpg)
+<use img/image097.jpg>
+Package pdftex.def Info: img/image097.jpg  used on input line 1087.
+(pdftex.def)             Requested size: 132.30666pt x 105.45316pt.
+<img/image099.jpg, id=337, 51.246pt x 41.0625pt>
+File: img/image099.jpg Graphic file (type jpg)
+<use img/image099.jpg>
+Package pdftex.def Info: img/image099.jpg  used on input line 1093.
+(pdftex.def)             Requested size: 109.1508pt x 87.46681pt.
+<img/image101.jpg, id=338, 41.7195pt x 33.1785pt>
+File: img/image101.jpg Graphic file (type jpg)
+<use img/image101.jpg>
+Package pdftex.def Info: img/image101.jpg  used on input line 1100.
+(pdftex.def)             Requested size: 109.1508pt x 86.80626pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[22 <./img/image077.png> <./img/image079.png> <./img/image082.jpg> <./img/image083.jpg>]
+
+[23 <./img/image093.jpg> <./img/image095.jpg> <./img/image097.jpg> <./img/image099.jpg> <./img/image101.jpg>]
+<img/image103.jpg, id=362, 330.1425pt x 178.3755pt>
+File: img/image103.jpg Graphic file (type jpg)
+<use img/image103.jpg>
+Package pdftex.def Info: img/image103.jpg  used on input line 1189.
+(pdftex.def)             Requested size: 441.01773pt x 238.29248pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<img/image105.jpg, id=363, 281.196pt x 187.245pt>
+File: img/image105.jpg Graphic file (type jpg)
+<use img/image105.jpg>
+Package pdftex.def Info: img/image105.jpg  used on input line 1207.
+(pdftex.def)             Requested size: 441.01773pt x 293.67526pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (7.09064pt too wide) in paragraph at lines 1212--1221
 []\OT1/ptm/m/n/12 The dis-place-ment anal-y-sis re-sults in-di-cate that un-der a de-for-ma-tion scale fac-tor of 15.0324,
  []
 
+<img/image107.jpg, id=364, 269.0415pt x 179.361pt>
+File: img/image107.jpg Graphic file (type jpg)
+<use img/image107.jpg>
+Package pdftex.def Info: img/image107.jpg  used on input line 1224.
+(pdftex.def)             Requested size: 441.01773pt x 294.01979pt.
 
-
-[23]
 
 [24]
 
-[25]
-Overfull \hbox (7.24893pt too wide) in paragraph at lines 1420--1426
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[25 <./img/image103.jpg> <./img/image105.jpg>]
+
+[26 <./img/image107.jpg>]
+<img/image110.jpg, id=381, 205.9695pt x 230.0595pt>
+File: img/image110.jpg Graphic file (type jpg)
+<use img/image110.jpg>
+Package pdftex.def Info: img/image110.jpg  used on input line 1303.
+(pdftex.def)             Requested size: 220.50887pt x 246.29813pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[27]
+
+[28 <./img/image110.jpg>]
+Overfull \hbox (7.24893pt too wide) in paragraph at lines 1399--1405
 \OT1/ptm/m/n/12 con-di-tions, demon-strat-ing seam-less in-te-gra-tion with scis-sor lift op-er-a-tions and ef-fec-tive weight
  []
 
 
 
-[26]
-Chapter 2.
+[29]
 
+[30]
 
-[27
-
-]
-
-[28] (./Boima.aux)
+[31] (./Boima.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
  ***********
 Package rerunfilecheck Info: File `Boima.out' has not changed.
-(rerunfilecheck)             Checksum: A378E10C5E13C9594F90CAB459C586FA;6611.
+(rerunfilecheck)             Checksum: 270C35BA1BB1D75C72AE8C018299427F;6872.
  ) 
 Here is how much of TeX's memory you used:
- 34570 strings out of 473600
- 625618 string characters out of 5732737
+ 34706 strings out of 473600
+ 628331 string characters out of 5732737
  1943908 words of memory out of 5000000
- 56787 multiletter control sequences out of 15000+600000
- 589430 words of font info for 95 fonts, out of 8000000 for 9000
+ 56912 multiletter control sequences out of 15000+600000
+ 591534 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 138i,16n,162p,2826b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 138i,16n,162p,2826b,677s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Boima.pdf (28 pages, 504105 bytes).
+Output written on Boima.pdf (31 pages, 914692 bytes).
 PDF statistics:
- 428 PDF objects out of 1000 (max. 8388607)
- 359 compressed objects within 4 object streams
- 117 named destinations out of 1000 (max. 500000)
- 357 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 478 PDF objects out of 1000 (max. 8388607)
+ 386 compressed objects within 4 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 430 words of extra memory for PDF output out of 10000 (max. 10000000)
 
