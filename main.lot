@@ -1,14 +1,22 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces LM2596 Voltage Regulator Specifications}}{10}{table.caption.5}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces DC-DC Constant Current Boost Converter Specifications and Features}}{11}{table.caption.7}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Buck-Boost Converter Specifications}}{12}{table.caption.9}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Stepper Motor Specifications (Model: 23E1KBK20-20)}}{15}{table.caption.11}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Specifications of the linear actuator model JS-TGZ-U3}}{16}{table.caption.13}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces Specifications of the Closed-Loop Stepper Driver}}{18}{table.caption.15}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces Features and Specifications of the IBT-2 Motor Driver Module}}{19}{table.caption.17}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Primitive types and their serialization in C++ and Python.}}{44}{table.caption.17}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces ROS Distributions Table}}{56}{table.caption.21}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Primitive types and their serialization in C++ and Python.}}{64}{table.caption.43}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces ROS Distributions Table}}{76}{table.caption.47}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7.1}{\ignorespaces Essential Dependencies for Simulating a URDF in Gazebo}}{97}{table.caption.42}%
+\contentsline {table}{\numberline {8.1}{\ignorespaces Essential Dependencies for Simulating a URDF in Gazebo}}{117}{table.caption.68}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {10.1}{\ignorespaces here is the list of components}}{113}{table.10.1}%
+\contentsline {table}{\numberline {11.1}{\ignorespaces here is the list of components}}{133}{table.11.1}%

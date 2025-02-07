@@ -2,6 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2024)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: ieeetr.bst
+A level-1 auxiliary file: sublatex/parfait/ECI.aux
 A level-1 auxiliary file: sublatex/Opryrmi/Opryrmi.aux
 A level-1 auxiliary file: sublatex/Gregoire/Gregoire.aux
 A level-1 auxiliary file: sublatex/hashem/ROS.aux
@@ -9,47 +10,51 @@ A level-1 auxiliary file: sublatex/parfait/simulation_environment.aux
 A level-1 auxiliary file: sublatex/hashem/urdf.aux
 A level-1 auxiliary file: sublatex/felly/felly.aux
 Database file #1: references.bib
-Warning--entry type for "ros_urdf_xml" isn't style-file defined
---line 97 of file references.bib
-You've used 16 entries,
+Warning--entry type for "OrientalMotorAGV" isn't style-file defined
+--line 313 of file references.bib
+Warning--entry type for "LinEngineering_AGV" isn't style-file defined
+--line 331 of file references.bib
+Warning--entry type for "AMC_AGV_Benefits" isn't style-file defined
+--line 345 of file references.bib
+You've used 20 entries,
             1876 wiz_defined-function locations,
-            574 strings with 6043 characters,
-and the built_in function-call counts, 3645 in all, are:
-= -- 381
-> -- 98
+            595 strings with 6555 characters,
+and the built_in function-call counts, 4373 in all, are:
+= -- 456
+> -- 114
 < -- 0
-+ -- 41
-- -- 25
-* -- 214
-:= -- 495
-add.period$ -- 23
-call.type$ -- 16
-change.case$ -- 14
++ -- 49
+- -- 29
+* -- 245
+:= -- 591
+add.period$ -- 30
+call.type$ -- 20
+change.case$ -- 18
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 180
-empty$ -- 397
-format.name$ -- 25
-if$ -- 916
+cite$ -- 20
+duplicate$ -- 213
+empty$ -- 488
+format.name$ -- 29
+if$ -- 1103
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 12
-newline$ -- 58
-num.names$ -- 15
-pop$ -- 76
+int.to.str$ -- 20
+missing$ -- 13
+newline$ -- 73
+num.names$ -- 19
+pop$ -- 103
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 125
+skip$ -- 149
 stack$ -- 0
-substring$ -- 222
-swap$ -- 64
+substring$ -- 254
+swap$ -- 73
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 39
-width$ -- 18
-write$ -- 158
-(There was 1 warning)
+while$ -- 46
+width$ -- 22
+write$ -- 195
+(There were 3 warnings)
