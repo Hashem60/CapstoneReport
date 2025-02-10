@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nt}{\PYGZlt{}xacro:include}\PYG{+w}{ }\PYG{n+na}{filename=}\PYG{l+s}{\PYGZdq{}\PYGZdl{}(find ros\PYGZus{}robot\PYGZus{}pkg)/urdf/definition.xacro\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\end{Verbatim}

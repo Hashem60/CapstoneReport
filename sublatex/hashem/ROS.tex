@@ -1,29 +1,29 @@
 \documentclass[../../main]{subfiles}
 \begin{document}
-\chapter{ROS}
-we will introduce basic ROS concepts and the ROS package management system in order to approach ROS
-programming. In this chapter, we will go through ROS concepts such
-as the ROS master, the ROS nodes, the ROS parameter server, and ROS
-messages and services, all while discussing what we need to install ROS
-and how to get started with the ROS master.\\
-In this chapter, we will cover the following topics:
+\section{ROS}
+The Robot Operating System (ROS) is a set of software libraries and tools that help you build robot applications. 
+From drivers to state-of-the-art algorithms, and with powerful developer tools, \cite{ros_website}
+To effectively approach ROS programming, it's essential to first understand the foundational concepts of ROS and its package management system. 
+We will explore key ROS components, including the ROS master, nodes, parameter server, messages, and services. 
+Along the way, we will also discuss the necessary steps for installing ROS and initiating work with the ROS master.\\
+In the subsequent sections, we will explore the following topics:
 \begin{itemize}
-\item  Why should we learn ROS?
-\item Understanding the ROS filesystem level.
-\item Understanding ROS computation graph level.
-\item ROS community level.
+\item  Why ROS?
+\item  the ROS filesystem level.
+\item  ROS computation graph level.
+\item  ROS community level.
 \end{itemize}
 \section*{Technical requirements}
 To follow this chapter, the only thing you need is a 
 standard computer running \href{https://releases.ubuntu.com/20.04/}{Ubuntu 20.04 LTS} or a Debian 10 GNU/Linux 
 distribution.
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{img/ubuntu.png}
     \caption{Ubuntu 20.04}
 \end{figure}
 \newpage
-\section{Why should we use ROS?}\cite{joseph2018mastering}
+\section{Why ROS?}\cite{joseph2018mastering}
 \emph{Robot Operating System (ROS)} is a flexible framework that provides various tools and
 libraries for writing robotic software. It offers several powerful features to help developers
 in tasks such as message passing, distributed computing, code reusing, and implementing
@@ -34,8 +34,7 @@ to establish a standard way to program robots while offering off-the-shelf softw
 components that can be easily integrated with custom robotic applications. There are
 many reasons to choose ROS as a programming framework, and some of them are as
 follows:
-\begin{itemize}
-\item \textbf{High-end capabilities:}ROS comes with ready-to-use functionalities. For example,
+\subsection{High-end capabilities:}ROS comes with ready-to-use functionalities. For example,
     the \\\emph{Simultaneous Localization and Mapping (SLAM)} and \emph{Adaptive Monte
     Carlo Localization (AMCL)} packages in ROS can be used for having autonomous
     navigation in mobile robots, while the \lstinline!MoveIt! package can be used for motion
@@ -43,24 +42,24 @@ follows:
     robot software without any hassle. In several cases, these packages are enough for
     having core robotics tasks on different platforms. Also, these capabilities are highly
     configurable; we can fine-tune each one using various parameters.
-\item \textbf{Tons of tools:} The ROS ecosystem is packed with tons of tools for debugging,
+\subsection{Tons of tools:} The ROS ecosystem is packed with tons of tools for debugging,
     visualizing, and having a simulation. The tools, such as \emph{rqt\_gui, RViz}, and \emph{Gazebo},
     are some of the strongest open source tools for debugging, visualization, and
     simulation. A software framework that has this many tools is very rare.
-\item \textbf{Support for high-end sensors and actuators:} ROS allows us to use different device
+\subsection{Support for high-end sensors and actuators:} ROS allows us to use different device
     drivers and the interface packages of various sensors and actuators in robotics. Such
     high-end sensors include 3D LIDAR, laser scanners, depth sensors, actuators, and
     more. We can interface these components with ROS without any hassle.
-\item \textbf{Inter-platform operability:} The ROS message-passing middleware allows
+\subsection{Inter-platform operability:} The ROS message-passing middleware allows
     communication between different programs. In ROS, this middleware is known
     as nodes. These nodes can be programmed in any language that has ROS client
     libraries. We can write high-haveance nodes in C++ or C and other nodes in Python
     or Java.
-\item \textbf{Modularity:}One of the issues that can occur in most standalone robotic
+\subsection{Modularity:}One of the issues that can occur in most standalone robotic
     applications is that if any of the threads of the main code crash, the entire robot
     application can stop. In ROS, the situation is different; we are writing different
     nodes for each process, and if one node crashes, the system can still work.
-\item \textbf{Concurrent resource handling:} Handling a hardware resource via more than two
+\subsection{Concurrent resource handling:} Handling a hardware resource via more than two
 processes is always a headache. Imagine that we want to process an image from a
 camera for face detection and motion detection; we can either write the code as a
 single entity that can do both, or we can write a single-threaded piece of code for
@@ -70,7 +69,7 @@ devices using ROS topics from the ROS drivers. Any number of ROS nodes can
 subscribe to the image message from the ROS camera driver, and each node can
 have different functionalities. This can reduce the complexity in computation and
 also increase the debugging ability of the entire system.
-\end{itemize}
+
 
 Most high-end robotics companies are now porting their software to ROS.
 This trend is also visible in industrial robotics, in which companies are switching from
@@ -79,7 +78,7 @@ Now that we know why it is convenient to study ROS, we can start introducing its
 concepts. There are mainly three levels in ROS: the filesystem level, the computation graph
 level, and the community level. We will briefly have a look at each level.
 
-\section{Understanding the ROS filesystem level}
+\section{the ROS filesystem level}
 ROS is more than a development framework. We can refer to ROS as a meta-OS, since
 it offers not only tools and libraries but even OS-like functions, such as hardware
 abstraction, package management, and a developer toolchain. Like a real operating
@@ -178,9 +177,8 @@ package. Here are some of the rosbash commands:
     \end{itemize}
     The definition of package.xml in a typical package is shown in the following
     code:
-    \begin{figure}
         
-        \begin{lstlisting}[style=xmlstyle]
+        \begin{minted}{xml}
             <?xml version="1.0"?>
             <package>
             <name>hello world</name>
@@ -194,13 +192,10 @@ package. Here are some of the rosbash commands:
             <run_depend>roscpp</run_depend>
             <run_depend>rospy</run_depend>
             <run_depend>std_msgs</run_depend>
-            
             <export>
-            </export>
-            </package>
-        \end{lstlisting}
-        \caption{Structure of package.xml}
-    \end{figure}
+            </export> </package>
+        \end{minted}
+
         The package.xml file also contains information about the compilation.\\ The \texttt{<build\_
         depend></build\_depend>} tag includes the packages that are necessary for building
         the source code of the package. The packages inside the \texttt{<run\_depend></run\_
@@ -211,11 +206,11 @@ Metapackages are specialized packages that require only one file; that is, a pac
 file.
 Metapackages simply group a set of multiple packages as a single logical package. In the
 package.xml file, the metapackage contains an export tag, as shown here:
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     <export>
     <metapackage/>
     </export>
-\end{lstlisting}
+\end{minted}
 Also, in metapackages, there are no \texttt{<buildtool\_depend>} dependencies for catkin;
 there are only \texttt{<run\_depend>} dependencies, which are the packages that are grouped
 inside the metapackage.\\
@@ -223,17 +218,17 @@ inside the metapackage.\\
 The ROS navigation stack is a good example of somewhere that contains metapackages. If
 ROS and its navigation package are installed, we can try using the following command by
 switching to the navigation metapackage folder:
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\begin{minted}{bash}
     roscd navigation
-    \end{lstlisting}
+    \end{minted}
     Open package.xml using your text editor (gedit, in the following case):
-    \begin{lstlisting}[language=bash, frame=shadowbox]
+    \begin{minted}{xml}
     gedit package.xml
-        \end{lstlisting}
+        \end{minted}
     \newpage
         This is a lengthy file; here is a stripped-down version of it:
 \begin{figure}[ht]
-        \begin{lstlisting}[style=xmlstyle]
+        \begin{minted}{xml}
             <?xml version="1.0"?>
             <package>
             <name>navigation</name>
@@ -251,7 +246,7 @@ switching to the navigation metapackage folder:
             <metapackage/>
             </export>
             </package>
-        \end{lstlisting}
+        \end{minted}
         \caption{Structure of the package.xml metapackage}
     \end{figure}
     This file contains several pieces of information about the package, such as a brief
@@ -270,15 +265,15 @@ split into field types and field names. The field type is the data type of the t
 message, while the field name is the name of it.
 
 Here is an example of message definitions:
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\begin{minted}{bash}
     int32 number
-\end{lstlisting}
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\end{minted}
+\begin{minted}{bash}
     string name
-\end{lstlisting}
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\end{minted}
+\begin{minted}{bash}
     float32 speed
-\end{lstlisting}
+\end{minted}
 Here, the first part is the field type and the second is the field name. The field type is
 the data type, and the field name can be used to access the value from the message. For
 example, we can use msg.number to access the value of the number from the message.
@@ -316,21 +311,21 @@ Here is a table showing some of the built-in field types that we can use in our 
 \end{table}
 
 ROS provides a set of complex and more structured message files that are designed to cover a specific application's necessity, such as exchanging common geometrical (geometry\_msgs) or sensor (sensor\_msgs) information. These messages are composed of different primitive types. A special type of ROS message is called a message header. This header can carry information, such as time, frame of reference or frame\_id, and sequence number. Using the header, we will get numbered messages and more clarity about which component is sending the current message. The header information is mainly used to send data such as robot joint transforms. Here is the definition of the header:
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\begin{minted}{bash}
     uint32 seq
-\end{lstlisting}
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\end{minted}
+\begin{minted}{bash}
     time stamp
-\end{lstlisting}
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\end{minted}
+\begin{minted}{bash}
     string frame_id
-\end{lstlisting}
+\end{minted}
 
 The rosmsg command tool can be used to inspect the message header and the field types.
 The following command helps view the message header of a particular message:
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\begin{minted}{bash}
     rosmsg show std_msgs/Header
-\end{lstlisting}
+\end{minted}
 This will give you an output like the preceding example's message header. We will look
 at the \texttt{rosmsg} command and how to work with custom message definitions later in this
 chapter.
@@ -339,25 +334,17 @@ chapter.
 ROS services are a type of request/response communication between ROS nodes. One node will send a request and wait until it gets a response from the other. Similar to the message definitions when using the .msg file, we must define the service definition in another file called .\texttt{srv}, which must be kept inside the \texttt{srv} subdirectory of the package.
 
 An example service description format is as follows:
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\begin{minted}[style=default]{bash}
     #Request message type
-\end{lstlisting}
-\begin{lstlisting}[language=bash, frame=shadowbox]
     string req
-\end{lstlisting}
-\begin{lstlisting}[language=bash, frame=shadowbox]
     ---
-\end{lstlisting}
-\begin{lstlisting}[language=bash, frame=shadowbox]
     #Response message type
-\end{lstlisting}
-\begin{lstlisting}[language=bash, frame=shadowbox]
     string res
-\end{lstlisting}
+\end{minted}
 The first section is the message type of the request, which is separated by ---, while the
 next section contains the message type of the response. In these examples, both Request
 and Response are strings.
-\section{Understanding the ROS computation graph level}
+\section{the ROS computation graph level}
 Computation in ROS is done using a network of ROS nodes. This computation network is called the computation graph. The main concepts in the computation graph are ROS \textbf{nodes}, \textbf{master}, \textbf{parameter server}, \textbf{messages}, \textbf{topics}, \textbf{services}, and \textbf{bags}. Each concept in the graph is contributed to this graph in different ways.
 
 The ROS communication-related packages, including core client libraries, such as roscpp and rospython, and the implementation of concepts, such as topics, nodes, parameters, and services, are included in a stack called ros\_comm (http://wiki.ros.org/ros\_comm).
@@ -420,7 +407,7 @@ Using nodes can make the system fault-tolerant. Even if a node crashes, an entir
 All running nodes should have a name assigned to help us identify them. For example, /camera\_node could be the name of a node that is broadcasting camera images.
 
 There is a rosbash tool for introspecting ROS nodes. The \texttt{rosnode} command can be used to gather information about an ROS node. Here are the usages of \textbf{rosnode}:
-\newpage
+
 \begin{itemize}
     \item \texttt{rosnode info [node\_name]}: This will print out information about the node.
     \item \texttt{rosnode kill [node\_name]}: This will kill a running node.
@@ -497,9 +484,9 @@ Here are the commands for recording and playing back a bag file:
 \end{itemize}
 The full, detailed list of commands can be found by using the following command in a
 Terminal:
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\begin{minted}{bash}
     rosbag play -h
-\end{lstlisting}
+\end{minted}
 There is a GUI tool that we can use to handle how bag files are recorded and played back called \texttt{rqt\_bag}. To learn more about \texttt{rqt\_bag}, go to \url{https://wiki.ros.org/rqt_bag}.
 \newpage
 \section{The ROS master}
@@ -510,14 +497,16 @@ When a node starts publishing to a topic, the node will give the details of the 
 As we've already stated, the nodes are written using ROS client libraries, such as \texttt{roscpp} and \texttt{rospy}. These clients interact with the ROS master using \textbf{XML Remote Procedure Call (XMLRPC)}-based APIs, which act as the backend of the ROS system APIs.
 
 The \texttt{ROS\_MASTER\_URI} environment variable contains the IP and port of the ROS master. Using this variable, ROS nodes can locate the ROS master. If this variable is wrong, communication between the nodes will not take place. When we use ROS in a single system, we can use the IP of a localhost or the name \texttt{localhost} itself. But in a distributed network, in which computation is done on different physical computers, we should define \texttt{ROS\_MASTER\_URI} properly; only then will the remote nodes be able to find each other and communicate with each other. We only need one master in a distributed system, and it should run on a computer in which all the other computers can ping it properly to ensure that remote ROS nodes can access the master.
-\newpage
-The following diagram shows how the ROS master interacts with publishing and
+
+
+The following diagram(\cref{fig:helloWorld}) shows how the ROS master interacts with publishing and
 subscribing nodes, with the publisher node publishing a string type topic with a \texttt{Hello
 World} message and the subscriber node subscribing to this topic:
 \begin{figure}[ht]
     \centering
     \includegraphics{img/helloWorld.jpg}
     \caption{Communication between the ROS master and Hello World publisher and subscriber}
+    \label{fig:helloWorld}
 \end{figure}
 When the publisher node starts advertising the \texttt{Hello World} message in a particular
 topic, the ROS master gets the details of the topic and the node. It will check whether any
@@ -570,20 +559,8 @@ These parameters can be changed dynamically when you're executing a node that us
 \newpage
 \section{ROS distributions}
 ROS updates are released with new ROS distributions. A new distribution of ROS is composed of an updated version of its core software and a set of new/updated ROS packages. ROS follows the same release cycle as the Ubuntu Linux distribution: a new version of ROS is released every 6 months. Typically, for each Ubuntu LTS version, an \textbf{LTS} version of ROS is released. \textbf{Long Term Support (LTS)} and means that the released software will be maintained for a long time (5 years in the case of ROS and Ubuntu).
-% \begin{table}[h]
-%     \centering
-%     \begin{longtable}{|m{2cm}|c|c|m{1.5cm}|m{1.5cm}|}
-%     \hline 
-%     \textbf{Distro} & \textbf{Release date} & \textbf{Poster} & \textbf{Turtle, turtle in tutorial EOL }& \textbf{date} \endfirsthead \hline
-% ROS Noetic Ninjemys (Recommended) & May 23rd, 2020 & \includegraphics[width=0.2\textwidth]{img/noetic.png} & \includegraphics[width=0.08\textwidth]{img/noetic_c.png} &May, 2025 (Focal EOL) \\ \hline
-% ROS Melodic Morenia & May 23rd, 2018 & \includegraphics[width=0.2\textwidth]{img/melodic_with_bg.png} & \includegraphics[width=0.08\textwidth]{img/melodic.png} &June 27, 2023 (Bionic EOL) \\ \hline
-% ROS Lunar Loggerhead & May 23rd, 2017 & \includegraphics[width=0.2\textwidth]{img/lunar_with_bg.png} & \includegraphics[width=0.08\textwidth]{img/lunar.png}& May, 2019 \\ \hline
-% ROS Kinetic Kame & May 23rd, 2016 & \includegraphics[width=0.2\textwidth]{img/kinetic.png} & \includegraphics[width=0.08\textwidth]{img/kinetic (1).png} &April, 2021 (Xenial EOL) \\ \hline
-%     \end{longtable}
-%     \caption{ROS Distributions Table}
-%     \label{tab:ros_distributions}
-%     \end{table}
-\begin{table}[h]
+
+\begin{table}[h!]
 \begin{tcolorbox}[
     colback=red!5!white,colframe=red!75!black,
     title={\textbf{Built-in Field Types for Message Definition}},
@@ -640,9 +617,9 @@ The rosout node will collect log messages from other ROS nodes and store them in
 
 Use the following command to run \texttt{roscore} on a Linux Terminal:
 
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\begin{minted}{bash}
     roscore
-\end{lstlisting}
+\end{minted}
 
 After running this command, we will see the following text in the Linux Terminal:
 \begin{figure}[ht]
@@ -661,7 +638,7 @@ After running this command, we will see the following text in the Linux Terminal
 
 The following is the content of \texttt{roscore.xml}:
 
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     <launch>
         <group ns="/">
             <param name="rosversion" command="rosversion roslaunch" />
@@ -669,7 +646,7 @@ The following is the content of \texttt{roscore.xml}:
             <node pkg="rosout" type="rosout" name="rosout" respawn="true"/>
         </group>
     </launch>
-\end{lstlisting}
+\end{minted}
 
 When the \texttt{roscore} command is executed, initially, the command checks the command-line argument for a new port number for \texttt{rosmaster}. If it gets the port number, it will start listening to the new port number; otherwise, it will use the default port. This port number and the \texttt{roscore.xml} launch file will be passed to the \texttt{roslaunch} system. The \texttt{roslaunch} system is implemented in a Python module; it will parse the port number and launch the \texttt{roscore.xml} file.
 
@@ -679,46 +656,46 @@ In the \texttt{roscore.xml} file, we can see that the ROS parameters and nodes a
 The \texttt{rosversion} and \texttt{rosdistro} parameters store the output of the \texttt{rosversion roslaunch} and \texttt{rosversion -d} commands using the \texttt{command} tag, which is a part of the ROS param tag. The \texttt{command} tag will execute the command mentioned in it and store the output of the command in these two parameters.
 
 \texttt{rosmaster} and the parameter server are executed inside \texttt{roslaunch} modules via the \texttt{ROS\_MASTER\_URI} address. This happens inside the \texttt{roslaunch} Python module.\\ \texttt{ROS\_MASTER\_URI} is a combination of the IP address and port that \texttt{rosmaster} is going to listen to. The port number can be changed according to the given port number in the \texttt{roscore} command.
-\newpage
+
 \subsection{Checking the roscore command's output}
 Let's check out the ROS topics and ROS parameters that are created after running roscore. The following command will list the active topics in the Terminal:
 
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\begin{minted}{bash}
     rostopic list
-\end{lstlisting}
+\end{minted}
 
 The list of topics is as follows, as per our discussion of the rosout node's subscribe /rosout topic. This contains all the log messages from the ROS nodes. /rosout\_agg will rebroadcast the log messages:
 
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\begin{minted}{bash}
     /rosout
     /rosout_agg
-\end{lstlisting}
+\end{minted}
 
 The following command lists the parameters that are available when running roscore. The following command is used to list the active ROS parameter:
 
-\begin{lstlisting}[language=bash, frame=shadowbox,basicstyle=\bfseries ]
+\begin{minted}{bash}
     rosparam list
-\end{lstlisting}
+\end{minted}
 
 These parameters are mentioned here; they provide the ROS distribution name, version, the address of the roslaunch server, and run\_id, where run\_id is a unique ID associated with a particular run of roscore:
 
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\begin{minted}{bash}
     /rosdistro
     /roslaunch/uris/host_robot_virtualbox_51189
     /rosversion
     /run_id
-\end{lstlisting}
+\end{minted}
 
 The list of ROS services that's generated when running roscore can be checked by using the following command:
 
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\begin{minted}{bash}
     rosservice list
-\end{lstlisting}
+\end{minted}
 The list of services that are running is as follows:
-\begin{lstlisting}[language=bash, frame=shadowbox]
+\begin{minted}{bash}
     /rosout/get_loggers
     /rosout/set_logger_level
-\end{lstlisting}
+\end{minted}
 These ROS services are generated for each ROS node, and they are used to set the logging
 levels.
 \end{document}

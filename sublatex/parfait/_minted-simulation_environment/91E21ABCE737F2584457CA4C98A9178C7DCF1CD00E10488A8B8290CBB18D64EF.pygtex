@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{        }...
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}wall\PYGZus{}time\PYGZgt{}}1738074256\PYG{+w}{ }296636706\PYG{n+nt}{\PYGZlt{}/wall\PYGZus{}time\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}iterations\PYGZgt{}}117145\PYG{n+nt}{\PYGZlt{}/iterations\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}model}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}black\PYGZus{}line\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}pose\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0.06\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/pose\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}scale\PYGZgt{}}1\PYG{+w}{ }1\PYG{+w}{ }1\PYG{n+nt}{\PYGZlt{}/scale\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}link}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}line\PYGZus{}link\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}pose\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0.06\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/pose\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}velocity\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/velocity\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}acceleration\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/acceleration\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}wrench\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/wrench\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}/link\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}/model\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}model}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}black\PYGZus{}line\PYGZus{}clone\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}pose\PYGZgt{}}0\PYG{+w}{ }2.33333\PYG{+w}{ }0.06\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/pose\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}scale\PYGZgt{}}1\PYG{+w}{ }1\PYG{+w}{ }1\PYG{n+nt}{\PYGZlt{}/scale\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}link}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}line\PYGZus{}link\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}pose\PYGZgt{}}0\PYG{+w}{ }2.33333\PYG{+w}{ }0.06\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/pose\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}velocity\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/velocity\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}acceleration\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/acceleration\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}wrench\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/wrench\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}/link\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}/model\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}model}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}black\PYGZus{}line\PYGZus{}clone\PYGZus{}0\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}pose\PYGZgt{}}0\PYG{+w}{ }4.666\PYG{+w}{ }0.06\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/pose\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}scale\PYGZgt{}}1\PYG{+w}{ }1\PYG{+w}{ }1\PYG{n+nt}{\PYGZlt{}/scale\PYGZgt{}}
+\PYG{+w}{          }...
+\end{Verbatim}

@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}launch\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}group}\PYG{+w}{ }\PYG{n+na}{ns=}\PYG{l+s}{\PYGZdq{}/\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}param}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}rosversion\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{command=}\PYG{l+s}{\PYGZdq{}rosversion roslaunch\PYGZdq{}}\PYG{+w}{ }\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}param}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}rosdistro\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{command=}\PYG{l+s}{\PYGZdq{}rosversion \PYGZhy{}d\PYGZdq{}}\PYG{+w}{ }\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}node}\PYG{+w}{ }\PYG{n+na}{pkg=}\PYG{l+s}{\PYGZdq{}rosout\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}rosout\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}rosout\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{respawn=}\PYG{l+s}{\PYGZdq{}true\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}/group\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}/launch\PYGZgt{}}
+\end{Verbatim}

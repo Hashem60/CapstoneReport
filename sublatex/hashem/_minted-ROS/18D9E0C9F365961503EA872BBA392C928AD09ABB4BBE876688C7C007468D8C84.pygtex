@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{c+c1}{\PYGZsh{}Request message type}
+
+\PYG{+w}{    }string\PYG{+w}{ }req
+\end{Verbatim}

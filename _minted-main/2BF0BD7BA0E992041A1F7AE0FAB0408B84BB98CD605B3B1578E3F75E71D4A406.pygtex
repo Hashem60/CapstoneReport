@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{            }\PYG{c+cp}{\PYGZlt{}?xml version=\PYGZdq{}1.0\PYGZdq{}?\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}package\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}name\PYGZgt{}}navigation\PYG{n+nt}{\PYGZlt{}/name\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}version\PYGZgt{}}l.\PYG{+w}{ }14.\PYG{+w}{ }O\PYG{n+nt}{\PYGZlt{}/version\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}description\PYGZgt{}}
+\PYG{+w}{            }A\PYG{+w}{ }2D\PYG{+w}{ }navigation\PYG{+w}{ }stack\PYG{+w}{ }that\PYG{+w}{ }takes\PYG{+w}{ }in\PYG{+w}{ }information\PYG{+w}{ }from\PYG{+w}{ }odometry,\PYG{+w}{ }sensor
+\PYG{+w}{            }streams,\PYG{+w}{ }and\PYG{+w}{ }a\PYG{+w}{ }goal\PYG{+w}{ }pose\PYG{+w}{ }and\PYG{+w}{ }outputs\PYG{+w}{ }safe\PYG{+w}{ }velocity\PYG{+w}{ }commands\PYG{+w}{ }that\PYG{+w}{ }are\PYG{+w}{ }sent
+\PYG{+w}{            }to\PYG{+w}{ }a\PYG{+w}{ }mobile\PYG{+w}{ }base.
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}/description\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}url\PYGZgt{}}http\PYG{+w}{ }:\PYG{+w}{ }//wiki.ros.org/navigation\PYG{n+nt}{\PYGZlt{}/url\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}buildtool\PYGZus{}depend\PYGZgt{}}catkin\PYG{n+nt}{\PYGZlt{}/buildtool\PYGZus{}depend\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}run\PYGZus{}depend\PYGZgt{}}amcl\PYG{n+nt}{\PYGZlt{}/run\PYGZus{}depend\PYGZgt{}}
+\PYG{+w}{            }...
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}export\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}metapackage/\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}/export\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}/package\PYGZgt{}}
+\end{Verbatim}

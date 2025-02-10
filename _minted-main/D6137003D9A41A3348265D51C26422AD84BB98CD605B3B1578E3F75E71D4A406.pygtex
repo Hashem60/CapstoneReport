@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}link}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}\PYGZlt{}name of the link\PYGZgt{}\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}inertial\PYGZgt{}}...........\PYG{n+nt}{\PYGZlt{}/inertial\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}visual\PYGZgt{}}\PYG{+w}{ }............\PYG{n+nt}{\PYGZlt{}/visual\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}collision\PYGZgt{}}..........\PYG{n+nt}{\PYGZlt{}/collision\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}/link\PYGZgt{}}
+\end{Verbatim}

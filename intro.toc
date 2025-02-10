@@ -1,4 +1,2 @@
-\contentsline {part}{I\hspace {1em}INTRODUCTION}{1}{part.1}%
-\contentsline {chapter}{\numberline {1}introduction}{2}{chapter.1}%
-\contentsline {part}{II\hspace {1em}LITERATURE SURVEY}{4}{part.2}%
-\contentsline {chapter}{\numberline {2}Theory of AGV Design}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}LITERATURE SURVEY}{3}{chapter.2}%

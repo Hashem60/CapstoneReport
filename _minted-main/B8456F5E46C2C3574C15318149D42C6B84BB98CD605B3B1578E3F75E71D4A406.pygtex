@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nt}{\PYGZlt{}launch\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}param}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}robot\PYGZus{}description\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{command=}\PYG{l+s}{\PYGZdq{}\PYGZdl{}(find xacro)/xacro \PYGZdl{}(find the\PYGZus{}pkg\PYGZus{}name)/.../my\PYGZus{}robot.urdf.xacro\PYGZdq{}}\PYG{+w}{ }\PYG{n+nt}{/\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}node}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}robot\PYGZus{}state\PYGZus{}publisher\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{pkg=}\PYG{l+s}{\PYGZdq{}robot\PYGZus{}state\PYGZus{}publisher\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}robot\PYGZus{}state\PYGZus{}publisher\PYGZdq{}}\PYG{+w}{ }\PYG{n+nt}{/\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}node}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}rviz\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{pkg=}\PYG{l+s}{\PYGZdq{}rviz\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}rviz\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{args=}\PYG{l+s}{\PYGZdq{}\PYGZhy{}d \PYGZdl{}(find the\PYGZus{}pkg\PYGZus{}name)/rviz/config.rviz\PYGZdq{}}\PYG{+w}{ }\PYG{n+nt}{/\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}node}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}joint\PYGZus{}state\PYGZus{}publisher\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{pkg=}\PYG{l+s}{\PYGZdq{}joint\PYGZus{}state\PYGZus{}publisher\PYGZdq{}}
+\PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}joint\PYGZus{}state\PYGZus{}publisher\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}node}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}joint\PYGZus{}state\PYGZus{}publisher\PYGZus{}gui\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{pkg=}\PYG{l+s}{\PYGZdq{}joint\PYGZus{}state\PYGZus{}publisher\PYGZus{}gui\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}joint\PYGZus{}state\PYGZus{}publisher\PYGZus{}gui\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{}  Controller Manager  \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}node}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}controller\PYGZus{}spawner\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{pkg=}\PYG{l+s}{\PYGZdq{}controller\PYGZus{}manager\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}spawner\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{respawn=}\PYG{l+s}{\PYGZdq{}false\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{output=}\PYG{l+s}{\PYGZdq{}screen\PYGZdq{}}
+\PYG{+w}{        }\PYG{n+na}{args=}\PYG{l+s}{\PYGZdq{}diff\PYGZus{}drive\PYGZus{}controller\PYGZdq{}}\PYG{+w}{ }\PYG{n+nt}{/\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}/launch\PYGZgt{}}
+\end{Verbatim}

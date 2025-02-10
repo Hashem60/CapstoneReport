@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}gazebo}\PYG{+w}{ }\PYG{n+na}{reference=}\PYG{l+s}{\PYGZdq{}link\PYGZus{}1\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}material\PYGZgt{}}Gazebo/Black\PYG{n+nt}{\PYGZlt{}/material\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}/gazebo\PYGZgt{}}
+\end{Verbatim}

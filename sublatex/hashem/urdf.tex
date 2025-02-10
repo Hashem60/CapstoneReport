@@ -1,7 +1,7 @@
 \documentclass[../../main]{subfiles}
 \begin{document}
 \lstset{language=XML}
-\chapter{URDF}
+\section{URDF}
 \section{Understanding robot modeling using URDF}
 The Unified Robot Description Format (URDF) is an XML file format used to describe the physical properties of a robot in robotics applications, in particular within the Robot Operating System (ROS) ecosystem. It specifies the robot structure (links, joints, sensors and actuators etc.)
 
@@ -18,13 +18,13 @@ collision properties.
 The syntax is as follows:
 \\
 % 
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     <link name="<name of the link>">
         <inertial>...........</inertial>
         <visual> ............</visual>
         <collision>..........</collision>
     </link>
-\end{lstlisting}
+\end{minted}
 The following is a representation of a single link. The Visual section represents the
 real link of the robot, and the area surrounding the real link is the Collision section.
 The Collision section encapsulates the real link to detect a collision before hitting
@@ -43,15 +43,15 @@ prismatic, fixed, floating,} and \emph{planar}.
 The syntax is as follows:
 \\
 
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     <joint name="<name of the joint>">
     <parent link="link1"/>
     <child link="link2"/>
     <calibration .... />
-    <dynamics damping ..../>
-    <limit effort .... />
+    <dynamics damping = ..../>
+    <limit effort = ..../>
     </joint>
-\end{lstlisting}
+\end{minted}
 A URDF joint is formed between two links; the first is called the Parent link, and the
 second is called the Child link. Note that a single joint can have a single parent and
 multiple children at the same time. The following is an illustration of a joint and its links:
@@ -68,14 +68,13 @@ joints of the robot.
 The syntax is as follows:
 \\
 
-\begin{lstlisting}[style=xmlstyle]
-    <robot name="<name of the robot>"
-    <link> ..... </link>
+\begin{minted}{xml}
+    <robot name="<name of the robot>">
     <link> ...... </link>
     <joint> ....... </joint>
     <joint> ........</joint>
     </robot>
-\end{lstlisting}
+\end{minted}
 A robot model consists of connected links and joints. Here is a visualization of the
 robot model:
 \begin{figure}[ht]
@@ -91,11 +90,11 @@ gazebo material properties, and more. The following shows an example that uses
 gazebo tags:
 \\
 
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     <gazebo reference="link_1">
     <material>Gazebo/Black</material>
     </gazebo>
-\end{lstlisting}
+\end{minted}
 You can find more about URDF tags at \href{http://wiki.ros.org/urdf/XML}{wiki.ros}\cite{ros_urdf_xml}. We are now
 ready to use the elements listed earlier to create a new robot from scratch. In the next
 section, we are going to create a new ROS package containing a description of the different
@@ -109,7 +108,7 @@ Good robot simulations can be obtained only if the robot dynamic parameters (for
 instance, its mass, inertia, and more) are correctly specified in the urdf file. In the
 following code, we include these parameters as part of the base\_link:
 
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     <link name="base_link">
     ...
     <collision>
@@ -123,14 +122,14 @@ following code, we include these parameters as part of the base\_link:
     <mass value="35"/>
     <inertia ixx="3.2" ixy="0.0" ixz="0.0" iyy="4" iyz="0.0" izz="$3.9"/>
  </inertial>  </link>
-\end{lstlisting}
+\end{minted}
 
 \subsection{Transmission:}
 \emph{transmission} tag is used to model the relationship between a robot's joints and actuators 
 (such as motors, servos, or other mechanical devices that provide motion). 
 It defines how power or motion is transferred from an actuator to a joint in the robot's structure.
 The <transmission> tag usually works with <joint> and <actuator> tags to specify how an actuator controls the motion of the robot's joints:
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     <robot name="example_robot">
 
     <!-- Define the joint -->
@@ -160,7 +159,7 @@ The <transmission> tag usually works with <joint> and <actuator> tags to specify
   
   </robot>
   
-\end{lstlisting}
+\end{minted}
 \lstinline!<joint>!: The joint joint\_1 connects the base\_link to link\_1 and allows rotational movement. 
 It has limits on effort and velocity.
 \lstinline!<transmission>!: The transmission trans\_1 links joint\_1 to the actuator (motor motor\_1). It uses the SimpleTransmission type.
@@ -242,10 +241,10 @@ xacro are as follows:
 
 Instead of .urdf, we need to use the .xacro extension for xacro files.
 Here is an explanation of the xacro code:
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     <?xml version="1.0"?>
     <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_robot">
-\end{lstlisting}
+\end{minted}
 These lines specify a namespace that is needed in all xacro files to parse the xacro file.
 After specifying the namespace, we need to add the name of the xacro file. In the next section.
 
@@ -259,7 +258,7 @@ An example of using properties is given here. We declare the length and radius o
 base link and the pan link. So, it will be easy to change the dimension here rather than
 changing the values in each one:
 
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     <!-- body value -->
     <xacro:property name="base_length" value="0.9" />
     <xacro:property name="base_width" value="0.85" />
@@ -272,11 +271,11 @@ changing the values in each one:
     <!-- Lidar values  -->
     <xacro:property name="lidar_r" value="0.1" />
     <xacro:property name="lidar_l" value="0.05" />
-\end{lstlisting}
+\end{minted}
 
 We can use the value of the variable by replacing the hardcoded value with the following
 definition:
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     <link name="base_link">
       <visual>
         <geometry>
@@ -285,7 +284,7 @@ definition:
           <origin xyz="0.0 0.0 ${base_hight/2.0}" rpy="0.0 0.0 0.0"/>
           <material name="green"/>
       </visual>
-\end{lstlisting}
+\end{minted}
 
 Here, the  value 0.9, is replaced with "{base\_length}", and "0.85" is
 replaced with "{base\_width}".
@@ -295,7 +294,7 @@ We can build mathematical expressions inside \${} using basic operations such as
 /, unary minus, and parentheses. Exponentiation and modulus are not supported yet. The
 following is a simple math expression used inside the code:
 
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     <link name="platform_link">
     <visual>
       <geometry>
@@ -304,13 +303,13 @@ following is a simple math expression used inside the code:
         <origin xyz="0.0 0.0 0" rpy="0.0 0.0 0.0"/>
         <material name="green"/>
     </visual>
-\end{lstlisting}
+\end{minted}
 
 \subsection{Using macros}
 One of the main features of xacro is that it supports macros. We can use xacro to reduce
 the length of complex definitions. Here is a xacro definition we used in our code to
 specify inertial values:
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     <xacro:macro name="box_inertia" params="m l w h xyz rpy">
     <inertial>
        <origin xyz="${xyz}" rpy="${rpy}"/>
@@ -318,39 +317,37 @@ specify inertial values:
        <inertia ixx="${ (m/12)*(h*h + l*l) }" ixy="0.0" ixz="0.0" iyy="${(m/12)*(w*w + l*l)}" iyz="0.0" izz="${(m/12) * (w*w + h*h)}"/>
     </inertial>
    </xacro:macro>
-\end{lstlisting}
+\end{minted}
 Here, the macro is named box\_inertia, and its parameters are \{m ,l ,w ,h ,xyz ,rpy\}. we can pass these parameters as a vaues or as a xacro property:
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
 <xacro:box_inertia m="5.0" l="${2*base_length}" w="${2*base_width}" h="${2*base_hight}" xyz="0.0 0.0 ${base_hight/2.0}" rpy="0.0 0.0 0.0"/>
-\end{lstlisting}
+\end{minted}
 
 \subsection{Including other xacro files}
 We can extend the capabilities of the robot xacro by including the xacro definition of
 sensors using the xacro:include tag. The following code snippet shows how to include
 a sensor definition in the robot xacro:
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
 <xacro:include filename="$(find ros_robot_pkg)/urdf/definition.xacro"/>
-\end{lstlisting}
+\end{minted}
 Here, we include a xacro file to call the definitions and the constants. 
 
 \section{Visualizing the 3D robot model in RViz}
 After designing the URDF, we can view it on RViz.
 We can create a launch file and put the following code into the launch folder:
-\begin{lstlisting}[style=xmlstyle]
-    <launch>
-  <param name="robot_description" command="$(find xacro)/xacro $(find the_pkg_name)/.../my_robot.urdf.xacro" />
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find the_pkg_name)/rviz/config.rviz" />
-  <node name="joint_state_publisher" pkg="joint_state_publisher" 
-  type="joint_state_publisher"/>
-  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"/>
-
+\begin{minted}{xml}
+<launch>
+<param name="robot_description" command="$(find xacro)/xacro $(find the_pkg_name)/.../my_robot.urdf.xacro" />
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find the_pkg_name)/rviz/config.rviz" />
+<node name="joint_state_publisher" pkg="joint_state_publisher" 
+type="joint_state_publisher"/>
+<node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"/>
 <!--  Controller Manager  -->
-
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen"
-        args="diff_drive_controller" />
+        args="diff_drive_controller" /> 
 </launch>
-    \end{lstlisting}
+    \end{minted}
     The \texttt{<launch>} tag is the root tag that defines the entire launch file. All the nodes and parameters that need to be launched are specified within this tag.
 
     The \texttt{<param>} tag sets the \texttt{robot\_description} parameter, which specifies the URDF or XACRO file that contains the robot’s description. In this case, the \texttt{command} attribute runs the \texttt{xacro} tool to process the \texttt{my\_robot.urdf.xacro} file located in the package specified by \texttt{the\_pkg\_name}.
@@ -364,9 +361,9 @@ We can create a launch file and put the following code into the launch folder:
     Finally, the \texttt{<node>} tag for the \texttt{controller\_spawner} node is responsible for spawning and managing robot controllers. The node is part of the \texttt{controller\_manager} package, and the \texttt{spawner} executable is used to spawn a controller, in this case, \texttt{diff\_drive\_controller}. The \texttt{respawn} attribute is set to \texttt{false}, so the node will not automatically respawn if it crashes. The \texttt{output} attribute ensures that the output from the node is printed to the screen.
     
     We can launch the model using the following command:
-    \begin{lstlisting}[language=bash, frame=shadowbox]
+    \begin{minted}{bash}
         roslaunch the_pkg_name launch_file_name.launch
-    \end{lstlisting}
+    \end{minted}
     If everything works correctly, we will get a pan-and-tilt mechanism in RViz, as shown
     here:
     \begin{figure}[ht]
@@ -385,15 +382,15 @@ parameter.
 We can see that an extra GUI came along with RViz; it contains sliders to control the
 Whell joints and the lifting platform joint. This GUI is called the Joint State Publisher Gui node and
 belongs to the \texttt{joint\_state\_publisher\_gui} package:
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
 <node name="joint_state_publisher_gui" pkg="joint_state_
 publisher_gui" type="joint_state_publisher_gui" />
-\end{lstlisting}
+\end{minted}
 
 We can include this node in the launch file using the following statement. The limits of
 pan-and-tilt should be mentioned inside the joint tag:
 
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
 <joint name="platform_lift_joint" type="prismatic">
     <origin xyz="0.0 0.0 ${base_hight / 2}" rpy="0.0 0.0 0.0"/>
     <parent link="base_link"/>
@@ -402,7 +399,7 @@ pan-and-tilt should be mentioned inside the joint tag:
     <!-- Motion range and limits -->
      <limit lower="0.0" upper="${base_hight/2}" effort="50" velocity="1.0"/> 
 </joint>
-\end{lstlisting}
+\end{minted}
 
 The \text{<limit>} tag defines the limits of effort, velocity, and angle. In this scenario,
 effort is the maximum force supported by this joint, expressed in Newton; lower

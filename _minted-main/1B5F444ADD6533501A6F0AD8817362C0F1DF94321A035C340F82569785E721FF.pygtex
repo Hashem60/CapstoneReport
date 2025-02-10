@@ -1,0 +1,110 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{      }\PYG{p}{...}
+\PYG{+w}{      }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{texture\PYGZus{}unit}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n}{texture}\PYG{+w}{ }\PYG{n}{intersection\PYGZus{}zone\PYGZus{}c\PYGZus{}station\PYGZus{}1}\PYG{p}{.}\PYG{n}{png}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n}{material}\PYG{+w}{ }\PYG{n}{intersection\PYGZus{}zone\PYGZus{}c\PYGZus{}station\PYGZus{}2}
+\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{technique}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n}{pass}
+\PYG{+w}{      }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{texture\PYGZus{}unit}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n}{texture}\PYG{+w}{ }\PYG{n}{intersection\PYGZus{}zone\PYGZus{}c\PYGZus{}station\PYGZus{}2}\PYG{p}{.}\PYG{n}{png}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n}{material}\PYG{+w}{ }\PYG{n}{intersection\PYGZus{}zone\PYGZus{}d\PYGZus{}station\PYGZus{}1}
+\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{technique}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n}{pass}
+\PYG{+w}{      }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{texture\PYGZus{}unit}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n}{texture}\PYG{+w}{ }\PYG{n}{intersection\PYGZus{}zone\PYGZus{}d\PYGZus{}station\PYGZus{}1}\PYG{p}{.}\PYG{n}{png}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n}{material}\PYG{+w}{ }\PYG{n}{intersection\PYGZus{}zone\PYGZus{}d\PYGZus{}station\PYGZus{}2}
+\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{technique}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n}{pass}
+\PYG{+w}{      }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{texture\PYGZus{}unit}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n}{texture}\PYG{+w}{ }\PYG{n}{intersection\PYGZus{}zone\PYGZus{}d\PYGZus{}station\PYGZus{}2}\PYG{p}{.}\PYG{n}{png}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n}{material}\PYG{+w}{ }\PYG{n}{intersection\PYGZus{}zone\PYGZus{}x\PYGZus{}station\PYGZus{}1}
+\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{technique}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n}{pass}
+\PYG{+w}{      }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{texture\PYGZus{}unit}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n}{texture}\PYG{+w}{ }\PYG{n}{intersection\PYGZus{}zone\PYGZus{}x\PYGZus{}station\PYGZus{}1}\PYG{p}{.}\PYG{n}{png}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n}{material}\PYG{+w}{ }\PYG{n}{intersection\PYGZus{}zone\PYGZus{}x\PYGZus{}station\PYGZus{}2}
+\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{technique}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n}{pass}
+\PYG{+w}{      }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{texture\PYGZus{}unit}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n}{texture}\PYG{+w}{ }\PYG{n}{intersection\PYGZus{}zone\PYGZus{}x\PYGZus{}station\PYGZus{}2}\PYG{p}{.}\PYG{n}{png}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n}{material}\PYG{+w}{ }\PYG{n}{intersection\PYGZus{}zone\PYGZus{}y\PYGZus{}station\PYGZus{}1}
+\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{technique}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n}{pass}
+\PYG{+w}{      }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{texture\PYGZus{}unit}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n}{texture}\PYG{+w}{ }\PYG{n}{intersection\PYGZus{}zone\PYGZus{}y\PYGZus{}station\PYGZus{}1}\PYG{p}{.}\PYG{n}{png}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n}{material}\PYG{+w}{ }\PYG{n}{intersection\PYGZus{}zone\PYGZus{}y\PYGZus{}station\PYGZus{}2}
+\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{technique}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n}{pass}
+\PYG{+w}{      }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{texture\PYGZus{}unit}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n}{texture}\PYG{+w}{ }\PYG{n}{intersection\PYGZus{}zone\PYGZus{}y\PYGZus{}station\PYGZus{}2}\PYG{p}{.}\PYG{n}{png}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{p}{...}
+\end{Verbatim}

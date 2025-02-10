@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{c+cp}{\PYGZlt{}?xml version=\PYGZdq{}1.0\PYGZdq{}?\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}robot}\PYG{+w}{ }\PYG{n+na}{xmlns:xacro=}\PYG{l+s}{\PYGZdq{}http://www.ros.org/wiki/xacro\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}my\PYGZus{}robot\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+\end{Verbatim}

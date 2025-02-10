@@ -1,213 +1,228 @@
-\contentsline {part}{I\hspace {1em}INTRODUCTION}{1}{part.1}%
-\contentsline {chapter}{\numberline {1}introduction}{2}{chapter.1}%
-\contentsline {part}{II\hspace {1em}LITERATURE SURVEY}{4}{part.2}%
-\contentsline {chapter}{\numberline {2}Theory of AGV Design}{5}{chapter.2}%
-\contentsline {part}{III\hspace {1em}REALISTIC CONSTRAINTS}{6}{part.3}%
-\contentsline {chapter}{\numberline {3}Electrical System Design}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Power Supply and Distribution}{8}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Battery System}{8}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Battery Management System (BMS)}{9}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Voltage Regulation and Power Distribution}{9}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Key Considerations}{13}{subsection.3.1.4}%
-\contentsline {section}{\numberline {3.2}Motor Control System}{13}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Motors and actuators}{14}{subsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.1.1}Motor drivers}{17}{subsubsection.3.2.1.1}%
-\contentsline {section}{\numberline {3.3}Sensors}{20}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}VL53L0X (Time-of-Flight Distance Sensor)}{20}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Weight Sensor - Load Sensor 50Kg}{20}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}RPLIDAR - 360}{21}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Camera HUSKYLENS}{22}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}IMU Sensor}{22}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Barcode Scanner GM65}{23}{subsection.3.3.6}%
-\contentsline {subsection}{\numberline {3.3.7}QTRX-HD-11RC}{24}{subsection.3.3.7}%
-\contentsline {section}{\numberline {3.4}Microcontroller and Communication}{24}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Raspberry Pi 4}{24}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}ESP32-S3-DevKitC-1}{25}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}RS232 to Bluetooth Series Adapter}{25}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}TP-Link TL-WR840N}{26}{subsection.3.4.4}%
-\contentsline {chapter}{\numberline {4}boima's chapter}{27}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Research Gaps and Justification}{28}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Physical Design Constraints}{29}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Load Capacity Constraints}{29}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Dimensional Constraints}{29}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Material and Manufacturing Constraints}{29}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Operational Constraints}{29}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Safety Requirements}{29}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Performance Constraints}{30}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Environmental Constraints}{30}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}METHOD OF AGV DESIGN}{31}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Single level Scissor lift design}{31}{subsection.4.4.1}%
-\contentsline {paragraph}{Note:}{33}{table.caption.31}%
-\contentsline {section}{\numberline {4.5}Load analysis}{34}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Load distribution:}{35}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Dead load}{36}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Forces on the lift}{37}{subsection.4.5.3}%
-\contentsline {section}{\numberline {4.6}Mechanical Advantage Analysis:}{39}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Kinematic analysis}{40}{subsection.4.6.1}%
-\contentsline {subsubsection}{\numberline {4.6.1.1}Range of motion}{40}{subsubsection.4.6.1.1}%
-\contentsline {subsection}{\numberline {4.6.2}Scissor lift dimensions}{40}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Mass center}{42}{subsection.4.6.3}%
-\contentsline {section}{\numberline {4.7}Mobility}{43}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Instantaneous center}{44}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Velocity Determination}{45}{section.4.9}%
-\contentsline {section}{\numberline {4.10}Actuation Mechanism}{45}{section.4.10}%
-\contentsline {subsection}{\numberline {4.10.1}Cylinder Extension Length (Z)}{46}{subsection.4.10.1}%
-\contentsline {subsubsection}{\numberline {4.10.1.1}Actuator Force Calculations}{46}{subsubsection.4.10.1.1}%
-\contentsline {section}{\numberline {4.11}CAD design}{47}{section.4.11}%
-\contentsline {subsection}{\numberline {4.11.1}Machine components (Scissor lifts)}{48}{subsection.4.11.1}%
-\contentsline {subsection}{\numberline {4.11.2}Method of assembly}{49}{subsection.4.11.2}%
-\contentsline {subsection}{\numberline {4.11.3}Stress Analysis}{50}{subsection.4.11.3}%
-\contentsline {section}{\numberline {4.12}AGV Chassis Design and Analysis Report}{53}{section.4.12}%
-\contentsline {subsection}{\numberline {4.12.1}Design Specifications}{53}{subsection.4.12.1}%
-\contentsline {subsection}{\numberline {4.12.2}Structural Configuration}{53}{subsection.4.12.2}%
-\contentsline {subsection}{\numberline {4.12.3}Component Integration}{54}{subsection.4.12.3}%
-\contentsline {subsection}{\numberline {4.12.4}Protective Framework}{54}{subsection.4.12.4}%
-\contentsline {subsection}{\numberline {4.12.5}Design Methodology}{54}{subsection.4.12.5}%
-\contentsline {subsection}{\numberline {4.12.6}Load Distribution Analysis}{56}{subsection.4.12.6}%
-\contentsline {subsection}{\numberline {4.12.7}Symmetry Stress Analysis}{57}{subsection.4.12.7}%
-\contentsline {subsection}{\numberline {4.12.8}Load Analysis with 2943N Force}{58}{subsection.4.12.8}%
-\contentsline {section}{\numberline {4.13}\textbf {CONCLUSION AND FUTURE WORKS}}{58}{section.4.13}%
-\contentsline {chapter}{\numberline {5}Design and Development of the Drive Wheel and Gearbox System}{60}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Critical Elements of AGV Design: Drive Wheels, Gear Mechanisms, and Material Selection}{61}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Design Constraints}{62}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Technical Constraints}{62}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Material Constraints}{62}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Engineering Standards and Lifelong learning}{63}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Engineering standards}{63}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Importance of Engineering Standards in AGV Drive System Design}{63}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}Manufacturing Constraints}{64}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Economic Constraints}{64}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Environmental Constraints}{65}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Health and Safety Problems}{66}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Manufacturability}{66}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Methodology}{67}{section.5.9}%
-\contentsline {subsection}{\numberline {5.9.1}Dimensions}{67}{subsection.5.9.1}%
-\contentsline {section}{\numberline {5.10}3D Modeling}{68}{section.5.10}%
-\contentsline {subsection}{\numberline {5.10.1}Middle Drive Wheels:}{68}{subsection.5.10.1}%
-\contentsline {subsection}{\numberline {5.10.2}Gearbox:}{68}{subsection.5.10.2}%
-\contentsline {subsection}{\numberline {5.10.3}Shafts and Bearings:}{68}{subsection.5.10.3}%
-\contentsline {subsection}{\numberline {5.10.4}Housing:}{69}{subsection.5.10.4}%
-\contentsline {subsection}{\numberline {5.10.5}Assembly}{70}{subsection.5.10.5}%
-\contentsline {section}{\numberline {5.11}Calculation and Analysis}{70}{section.5.11}%
-\contentsline {subsection}{\numberline {5.11.1}GEARBOX CALCULATION}{70}{subsection.5.11.1}%
-\contentsline {section}{\numberline {5.12}Motion Analysis:}{73}{section.5.12}%
-\contentsline {section}{\numberline {5.13}Conclusion}{74}{section.5.13}%
-\contentsline {chapter}{\numberline {6}gregory's chapter}{75}{chapter.6}%
-\contentsline {section}{\numberline {6.1}INTRODUCTION}{75}{section.6.1}%
-\contentsline {section}{\numberline {6.2}LITERATURE REVIEW}{76}{section.6.2}%
-\contentsline {section}{\numberline {6.3}REALISTIC CONSTRAINTS}{78}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Material Constraints}{78}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2} Manufacturing Constraints}{78}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Mechanical Constraints}{78}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}Environmental Constraints}{78}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Safety Constraints}{79}{subsection.6.3.5}%
-\contentsline {section}{\numberline {6.4}CHAPTER FOUR: METHODS USED TO DESIGN THE PROJECT}{79}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Objectives}{79}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Methodology}{79}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Bearing selection}{79}{subsection.6.4.3}%
-\contentsline {subsubsection}{\numberline {6.4.3.1}Inputs and Assumptions}{79}{subsubsection.6.4.3.1}%
-\contentsline {subsubsection}{\numberline {6.4.3.2} Shaft Diameter Calculation}{80}{subsubsection.6.4.3.2}%
-\contentsline {paragraph}{Angular Velocity}{80}{subsubsection.6.4.3.2}%
-\contentsline {paragraph}{Bending Moment and Shaft Diameter}{80}{equation.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.3.3}Bearing Selection}{80}{subsubsection.6.4.3.3}%
-\contentsline {paragraph}{ Load on the Bearing}{80}{subsubsection.6.4.3.3}%
-\contentsline {paragraph}{Dynamic Load Rating}{81}{subsubsection.6.4.3.3}%
-\contentsline {subsubsection}{\numberline {6.4.3.4}Material Properties of AISI 1045 Steel}{81}{subsubsection.6.4.3.4}%
-\contentsline {subsubsection}{\numberline {6.4.3.5}Calculation}{81}{subsubsection.6.4.3.5}%
-\contentsline {paragraph}{3.3 Number of Balls in the Bearing}{81}{Item.37}%
-\contentsline {subsubsection}{\numberline {6.4.3.6}Material Selection}{82}{subsubsection.6.4.3.6}%
-\contentsline {paragraph}{Shaft Material: AISI 1045 Steel}{82}{subsubsection.6.4.3.6}%
-\contentsline {paragraph}{Bearing Material: AISI 52100 Chrome Steel}{82}{subsubsection.6.4.3.6}%
-\contentsline {subsubsection}{\numberline {6.4.3.7}Compatibility Check}{82}{subsubsection.6.4.3.7}%
-\contentsline {subsection}{\numberline {6.4.4}Torque calculation}{85}{subsection.6.4.4}%
-\contentsline {subsubsection}{\numberline {6.4.4.1}Given Data:}{85}{subsubsection.6.4.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.4.2}Load Analysis:}{85}{subsubsection.6.4.4.2}%
-\contentsline {subsection}{\numberline {6.4.5}Results}{86}{subsection.6.4.5}%
-\contentsline {subsubsection}{\numberline {6.4.5.1}Shaft Measurements}{86}{subsubsection.6.4.5.1}%
-\contentsline {subsubsection}{\numberline {6.4.5.2}Bearing Details:}{86}{subsubsection.6.4.5.2}%
-\contentsline {subsubsection}{\numberline {6.4.5.3}Observance of Standards}{87}{subsubsection.6.4.5.3}%
-\contentsline {subsubsection}{\numberline {6.4.5.4}Total Torque Required:}{87}{subsubsection.6.4.5.4}%
-\contentsline {section}{\numberline {6.5}CONCLUSION AND FUTURE WORKS}{87}{section.6.5}%
-\contentsline {chapter}{\numberline {7}ROS}{89}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Why should we use ROS?}{90}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Understanding the ROS filesystem level}{91}{section.7.2}%
-\contentsline {section}{\numberline {7.3}ROS packages}{93}{section.7.3}%
-\contentsline {section}{\numberline {7.4}ROS metapackages}{95}{section.7.4}%
-\contentsline {section}{\numberline {7.5}ROS messages}{96}{section.7.5}%
-\contentsline {section}{\numberline {7.6}The ROS services}{98}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Understanding the ROS computation graph level}{98}{section.7.7}%
-\contentsline {subsection}{\numberline {7.7.1}Nodes}{99}{subsection.7.7.1}%
-\contentsline {subsection}{\numberline {7.7.2}Master}{99}{subsection.7.7.2}%
-\contentsline {subsection}{\numberline {7.7.3}Parameter server}{99}{subsection.7.7.3}%
-\contentsline {subsection}{\numberline {7.7.4}Topics}{99}{subsection.7.7.4}%
-\contentsline {subsection}{\numberline {7.7.5}Logging}{100}{subsection.7.7.5}%
-\contentsline {section}{\numberline {7.8}ROS nodes}{100}{section.7.8}%
-\contentsline {section}{\numberline {7.9}ROS messages}{102}{section.7.9}%
-\contentsline {section}{\numberline {7.10}ROS topics}{103}{section.7.10}%
-\contentsline {section}{\numberline {7.11}ROS services}{103}{section.7.11}%
-\contentsline {section}{\numberline {7.12}ROS bagfiles}{104}{section.7.12}%
-\contentsline {section}{\numberline {7.13}The ROS master}{105}{section.7.13}%
-\contentsline {section}{\numberline {7.14}ROS parameter}{106}{section.7.14}%
-\contentsline {section}{\numberline {7.15}ROS distributions}{109}{section.7.15}%
-\contentsline {section}{\numberline {7.16}Running the ROS master and the ROS parameter server}{110}{section.7.16}%
-\contentsline {subsection}{\numberline {7.16.1}Checking the roscore command's output}{113}{subsection.7.16.1}%
-\contentsline {chapter}{\numberline {8}SIMULATION ENVIRONMENT}{114}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Introduction to the Simulation Environment}{114}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Tools and Framework}{115}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Gazebo}{115}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}RViz}{122}{subsection.8.2.2}%
-\contentsline {section}{\numberline {8.3}Implementation of the Simulation Environment}{123}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Robot Model ( URDF/SDF )}{124}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}World Design}{124}{subsection.8.3.2}%
-\contentsline {subsubsection}{\numberline {8.3.2.1}Environment Layout}{125}{subsubsection.8.3.2.1}%
-\contentsline {subsubsection}{\numberline {8.3.2.2}Physics Configuration}{143}{subsubsection.8.3.2.2}%
-\contentsline {subsubsection}{\numberline {8.3.2.3}Realism Enhancements}{143}{subsubsection.8.3.2.3}%
-\contentsline {subsection}{\numberline {8.3.3}Control and sensor Integration}{143}{subsection.8.3.3}%
-\contentsline {section}{\numberline {8.4}Validation of the simulation}{143}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Challenges and Solutions}{143}{section.8.5}%
-\contentsline {part}{IV\hspace {1em}METHODS USED TO DESIGN THE PROJECT}{144}{part.4}%
-\contentsline {chapter}{\numberline {9}URDF}{145}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Understanding robot modeling using URDF}{145}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}link:}{145}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}joint:}{146}{subsection.9.1.2}%
-\contentsline {subsection}{\numberline {9.1.3}robot:}{146}{subsection.9.1.3}%
-\contentsline {subsection}{\numberline {9.1.4}gazebo:}{147}{subsection.9.1.4}%
-\contentsline {subsection}{\numberline {9.1.5}Adding physical and collision properties to a URDF model}{147}{subsection.9.1.5}%
-\contentsline {subsection}{\numberline {9.1.6}Transmission:}{149}{subsection.9.1.6}%
-\contentsline {section}{\numberline {9.2}Creating URDF model}{150}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Understanding robot modeling using xacro}{151}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Using properties}{151}{subsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.2.3}Using the math expression}{152}{subsection.9.2.3}%
-\contentsline {subsection}{\numberline {9.2.4}Using macros}{153}{subsection.9.2.4}%
-\contentsline {subsection}{\numberline {9.2.5}Including other xacro files}{153}{subsection.9.2.5}%
-\contentsline {section}{\numberline {9.3}Visualizing the 3D robot model in RViz}{153}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Interacting with joints in Rviz}{155}{subsection.9.3.1}%
-\contentsline {chapter}{\numberline {10}NAVIGATION}{157}{chapter.10}%
-\contentsline {section}{\numberline {10.1}For Line Detection and Following:}{158}{section.10.1}%
-\contentsline {subsection}{\numberline {10.1.1}Camera-based Vision Method:}{158}{subsection.10.1.1}%
-\contentsline {subsection}{\numberline {10.1.2}1.2 Control Algorithm for Line Following}{159}{subsection.10.1.2}%
-\contentsline {subsection}{\numberline {10.1.3}1.3 Integrating the Line Following with the Simulator}{160}{subsection.10.1.3}%
-\contentsline {section}{\numberline {10.2}For Building Map}{160}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}LIDAR}{160}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}QR Code Scanning}{160}{subsection.10.2.2}%
-\contentsline {chapter}{\numberline {11}Realistic constraints}{161}{chapter.11}%
-\contentsline {section}{\numberline {11.1}computational-power-and-resources}{161}{section.11.1}%
-\contentsline {subsection}{\numberline {11.1.1}cpu-and-gpu-limitations}{161}{subsection.11.1.1}%
-\contentsline {subsection}{\numberline {11.1.2}memory-ram-constraints}{161}{subsection.11.1.2}%
-\contentsline {subsection}{\numberline {11.1.3}real-time-performance}{162}{subsection.11.1.3}%
-\contentsline {section}{\numberline {11.2}complexity-of-the-simulated-environment}{162}{section.11.2}%
-\contentsline {subsection}{\numberline {11.2.1}size-and-detail-of-the-simulation}{162}{subsection.11.2.1}%
-\contentsline {subsection}{\numberline {11.2.2}dynamic-objects-and-movements}{162}{subsection.11.2.2}%
-\contentsline {section}{\numberline {11.3}simulating-sensor-data}{162}{section.11.3}%
-\contentsline {subsection}{\numberline {11.3.1}a.-sensor-data-processing-load}{162}{subsection.11.3.1}%
-\contentsline {subsection}{\numberline {11.3.2}real-time-sensor-fusion}{163}{subsection.11.3.2}%
-\contentsline {section}{\numberline {11.4}algorithmic-constraints}{163}{section.11.4}%
-\contentsline {subsection}{\numberline {11.4.1}a.-computational-cost-of-slam}{163}{subsection.11.4.1}%
-\contentsline {subsection}{\numberline {11.4.2}b.-path-planning-and-decision-making}{163}{subsection.11.4.2}%
-\contentsline {section}{\numberline {11.5}simulation-software-limitations}{164}{section.11.5}%
-\contentsline {subsection}{\numberline {11.5.1}simulation-engine-efficiency}{164}{subsection.11.5.1}%
-\contentsline {subsection}{\numberline {11.5.2}parallelization-and-multithreading}{164}{subsection.11.5.2}%
-\contentsline {section}{\numberline {11.6}simulating-real-time-constraints}{165}{section.11.6}%
-\contentsline {subsection}{\numberline {11.6.1}real-time-control-vs.-simulation-speed}{165}{subsection.11.6.1}%
-\contentsline {chapter}{\numberline {12}CONCLUSION AND FUTURE WORKS}{166}{chapter.12}%
-\contentsline {section}{\numberline {12.1}COST}{166}{section.12.1}%
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}LITERATURE SURVEY}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}REALISTIC CONSTRAINTS}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Design Constraints }{4}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Engineering Standards and Lifelong learning }{4}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Economical Analysis}{4}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Sustainability}{4}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Ethics Issues}{4}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Health and Safety Problems}{4}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Social and Political Issues}{4}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Environmental Impact}{4}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Manufacturability}{4}{section.3.9}%
+\contentsline {section}{\numberline {3.10}Risk management, and Change management}{4}{section.3.10}%
+\contentsline {section}{\numberline {3.11}Legal Consequences}{4}{section.3.11}%
+\contentsline {chapter}{\numberline {4}METHODS USED TO DESIGN THE PROJECT}{5}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Electrical System Design}{6}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Power Supply and Distribution}{7}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Battery System}{7}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Battery Management System (BMS)}{8}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Voltage Regulation and Power Distribution}{8}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Key Considerations}{12}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Motor Control System}{12}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Motors and actuators}{13}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}Motor drivers}{16}{subsubsection.4.3.1.1}%
+\contentsline {section}{\numberline {4.4}Sensors}{19}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}VL53L0X (Time-of-Flight Distance Sensor)}{19}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Weight Sensor - Load Sensor 50Kg}{19}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}RPLIDAR - 360}{20}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Camera HUSKYLENS}{21}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}IMU Sensor}{21}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}Barcode Scanner GM65}{22}{subsection.4.4.6}%
+\contentsline {subsection}{\numberline {4.4.7}QTRX-HD-11RC}{23}{subsection.4.4.7}%
+\contentsline {section}{\numberline {4.5}Microcontroller and Communication}{23}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Raspberry Pi 4}{23}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}ESP32-S3-DevKitC-1}{24}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}RS232 to Bluetooth Series Adapter}{24}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}TP-Link TL-WR840N}{25}{subsection.4.5.4}%
+\contentsline {section}{\numberline {4.6}boima's chapter}{26}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Research Gaps and Justification}{27}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Physical Design Constraints}{28}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Load Capacity Constraints}{28}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Dimensional Constraints}{28}{subsection.4.8.2}%
+\contentsline {subsection}{\numberline {4.8.3}Material and Manufacturing Constraints}{28}{subsection.4.8.3}%
+\contentsline {section}{\numberline {4.9}Operational Constraints}{28}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Safety Requirements}{28}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Performance Constraints}{29}{subsection.4.9.2}%
+\contentsline {subsection}{\numberline {4.9.3}Environmental Constraints}{29}{subsection.4.9.3}%
+\contentsline {section}{\numberline {4.10}METHOD OF AGV DESIGN}{30}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Single level Scissor lift design}{30}{subsection.4.10.1}%
+\contentsline {paragraph}{Note:}{32}{table.caption.34}%
+\contentsline {section}{\numberline {4.11}Load analysis}{33}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Load distribution:}{34}{subsection.4.11.1}%
+\contentsline {subsection}{\numberline {4.11.2}Dead load}{35}{subsection.4.11.2}%
+\contentsline {subsection}{\numberline {4.11.3}Forces on the lift}{36}{subsection.4.11.3}%
+\contentsline {section}{\numberline {4.12}Mechanical Advantage Analysis:}{38}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}Kinematic analysis}{39}{subsection.4.12.1}%
+\contentsline {subsubsection}{\numberline {4.12.1.1}Range of motion}{39}{subsubsection.4.12.1.1}%
+\contentsline {subsection}{\numberline {4.12.2}Scissor lift dimensions}{39}{subsection.4.12.2}%
+\contentsline {subsection}{\numberline {4.12.3}Mass center}{41}{subsection.4.12.3}%
+\contentsline {section}{\numberline {4.13}Mobility}{42}{section.4.13}%
+\contentsline {section}{\numberline {4.14}Instantaneous center}{43}{section.4.14}%
+\contentsline {section}{\numberline {4.15}Velocity Determination}{44}{section.4.15}%
+\contentsline {section}{\numberline {4.16}Actuation Mechanism}{44}{section.4.16}%
+\contentsline {subsection}{\numberline {4.16.1}Cylinder Extension Length (Z)}{45}{subsection.4.16.1}%
+\contentsline {subsubsection}{\numberline {4.16.1.1}Actuator Force Calculations}{45}{subsubsection.4.16.1.1}%
+\contentsline {section}{\numberline {4.17}CAD design}{46}{section.4.17}%
+\contentsline {subsection}{\numberline {4.17.1}Machine components (Scissor lifts)}{47}{subsection.4.17.1}%
+\contentsline {subsection}{\numberline {4.17.2}Method of assembly}{48}{subsection.4.17.2}%
+\contentsline {subsection}{\numberline {4.17.3}Stress Analysis}{49}{subsection.4.17.3}%
+\contentsline {section}{\numberline {4.18}AGV Chassis Design and Analysis Report}{52}{section.4.18}%
+\contentsline {subsection}{\numberline {4.18.1}Design Specifications}{52}{subsection.4.18.1}%
+\contentsline {subsection}{\numberline {4.18.2}Structural Configuration}{52}{subsection.4.18.2}%
+\contentsline {subsection}{\numberline {4.18.3}Component Integration}{53}{subsection.4.18.3}%
+\contentsline {subsection}{\numberline {4.18.4}Protective Framework}{53}{subsection.4.18.4}%
+\contentsline {subsection}{\numberline {4.18.5}Design Methodology}{53}{subsection.4.18.5}%
+\contentsline {subsection}{\numberline {4.18.6}Load Distribution Analysis}{55}{subsection.4.18.6}%
+\contentsline {subsection}{\numberline {4.18.7}Symmetry Stress Analysis}{56}{subsection.4.18.7}%
+\contentsline {subsection}{\numberline {4.18.8}Load Analysis with 2943N Force}{57}{subsection.4.18.8}%
+\contentsline {section}{\numberline {4.19}\textbf {CONCLUSION AND FUTURE WORKS}}{57}{section.4.19}%
+\contentsline {section}{\numberline {4.20}Design and Development of the Drive Wheel and Gearbox System}{59}{section.4.20}%
+\contentsline {section}{\numberline {4.21}Critical Elements of AGV Design: Drive Wheels, Gear Mechanisms, and Material Selection}{60}{section.4.21}%
+\contentsline {section}{\numberline {4.22}Design Constraints}{61}{section.4.22}%
+\contentsline {subsection}{\numberline {4.22.1}Technical Constraints}{61}{subsection.4.22.1}%
+\contentsline {subsection}{\numberline {4.22.2}Material Constraints}{61}{subsection.4.22.2}%
+\contentsline {section}{\numberline {4.23}Engineering Standards and Lifelong learning}{62}{section.4.23}%
+\contentsline {subsection}{\numberline {4.23.1}Engineering standards}{62}{subsection.4.23.1}%
+\contentsline {subsection}{\numberline {4.23.2}Importance of Engineering Standards in AGV Drive System Design}{62}{subsection.4.23.2}%
+\contentsline {section}{\numberline {4.24}Manufacturing Constraints}{63}{section.4.24}%
+\contentsline {section}{\numberline {4.25}Economic Constraints}{63}{section.4.25}%
+\contentsline {section}{\numberline {4.26}Environmental Constraints}{64}{section.4.26}%
+\contentsline {section}{\numberline {4.27}Health and Safety Problems}{65}{section.4.27}%
+\contentsline {section}{\numberline {4.28}Manufacturability}{65}{section.4.28}%
+\contentsline {section}{\numberline {4.29}Methodology}{66}{section.4.29}%
+\contentsline {subsection}{\numberline {4.29.1}Dimensions}{66}{subsection.4.29.1}%
+\contentsline {section}{\numberline {4.30}3D Modeling}{67}{section.4.30}%
+\contentsline {subsection}{\numberline {4.30.1}Middle Drive Wheels:}{67}{subsection.4.30.1}%
+\contentsline {subsection}{\numberline {4.30.2}Gearbox:}{67}{subsection.4.30.2}%
+\contentsline {subsection}{\numberline {4.30.3}Shafts and Bearings:}{67}{subsection.4.30.3}%
+\contentsline {subsection}{\numberline {4.30.4}Housing:}{68}{subsection.4.30.4}%
+\contentsline {subsection}{\numberline {4.30.5}Assembly}{69}{subsection.4.30.5}%
+\contentsline {section}{\numberline {4.31}Calculation and Analysis}{69}{section.4.31}%
+\contentsline {subsection}{\numberline {4.31.1}GEARBOX CALCULATION}{69}{subsection.4.31.1}%
+\contentsline {section}{\numberline {4.32}Motion Analysis:}{72}{section.4.32}%
+\contentsline {section}{\numberline {4.33}Conclusion}{73}{section.4.33}%
+\contentsline {section}{\numberline {4.34}gregory's chapter}{74}{section.4.34}%
+\contentsline {section}{\numberline {4.35}INTRODUCTION}{74}{section.4.35}%
+\contentsline {section}{\numberline {4.36}LITERATURE REVIEW}{75}{section.4.36}%
+\contentsline {section}{\numberline {4.37}REALISTIC CONSTRAINTS}{76}{section.4.37}%
+\contentsline {subsection}{\numberline {4.37.1}Material Constraints}{76}{subsection.4.37.1}%
+\contentsline {subsection}{\numberline {4.37.2} Manufacturing Constraints}{76}{subsection.4.37.2}%
+\contentsline {subsection}{\numberline {4.37.3}Mechanical Constraints}{76}{subsection.4.37.3}%
+\contentsline {subsection}{\numberline {4.37.4}Environmental Constraints}{76}{subsection.4.37.4}%
+\contentsline {subsection}{\numberline {4.37.5}Safety Constraints}{77}{subsection.4.37.5}%
+\contentsline {section}{\numberline {4.38}CHAPTER FOUR: METHODS USED TO DESIGN THE PROJECT}{77}{section.4.38}%
+\contentsline {subsection}{\numberline {4.38.1}Objectives}{77}{subsection.4.38.1}%
+\contentsline {subsection}{\numberline {4.38.2}Methodology}{77}{subsection.4.38.2}%
+\contentsline {subsection}{\numberline {4.38.3}Bearing selection}{77}{subsection.4.38.3}%
+\contentsline {subsubsection}{\numberline {4.38.3.1}Inputs and Assumptions}{77}{subsubsection.4.38.3.1}%
+\contentsline {subsubsection}{\numberline {4.38.3.2} Shaft Diameter Calculation}{78}{subsubsection.4.38.3.2}%
+\contentsline {paragraph}{Angular Velocity}{78}{subsubsection.4.38.3.2}%
+\contentsline {paragraph}{Bending Moment and Shaft Diameter}{78}{equation.4.38.18}%
+\contentsline {subsubsection}{\numberline {4.38.3.3}Bearing Selection}{78}{subsubsection.4.38.3.3}%
+\contentsline {paragraph}{ Load on the Bearing}{78}{subsubsection.4.38.3.3}%
+\contentsline {paragraph}{Dynamic Load Rating}{79}{subsubsection.4.38.3.3}%
+\contentsline {subsubsection}{\numberline {4.38.3.4}Material Properties of AISI 1045 Steel}{79}{subsubsection.4.38.3.4}%
+\contentsline {subsubsection}{\numberline {4.38.3.5}Calculation}{79}{subsubsection.4.38.3.5}%
+\contentsline {paragraph}{3.3 Number of Balls in the Bearing}{79}{Item.37}%
+\contentsline {subsubsection}{\numberline {4.38.3.6}Material Selection}{80}{subsubsection.4.38.3.6}%
+\contentsline {paragraph}{Shaft Material: AISI 1045 Steel}{80}{subsubsection.4.38.3.6}%
+\contentsline {paragraph}{Bearing Material: AISI 52100 Chrome Steel}{80}{subsubsection.4.38.3.6}%
+\contentsline {subsubsection}{\numberline {4.38.3.7}Compatibility Check}{80}{subsubsection.4.38.3.7}%
+\contentsline {subsection}{\numberline {4.38.4}Torque calculation}{83}{subsection.4.38.4}%
+\contentsline {subsubsection}{\numberline {4.38.4.1}Given Data:}{83}{subsubsection.4.38.4.1}%
+\contentsline {subsubsection}{\numberline {4.38.4.2}Load Analysis:}{83}{subsubsection.4.38.4.2}%
+\contentsline {subsection}{\numberline {4.38.5}Results}{84}{subsection.4.38.5}%
+\contentsline {subsubsection}{\numberline {4.38.5.1}Shaft Measurements}{84}{subsubsection.4.38.5.1}%
+\contentsline {subsubsection}{\numberline {4.38.5.2}Bearing Details:}{84}{subsubsection.4.38.5.2}%
+\contentsline {subsubsection}{\numberline {4.38.5.3}Observance of Standards}{85}{subsubsection.4.38.5.3}%
+\contentsline {subsubsection}{\numberline {4.38.5.4}Total Torque Required:}{85}{subsubsection.4.38.5.4}%
+\contentsline {section}{\numberline {4.39}CONCLUSION AND FUTURE WORKS}{85}{section.4.39}%
+\contentsline {section}{\numberline {4.40}ROS}{87}{section.4.40}%
+\contentsline {section}{\numberline {4.41}Why ROS?}{88}{section.4.41}%
+\contentsline {subsection}{\numberline {4.41.1}High-end capabilities:}{88}{subsection.4.41.1}%
+\contentsline {subsection}{\numberline {4.41.2}Tons of tools:}{88}{subsection.4.41.2}%
+\contentsline {subsection}{\numberline {4.41.3}Support for high-end sensors and actuators:}{88}{subsection.4.41.3}%
+\contentsline {subsection}{\numberline {4.41.4}Inter-platform operability:}{88}{subsection.4.41.4}%
+\contentsline {subsection}{\numberline {4.41.5}Modularity:}{89}{subsection.4.41.5}%
+\contentsline {subsection}{\numberline {4.41.6}Concurrent resource handling:}{89}{subsection.4.41.6}%
+\contentsline {section}{\numberline {4.42}the ROS filesystem level}{89}{section.4.42}%
+\contentsline {section}{\numberline {4.43}ROS packages}{90}{section.4.43}%
+\contentsline {section}{\numberline {4.44}ROS metapackages}{93}{section.4.44}%
+\contentsline {section}{\numberline {4.45}ROS messages}{94}{section.4.45}%
+\contentsline {section}{\numberline {4.46}The ROS services}{98}{section.4.46}%
+\contentsline {section}{\numberline {4.47}the ROS computation graph level}{98}{section.4.47}%
+\contentsline {subsection}{\numberline {4.47.1}Nodes}{99}{subsection.4.47.1}%
+\contentsline {subsection}{\numberline {4.47.2}Master}{99}{subsection.4.47.2}%
+\contentsline {subsection}{\numberline {4.47.3}Parameter server}{99}{subsection.4.47.3}%
+\contentsline {subsection}{\numberline {4.47.4}Topics}{99}{subsection.4.47.4}%
+\contentsline {subsection}{\numberline {4.47.5}Logging}{100}{subsection.4.47.5}%
+\contentsline {section}{\numberline {4.48}ROS nodes}{100}{section.4.48}%
+\contentsline {section}{\numberline {4.49}ROS messages}{101}{section.4.49}%
+\contentsline {section}{\numberline {4.50}ROS topics}{102}{section.4.50}%
+\contentsline {section}{\numberline {4.51}ROS services}{102}{section.4.51}%
+\contentsline {section}{\numberline {4.52}ROS bagfiles}{103}{section.4.52}%
+\contentsline {section}{\numberline {4.53}The ROS master}{105}{section.4.53}%
+\contentsline {section}{\numberline {4.54}ROS parameter}{106}{section.4.54}%
+\contentsline {section}{\numberline {4.55}ROS distributions}{108}{section.4.55}%
+\contentsline {section}{\numberline {4.56}Running the ROS master and the ROS parameter server}{109}{section.4.56}%
+\contentsline {subsection}{\numberline {4.56.1}Checking the roscore command's output}{111}{subsection.4.56.1}%
+\contentsline {section}{\numberline {4.57}SIMULATION ENVIRONMENT}{113}{section.4.57}%
+\contentsline {section}{\numberline {4.58}Introduction to the Simulation Environment}{113}{section.4.58}%
+\contentsline {section}{\numberline {4.59}Tools and Framework}{114}{section.4.59}%
+\contentsline {subsection}{\numberline {4.59.1}Gazebo}{114}{subsection.4.59.1}%
+\contentsline {subsection}{\numberline {4.59.2}RViz}{122}{subsection.4.59.2}%
+\contentsline {section}{\numberline {4.60}Implementation of the Simulation Environment}{123}{section.4.60}%
+\contentsline {subsection}{\numberline {4.60.1}Robot Model ( URDF/SDF )}{124}{subsection.4.60.1}%
+\contentsline {subsection}{\numberline {4.60.2}World Design}{124}{subsection.4.60.2}%
+\contentsline {subsubsection}{\numberline {4.60.2.1}Environment Layout}{125}{subsubsection.4.60.2.1}%
+\contentsline {subsubsection}{\numberline {4.60.2.2}Physics Configuration}{146}{subsubsection.4.60.2.2}%
+\contentsline {subsubsection}{\numberline {4.60.2.3}Realism Enhancements}{146}{subsubsection.4.60.2.3}%
+\contentsline {subsection}{\numberline {4.60.3}Control and sensor Integration}{146}{subsection.4.60.3}%
+\contentsline {section}{\numberline {4.61}Validation of the simulation}{146}{section.4.61}%
+\contentsline {section}{\numberline {4.62}Challenges and Solutions}{146}{section.4.62}%
+\contentsline {section}{\numberline {4.63}URDF}{147}{section.4.63}%
+\contentsline {section}{\numberline {4.64}Understanding robot modeling using URDF}{147}{section.4.64}%
+\contentsline {subsection}{\numberline {4.64.1}link:}{147}{subsection.4.64.1}%
+\contentsline {subsection}{\numberline {4.64.2}joint:}{148}{subsection.4.64.2}%
+\contentsline {subsection}{\numberline {4.64.3}robot:}{149}{subsection.4.64.3}%
+\contentsline {subsection}{\numberline {4.64.4}gazebo:}{150}{subsection.4.64.4}%
+\contentsline {subsection}{\numberline {4.64.5}Adding physical and collision properties to a URDF model}{150}{subsection.4.64.5}%
+\contentsline {subsection}{\numberline {4.64.6}Transmission:}{151}{subsection.4.64.6}%
+\contentsline {section}{\numberline {4.65}Creating URDF model}{152}{section.4.65}%
+\contentsline {subsection}{\numberline {4.65.1}Understanding robot modeling using xacro}{153}{subsection.4.65.1}%
+\contentsline {subsection}{\numberline {4.65.2}Using properties}{154}{subsection.4.65.2}%
+\contentsline {subsection}{\numberline {4.65.3}Using the math expression}{155}{subsection.4.65.3}%
+\contentsline {subsection}{\numberline {4.65.4}Using macros}{155}{subsection.4.65.4}%
+\contentsline {subsection}{\numberline {4.65.5}Including other xacro files}{156}{subsection.4.65.5}%
+\contentsline {section}{\numberline {4.66}Visualizing the 3D robot model in RViz}{156}{section.4.66}%
+\contentsline {subsection}{\numberline {4.66.1}Interacting with joints in Rviz}{157}{subsection.4.66.1}%
+\contentsline {section}{\numberline {4.67}NAVIGATION}{160}{section.4.67}%
+\contentsline {section}{\numberline {4.68}For Line Detection and Following:}{160}{section.4.68}%
+\contentsline {subsection}{\numberline {4.68.1}Camera-based Vision Method:}{160}{subsection.4.68.1}%
+\contentsline {subsection}{\numberline {4.68.2}1.2 Control Algorithm for Line Following}{162}{subsection.4.68.2}%
+\contentsline {subsection}{\numberline {4.68.3}1.3 Integrating the Line Following with the Simulator}{162}{subsection.4.68.3}%
+\contentsline {section}{\numberline {4.69}For Building Map}{163}{section.4.69}%
+\contentsline {subsection}{\numberline {4.69.1}LIDAR}{163}{subsection.4.69.1}%
+\contentsline {subsection}{\numberline {4.69.2}QR Code Scanning}{163}{subsection.4.69.2}%
+\contentsline {section}{\numberline {4.70}Realistic constraints}{163}{section.4.70}%
+\contentsline {section}{\numberline {4.71}computational-power-and-resources}{163}{section.4.71}%
+\contentsline {subsection}{\numberline {4.71.1}cpu-and-gpu-limitations}{163}{subsection.4.71.1}%
+\contentsline {subsection}{\numberline {4.71.2}memory-ram-constraints}{163}{subsection.4.71.2}%
+\contentsline {subsection}{\numberline {4.71.3}real-time-performance}{164}{subsection.4.71.3}%
+\contentsline {section}{\numberline {4.72}complexity-of-the-simulated-environment}{164}{section.4.72}%
+\contentsline {subsection}{\numberline {4.72.1}size-and-detail-of-the-simulation}{164}{subsection.4.72.1}%
+\contentsline {subsection}{\numberline {4.72.2}dynamic-objects-and-movements}{164}{subsection.4.72.2}%
+\contentsline {section}{\numberline {4.73}simulating-sensor-data}{165}{section.4.73}%
+\contentsline {subsection}{\numberline {4.73.1}a.-sensor-data-processing-load}{165}{subsection.4.73.1}%
+\contentsline {subsection}{\numberline {4.73.2}real-time-sensor-fusion}{165}{subsection.4.73.2}%
+\contentsline {section}{\numberline {4.74}algorithmic-constraints}{165}{section.4.74}%
+\contentsline {subsection}{\numberline {4.74.1}a.-computational-cost-of-slam}{165}{subsection.4.74.1}%
+\contentsline {subsection}{\numberline {4.74.2}b.-path-planning-and-decision-making}{166}{subsection.4.74.2}%
+\contentsline {section}{\numberline {4.75}simulation-software-limitations}{166}{section.4.75}%
+\contentsline {subsection}{\numberline {4.75.1}simulation-engine-efficiency}{166}{subsection.4.75.1}%
+\contentsline {subsection}{\numberline {4.75.2}parallelization-and-multithreading}{166}{subsection.4.75.2}%
+\contentsline {section}{\numberline {4.76}simulating-real-time-constraints}{167}{section.4.76}%
+\contentsline {subsection}{\numberline {4.76.1}real-time-control-vs.-simulation-speed}{167}{subsection.4.76.1}%
+\contentsline {chapter}{\numberline {5}CONCLUSION AND FUTURE WORKS}{168}{chapter.5}%
+\contentsline {section}{\numberline {5.1}COST}{168}{section.5.1}%

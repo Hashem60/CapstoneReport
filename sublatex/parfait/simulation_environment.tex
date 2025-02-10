@@ -1,7 +1,7 @@
 \documentclass[../../main]{subfiles}
 
 \begin{document}
-\chapter{SIMULATION ENVIRONMENT}
+\section{SIMULATION ENVIRONMENT}
 \lstset{language=XML}
 \section{Introduction to the Simulation Environment}
 In developing a control strategy for mobile robots such as Automated Guided Vehicles (AGVs),
@@ -70,7 +70,7 @@ cameras, and IMUs—to be published as ROS messages while also enabling ROS-base
 Additionally, the plugin supports \texttt{ros\_control}, making it possible to implement position, velocity, and effort controllers, 
 which are essential for tuning PID loops before testing them on real actuators.
 
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     <launch>
   <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
   <arg name="x_pos" default="0.0"/>
@@ -86,11 +86,15 @@ which are essential for tuning PID loops before testing them on real actuators.
     <arg name="debug" value="false"/>
   </include>
 
-  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
+  <param name="robot_description" command=
+  "$(find xacro)/xacro --inorder 
+$(find turtlebot3_description)/
+urdf/turtlebot3_$(arg model).urdf.xacro" />
 
-  <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" args="-urdf -model turtlebot3_$(arg model) -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" args="-urdf -model turtlebot3_$(arg model) -x $(arg x_pos) -y 
+  $(arg y_pos) -z $(arg z_pos) -param robot_description" />
 </launch>
-\end{lstlisting}
+\end{minted}
 The provided example demonstrates how the \textbf{ROS Plugin for Gazebo} enables the spawning and control of a robot model 
 within a simulated environment, enabling \textbf{smooth and efficient integration} with the \textbf{Robot Operating System (ROS)}. 
 The launch file initializes an empty \textbf{Gazebo} world and loads a robot model described in a 
@@ -351,7 +355,7 @@ ensuring that the robot's interaction with its surroundings is as realistic as p
     approach makes it easier to tweak the lines for different test scenarios, ensuring 
     flexibility and quick adjustments during development and testing.
     
-    \begin{lstlisting}[style=xmlstyle]
+    \begin{minted}{xml}
         ...
         <wall_time>1738074256 296636706</wall_time>
         <iterations>117145</iterations>
@@ -379,7 +383,7 @@ ensuring that the robot's interaction with its surroundings is as realistic as p
           <pose>0 4.666 0.06 0 -0 0</pose>
           <scale>1 1 1</scale>
           ...
-    \end{lstlisting}
+    \end{minted}
 
     Additionally, QR code tags were placed at key locations, such as loading/unloading points, stations, and before 
     turns, to provide the robot with precise location information.
@@ -409,7 +413,7 @@ with the material set to a white color to represent the wooden floor's appearanc
 
 \newpage
 
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     <model name='wooden_floor'>
     <static>1</static>
     <pose>0 0 0.01 0 -0 0</pose>
@@ -453,7 +457,7 @@ with the material set to a white color to represent the wooden floor's appearanc
     </link>
   </model>
   
-\end{lstlisting}
+\end{minted}
 
     \item \textbf{Obstacles and Load Platforms:} The environment includes various \textbf{obstacles} such as walls and 
     dynamic objects, designed to challenge the robot's obstacle avoidance and path planning abilities. 
@@ -505,7 +509,7 @@ collision responses. The platform's legs also incorporate both \texttt{<collisio
 allowing them to contribute to the overall stability of the structure while ensuring that the physics engine correctly 
 simulates interactions such as impacts, weight distribution, and external forces acting on the table.  
 
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     <model name='platform'>
       <link name='table_surface'>
         <inertial>
@@ -545,9 +549,9 @@ simulates interactions such as impacts, weight distribution, and external forces
           <max_contacts>10</max_contacts>
         </collision>
         ...
-\end{lstlisting}
+\end{minted}
 \newpage  
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
         ... 
         <visual name='surface_visual'>
           <pose>0 0 0.367 0 -0 0</pose>
@@ -566,9 +570,9 @@ simulates interactions such as impacts, weight distribution, and external forces
         </visual>
         ...
 
-\end{lstlisting}
+\end{minted}
 
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
       ...
       <link name='front_left_leg'>
         <inertial>
@@ -638,7 +642,7 @@ simulates interactions such as impacts, weight distribution, and external forces
             <ixy>0</ixy>
             <ixz>0</ixz>
         ...
-\end{lstlisting}
+\end{minted}
     \newpage
     Ad hoardings and obstacles were incorporated into the environment using a simple yet effective approach. 
     A cube shape was used to create the basic geometry of these objects, with their dimensions adjusted to meet the specific requirements of the simulation. 
@@ -655,7 +659,7 @@ simulates interactions such as impacts, weight distribution, and external forces
     These lines demonstrate how the hoardings models were assigned the name \texttt{cube\_test} during the individual SDF design phase of the world. 
     The code defines the geometry, textures, and physical properties for the hoardings.
 
-\begin{lstlisting}[style=xmlstyle]
+\begin{minted}{xml}
     ...
     model name='cube_test_clone_clone'>
       <link name='link_0'>
@@ -756,12 +760,12 @@ simulates interactions such as impacts, weight distribution, and external forces
       <enable_wind>0</enable_wind>
      </model>
      ...
-\end{lstlisting}
+\end{minted}
 The design of the QR codes followed a similar approach to most other models in the 
 world. Each QR code was represented by a textured cube, with textures made to 
 resemble the unique images that contain the right location information.
 \newpage
-    \begin{lstlisting}[style=xmlstyle]
+    \begin{minted}{xml}
       <?xml version='1.0'?>
       <sdf version='1.7'>
         <model name='qr_code'>
@@ -792,7 +796,7 @@ resemble the unique images that contain the right location information.
         </model>
       </sdf>
     
-    \end{lstlisting}
+    \end{minted}
 
 The above SDF code represents the individual model of the QR code. It contains 
 only visual information and does not define any physical properties, as the QR 
@@ -827,7 +831,7 @@ By separating the texture definition into the \texttt{qr\_code\_contents.materia
 file, it allows for easy updates and maintenance of the QR codes used in the simulation 
 without needing to modify the main model files. 
 
-    \begin{lstlisting}[style=xmlstyle]
+    \begin{minted}{cpp}
       ...
       {
         texture_unit
@@ -936,7 +940,7 @@ without needing to modify the main model files.
     }
   }
   ...
-    \end{lstlisting}
+\end{minted}
 
 
     \begin{figure}[H]

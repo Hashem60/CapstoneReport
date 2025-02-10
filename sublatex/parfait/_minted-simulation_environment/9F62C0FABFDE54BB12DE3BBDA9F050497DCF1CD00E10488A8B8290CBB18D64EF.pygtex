@@ -1,0 +1,45 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}model}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}wooden\PYGZus{}floor\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}static\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/static\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}pose\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0.01\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/pose\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}link}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}floor\PYGZus{}link\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}collision}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}floor\PYGZus{}collision\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}geometry\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}box\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}size\PYGZgt{}}12\PYG{+w}{ }17\PYG{+w}{ }0.1\PYG{n+nt}{\PYGZlt{}/size\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}/box\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}/geometry\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}max\PYGZus{}contacts\PYGZgt{}}10\PYG{n+nt}{\PYGZlt{}/max\PYGZus{}contacts\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}surface\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}contact\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}ode/\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}/contact\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}bounce/\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}friction\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}ode/\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}torsional\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}ode/\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}/torsional\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}static\PYGZus{}friction\PYGZgt{}}0.4\PYG{n+nt}{\PYGZlt{}/static\PYGZus{}friction\PYGZgt{}}\PYG{+w}{ }\PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} Adjusted for wooden floor \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}dynamic\PYGZus{}friction\PYGZgt{}}0.35\PYG{n+nt}{\PYGZlt{}/dynamic\PYGZus{}friction\PYGZgt{}}\PYG{+w}{ }\PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} Adjusted for wooden floor \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}/friction\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}/surface\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}/collision\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}visual}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}floor\PYGZus{}visual\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}geometry\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}box\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}size\PYGZgt{}}12\PYG{+w}{ }17\PYG{+w}{ }0.1\PYG{n+nt}{\PYGZlt{}/size\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}/box\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}/geometry\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}material\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}ambient\PYGZgt{}}1\PYG{+w}{ }1\PYG{+w}{ }1\PYG{+w}{ }1\PYG{n+nt}{\PYGZlt{}/ambient\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}diffuse\PYGZgt{}}1\PYG{+w}{ }1\PYG{+w}{ }1\PYG{+w}{ }1\PYG{n+nt}{\PYGZlt{}/diffuse\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}/material\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}/visual\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}self\PYGZus{}collide\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/self\PYGZus{}collide\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}enable\PYGZus{}wind\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/enable\PYGZus{}wind\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}kinematic\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/kinematic\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}/link\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}/model\PYGZgt{}}
+
+\end{Verbatim}

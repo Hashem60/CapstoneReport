@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }/rosout/get\PYGZus{}loggers
+\PYG{+w}{    }/rosout/set\PYGZus{}logger\PYGZus{}level
+\end{Verbatim}

@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{            }\PYG{c+cp}{\PYGZlt{}?xml version=\PYGZdq{}1.0\PYGZdq{}?\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}package\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}name\PYGZgt{}}hello\PYG{+w}{ }world\PYG{n+nt}{\PYGZlt{}/name\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}vrsion\PYGZgt{}}0.0.1\PYG{n+nt}{\PYGZlt{}/version\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}description\PYGZgt{}}The\PYG{+w}{ }hello\PYG{+w}{ }world\PYG{+w}{ }package\PYG{n+nt}{\PYGZlt{}/description\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}maintainer}\PYG{+w}{ }\PYG{n+na}{email=}\PYG{l+s}{\PYGZdq{}example@gmail.com\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}example\PYG{n+nt}{\PYGZlt{}/maintainer\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}buildtool\PYGZus{}depend\PYGZgt{}}catkin\PYG{n+nt}{\PYGZlt{}/buildtool\PYGZus{}depend\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}buildtool\PYGZus{}depend\PYGZgt{}}roscpp\PYG{n+nt}{\PYGZlt{}/build\PYGZus{}depend\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}build\PYGZus{}depend\PYGZgt{}}rospy\PYG{n+nt}{\PYGZlt{}/build\PYGZus{}depend\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}build\PYGZus{}depend\PYGZgt{}}std\PYGZus{}msgs\PYG{n+nt}{\PYGZlt{}/build\PYGZus{}depend\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}run\PYGZus{}depend\PYGZgt{}}roscpp\PYG{n+nt}{\PYGZlt{}/run\PYGZus{}depend\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}run\PYGZus{}depend\PYGZgt{}}rospy\PYG{n+nt}{\PYGZlt{}/run\PYGZus{}depend\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}run\PYGZus{}depend\PYGZgt{}}std\PYGZus{}msgs\PYG{n+nt}{\PYGZlt{}/run\PYGZus{}depend\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}export\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}/export\PYGZgt{}}\PYG{+w}{ }\PYG{n+nt}{\PYGZlt{}/package\PYGZgt{}}
+\end{Verbatim}

@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}launch\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}arg}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}model\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{default=}\PYG{l+s}{\PYGZdq{}\PYGZdl{}(env TURTLEBOT3\PYGZus{}MODEL)\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{doc=}\PYG{l+s}{\PYGZdq{}model type [burger, waffle, waffle\PYGZus{}pi]\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}arg}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}x\PYGZus{}pos\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{default=}\PYG{l+s}{\PYGZdq{}0.0\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}arg}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}y\PYGZus{}pos\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{default=}\PYG{l+s}{\PYGZdq{}0.0\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}arg}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}z\PYGZus{}pos\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{default=}\PYG{l+s}{\PYGZdq{}0.0\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}include}\PYG{+w}{ }\PYG{n+na}{file=}\PYG{l+s}{\PYGZdq{}\PYGZdl{}(find gazebo\PYGZus{}ros)/launch/empty\PYGZus{}world.launch\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}arg}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}world\PYGZus{}name\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{value=}\PYG{l+s}{\PYGZdq{}\PYGZdl{}(find turtlebot3\PYGZus{}gazebo)/worlds/empty.world\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}arg}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}paused\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{value=}\PYG{l+s}{\PYGZdq{}false\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}arg}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}use\PYGZus{}sim\PYGZus{}time\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{value=}\PYG{l+s}{\PYGZdq{}true\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}arg}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}gui\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{value=}\PYG{l+s}{\PYGZdq{}true\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}arg}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}headless\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{value=}\PYG{l+s}{\PYGZdq{}false\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}arg}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}debug\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{value=}\PYG{l+s}{\PYGZdq{}false\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}/include\PYGZgt{}}
+
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}param}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}robot\PYGZus{}description\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{command=}
+\PYG{+w}{  }\PYG{l+s}{\PYGZdq{}\PYGZdl{}(find xacro)/xacro \PYGZhy{}\PYGZhy{}inorder}
+\PYG{l+s}{\PYGZdl{}(find turtlebot3\PYGZus{}description)/}
+\PYG{l+s}{urdf/turtlebot3\PYGZus{}\PYGZdl{}(arg model).urdf.xacro\PYGZdq{}}\PYG{+w}{ }\PYG{n+nt}{/\PYGZgt{}}
+
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}node}\PYG{+w}{ }\PYG{n+na}{pkg=}\PYG{l+s}{\PYGZdq{}gazebo\PYGZus{}ros\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}spawn\PYGZus{}model\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}spawn\PYGZus{}urdf\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{args=}\PYG{l+s}{\PYGZdq{}\PYGZhy{}urdf \PYGZhy{}model turtlebot3\PYGZus{}\PYGZdl{}(arg model) \PYGZhy{}x \PYGZdl{}(arg x\PYGZus{}pos) \PYGZhy{}y}
+\PYG{l+s}{  \PYGZdl{}(arg y\PYGZus{}pos) \PYGZhy{}z \PYGZdl{}(arg z\PYGZus{}pos) \PYGZhy{}param robot\PYGZus{}description\PYGZdq{}}\PYG{+w}{ }\PYG{n+nt}{/\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}/launch\PYGZgt{}}
+\end{Verbatim}

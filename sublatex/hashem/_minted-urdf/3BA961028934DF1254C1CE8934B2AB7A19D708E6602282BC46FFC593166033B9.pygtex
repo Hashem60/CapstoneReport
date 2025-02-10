@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}robot}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}\PYGZlt{}name of the robot\PYGZgt{}\PYGZdq{}}\PYG{err}{\PYGZlt{}/robot}\PYG{n+nt}{\PYGZgt{}}
+\end{Verbatim}

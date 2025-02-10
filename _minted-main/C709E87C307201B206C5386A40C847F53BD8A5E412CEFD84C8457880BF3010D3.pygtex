@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{        }roslaunch\PYG{+w}{ }the\PYGZus{}pkg\PYGZus{}name\PYG{+w}{ }launch\PYGZus{}file\PYGZus{}name.launch
+\end{Verbatim}

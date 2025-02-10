@@ -1,0 +1,102 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }...
+\PYG{+w}{    }model\PYG{+w}{ }name=\PYGZsq{}cube\PYGZus{}test\PYGZus{}clone\PYGZus{}clone\PYGZsq{}\PYGZgt{}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}link}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}link\PYGZus{}0\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}inertial\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}mass\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/mass\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}inertia\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}ixx\PYGZgt{}}0.166667\PYG{n+nt}{\PYGZlt{}/ixx\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}ixy\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/ixy\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}ixz\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/ixz\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}iyy\PYGZgt{}}0.166667\PYG{n+nt}{\PYGZlt{}/iyy\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}iyz\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/iyz\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}izz\PYGZgt{}}0.166667\PYG{n+nt}{\PYGZlt{}/izz\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}/inertia\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}pose\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/pose\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}/inertial\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}pose\PYGZgt{}}\PYGZhy{}0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/pose\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}visual}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}visual\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}pose\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/pose\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}geometry\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}box\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}size\PYGZgt{}}0.05\PYG{+w}{ }16.9\PYG{+w}{ }1\PYG{n+nt}{\PYGZlt{}/size\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}/box\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}/geometry\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}material\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}lighting\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/lighting\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}script\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}uri\PYGZgt{}}model://cube\PYGZus{}test/materials/scripts\PYG{n+nt}{\PYGZlt{}/uri\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}uri\PYGZgt{}}model://cube\PYGZus{}test/materials/textures\PYG{n+nt}{\PYGZlt{}/uri\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}name\PYGZgt{}}teknofest\PYGZus{}logo\PYG{n+nt}{\PYGZlt{}/name\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}/script\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}shader}\PYG{+w}{ }\PYG{n+na}{type=}\PYG{l+s}{\PYGZsq{}pixel\PYGZsq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}/material\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}transparency\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/transparency\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}cast\PYGZus{}shadows\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/cast\PYGZus{}shadows\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}/visual\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}collision}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}collision\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}laser\PYGZus{}retro\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/laser\PYGZus{}retro\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}max\PYGZus{}contacts\PYGZgt{}}10\PYG{n+nt}{\PYGZlt{}/max\PYGZus{}contacts\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}pose\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/pose\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}geometry\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}box\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}size\PYGZgt{}}0.05\PYG{+w}{ }16.9\PYG{+w}{ }1\PYG{n+nt}{\PYGZlt{}/size\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}/box\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}/geometry\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}surface\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}friction\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}ode\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}mu\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/mu\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}mu2\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/mu2\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}fdir1\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/fdir1\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}slip1\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/slip1\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}slip2\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/slip2\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}/ode\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}torsional\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}coefficient\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/coefficient\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}patch\PYGZus{}radius\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/patch\PYGZus{}radius\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}surface\PYGZus{}radius\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/surface\PYGZus{}radius\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}use\PYGZus{}patch\PYGZus{}radius\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/use\PYGZus{}patch\PYGZus{}radius\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}ode\PYGZgt{}}
+\PYG{+w}{                  }\PYG{n+nt}{\PYGZlt{}slip\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/slip\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}/ode\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}/torsional\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}/friction\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}bounce\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}restitution\PYGZus{}coefficient\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/restitution\PYGZus{}coefficient\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}threshold\PYGZgt{}}1e+06\PYG{n+nt}{\PYGZlt{}/threshold\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}/bounce\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}contact\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}collide\PYGZus{}without\PYGZus{}contact\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/collide\PYGZus{}without\PYGZus{}contact\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}collide\PYGZus{}without\PYGZus{}contact\PYGZus{}bitmask\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/collide\PYGZus{}without\PYGZus{}contact\PYGZus{}bitmask\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}collide\PYGZus{}bitmask\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/collide\PYGZus{}bitmask\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}ode\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}soft\PYGZus{}cfm\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/soft\PYGZus{}cfm\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}soft\PYGZus{}erp\PYGZgt{}}0.2\PYG{n+nt}{\PYGZlt{}/soft\PYGZus{}erp\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}kp\PYGZgt{}}1e+13\PYG{n+nt}{\PYGZlt{}/kp\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}kd\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/kd\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}max\PYGZus{}vel\PYGZgt{}}0.01\PYG{n+nt}{\PYGZlt{}/max\PYGZus{}vel\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}min\PYGZus{}depth\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/min\PYGZus{}depth\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}/ode\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}bullet\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}split\PYGZus{}impulse\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/split\PYGZus{}impulse\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}split\PYGZus{}impulse\PYGZus{}penetration\PYGZus{}threshold\PYGZgt{}}\PYGZhy{}0.01\PYG{n+nt}{\PYGZlt{}/split\PYGZus{}impulse\PYGZus{}penetration\PYGZus{}threshold\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}soft\PYGZus{}cfm\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/soft\PYGZus{}cfm\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}soft\PYGZus{}erp\PYGZgt{}}0.2\PYG{n+nt}{\PYGZlt{}/soft\PYGZus{}erp\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}kp\PYGZgt{}}1e+13\PYG{n+nt}{\PYGZlt{}/kp\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}kd\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/kd\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}/bullet\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}/contact\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}/surface\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}/collision\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}self\PYGZus{}collide\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/self\PYGZus{}collide\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}enable\PYGZus{}wind\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/enable\PYGZus{}wind\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}kinematic\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/kinematic\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}/link\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}static\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/static\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}allow\PYGZus{}auto\PYGZus{}disable\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/allow\PYGZus{}auto\PYGZus{}disable\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}pose\PYGZgt{}}\PYGZhy{}6.06431\PYG{+w}{ }0.045196\PYG{+w}{ }0.46\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/pose\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}enable\PYGZus{}wind\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/enable\PYGZus{}wind\PYGZgt{}}
+\PYG{+w}{     }\PYG{n+nt}{\PYGZlt{}/model\PYGZgt{}}
+\PYG{+w}{     }...
+\end{Verbatim}

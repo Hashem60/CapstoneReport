@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  7 FEB 2025 15:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  9 FEB 2025 20:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -408,15 +408,6 @@ Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \ULC@box=\box66
 Package: ulem 2019/11/18
 \ULdepth=\dimen177
-) (c:/texlive/2024/texmf-dist/tex/latex/fncychap/fncychap.sty
-Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
-\RW=\skip78
-\mylen=\skip79
-\myhi=\skip80
-\px=\skip81
-\py=\skip82
-\pyy=\skip83
-\pxx=\skip84
 ) (c:/texlive/2024/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
@@ -480,7 +471,7 @@ File: svgnam.def 2023/11/15 v3.01 Predefined colors according to SVG 1.1 (UK)
 ) (c:/texlive/2024/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2024/05/26 v1.0h Color table columns (DPC)
 \everycr=\toks35
-\minrowclearance=\skip85
+\minrowclearance=\skip78
 \rownum=\count322
 ) (c:/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
@@ -834,19 +825,13 @@ Package hyperref Info: Link coloring OFF on input line 3.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-Chapter 1.
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 5.
-(c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
-File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
-)
 
 [1
-
 
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 
 [2]
-<fig/battery.jpg, id=103, 501.875pt x 501.875pt>
+<fig/battery.jpg, id=102, 501.875pt x 501.875pt>
 File: fig/battery.jpg Graphic file (type jpg)
 <use fig/battery.jpg>
 Package pdftex.def Info: fig/battery.jpg  used on input line 73.
@@ -854,7 +839,7 @@ Package pdftex.def Info: fig/battery.jpg  used on input line 73.
 
 
 [3 <./fig/battery.jpg>]
-<fig/voltage_regulator.jpg, id=112, 1405.25pt x 1405.25pt>
+<fig/voltage_regulator.jpg, id=111, 1405.25pt x 1405.25pt>
 File: fig/voltage_regulator.jpg Graphic file (type jpg)
 <use fig/voltage_regulator.jpg>
 Package pdftex.def Info: fig/voltage_regulator.jpg  used on input line 113.
@@ -885,7 +870,7 @@ LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 1
  (c:/texlive/2024/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-<fig/motor_booster.jpg, id=115, 1004.75375pt x 1004.75375pt>
+<fig/motor_booster.jpg, id=114, 1004.75375pt x 1004.75375pt>
 File: fig/motor_booster.jpg Graphic file (type jpg)
 <use fig/motor_booster.jpg>
 Package pdftex.def Info: fig/motor_booster.jpg  used on input line 144.
@@ -895,7 +880,7 @@ Package pdftex.def Info: fig/motor_booster.jpg  used on input line 144.
 [4{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./fig/voltage_regulator.jpg>]
 
 [5 <./fig/motor_booster.jpg>]
-<fig/actuator_booster.jpg, id=131, 903.375pt x 903.375pt>
+<fig/actuator_booster.jpg, id=130, 903.375pt x 903.375pt>
 File: fig/actuator_booster.jpg Graphic file (type jpg)
 <use fig/actuator_booster.jpg>
 Package pdftex.def Info: fig/actuator_booster.jpg  used on input line 187.
@@ -937,7 +922,7 @@ LaTeX Warning: Citation `AMC_AGV_Benefits' on page 7 undefined on input line 240
 
 
 [7]
-<fig/nema_motor.png, id=143, 491.8375pt x 480.79625pt>
+<fig/nema_motor.png, id=142, 491.8375pt x 480.79625pt>
 File: fig/nema_motor.png Graphic file (type png)
 <use fig/nema_motor.png>
 Package pdftex.def Info: fig/nema_motor.png  used on input line 278.
@@ -953,7 +938,7 @@ Overfull \hbox (17.35219pt too wide) in paragraph at lines 325--330
 []\OT1/ptm/m/n/12 The lift-ing mech-a-nism of the au-to-mated guided ve-hi-cle (AGV) uti-lizes a high-performance
  []
 
-<fig/linear_actuator.jpg, id=151, 909.3975pt x 833.1125pt>
+<fig/linear_actuator.jpg, id=150, 909.3975pt x 833.1125pt>
 File: fig/linear_actuator.jpg Graphic file (type jpg)
 <use fig/linear_actuator.jpg>
 Package pdftex.def Info: fig/linear_actuator.jpg  used on input line 333.
@@ -963,7 +948,7 @@ Package pdftex.def Info: fig/linear_actuator.jpg  used on input line 333.
 [9]
 
 [10 <./fig/linear_actuator.jpg>]
-<fig/stepper_driver.png, id=163, 486.81876pt x 486.81876pt>
+<fig/stepper_driver.png, id=162, 486.81876pt x 486.81876pt>
 File: fig/stepper_driver.png Graphic file (type png)
 <use fig/stepper_driver.png>
 Package pdftex.def Info: fig/stepper_driver.png  used on input line 388.
@@ -986,7 +971,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 418--418
 
 
 [11 <./fig/stepper_driver.png>]
-<fig/40_amp_driver.jpg, id=172, 803.0pt x 536.0025pt>
+<fig/40_amp_driver.jpg, id=171, 803.0pt x 536.0025pt>
 File: fig/40_amp_driver.jpg Graphic file (type jpg)
 <use fig/40_amp_driver.jpg>
 Package pdftex.def Info: fig/40_amp_driver.jpg  used on input line 440.
@@ -1006,12 +991,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 459--459
 
 
 [13 <./fig/40_amp_driver.jpg>]
-<fig/tof_sensor.png, id=185, 442.65375pt x 240.9pt>
+<fig/tof_sensor.png, id=184, 442.65375pt x 240.9pt>
 File: fig/tof_sensor.png Graphic file (type png)
 <use fig/tof_sensor.png>
 Package pdftex.def Info: fig/tof_sensor.png  used on input line 498.
 (pdftex.def)             Requested size: 198.45662pt x 108.00333pt.
-<fig/4_cells.png, id=186, 393.47pt x 348.30125pt>
+<fig/4_cells.png, id=185, 393.47pt x 348.30125pt>
 File: fig/4_cells.png Graphic file (type png)
 <use fig/4_cells.png>
 Package pdftex.def Info: fig/4_cells.png  used on input line 510.
@@ -1019,12 +1004,12 @@ Package pdftex.def Info: fig/4_cells.png  used on input line 510.
 
 
 [14 <./fig/tof_sensor.png>]
-<fig/load_cell_amplifier.png, id=195, 488.82625pt x 377.41pt>
+<fig/load_cell_amplifier.png, id=194, 488.82625pt x 377.41pt>
 File: fig/load_cell_amplifier.png Graphic file (type png)
 <use fig/load_cell_amplifier.png>
 Package pdftex.def Info: fig/load_cell_amplifier.png  used on input line 520.
 (pdftex.def)             Requested size: 198.45662pt x 153.22453pt.
-<fig/lidar.png, id=196, 426.59375pt x 426.59375pt>
+<fig/lidar.png, id=195, 426.59375pt x 426.59375pt>
 File: fig/lidar.png Graphic file (type png)
 <use fig/lidar.png>
 Package pdftex.def Info: fig/lidar.png  used on input line 534.
@@ -1032,12 +1017,12 @@ Package pdftex.def Info: fig/lidar.png  used on input line 534.
 
 
 [15 <./fig/4_cells.png> <./fig/load_cell_amplifier.png>]
-<fig/huskylens.png, id=205, 528.97626pt x 386.44376pt>
+<fig/huskylens.png, id=204, 528.97626pt x 386.44376pt>
 File: fig/huskylens.png Graphic file (type png)
 <use fig/huskylens.png>
 Package pdftex.def Info: fig/huskylens.png  used on input line 549.
 (pdftex.def)             Requested size: 220.50887pt x 161.09056pt.
-<fig/imu.jpg, id=206, 903.375pt x 903.375pt>
+<fig/imu.jpg, id=205, 903.375pt x 903.375pt>
 File: fig/imu.jpg Graphic file (type jpg)
 <use fig/imu.jpg>
 Package pdftex.def Info: fig/imu.jpg  used on input line 564.
@@ -1045,12 +1030,12 @@ Package pdftex.def Info: fig/imu.jpg  used on input line 564.
 
 
 [16 <./fig/lidar.png> <./fig/huskylens.png>]
-<fig/qr_scanner.png, id=215, 566.115pt x 406.51875pt>
+<fig/qr_scanner.png, id=214, 566.115pt x 406.51875pt>
 File: fig/qr_scanner.png Graphic file (type png)
 <use fig/qr_scanner.png>
 Package pdftex.def Info: fig/qr_scanner.png  used on input line 573.
 (pdftex.def)             Requested size: 220.50887pt x 158.34317pt.
-<fig/array.png, id=216, 617.30624pt x 423.5825pt>
+<fig/array.png, id=215, 617.30624pt x 423.5825pt>
 File: fig/array.png Graphic file (type png)
 <use fig/array.png>
 Package pdftex.def Info: fig/array.png  used on input line 582.
@@ -1058,7 +1043,7 @@ Package pdftex.def Info: fig/array.png  used on input line 582.
 
 
 [17 <./fig/imu.jpg> <./fig/qr_scanner.png>]
-<fig/raspberry.png, id=225, 586.19pt x 419.5675pt>
+<fig/raspberry.png, id=224, 586.19pt x 419.5675pt>
 File: fig/raspberry.png Graphic file (type png)
 <use fig/raspberry.png>
 Package pdftex.def Info: fig/raspberry.png  used on input line 606.
@@ -1066,12 +1051,12 @@ Package pdftex.def Info: fig/raspberry.png  used on input line 606.
 
 
 [18 <./fig/array.png> <./fig/raspberry.png>]
-<fig/esp32.png, id=236, 5.7816pt x 5.02277pt>
+<fig/esp32.png, id=235, 5.7816pt x 5.02277pt>
 File: fig/esp32.png Graphic file (type png)
 <use fig/esp32.png>
 Package pdftex.def Info: fig/esp32.png  used on input line 633.
 (pdftex.def)             Requested size: 220.50887pt x 191.57747pt.
-<fig/bluetooth.jpg, id=237, 752.8125pt x 752.8125pt>
+<fig/bluetooth.jpg, id=236, 752.8125pt x 752.8125pt>
 File: fig/bluetooth.jpg Graphic file (type jpg)
 <use fig/bluetooth.jpg>
 Package pdftex.def Info: fig/bluetooth.jpg  used on input line 642.
@@ -1090,21 +1075,21 @@ L3 programming layer <2024-05-27>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `ECI.out' has not changed.
-(rerunfilecheck)             Checksum: 0B464DD969D403BBDE28BB34CE00FB2B;3692.
+(rerunfilecheck)             Checksum: 7019F67A145519FABBC72723A5472759;3658.
  ) 
 Here is how much of TeX's memory you used:
- 34520 strings out of 473600
- 625953 string characters out of 5732737
+ 34370 strings out of 473600
+ 624061 string characters out of 5732737
  1938908 words of memory out of 5000000
- 56801 multiletter control sequences out of 15000+600000
- 578597 words of font info for 73 fonts, out of 8000000 for 9000
+ 56662 multiletter control sequences out of 15000+600000
+ 573148 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  138i,14n,162p,2826b,518s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ECI.pdf (20 pages, 2828378 bytes).
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ECI.pdf (20 pages, 2823432 bytes).
 PDF statistics:
- 296 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
+ 291 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
  69 named destinations out of 1000 (max. 500000)
  276 words of extra memory for PDF output out of 10000 (max. 10000000)
 

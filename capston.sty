@@ -16,7 +16,7 @@
 \usepackage{ragged2e} % For better control over text alignment
 \usepackage{titlesec} % For customizing section headings
 \usepackage{ulem}
-\usepackage[Lenny]{fncychap}
+%\usepackage[Lenny]{fncychap}
 \usepackage{cleveref}
 \usepackage{listings}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
@@ -27,6 +27,7 @@
 \usepackage{adjustbox}
 \usepackage{subcaption}
 \usepackage{cite}
+\usepackage{minted}
 
 \usepackage{subfiles} % Add this line
 
@@ -134,6 +135,19 @@
 % stringstyle=\color{blue},
 % identifierstyle=\color{maroon},
 % }
+\setminted{
+    linenos=true,          % Enable line numbers
+    fontsize=\small,       % Set font size
+    frame=single,           % Add a frame around the code
+    framesep=2mm,          % Space between frame and code
+    framerule=1pt,
+    breakanywhere=true,    % Allow breaking at any character
+    breaklines=true,       % Wrap long lines
+    baselinestretch=1.2,   % Line spacing
+    bgcolor=white,     % Background color
+    tabsize=4              % Tab size
+}
+\usemintedstyle{pastie}   % Use the "monokai" style
 
 
 
