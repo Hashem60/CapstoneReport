@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  9 FEB 2025 20:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.16)  11 FEB 2025 00:34
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/me/Documents/CapstoneReport/sublatex/parfait/ECI.tex
+**c:/Users/me/Documents/CapstoneReport/sublatex/parfait/ECI
 (c:/Users/me/Documents/CapstoneReport/sublatex/parfait/ECI.tex
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
@@ -732,16 +732,228 @@ Package caption Info: New subtype `subtable' on input line 238.
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
+) (c:/texlive/2024/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2023/12/18 v2.9 Yet another Pygments shim for LaTeX
+ (c:/texlive/2024/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2024/05/16 v1.7.0 fvextra - extensions and patches for fancyvrb
+ (c:/texlive/2024/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+\FV@CodeLineNo=\count349
+\FV@InFile=\read4
+\FV@TabBox=\box87
+\c@FancyVerbLine=\count350
+\FV@StepNumber=\count351
+\FV@OutFile=\write4
+) (c:/texlive/2024/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+) (c:/texlive/2024/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2023/05/20 line numbers on paragraphs v5.3
+\linenopenalty=\count352
+\output=\toks50
+\linenoprevgraf=\count353
+\linenumbersep=\dimen313
+\linenumberwidth=\dimen314
+\c@linenumber=\count354
+\c@pagewiselinenumber=\count355
+\c@LN@truepage=\count356
+\c@internallinenumber=\count357
+\c@internallinenumbers=\count358
+\quotelinenumbersep=\dimen315
+\bframerule=\dimen316
+\bframesep=\dimen317
+\bframebox=\box88
+\linenoamsmath@ams@eqpen=\count359
+LaTeX Info: Redefining \\ on input line 3180.
+)
+\c@FancyVerbWriteLine=\count360
+\c@FancyVerbBufferIndex=\count361
+\c@FancyVerbBufferLength=\count362
+\c@FancyVerbBufferLine=\count363
+\c@FV@oldbufferlength=\count364
+\c@FV@TrueTabGroupLevel=\count365
+\c@FV@TrueTabCounter=\count366
+\FV@TabBox@Group=\box89
+\FV@TmpLength=\skip79
+\c@FV@HighlightLinesStart=\count367
+\c@FV@HighlightLinesStop=\count368
+\FV@LoopCount=\count369
+\FV@NCharsBox=\box90
+\FV@BreakIndent=\dimen318
+\FV@BreakIndentNChars=\count370
+\FV@BreakSymbolSepLeft=\dimen319
+\FV@BreakSymbolSepLeftNChars=\count371
+\FV@BreakSymbolSepRight=\dimen320
+\FV@BreakSymbolSepRightNChars=\count372
+\FV@BreakSymbolIndentLeft=\dimen321
+\FV@BreakSymbolIndentLeftNChars=\count373
+\FV@BreakSymbolIndentRight=\dimen322
+\FV@BreakSymbolIndentRightNChars=\count374
+\c@FancyVerbLineBreakLast=\count375
+\FV@LineBox=\box91
+\FV@LineIndentBox=\box92
+\c@FV@BreakBufferDepth=\count376
+\FV@LineWidth=\dimen323
+) (c:/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (c:/texlive/2024/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+) (c:/texlive/2024/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+ (c:/texlive/2024/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+ (c:/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+))) (c:/texlive/2024/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip80
+\fb@frw=\dimen324
+\fb@frh=\dimen325
+\FrameRule=\dimen326
+\FrameSep=\dimen327
+)
+\minted@appexistsfile=\read5
+\minted@bgbox=\box93
+\minted@code=\write5
+\c@minted@FancyVerbLineTemp=\count377
+\c@minted@pygmentizecounter=\count378
+\@float@every@listing=\toks51
+\c@listing=\count379
+)
+runsystem(if not exist _minted-ECI mkdir _minted-ECI)...executed.
+
+ (c:/texlive/2024/texmf-dist/tex/latex/circuitikz/circuitikz.sty
+Package: circuitikz 2024/05/25{} The CircuiTikz circuit drawing package version 1.6.9
+ (c:/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/texlive/2024/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen328
+\pgffor@skip=\dimen329
+\pgffor@stack=\toks52
+\pgffor@toks=\toks53
+)) (c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count380
+\pgfplotmarksize=\dimen330
+)
+\tikz@lastx=\dimen331
+\tikz@lasty=\dimen332
+\tikz@lastxsaved=\dimen333
+\tikz@lastysaved=\dimen334
+\tikz@lastmovetox=\dimen335
+\tikz@lastmovetoy=\dimen336
+\tikzleveldistance=\dimen337
+\tikzsiblingdistance=\dimen338
+\tikz@figbox=\box94
+\tikz@figbox@bg=\box95
+\tikz@tempbox=\box96
+\tikz@tempbox@bg=\box97
+\tikztreelevel=\count381
+\tikznumberofchildren=\count382
+\tikznumberofcurrentchild=\count383
+\tikz@fig@count=\count384
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count385
+\pgfmatrixcurrentcolumn=\count386
+\pgf@matrix@numberofcolumns=\count387
+)
+\tikz@expandcount=\count388
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen339
+\pgfarrowlength=\dimen340
+\pgfarrowwidth=\dimen341
+\pgfarrowlinewidth=\dimen342
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybending.code.tex
+File: tikzlibrarybending.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.code.tex
+File: pgfmodulebending.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransformations.code.tex
+File: pgfmodulenonlineartransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgftransformnonlinearflatness=\dimen343
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex
+File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@curvilinear@time@a=\dimen344
+\pgf@curvilinear@length@a=\dimen345
+\pgf@curvilinear@length@b=\dimen346
+\pgf@curvilinear@length@c=\dimen347
+\pgf@curvilinear@length@d=\dimen348
+)
+\pgf@arrows@the@rigidity=\dimen349
+)) (c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex (c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)) (c:/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
+\pgf@circ@count@a=\count389
+\pgf@circ@count@b=\count390
+\pgf@circ@count@c=\count391
+\pgf@circ@res@up=\dimen350
+\pgf@circ@res@down=\dimen351
+\pgf@circ@res@zero=\dimen352
+\pgf@circ@res@left=\dimen353
+\pgf@circ@res@right=\dimen354
+\pgf@circ@res@other=\dimen355
+\pgf@circ@res@step=\dimen356
+\pgf@circ@res@temp=\dimen357
+\pgf@circ@Rlen=\dimen358
+\pgf@circ@scaled@Rlen=\dimen359
+\pgfstartlinewidth=\dimen360
+) (c:/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex
+\ctikz@scratchbox=\box98
+) (c:/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex) (c:/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex) (c:/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex) (c:/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex) (c:/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
+\pgf@circ@res@count=\count392
+) (c:/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex) (c:/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex) (c:/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex) (c:/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex
+\pgfcirc@labelshift=\dimen361
+) (c:/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex) (c:/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex)) (c:/texlive/2024/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2024-06-14 v3.3.18 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count393
+\l__siunitx_number_exponent_fixed_int=\count394
+\l__siunitx_number_min_decimal_int=\count395
+\l__siunitx_number_min_integer_int=\count396
+\l__siunitx_number_round_precision_int=\count397
+\l__siunitx_number_lower_threshold_int=\count398
+\l__siunitx_number_upper_threshold_int=\count399
+\l__siunitx_number_group_first_int=\count400
+\l__siunitx_number_group_size_int=\count401
+\l__siunitx_number_group_minimum_int=\count402
+\l__siunitx_angle_tmp_dim=\dimen362
+\l__siunitx_angle_marker_box=\box99
+\l__siunitx_angle_unit_box=\box100
+\l__siunitx_compound_count_int=\count403
+ (c:/texlive/2024/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+)
+\l__siunitx_table_tmp_box=\box101
+\l__siunitx_table_tmp_dim=\dimen363
+\l__siunitx_table_column_width_dim=\dimen364
+\l__siunitx_table_integer_box=\box102
+\l__siunitx_table_decimal_box=\box103
+\l__siunitx_table_uncert_box=\box104
+\l__siunitx_table_before_box=\box105
+\l__siunitx_table_after_box=\box106
+\l__siunitx_table_before_dim=\dimen365
+\l__siunitx_table_carry_dim=\dimen366
+\l__siunitx_unit_tmp_int=\count404
+\l__siunitx_unit_position_int=\count405
+\l__siunitx_unit_total_int=\count406
 ) (c:/texlive/2024/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
 ))))
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > ECI.aex <nul: /p x=^%~$PATH:i>> ECI.aex)...executed.
+
+runsystem(del ECI.aex)...executed.
+
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 3.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 3.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count349
-\l__pdf_internal_box=\box87
+\l__color_backend_stack_int=\count407
+\l__pdf_internal_box=\box107
 ) (./ECI.aux)
 \openout1 = `ECI.aux'.
 
@@ -765,17 +977,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
  (c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count350
-\scratchdimen=\dimen313
-\scratchbox=\box88
-\nofMPsegments=\count351
-\nofMParguments=\count352
-\everyMPshowfont=\toks50
-\MPscratchCnt=\count353
-\MPscratchDim=\dimen314
-\MPnumerator=\count354
-\makeMPintoPDFobject=\count355
-\everyMPtoPDFconversion=\toks51
+\scratchcounter=\count408
+\scratchdimen=\dimen367
+\scratchbox=\box108
+\nofMPsegments=\count409
+\nofMParguments=\count410
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count411
+\MPscratchDim=\dimen368
+\MPnumerator=\count412
+\makeMPintoPDFobject=\count413
+\everyMPtoPDFconversion=\toks55
 ) (c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -818,12 +1030,19 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
 Package hyperref Info: Link coloring OFF on input line 3.
 (./ECI.out) (./ECI.out)
-\@outlinefile=\write4
-\openout4 = `ECI.out'.
+\@outlinefile=\write6
+\openout6 = `ECI.out'.
 
-\c@lstlisting=\count356
+ (c:/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+)
+\c@lstlisting=\count414
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+ (c:/texlive/2024/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 3.
 
 
 [1
@@ -831,7 +1050,7 @@ Package caption Info: End \AtBeginDocument code.
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 
 [2]
-<fig/battery.jpg, id=102, 501.875pt x 501.875pt>
+<fig/battery.jpg, id=106, 501.875pt x 501.875pt>
 File: fig/battery.jpg Graphic file (type jpg)
 <use fig/battery.jpg>
 Package pdftex.def Info: fig/battery.jpg  used on input line 73.
@@ -839,7 +1058,7 @@ Package pdftex.def Info: fig/battery.jpg  used on input line 73.
 
 
 [3 <./fig/battery.jpg>]
-<fig/voltage_regulator.jpg, id=111, 1405.25pt x 1405.25pt>
+<fig/voltage_regulator.jpg, id=115, 1405.25pt x 1405.25pt>
 File: fig/voltage_regulator.jpg Graphic file (type jpg)
 <use fig/voltage_regulator.jpg>
 Package pdftex.def Info: fig/voltage_regulator.jpg  used on input line 113.
@@ -870,7 +1089,7 @@ LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 1
  (c:/texlive/2024/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-<fig/motor_booster.jpg, id=114, 1004.75375pt x 1004.75375pt>
+<fig/motor_booster.jpg, id=118, 1004.75375pt x 1004.75375pt>
 File: fig/motor_booster.jpg Graphic file (type jpg)
 <use fig/motor_booster.jpg>
 Package pdftex.def Info: fig/motor_booster.jpg  used on input line 144.
@@ -880,7 +1099,7 @@ Package pdftex.def Info: fig/motor_booster.jpg  used on input line 144.
 [4{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./fig/voltage_regulator.jpg>]
 
 [5 <./fig/motor_booster.jpg>]
-<fig/actuator_booster.jpg, id=130, 903.375pt x 903.375pt>
+<fig/actuator_booster.jpg, id=134, 903.375pt x 903.375pt>
 File: fig/actuator_booster.jpg Graphic file (type jpg)
 <use fig/actuator_booster.jpg>
 Package pdftex.def Info: fig/actuator_booster.jpg  used on input line 187.
@@ -922,7 +1141,7 @@ LaTeX Warning: Citation `AMC_AGV_Benefits' on page 7 undefined on input line 240
 
 
 [7]
-<fig/nema_motor.png, id=142, 491.8375pt x 480.79625pt>
+<fig/nema_motor.png, id=146, 491.8375pt x 480.79625pt>
 File: fig/nema_motor.png Graphic file (type png)
 <use fig/nema_motor.png>
 Package pdftex.def Info: fig/nema_motor.png  used on input line 278.
@@ -938,7 +1157,7 @@ Overfull \hbox (17.35219pt too wide) in paragraph at lines 325--330
 []\OT1/ptm/m/n/12 The lift-ing mech-a-nism of the au-to-mated guided ve-hi-cle (AGV) uti-lizes a high-performance
  []
 
-<fig/linear_actuator.jpg, id=150, 909.3975pt x 833.1125pt>
+<fig/linear_actuator.jpg, id=154, 909.3975pt x 833.1125pt>
 File: fig/linear_actuator.jpg Graphic file (type jpg)
 <use fig/linear_actuator.jpg>
 Package pdftex.def Info: fig/linear_actuator.jpg  used on input line 333.
@@ -948,7 +1167,7 @@ Package pdftex.def Info: fig/linear_actuator.jpg  used on input line 333.
 [9]
 
 [10 <./fig/linear_actuator.jpg>]
-<fig/stepper_driver.png, id=162, 486.81876pt x 486.81876pt>
+<fig/stepper_driver.png, id=167, 486.81876pt x 486.81876pt>
 File: fig/stepper_driver.png Graphic file (type png)
 <use fig/stepper_driver.png>
 Package pdftex.def Info: fig/stepper_driver.png  used on input line 388.
@@ -971,7 +1190,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 418--418
 
 
 [11 <./fig/stepper_driver.png>]
-<fig/40_amp_driver.jpg, id=171, 803.0pt x 536.0025pt>
+<fig/40_amp_driver.jpg, id=175, 803.0pt x 536.0025pt>
 File: fig/40_amp_driver.jpg Graphic file (type jpg)
 <use fig/40_amp_driver.jpg>
 Package pdftex.def Info: fig/40_amp_driver.jpg  used on input line 440.
@@ -991,12 +1210,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 459--459
 
 
 [13 <./fig/40_amp_driver.jpg>]
-<fig/tof_sensor.png, id=184, 442.65375pt x 240.9pt>
+<fig/tof_sensor.png, id=188, 442.65375pt x 240.9pt>
 File: fig/tof_sensor.png Graphic file (type png)
 <use fig/tof_sensor.png>
 Package pdftex.def Info: fig/tof_sensor.png  used on input line 498.
 (pdftex.def)             Requested size: 198.45662pt x 108.00333pt.
-<fig/4_cells.png, id=185, 393.47pt x 348.30125pt>
+<fig/4_cells.png, id=189, 393.47pt x 348.30125pt>
 File: fig/4_cells.png Graphic file (type png)
 <use fig/4_cells.png>
 Package pdftex.def Info: fig/4_cells.png  used on input line 510.
@@ -1004,12 +1223,12 @@ Package pdftex.def Info: fig/4_cells.png  used on input line 510.
 
 
 [14 <./fig/tof_sensor.png>]
-<fig/load_cell_amplifier.png, id=194, 488.82625pt x 377.41pt>
+<fig/load_cell_amplifier.png, id=198, 488.82625pt x 377.41pt>
 File: fig/load_cell_amplifier.png Graphic file (type png)
 <use fig/load_cell_amplifier.png>
 Package pdftex.def Info: fig/load_cell_amplifier.png  used on input line 520.
 (pdftex.def)             Requested size: 198.45662pt x 153.22453pt.
-<fig/lidar.png, id=195, 426.59375pt x 426.59375pt>
+<fig/lidar.png, id=199, 426.59375pt x 426.59375pt>
 File: fig/lidar.png Graphic file (type png)
 <use fig/lidar.png>
 Package pdftex.def Info: fig/lidar.png  used on input line 534.
@@ -1017,12 +1236,12 @@ Package pdftex.def Info: fig/lidar.png  used on input line 534.
 
 
 [15 <./fig/4_cells.png> <./fig/load_cell_amplifier.png>]
-<fig/huskylens.png, id=204, 528.97626pt x 386.44376pt>
+<fig/huskylens.png, id=208, 528.97626pt x 386.44376pt>
 File: fig/huskylens.png Graphic file (type png)
 <use fig/huskylens.png>
 Package pdftex.def Info: fig/huskylens.png  used on input line 549.
 (pdftex.def)             Requested size: 220.50887pt x 161.09056pt.
-<fig/imu.jpg, id=205, 903.375pt x 903.375pt>
+<fig/imu.jpg, id=209, 903.375pt x 903.375pt>
 File: fig/imu.jpg Graphic file (type jpg)
 <use fig/imu.jpg>
 Package pdftex.def Info: fig/imu.jpg  used on input line 564.
@@ -1030,12 +1249,12 @@ Package pdftex.def Info: fig/imu.jpg  used on input line 564.
 
 
 [16 <./fig/lidar.png> <./fig/huskylens.png>]
-<fig/qr_scanner.png, id=214, 566.115pt x 406.51875pt>
+<fig/qr_scanner.png, id=218, 566.115pt x 406.51875pt>
 File: fig/qr_scanner.png Graphic file (type png)
 <use fig/qr_scanner.png>
 Package pdftex.def Info: fig/qr_scanner.png  used on input line 573.
 (pdftex.def)             Requested size: 220.50887pt x 158.34317pt.
-<fig/array.png, id=215, 617.30624pt x 423.5825pt>
+<fig/array.png, id=219, 617.30624pt x 423.5825pt>
 File: fig/array.png Graphic file (type png)
 <use fig/array.png>
 Package pdftex.def Info: fig/array.png  used on input line 582.
@@ -1043,7 +1262,7 @@ Package pdftex.def Info: fig/array.png  used on input line 582.
 
 
 [17 <./fig/imu.jpg> <./fig/qr_scanner.png>]
-<fig/raspberry.png, id=224, 586.19pt x 419.5675pt>
+<fig/raspberry.png, id=228, 586.19pt x 419.5675pt>
 File: fig/raspberry.png Graphic file (type png)
 <use fig/raspberry.png>
 Package pdftex.def Info: fig/raspberry.png  used on input line 606.
@@ -1051,12 +1270,12 @@ Package pdftex.def Info: fig/raspberry.png  used on input line 606.
 
 
 [18 <./fig/array.png> <./fig/raspberry.png>]
-<fig/esp32.png, id=235, 5.7816pt x 5.02277pt>
+<fig/esp32.png, id=239, 5.7816pt x 5.02277pt>
 File: fig/esp32.png Graphic file (type png)
 <use fig/esp32.png>
 Package pdftex.def Info: fig/esp32.png  used on input line 633.
 (pdftex.def)             Requested size: 220.50887pt x 191.57747pt.
-<fig/bluetooth.jpg, id=236, 752.8125pt x 752.8125pt>
+<fig/bluetooth.jpg, id=240, 752.8125pt x 752.8125pt>
 File: fig/bluetooth.jpg Graphic file (type jpg)
 <use fig/bluetooth.jpg>
 Package pdftex.def Info: fig/bluetooth.jpg  used on input line 642.
@@ -1065,7 +1284,9 @@ Package pdftex.def Info: fig/bluetooth.jpg  used on input line 642.
 
 [19 <./fig/esp32.png>]
 
-[20 <./fig/bluetooth.jpg>] (./ECI.aux)
+[20 <./fig/bluetooth.jpg>]
+
+[21] (./ECI.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
@@ -1075,21 +1296,21 @@ L3 programming layer <2024-05-27>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `ECI.out' has not changed.
-(rerunfilecheck)             Checksum: 7019F67A145519FABBC72723A5472759;3658.
+(rerunfilecheck)             Checksum: F43EB6F70D726DF702CA5718BC995B83;3767.
  ) 
 Here is how much of TeX's memory you used:
- 34370 strings out of 473600
- 624061 string characters out of 5732737
- 1938908 words of memory out of 5000000
- 56662 multiletter control sequences out of 15000+600000
- 573148 words of font info for 66 fonts, out of 8000000 for 9000
+ 61227 strings out of 473600
+ 1401807 string characters out of 5732737
+ 2076648 words of memory out of 5000000
+ 83345 multiletter control sequences out of 15000+600000
+ 576636 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 138i,14n,162p,2826b,518s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ECI.pdf (20 pages, 2823432 bytes).
+ 138i,14n,162p,2822b,1004s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ECI.pdf (21 pages, 2842860 bytes).
 PDF statistics:
- 291 PDF objects out of 1000 (max. 8388607)
- 226 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
- 276 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 311 PDF objects out of 1000 (max. 8388607)
+ 241 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 284 words of extra memory for PDF output out of 10000 (max. 10000000)
 

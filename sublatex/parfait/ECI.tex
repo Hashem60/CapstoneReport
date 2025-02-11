@@ -665,4 +665,37 @@ This structured communication enhances \textbf{precision, synchronization,
 and responsiveness}, optimizing the AGV’s navigation, lifting, and 
 traction systems while maintaining operational efficiency and safety.
     
+
+\newpage
+\section{usefull part}
+\begin{figure}[h!]
+    \centering
+    \begin{circuitikz}[scale=1.2, transform shape,american voltages]
+  
+        % Wheatstone Bridge
+        \draw (0,0) to [R=$R_1$] (45:3); % Resistor R1
+        \draw (0,0) to [R, l_=$R_2$] (-45:3); % Resistor R3
+        \draw (45:3) to[R=$R_3$] ++(-45:3) coordinate(alpha); % Resistor R2
+        \draw (alpha) to[R=$R_4$] (-45:3); % Resistor R4
+  
+        \draw (45:3) --++(0,0.5)  to [short, o-*] ++(-3,0)node[left]{$V_+$}; % Positive terminal
+        \draw (-45:3)--++(0,-0.5)  to [short, o-*] ++(-3,0)node[left]{$V_-$}; % Positive terminal
+  
+        % \draw (0,0) to[open, v^=$V_{\text{out}}$, *-*] (alpha);
+        \draw (0,0) to[rmeter, t=$V$] (alpha);
+  
+  
+    \end{circuitikz}
+    \caption{Load Cell Circuit with Wheatstone Bridge and Amplifier}
+    \label{fig:load-cell}
+  \end{figure}
+  The idea behind the load cell is to use the Wheatstone bridge (\cref{fig:load-cell}). In a Wheatstone bridge, $R_1 = R_2 = R_3 = R_4$, and the output voltage is zero when no force is applied. When weight is applied, it bends the material, which changes the resistivity of the material. This change disrupts the equality of the resistances, causing a difference in voltage across $V$. By experimenting and calibrating with different weights and tracking the changes in voltage, we can measure the weight.
+
+  It is also worth noting that the signal produced depends on the material properties. If the bending factor is linear, the output will be proportional to the applied weight. However, if the bending becomes exponential (which would be a limitation of the material), the relationship between the applied weight and the output signal may no longer be accurate. Additionally, the placement of the load affects the measurement. The voltage difference across $V$ is used to measure the output of the bridge.
+  
+  In theory, we could use the microcontroller's analog input to read the voltage differences. However, the changes are too small to provide an accurate reading. For this reason, the \textbf{HX711} amplifier is used to amplify the signal and convert it into a digital signal.
+
+  
+
+
 \end{document}
