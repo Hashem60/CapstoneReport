@@ -694,8 +694,86 @@ traction systems while maintaining operational efficiency and safety.
   It is also worth noting that the signal produced depends on the material properties. If the bending factor is linear, the output will be proportional to the applied weight. However, if the bending becomes exponential (which would be a limitation of the material), the relationship between the applied weight and the output signal may no longer be accurate. Additionally, the placement of the load affects the measurement. The voltage difference across $V$ is used to measure the output of the bridge.
   
   In theory, we could use the microcontroller's analog input to read the voltage differences. However, the changes are too small to provide an accurate reading. For this reason, the \textbf{HX711} amplifier is used to amplify the signal and convert it into a digital signal.
+\begin{figure}
+    \centering
 
-  
-
+    \begin{circuitikz}[american]
+        %
+        \tikzset{myICwl/.style={muxdemux,
+    muxdemux def={Lh=4, Rh=4, w=4,
+    NR=2, NL=2, NB=0, },
+    muxdemux label={L1=IN$(+)$, L2=IN$(-)$,
+    R1=3.3$v$ out, R2=OUT$(-)$,},
+    }
+    }
+    %
+    \tikzset{myICwl2/.style={muxdemux,
+    muxdemux def={Lh=4, Rh=4, w=4,
+    NR=2, NL=2, NB=0, },
+    muxdemux label={L1=IN$(+)$, L2=IN$(-)$,
+    R1=5$v$ out, R2=OUT$(-)$,},
+    }
+    }
+    %
+    \tikzset{myICwl3/.style={muxdemux,
+    muxdemux def={Lh=4, Rh=4, w=4,
+    NR=2, NL=2, NB=0, },
+    muxdemux label={L1=IN$(+)$, L2=IN$(-)$,
+    R1=9$v$ out, R2=OUT$(-)$,},
+    }
+    }
+    %
+    \tikzset{myICwl4/.style={muxdemux,
+    muxdemux def={Lh=4, Rh=4, w=4,
+    NR=2, NL=2, NB=0, },
+    muxdemux label={L1=IN$(+)$, L2=IN$(-)$,
+    R1=24$v$ out, R2=OUT$(-)$,},
+    }
+    }
+    %
+    \tikzset{myICwl5/.style={muxdemux,
+    muxdemux def={Lh=4, Rh=4, w=4,
+    NR=2, NL=2, NB=0, },
+    muxdemux label={L1=IN$(+)$, L2=IN$(-)$,
+    R1=48$v$ out, R2=OUT$(-)$,},
+    }
+    }
+    %
+    \draw (5, 7) node[myICwl5](chip5){MotorobitDC};
+    \draw (5, 4.5) node[myICwl4](chip4){WM-045};
+    \draw (5, 2) node[myICwl3](chip3){MP1584EN};
+    \draw (5, -0.5) node[myICwl2](chip2){MP1584EN};
+    \draw (5,-3) node[myICwl](chip1){MP1584EN};
+    % \draw (5, 2) node[myICwl](chip1){MP1584EN} ;
+    \ctikzset{bipoles/vsourceam/inner plus={ $+$}}
+    \ctikzset{bipoles/vsourceam/inner minus={ $-$}}
+    \draw (chip1.blpin 1)--+(-1,0) coordinate(dist) to[switch,mirror,label=Switch,*-]++(-3,0) to[V, l_=$12V$,-*] ++(0,-2) node[ground]{} coordinate(end);
+    \draw (chip2.blpin 1)--+(-1,0)--(dist);
+    \draw (chip3.blpin 1)--+(-1,0)--(dist);
+    \draw (chip4.blpin 1)--+(-1,0)--(dist);
+    \draw (chip5.blpin 1)--+(-1,0)--(dist);
+    %
+    \draw (chip1.brpin 1)--+(1,0) to[short,l=$3.3V$,-]+(2,0) to [fuse,label=$3A$,-o]+(3,0);
+    \draw (chip2.brpin 1)--+(1,0) to[short,l=$5V$,-]+(2,0)to [fuse,label=$3A$,-o]+(3,0);
+    \draw (chip3.brpin 1)--+(1,0) to[short,l=$9V$,-]+(2,0)to [fuse,label=$1A$,-o]+(3,0);
+    \draw (chip4.brpin 1)--+(1,0) to[short,l=$24V$,-]+(2,0)to [fuse,label=$5A$,-o]+(3,0);
+    \draw (chip5.brpin 1)--+(1,0) to[short,l=$45V$,-]+(2,0)to [fuse,label=$10A$,-o]+(3,0);
+    %
+    \draw (chip1.blpin 2)to node[ground]{}++(-0.5,0);
+    \draw (chip2.blpin 2)to node[ground]{}++(-0.5,0);
+    \draw (chip3.blpin 2)to node[ground]{}++(-0.5,0);
+    \draw (chip4.blpin 2)to node[ground]{}++(-0.5,0);
+    \draw (chip5.blpin 2)to node[ground]{}++(-0.5,0);
+    
+    \draw (chip1.brpin 2)to node[ground]{}++(0.5,0);
+    \draw (chip2.brpin 2)to node[ground]{}++(0.5,0);
+    \draw (chip3.brpin 2)to node[ground]{}++(0.5,0);
+    \draw (chip4.brpin 2)to node[ground]{}++(0.5,0);
+    \draw (chip5.brpin 2)to node[ground]{}++(0.5,0);
+    
+    
+    \end{circuitikz}
+    \caption{Power Distribution Circuit}
+\end{figure}
 
 \end{document}
