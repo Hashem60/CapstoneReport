@@ -15,7 +15,7 @@ precise navigation, and effective braking. Additionally, AGVs rely on a
 network of embedded controllers, sensors, and communication modules to 
 process data in real time, enabling obstacle detection, localization, and 
 coordination a central control system.
-\newpage
+
 \section{Power Supply and Distribution}
 
 At the heart of the electrical design lies the power supply and distribution system, 
@@ -96,7 +96,7 @@ To accommodate these diverse requirements, multiple voltage regulators
 are incorporated to step down the 12V battery supply to the appropriate 
 levels, ensuring consistent performance across all subsystems. 
 
-\newpage
+
 The \textbf{LM2596} in Figure~\ref{LM2596} voltage regulator will be used to step down the 12V battery 
 supply to the required voltage levels for various components. Different 
 versions of the LM2596 are available, including fixed output versions 
@@ -218,7 +218,7 @@ modules, while minimizing power losses and ensuring reliable operation.
 Protection circuits and fuses are also integrated to safeguard sensitive 
 components from voltage spikes, short circuits, and other electrical faults, 
 enhancing the overall safety and durability of the AGV.
-\newpage
+
 \subsection{Key Considerations}%(It's probably something that can be moved to constrainst if we decide to keep it)
 \begin{itemize}
     \item \textit{Efficiency}: The system is designed to maximize 
@@ -250,7 +250,7 @@ A motor control system comprises two fundamental components: the motors themselv
 The motor alone cannot achieve optimal operation without the integration of a sophisticated motor driver or controller. 
 The motor driver acts as the intermediary between the power supply and the motor, regulating voltage and current to ensure 
 smooth and efficient operation. It interprets control signals and translates them into precise commands.
-\newpage
+
 \subsection{Motors and actuators}
 
 \begin{itemize}
@@ -318,8 +318,8 @@ by halting motion instantly when required.
 \end{table}
 
 
-\newpage
 
+\newpage
 subsubsection{DC 12V Electric Linear Actuator (Maximum Force 6000N):}
 
 The lifting mechanism of the automated guided vehicle (AGV)  
@@ -328,7 +328,7 @@ precise vertical motion. The actuator includes an overload
 protection feature, preventing excessive force application  
 and minimizing mechanical wear.
 
-\begin{figure}[H]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=0.45\textwidth]{fig/linear_actuator.jpg}
     \caption{Linear actuator with a maximum stoke of 6000N }
@@ -741,9 +741,9 @@ traction systems while maintaining operational efficiency and safety.
     %
     \draw (5, 7) node[myICwl5](chip5){MotorobitDC};
     \draw (5, 4.5) node[myICwl4](chip4){WM-045};
-    \draw (5, 2) node[myICwl3](chip3){MP1584EN};
-    \draw (5, -0.5) node[myICwl2](chip2){MP1584EN};
-    \draw (5,-3) node[myICwl](chip1){MP1584EN};
+    \draw (5, 2) node[myICwl3](chip3){LM2596};
+    \draw (5, -0.5) node[myICwl2](chip2){LM2596};
+    \draw (5,-3) node[myICwl](chip1){LM2596};
     % \draw (5, 2) node[myICwl](chip1){MP1584EN} ;
     \ctikzset{bipoles/vsourceam/inner plus={ $+$}}
     \ctikzset{bipoles/vsourceam/inner minus={ $-$}}
@@ -774,6 +774,17 @@ traction systems while maintaining operational efficiency and safety.
     
     \end{circuitikz}
     \caption{Power Distribution Circuit}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{fig/lm.png}
+    \caption{1.2-V to 55-V Adjustable 3-A Power Supply With Low Output Ripple}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{fig/lm2.png}
+    \caption{Fixed Output Voltage Version Typical Application Diagram}
 \end{figure}
 
 \end{document}

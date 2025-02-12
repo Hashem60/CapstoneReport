@@ -16,6 +16,30 @@ S.~A. Reveliotis, ``Conflict resolution in agv systems,'' {\em Iie Transactions}
 \bibitem{shengfang2006research}
 L.~Shengfang and H.~Xingzhe, ``Research on the agv based robot system used in substation inspection,'' in {\em 2006 International Conference on Power System Technology}, pp.~1--4, IEEE, 2006.
 
+\bibitem{ISO3691-4:2020}
+{International Organization for Standardization}, ``{Industrial Trucks—Safety Requirements and Verification—Part 4: Driverless Industrial Trucks and Their Systems}.'' ISO 3691-4:2020, 2020.
+
+\bibitem{ANSIITSDFB56.5}
+{American National Standards Institute (ANSI)}, ``{ANSI/ITSDF B56.5: Safety Standard for Driverless Automated Industrial Trucks}.'' ANSI/ITSDF B56.5, 2020.
+
+\bibitem{EN3691-4}
+{European Committee for Standardization (CEN)}, ``{EN 3691-4: Safety Requirements for Industrial Trucks – Part 4: Driverless Industrial Trucks and Their Systems}.'' EN 3691-4, 2020.
+
+\bibitem{RIAR15.08}
+{Robotic Industries Association (RIA)}, ``{RIA R15.08: Industrial Robot Safety Standard}.'' RIA R15.08, 2020.
+
+\bibitem{VDI2510}
+{Verein Deutscher Ingenieure (VDI)}, ``{VDI 2510: Safety of Automated Systems}.'' VDI Guideline 2510, 2017.
+
+\bibitem{OSHArequirements}
+{Occupational Safety and Health Administration (OSHA)}, ``{OSHA Requirements for Industrial Safety}.'' OSHA Regulations, 2020.
+
+\bibitem{GDPR}
+{European Union}, ``{General Data Protection Regulation (GDPR)}.'' EU Regulation 2016/679, 2018.
+
+\bibitem{CCPA}
+{California State Legislature}, ``{California Consumer Privacy Act (CCPA)}.'' California Civil Code 1798.100 et seq., 2018.
+
 \bibitem{cservenak2018further}
 {\'A}.~Cserven{\'a}k, ``Further development of an agv control system,'' in {\em Vehicle and Automotive Engineering 2: Proceedings of the 2nd VAE2018, Miskolc, Hungary}, pp.~376--384, Springer, 2018.
 
