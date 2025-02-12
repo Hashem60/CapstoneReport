@@ -81,62 +81,32 @@
 \definecolor{darkgreen}{rgb}{0,0.5,0}
 
 
-% Define XML-
 % \lstdefinestyle{xmlstyle}{
-%     language=XML,                   % Specify the language for highlighting
-%     basicstyle=\ttfamily\footnotesize,     % Set font and size
+%     language=XML,
+%     basicstyle=\ttfamily\footnotesize,
 %     columns=fullflexible,
-%     keywordstyle=\color{maroon}\bfseries, % Keywords in blue and bold
-%     stringstyle=\color{blue},        % Strings in red
-%     commentstyle=\color{codegreen},      % Comments in green
-%     frame=shadowbox,                   % Draw a box around the code
-%     numbers=left,                   % Display line numbers on the left
-%     numberstyle=\tiny\color{codegray}, % Style for line numbers
-%     stepnumber=1,                   % Line number increment
-%     numbersep=5pt,                  % Space between line numbers and code
-%     breaklines=true,                % Automatically wrap long lines
-%     showstringspaces=false,         % Hide ␣ for spaces
-%     %caption={Example XML Code},     % Add a caption for the listing
-%     %label={lst:xml_example},        % Add a label for referencing
-%     morestring=[s]{"}{"},
-%     morecomment=[s]{!--}{--},
-%     %morecomment=[s]{?}{?},
-%     moredelim=[s][\color{black}]{>}{<},
-%     moredelim=[s][\color{red}]{\ }{=},
-%     identifierstyle=\color{maroon}
-%     %morekeywords={link, inertial, visual, collision,joint,parent,child,ros,gazebo, plugin,sensor,}
+%     keywordstyle=\color{maroon}\bfseries, % For reserved keywords (if defined)
+%     stringstyle=\color{blue},             % Attribute values (e.g., "value")
+%     commentstyle=\color{codegreen},       
+%     frame=shadowbox,
+%     numbers=left,
+%     numberstyle=\tiny\color{codegray},
+%     stepnumber=1,
+%     numbersep=5pt,
+%     breaklines=true,
+%     showstringspaces=false,
+%     % Tags and attributes
+%     tagstyle=\color{maroon},              % Color for XML tags (e.g., <tag>)
+%     moredelim=[s][\color{black}]{>}{<},   % Color tag delimiters
+%     moredelim=[s][\color{red}]{=}{=},     % Color "=" in attributes
+%     morecomment=[s]{!--}{--},             
+%     morestring=[b]",
+%     % Highlight specific attributes or tags (optional)
+%     emph={id, name, version},
+%     emphstyle=\color{maroon}\bfseries,
+%     literate={\ =}{{\textcolor{backcolour}{=}}}1 % Color "=" without spaces
 % }
 
-\lstdefinestyle{xmlstyle}{
-    language=XML,
-    basicstyle=\ttfamily\footnotesize,
-    columns=fullflexible,
-    keywordstyle=\color{maroon}\bfseries, % For reserved keywords (if defined)
-    stringstyle=\color{blue},             % Attribute values (e.g., "value")
-    commentstyle=\color{codegreen},       
-    frame=shadowbox,
-    numbers=left,
-    numberstyle=\tiny\color{codegray},
-    stepnumber=1,
-    numbersep=5pt,
-    breaklines=true,
-    showstringspaces=false,
-    % Tags and attributes
-    tagstyle=\color{maroon},              % Color for XML tags (e.g., <tag>)
-    moredelim=[s][\color{black}]{>}{<},   % Color tag delimiters
-    moredelim=[s][\color{red}]{=}{=},     % Color "=" in attributes
-    morecomment=[s]{!--}{--},             
-    morestring=[b]",
-    % Highlight specific attributes or tags (optional)
-    emph={id, name, version},
-    emphstyle=\color{maroon}\bfseries,
-    literate={\ =}{{\textcolor{backcolour}{=}}}1 % Color "=" without spaces
-}
-
-% moredelim=[s][\color{red}]{\ }{=},
-% stringstyle=\color{blue},
-% identifierstyle=\color{maroon},
-% }
 \setminted{
     linenos=true,          % Enable line numbers
     fontsize=\small,       % Set font size
