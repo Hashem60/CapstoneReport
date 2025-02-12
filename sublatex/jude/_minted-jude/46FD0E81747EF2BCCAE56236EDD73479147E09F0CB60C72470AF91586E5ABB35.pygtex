@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYG{k}{const}\PYG{+w}{ }\PYG{n}{socket}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{io}\PYG{p}{(}\PYG{err}{\PYGZsq{}}\PYG{n}{http}\PYG{o}{:}\PYG{c+c1}{//localhost:5000\PYGZsq{});}
+\PYG{+w}{  }\PYG{n}{set}\PYG{p}{(\PYGZob{}}\PYG{+w}{ }\PYG{n}{socket}\PYG{+w}{ }\PYG{p}{\PYGZcb{});}
+\end{Verbatim}

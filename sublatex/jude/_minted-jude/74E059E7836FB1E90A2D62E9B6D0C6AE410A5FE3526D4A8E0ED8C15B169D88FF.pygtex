@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYG{n+nx}{def}\PYG{+w}{ }\PYG{n+nx}{is\PYGZus{}obstacle\PYGZus{}behind}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{scan\PYGZus{}data}\PYG{+w}{ }\PYG{n+nx}{is}\PYG{+w}{ }\PYG{n+nx}{None}\PYG{o}{:}
+\PYG{+w}{            }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{False}
+\PYG{+w}{        }\PYG{n+nx}{robot\PYGZus{}length}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.52}
+\PYG{+w}{        }\PYG{n+nx}{obstacle\PYGZus{}distance\PYGZus{}threshold}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{robot\PYGZus{}}
+\PYG{+w}{        }\PYG{n+nx}{sector\PYGZus{}start\PYGZus{}angle}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{np}\PYG{p}{.}\PYG{n+nx}{deg2rad}\PYG{p}{(}\PYG{l+m+mf}{225}\PYG{p}{)}\PYG{+w}{  }\PYG{err}{\PYGZsh{}}\PYG{+w}{ }\PYG{l+m+mf}{225}\PYG{+w}{ }\PYG{n+nx}{degrees}
+\PYG{+w}{        }\PYG{n+nx}{sector\PYGZus{}end\PYGZus{}angle}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{np}\PYG{p}{.}\PYG{n+nx}{deg2rad}\PYG{p}{(}\PYG{l+m+mf}{270}\PYG{p}{)}\PYG{+w}{   }\PYG{err}{\PYGZsh{}}\PYG{+w}{ }\PYG{l+m+mf}{270}\PYG{+w}{ }\PYG{n+nx}{degrees}
+\PYG{+w}{        }\PYG{n+nx}{angle\PYGZus{}increment}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{scan\PYGZus{}data}\PYG{p}{.}\PYG{n+nx}{angle\PYGZus{}increment}
+\PYG{+w}{        }\PYG{n+nx}{num\PYGZus{}ranges}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{len}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{scan\PYGZus{}data}\PYG{p}{.}\PYG{n+nx}{ranges}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n+nx}{start\PYGZus{}index}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kr}{int}\PYG{p}{((}\PYG{n+nx}{sector\PYGZus{}start\PYGZus{}angle}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{scan\PYGZus{}data}\PYG{p}{.}\PYG{n+nx}{angle\PYGZus{}min}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n+nx}{angle\PYGZus{}increment}\PYG{p}{)}
+
+\PYG{+w}{        }\PYG{n+nx}{end\PYGZus{}index}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kr}{int}\PYG{p}{((}\PYG{n+nx}{sector\PYGZus{}end\PYGZus{}angle}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{scan\PYGZus{}data}\PYG{p}{.}\PYG{n+nx}{angle\PYGZus{}min}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n+nx}{angle\PYGZus{}increment}\PYG{p}{)}
+
+\PYG{+w}{        }\PYG{n+nx}{min\PYGZus{}distance}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kr}{float}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}inf\PYGZsq{}}\PYG{p}{)}
+\PYG{+w}{        }\PYG{k}{for}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o+ow}{in}\PYG{+w}{ }\PYG{n+nx}{range}\PYG{p}{(}\PYG{n+nx}{start\PYGZus{}index}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{end\PYGZus{}index}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{scan\PYGZus{}data}\PYG{p}{.}\PYG{n+nx}{ranges}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{min\PYGZus{}distance}\PYG{o}{:}
+\PYG{+w}{                }\PYG{n+nx}{min\PYGZus{}distance}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{scan\PYGZus{}data}\PYG{p}{.}\PYG{n+nx}{ranges}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}
+\PYG{+w}{        }\PYG{n+nx}{print}\PYG{p}{(}\PYG{n+nx}{f}\PYG{l+s+s2}{\PYGZdq{}min distance : \PYGZob{}min\PYGZus{}distance\PYGZcb{}\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{min\PYGZus{}distance}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{obstacle\PYGZus{}distance\PYGZus{}threshold}\PYG{+w}{ }\PYG{n+nx}{and}\PYG{+w}{ }\PYG{n+nx}{min\PYGZus{}distance}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{obstacle\PYGZus{}distance\PYGZus{}threshold}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mf}{0.5}\PYG{p}{)}
+
+\end{Verbatim}

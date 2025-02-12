@@ -1,0 +1,42 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{\PYGZus{}adjust\PYGZus{}orientation}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{error}\PYG{p}{,} \PYG{n}{angle}\PYG{p}{,} \PYG{n}{pixels}\PYG{p}{,} \PYG{n}{mask} \PYG{p}{,} \PYG{n}{w\PYGZus{}min}\PYG{p}{,} \PYG{n}{h\PYGZus{}min}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}obstacleInFront}\PYG{p}{:}
+        \PYG{k}{return} \PYG{k+kc}{None}
+    \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{moveToTurnPosition}\PYG{p}{:}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}move}\PYG{p}{(}\PYG{n}{error}\PYG{p}{)}
+        \PYG{n}{ing\PYGZus{}turn}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}error\PYGZdq{}}\PYG{p}{,} \PYG{n}{error}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n}{error} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{60} \PYG{o+ow}{or} \PYG{n}{error} \PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{60}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{stop}\PYG{p}{()}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}making\PYGZus{}turn} \PYG{o}{=} \PYG{k+kc}{False}
+        \PYG{k}{return}
+    \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}making\PYGZus{}u\PYGZus{}turn}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}error\PYGZdq{}}\PYG{p}{,} \PYG{n}{error}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n}{error} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{60} \PYG{o+ow}{or} \PYG{n}{error} \PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{60}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{stop}\PYG{p}{()}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}making\PYGZus{}u\PYGZus{}turn} \PYG{o}{=} \PYG{k+kc}{False}
+        \PYG{k}{return}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{w\PYGZus{}min} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{100} \PYG{o+ow}{and} \PYG{n}{h\PYGZus{}min} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{100}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}move\PYGZus{}forward}\PYG{p}{()}
+        \PYG{k}{return} \PYG{k+kc}{None}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{pixels} \PYG{o}{\PYGZlt{}=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}black\PYGZus{}pixels} \PYG{o}{+} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}black\PYGZus{}pixels} \PYG{o}{*} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}threshold}\PYG{p}{))} \PYG{o+ow}{and}  \PYG{p}{(}\PYG{n}{pixels} \PYG{o}{\PYGZgt{}=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}black\PYGZus{}pixels} \PYG{o}{\PYGZhy{}} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}black\PYGZus{}pixels} \PYG{o}{*} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}threshold}\PYG{p}{)):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}move}\PYG{p}{(}\PYG{n}{error}\PYG{p}{)}
+        \PYG{k}{return} \PYG{k+kc}{None}
+    \PYG{k}{if} \PYG{n}{pixels} \PYG{o}{\PYGZgt{}} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}black\PYGZus{}pixels} \PYG{o}{+} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}black\PYGZus{}pixels} \PYG{o}{*} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}threshold}\PYG{p}{)):}
+        \PYG{n}{left\PYGZus{}pixels}\PYG{p}{,} \PYG{n}{right\PYGZus{}pixels}\PYG{p}{,} \PYG{n}{onLeft}\PYG{p}{,} \PYG{n}{onRight} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{check\PYGZus{}side\PYGZus{}pixels}\PYG{p}{(}\PYG{n}{mask}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n}{onLeft} \PYG{o+ow}{or} \PYG{n}{onRight}\PYG{p}{:}
+            \PYG{n}{top\PYGZus{}pixels\PYGZus{}remaining}\PYG{p}{,} \PYG{n}{top\PYGZus{}pixels\PYGZus{}side}\PYG{p}{,} \PYG{n}{bottom\PYGZus{}pixels\PYGZus{}side}\PYG{p}{,} \PYG{n}{onTop}\PYG{p}{,} \PYG{n}{hastoStop} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{check\PYGZus{}straight\PYGZus{}pixels}\PYG{p}{(}\PYG{n}{mask}\PYG{p}{)}
+            \PYG{k}{if} \PYG{n}{hastoStop}\PYG{p}{:}
+                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{needMakeDecision} \PYG{o}{=} \PYG{k+kc}{True}
+                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{junction\PYGZus{}decision}\PYG{p}{(}\PYG{n}{onLeft}\PYG{p}{,} \PYG{n}{onRight}\PYG{p}{,} \PYG{n}{onTop}\PYG{p}{)}
+                \PYG{k}{if} \PYG{n}{top\PYGZus{}pixels\PYGZus{}remaining} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+                    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}move\PYGZus{}forward}\PYG{p}{()}
+                \PYG{k}{return} \PYG{p}{[}\PYG{n}{left\PYGZus{}pixels}\PYG{p}{,} \PYG{n}{right\PYGZus{}pixels}\PYG{p}{,} \PYG{n}{top\PYGZus{}pixels\PYGZus{}remaining}\PYG{p}{,} \PYG{n}{top\PYGZus{}pixels\PYGZus{}side}\PYG{p}{,} \PYG{n}{bottom\PYGZus{}pixels\PYGZus{}side}\PYG{p}{]}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}move\PYGZus{}forward}\PYG{p}{()}
+            \PYG{k}{return} \PYG{p}{[}\PYG{n}{left\PYGZus{}pixels}\PYG{p}{,} \PYG{n}{right\PYGZus{}pixels}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}
+        \PYG{k}{elif} \PYG{n}{pixels} \PYG{o}{\PYGZlt{}} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}black\PYGZus{}pixels} \PYG{o}{\PYGZhy{}} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}black\PYGZus{}pixels} \PYG{o}{*} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}threshold}\PYG{p}{)):}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}move}\PYG{p}{(}\PYG{n}{error}\PYG{p}{)}
+            \PYG{k}{return} \PYG{k+kc}{None}
+    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}move}\PYG{p}{(}\PYG{n}{error}\PYG{p}{)}
+    \PYG{k}{return} \PYG{k+kc}{None}
+\end{Verbatim}

@@ -1,0 +1,34 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{check\PYGZus{}straight\PYGZus{}pixels}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{mask}\PYG{p}{):}
+        \PYG{n}{onTop} \PYG{o}{=} \PYG{k+kc}{False}
+        \PYG{n}{hastoStop} \PYG{o}{=} \PYG{k+kc}{False}
+        \PYG{n}{height}\PYG{p}{,} \PYG{n}{width} \PYG{o}{=} \PYG{n}{mask}\PYG{o}{.}\PYG{n}{shape}
+        \PYG{n}{middle\PYGZus{}start} \PYG{o}{=} \PYG{p}{(}\PYG{n}{width} \PYG{o}{//} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}middle\PYGZus{}width} \PYG{o}{//} \PYG{l+m+mi}{2}\PYG{p}{)}
+        \PYG{n}{middle\PYGZus{}end} \PYG{o}{=} \PYG{p}{(}\PYG{n}{width} \PYG{o}{//} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{+} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}middle\PYGZus{}width} \PYG{o}{//} \PYG{l+m+mi}{2}\PYG{p}{)}
+        \PYG{n}{middle\PYGZus{}mask} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros\PYGZus{}like}\PYG{p}{(}\PYG{n}{mask}\PYG{p}{)}
+        \PYG{n}{middle\PYGZus{}mask}\PYG{p}{[:,} \PYG{n}{middle\PYGZus{}start}\PYG{p}{:}\PYG{n}{middle\PYGZus{}end}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{255}
+
+        \PYG{n}{masked\PYGZus{}binary}\PYG{o}{=}\PYG{n}{cv2}\PYG{o}{.}\PYG{n}{bitwise\PYGZus{}and}\PYG{p}{(}\PYG{n}{mask}\PYG{p}{,} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{bitwise\PYGZus{}not}\PYG{p}{(}\PYG{n}{middle\PYGZus{}mask}\PYG{p}{))}
+        \PYG{n}{top\PYGZus{}half} \PYG{o}{=} \PYG{n}{masked\PYGZus{}binary}\PYG{p}{[:}\PYG{n}{height} \PYG{o}{//} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{p}{:]}
+        \PYG{n}{bottom\PYGZus{}half} \PYG{o}{=} \PYG{n}{masked\PYGZus{}binary}\PYG{p}{[}\PYG{n}{height} \PYG{o}{//} \PYG{l+m+mi}{2}\PYG{p}{:,} \PYG{p}{:]}
+        \PYG{n}{top\PYGZus{}pixels} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{top\PYGZus{}half} \PYG{o}{==} \PYG{l+m+mi}{255}\PYG{p}{)}
+        \PYG{n}{bottom\PYGZus{}pixels} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{bottom\PYGZus{}half} \PYG{o}{==} \PYG{l+m+mi}{255}\PYG{p}{)}
+
+        \PYG{k}{if} \PYG{n}{bottom\PYGZus{}pixels} \PYG{o}{\PYGZgt{}=} \PYG{n}{top\PYGZus{}pixels}\PYG{p}{:}
+            \PYG{n}{hastoStop} \PYG{o}{=} \PYG{k+kc}{True}
+            \PYG{n}{middle\PYGZus{}line} \PYG{o}{=} \PYG{n}{mask}\PYG{p}{[:,} \PYG{n}{middle\PYGZus{}start}\PYG{p}{:}\PYG{n}{middle\PYGZus{}end}\PYG{p}{]}
+            \PYG{n}{height}\PYG{p}{,} \PYG{n}{\PYGZus{}} \PYG{o}{=} \PYG{n}{middle\PYGZus{}line}\PYG{o}{.}\PYG{n}{shape}
+            \PYG{n}{top\PYGZus{}half} \PYG{o}{=} \PYG{n}{middle\PYGZus{}line}\PYG{p}{[:}\PYG{n}{height} \PYG{o}{//} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{p}{:]}
+            \PYG{n}{bottom\PYGZus{}half} \PYG{o}{=} \PYG{n}{middle\PYGZus{}line}\PYG{p}{[}\PYG{n}{height} \PYG{o}{//} \PYG{l+m+mi}{2}\PYG{p}{:,} \PYG{p}{:]}
+            \PYG{n}{bottom\PYGZus{}half}\PYG{p}{[}\PYG{n}{bottom\PYGZus{}half} \PYG{o}{==} \PYG{l+m+mi}{255}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}
+            \PYG{n}{top\PYGZus{}pixels\PYGZus{}remaining} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{top\PYGZus{}half} \PYG{o}{==} \PYG{l+m+mi}{255}\PYG{p}{)}
+            \PYG{n}{continuity\PYGZus{}threshold} \PYG{o}{=} \PYG{l+m+mf}{0.3} \PYG{o}{*} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}black\PYGZus{}pixels}
+            \PYG{k}{if} \PYG{n}{top\PYGZus{}pixels\PYGZus{}remaining} \PYG{o}{\PYGZgt{}=} \PYG{n}{continuity\PYGZus{}threshold}\PYG{p}{:}
+                \PYG{n}{onTop} \PYG{o}{=} \PYG{k+kc}{True}
+                \PYG{k}{return} \PYG{n}{top\PYGZus{}pixels\PYGZus{}remaining}\PYG{p}{,} \PYG{n}{top\PYGZus{}pixels}\PYG{p}{,} \PYG{n}{bottom\PYGZus{}pixels}\PYG{p}{,} \PYG{n}{onTop}\PYG{p}{,} \PYG{n}{hastoStop}
+            \PYG{k}{else}\PYG{p}{:}
+                \PYG{k}{return} \PYG{n}{top\PYGZus{}pixels\PYGZus{}remaining}\PYG{p}{,} \PYG{n}{top\PYGZus{}pixels}\PYG{p}{,} \PYG{n}{bottom\PYGZus{}pixels}\PYG{p}{,} \PYG{n}{onTop}\PYG{p}{,} \PYG{n}{hastoStop}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{top\PYGZus{}pixels}\PYG{p}{,} \PYG{n}{bottom\PYGZus{}pixels}\PYG{p}{,} \PYG{n}{onTop}\PYG{p}{,} \PYG{n}{hastoStop}
+
+\end{Verbatim}

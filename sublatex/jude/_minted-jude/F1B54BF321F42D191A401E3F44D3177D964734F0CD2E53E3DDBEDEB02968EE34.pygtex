@@ -1,0 +1,36 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{check\PYGZus{}for\PYGZus{}obstacles}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{event}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scan\PYGZus{}data} \PYG{o+ow}{is} \PYG{k+kc}{None} \PYG{o+ow}{or} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scan\PYGZus{}data}\PYG{o}{.}\PYG{n}{ranges}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+      \PYG{k}{return}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Checking for obstacles using LIDAR data\PYGZdq{}}\PYG{p}{)}
+  \PYG{n}{front\PYGZus{}angle\PYGZus{}range} \PYG{o}{=} \PYG{l+m+mi}{30}  \PYG{c+c1}{\PYGZsh{} Degrees}
+    \PYG{n}{front\PYGZus{}angle\PYGZus{}range\PYGZus{}rad} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{deg2rad}\PYG{p}{(}\PYG{n}{front\PYGZus{}angle\PYGZus{}range}\PYG{p}{)}
+    \PYG{n}{angle\PYGZus{}increment} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scan\PYGZus{}data}\PYG{o}{.}\PYG{n}{angle\PYGZus{}increment}
+    \PYG{n}{num\PYGZus{}ranges} \PYG{o}{=} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scan\PYGZus{}data}\PYG{o}{.}\PYG{n}{ranges}\PYG{p}{)}
+    \PYG{n}{min\PYGZus{}angle} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scan\PYGZus{}data}\PYG{o}{.}\PYG{n}{angle\PYGZus{}min}
+    \PYG{n}{start\PYGZus{}index} \PYG{o}{=} \PYG{n+nb}{max}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n+nb}{int}\PYG{p}{((}\PYG{n}{min\PYGZus{}angle} \PYG{o}{\PYGZhy{}} \PYG{n}{front\PYGZus{}angle\PYGZus{}range\PYGZus{}rad} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{/} \PYG{n}{angle\PYGZus{}increment}\PYG{p}{))}
+    \PYG{n}{end\PYGZus{}index} \PYG{o}{=} \PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{num\PYGZus{}ranges} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n+nb}{int}\PYG{p}{((}\PYG{n}{min\PYGZus{}angle} \PYG{o}{+} \PYG{n}{front\PYGZus{}angle\PYGZus{}range\PYGZus{}rad} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{/} \PYG{n}{angle\PYGZus{}increment}\PYG{p}{))}
+    \PYG{n}{min\PYGZus{}distance} \PYG{o}{=} \PYG{n+nb}{float}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}inf\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{start\PYGZus{}index}\PYG{p}{,} \PYG{n}{end\PYGZus{}index}\PYG{p}{):}
+      \PYG{k}{if} \PYG{l+m+mi}{0} \PYG{o}{\PYGZlt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scan\PYGZus{}data}\PYG{o}{.}\PYG{n}{ranges}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{\PYGZlt{}} \PYG{n}{min\PYGZus{}distance} \PYG{o+ow}{and} \PYG{n}{np}\PYG{o}{.}\PYG{n}{isfinite}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scan\PYGZus{}data}\PYG{o}{.}\PYG{n}{ranges}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]):}
+          \PYG{n}{min\PYGZus{}distance} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scan\PYGZus{}data}\PYG{o}{.}\PYG{n}{ranges}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}
+          \PYG{n}{obstacle\PYGZus{}distance\PYGZus{}threshold} \PYG{o}{=} \PYG{l+m+mf}{0.3}
+    \PYG{k}{if} \PYG{n}{min\PYGZus{}distance} \PYG{o}{\PYGZlt{}} \PYG{n}{obstacle\PYGZus{}distance\PYGZus{}threshold}\PYG{p}{:}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}obstacleInFront} \PYG{o}{=} \PYG{k+kc}{True}
+        \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{loginfo}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Obstacle detected at }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{min\PYGZus{}distance}\PYG{l+s+si}{:}\PYG{l+s+s2}{.2f}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ meters!\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{stop}\PYG{p}{()}  \PYG{c+c1}{\PYGZsh{} Stop the robot}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}obstacleChecker} \PYG{o}{+=} \PYG{l+m+mi}{1}
+
+    \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}obstacleChecker} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{5}\PYG{p}{:}
+        \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{loginfo}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Obstacle is still present. Calling contour\PYGZus{}obstacle function.\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}obstacleChecker} \PYG{o}{=} \PYG{l+m+mi}{0}
+
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}contourningObstacle}\PYG{p}{:}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}contourningObstacle} \PYG{o}{=} \PYG{k+kc}{True}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{contour\PYGZus{}obstacle}\PYG{p}{()}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}obstacleInFront} \PYG{o}{=} \PYG{k+kc}{False}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}obstacleChecker} \PYG{o}{=} \PYG{l+m+mi}{0}
+            \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{loginfo}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}No obstacle detected. Moving.\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

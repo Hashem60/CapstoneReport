@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{const MainLayout = () =\PYGZgt{} \PYGZob{}}
+\PYG{x}{    const \PYGZob{} connectedSocket, menuOpened \PYGZcb{} = core();}
+\PYG{x}{    return (}
+\PYG{x}{    \PYGZlt{}div className=\PYGZdq{}w\PYGZhy{}full h\PYGZhy{}full overflow\PYGZhy{}hidden\PYGZdq{}\PYGZgt{}}
+\PYG{x}{        \PYGZlt{}NavBar /\PYGZgt{}}
+\PYG{x}{        \PYGZlt{}div className=\PYGZdq{}w\PYGZhy{}full h\PYGZhy{}[calc(100\PYGZpc{}\PYGZhy{}64px)]\PYGZdq{}\PYGZgt{}}
+\PYG{x}{        \PYGZlt{}Routes\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}Route path=\PYGZdq{}/\PYGZdq{} element=\PYGZob{}connectedSocket ? \PYGZlt{}Remote /\PYGZgt{} : \PYGZlt{}Loader /\PYGZgt{}\PYGZcb{} /\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}Route}
+\PYG{x}{            path=\PYGZdq{}/remote\PYGZdq{}}
+\PYG{x}{            element=\PYGZob{}connectedSocket ? \PYGZlt{}Remote /\PYGZgt{} : \PYGZlt{}Loader /\PYGZgt{}\PYGZcb{}}
+\PYG{x}{            /\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}Route path=\PYGZdq{}/task\PYGZdq{} element=\PYGZob{}connectedSocket ? \PYGZlt{}Task /\PYGZgt{} : \PYGZlt{}Loader /\PYGZgt{}\PYGZcb{} /\PYGZgt{}}
+\PYG{x}{        \PYGZlt{}/Routes\PYGZgt{}}
+\PYG{x}{        \PYGZlt{}/div\PYGZgt{}}
+\PYG{x}{    \PYGZlt{}/div\PYGZgt{}}
+\PYG{x}{    );}
+\PYG{x}{\PYGZcb{};}
+\PYG{x}{export default MainLayout;}
+\end{Verbatim}

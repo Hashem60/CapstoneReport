@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nx}{camera\PYGZus{}feed}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{async}\PYG{+w}{ }\PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{data}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{set}\PYG{p}{(\PYGZob{}}\PYG{n+nx}{cameraData}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{data.image}\PYG{p}{\PYGZcb{})}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{n+nx}{camera\PYGZus{}qr\PYGZus{}feed}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{async}\PYG{+w}{ }\PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{data}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{set}\PYG{p}{(\PYGZob{}}\PYG{n+nx}{camera\PYGZus{}qr\PYGZus{}data}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{data.image}\PYG{p}{\PYGZcb{})}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{n+nx}{map\PYGZus{}feed}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{async}\PYG{+w}{ }\PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{data}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{set}\PYG{p}{(\PYGZob{}}\PYG{n+nx}{mapData}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{data.image}\PYG{p}{\PYGZcb{})}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\end{Verbatim}

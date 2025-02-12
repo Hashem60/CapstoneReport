@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYG{n+nx}{struct}\PYG{+w}{ }\PYG{n+nx}{cmd\PYGZus{}vel}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n+nx}{gear}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kr}{float}\PYG{+w}{ }\PYG{n+nx}{lx}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kr}{float}\PYG{+w}{ }\PYG{n+nx}{ly}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kr}{float}\PYG{+w}{ }\PYG{n+nx}{lz}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kr}{float}\PYG{+w}{ }\PYG{n+nx}{ax}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kr}{float}\PYG{+w}{ }\PYG{n+nx}{ay}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kr}{float}\PYG{+w}{ }\PYG{n+nx}{az}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{n+nx}{ros}\PYG{o}{::}\PYG{n+nx}{Time}\PYG{+w}{ }\PYG{n+nx}{last\PYGZus{}update\PYGZus{}time}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Last time angular velocity was updated}
+\PYG{+w}{    }\PYG{n+nx}{ros}\PYG{o}{::}\PYG{n+nx}{Time}\PYG{+w}{ }\PYG{n+nx}{interpolation\PYGZus{}start\PYGZus{}time}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Time when interpolation starts}
+\PYG{+w}{    }\PYG{n+nx}{bool}\PYG{+w}{ }\PYG{n+nx}{angular\PYGZus{}interpolating}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Flag to indicate interpolation}
+\PYG{+w}{    }\PYG{n+nx}{bool}\PYG{+w}{ }\PYG{n+nx}{waiting\PYGZus{}to\PYGZus{}interpolate}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Flag to indicate waiting period}
+\PYG{+w}{    }\PYG{k+kr}{float}\PYG{+w}{ }\PYG{n+nx}{angular\PYGZus{}start}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Starting value for interpolation}
+\PYG{+w}{    }\PYG{k+kr}{float}\PYG{+w}{ }\PYG{n+nx}{interpolation\PYGZus{}duration}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.8}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Duration for interpolation (in seconds)}
+\PYG{+w}{    }\PYG{k+kr}{float}\PYG{+w}{ }\PYG{n+nx}{wait\PYGZus{}duration}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.3}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Time to wait before starting interpolation (in seconds)}
+
+\end{Verbatim}

@@ -1,0 +1,50 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYG{k}{import}\PYG{+w}{ }\PYG{n}{rospy}
+\PYG{n}{from}\PYG{+w}{ }\PYG{n}{ie\PYGZus{}communication}\PYG{p}{.}\PYG{n}{srv}\PYG{+w}{ }\PYG{k}{import}\PYG{+w}{ }\PYG{n}{camState}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{camStateResponse}
+\PYG{k}{import}\PYG{+w}{ }\PYG{n}{cv2}
+\PYG{n}{from}\PYG{+w}{ }\PYG{n}{cv\PYGZus{}bridge}\PYG{+w}{ }\PYG{k}{import}\PYG{+w}{ }\PYG{n}{CvBridge}
+\PYG{n}{from}\PYG{+w}{ }\PYG{n}{sensor\PYGZus{}msgs}\PYG{p}{.}\PYG{n}{msg}\PYG{+w}{ }\PYG{k}{import}\PYG{+w}{ }\PYG{n}{Image}
+
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{CameraController}\PYG{o}{:}
+
+\PYG{+w}{    }\PYG{n}{def}\PYG{+w}{ }\PYG{n}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n}{self}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{        }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}pubcam1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{rospy}\PYG{p}{.}\PYG{n}{Publisher}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}camera\PYGZus{}feed\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Image}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{queue\PYGZus{}size}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}pubcam2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{rospy}\PYG{p}{.}\PYG{n}{Publisher}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}camera\PYGZus{}qr\PYGZus{}code\PYGZus{}feed\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Image}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{queue\PYGZus{}size}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n}{rospy}\PYG{p}{.}\PYG{n}{Subscriber}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}/camera/rgb/image\PYGZus{}raw\PYGZdq{}}\PYG{p}{,}\PYG{n}{Image}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}camera1Process}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n}{rospy}\PYG{p}{.}\PYG{n}{Subscriber}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}/camera\PYGZus{}2/camera\PYGZus{}2/image\PYGZus{}raw\PYGZdq{}}\PYG{p}{,}\PYG{n}{Image}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}camera2Process}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}bridge}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{CvBridge}\PYG{p}{()}
+\PYG{+w}{        }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}camState}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{True}
+\PYG{+w}{        }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}cam\PYGZus{}available}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{False}
+\PYG{+w}{        }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}cam1Frame}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{None}
+\PYG{+w}{        }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}cam2Frame}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{None}
+
+\PYG{+w}{    }\PYG{n}{def}\PYG{+w}{ }\PYG{n}{\PYGZus{}camera1Process}\PYG{p}{(}\PYG{n}{self}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{data}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{        }\PYG{n+nl}{try}\PYG{p}{:}
+\PYG{+w}{            }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}cam1Frame}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{data}
+\PYG{+w}{            }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}cam\PYGZus{}available}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{True}
+\PYG{+w}{            }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}provideCamFeed}\PYG{p}{()}
+\PYG{+w}{        }\PYG{n}{except}\PYG{+w}{ }\PYG{n}{Exception}\PYG{+w}{ }\PYG{n}{as}\PYG{+w}{ }\PYG{n}{e}\PYG{o}{:}
+\PYG{+w}{            }\PYG{n}{rospy}\PYG{p}{.}\PYG{n}{logerr}\PYG{p}{(}\PYG{n}{f}\PYG{l+s}{\PYGZdq{}Error converting image: \PYGZob{}e\PYGZcb{}\PYGZdq{}}\PYG{p}{)}
+
+\PYG{+w}{    }\PYG{n}{def}\PYG{+w}{ }\PYG{n}{\PYGZus{}camera2Process}\PYG{p}{(}\PYG{n}{self}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{data}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{        }\PYG{n+nl}{try}\PYG{p}{:}
+\PYG{+w}{            }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}cam2Frame}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{data}
+\PYG{+w}{            }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}cam\PYGZus{}available}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{True}
+\PYG{+w}{            }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}provideCam2Feed}\PYG{p}{()}
+\PYG{+w}{        }\PYG{n}{except}\PYG{+w}{ }\PYG{n}{Exception}\PYG{+w}{ }\PYG{n}{as}\PYG{+w}{ }\PYG{n}{e}\PYG{o}{:}
+\PYG{+w}{            }\PYG{n}{rospy}\PYG{p}{.}\PYG{n}{logerr}\PYG{p}{(}\PYG{n}{f}\PYG{l+s}{\PYGZdq{}Error converting image: \PYGZob{}e\PYGZcb{}\PYGZdq{}}\PYG{p}{)}
+
+\PYG{+w}{    }\PYG{n}{def}\PYG{+w}{ }\PYG{n}{\PYGZus{}provideCamFeed}\PYG{p}{(}\PYG{n}{self}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{None}\PYG{o}{:}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}camState}\PYG{+w}{ }\PYG{k}{and}\PYG{+w}{ }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}cam\PYGZus{}available}\PYG{o}{:}
+\PYG{+w}{            }\PYG{n+nl}{try}\PYG{p}{:}
+\PYG{+w}{                }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}pubcam1}\PYG{p}{.}\PYG{n}{publish}\PYG{p}{(}\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}cam1Frame}\PYG{p}{)}
+\PYG{+w}{            }\PYG{n}{except}\PYG{+w}{ }\PYG{n}{Exception}\PYG{+w}{ }\PYG{n}{as}\PYG{+w}{ }\PYG{n}{e}\PYG{o}{:}
+\PYG{+w}{                }\PYG{n}{rospy}\PYG{p}{.}\PYG{n}{logerr}\PYG{p}{(}\PYG{n}{f}\PYG{l+s}{\PYGZdq{}Error publishing image feed: \PYGZob{}e\PYGZcb{}\PYGZdq{}}\PYG{p}{)}
+
+\PYG{+w}{    }\PYG{n}{def}\PYG{+w}{ }\PYG{n}{\PYGZus{}provideCam2Feed}\PYG{p}{(}\PYG{n}{self}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{None}\PYG{o}{:}
+\PYG{+w}{        }\PYG{n+nl}{try}\PYG{p}{:}
+\PYG{+w}{            }\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}pubcam2}\PYG{p}{.}\PYG{n}{publish}\PYG{p}{(}\PYG{n}{self}\PYG{p}{.}\PYG{n}{\PYGZus{}cam2Frame}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n}{except}\PYG{+w}{ }\PYG{n}{Exception}\PYG{+w}{ }\PYG{n}{as}\PYG{+w}{ }\PYG{n}{e}\PYG{o}{:}
+\PYG{+w}{            }\PYG{n}{rospy}\PYG{p}{.}\PYG{n}{logerr}\PYG{p}{(}\PYG{n}{f}\PYG{l+s}{\PYGZdq{}Error publishing image from cam2 feed: \PYGZob{}e\PYGZcb{}\PYGZdq{}}\PYG{p}{)}
+
+\end{Verbatim}

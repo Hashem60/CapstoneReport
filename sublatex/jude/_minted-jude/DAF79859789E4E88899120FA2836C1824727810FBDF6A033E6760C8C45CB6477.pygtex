@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{\PYGZbs{}begin\PYGZob{}figure\PYGZcb{}}
+\PYG{x}{  \PYGZbs{}begin\PYGZob{}minted\PYGZcb{}\PYGZob{}js\PYGZcb{}}
+\PYG{x}{  const socket = io(\PYGZsq{}http://localhost:5000\PYGZsq{});}
+\PYG{x}{  set(\PYGZob{} socket \PYGZcb{});}
+\end{Verbatim}

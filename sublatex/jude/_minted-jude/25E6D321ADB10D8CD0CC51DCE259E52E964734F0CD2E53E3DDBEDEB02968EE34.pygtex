@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{void} \PYG{n}{updateAngular}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{n}{ros}\PYG{p}{::}\PYG{n}{Time} \PYG{n}{current\PYGZus{}time} \PYG{o}{=} \PYG{n}{ros}\PYG{p}{::}\PYG{n}{Time}\PYG{p}{::}\PYG{n}{now}\PYG{p}{();}
+        \PYG{n}{ros}\PYG{p}{::}\PYG{n}{Duration} \PYG{n}{time\PYGZus{}since\PYGZus{}update} \PYG{o}{=} \PYG{n}{current\PYGZus{}time} \PYG{o}{\PYGZhy{}} \PYG{n}{last\PYGZus{}update\PYGZus{}time}\PYG{p}{;}
+
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{waiting\PYGZus{}to\PYGZus{}interpolate}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{time\PYGZus{}since\PYGZus{}update}\PYG{o}{.}\PYG{n}{toSec}\PYG{p}{()} \PYG{o}{\PYGZgt{}=} \PYG{n}{wait\PYGZus{}duration}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{o}{//} \PYG{n}{Start} \PYG{n}{interpolation} \PYG{n}{after} \PYG{n}{waiting} \PYG{n}{period}
+                \PYG{n}{angular\PYGZus{}start} \PYG{o}{=} \PYG{n}{az}\PYG{p}{;}
+                \PYG{n}{interpolation\PYGZus{}start\PYGZus{}time} \PYG{o}{=} \PYG{n}{current\PYGZus{}time}\PYG{p}{;}
+                \PYG{n}{angular\PYGZus{}interpolating} \PYG{o}{=} \PYG{n}{true}\PYG{p}{;}
+                \PYG{n}{waiting\PYGZus{}to\PYGZus{}interpolate} \PYG{o}{=} \PYG{n}{false}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{angular\PYGZus{}interpolating}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n}{ros}\PYG{p}{::}\PYG{n}{Duration} \PYG{n}{time\PYGZus{}since\PYGZus{}start} \PYG{o}{=} \PYG{n}{current\PYGZus{}time} \PYG{o}{\PYGZhy{}} \PYG{n}{interpolation\PYGZus{}start\PYGZus{}time}\PYG{p}{;}
+            \PYG{n+nb}{float} \PYG{n}{t} \PYG{o}{=} \PYG{n}{time\PYGZus{}since\PYGZus{}start}\PYG{o}{.}\PYG{n}{toSec}\PYG{p}{()} \PYG{o}{/} \PYG{n}{interpolation\PYGZus{}duration}\PYG{p}{;}
+
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{t} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mf}{1.0}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{az} \PYG{o}{=} \PYG{l+m+mf}{0.0}\PYG{p}{;} \PYG{o}{//} \PYG{n}{Stop} \PYG{n}{interpolation} \PYG{n}{after} \PYG{n}{duration}
+                \PYG{n}{angular\PYGZus{}interpolating} \PYG{o}{=} \PYG{n}{false}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{p}{\PYGZob{}}
+                \PYG{n}{az} \PYG{o}{=} \PYG{n}{angular\PYGZus{}start} \PYG{o}{*} \PYG{p}{(}\PYG{l+m+mf}{1.0} \PYG{o}{\PYGZhy{}} \PYG{n}{t}\PYG{p}{);} \PYG{o}{//} \PYG{n}{Linearly} \PYG{n}{interpolate} \PYG{n}{towards} \PYG{n}{zero}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

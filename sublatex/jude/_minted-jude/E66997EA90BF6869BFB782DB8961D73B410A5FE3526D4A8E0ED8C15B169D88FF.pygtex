@@ -1,0 +1,55 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYG{n+nx}{def}\PYG{+w}{ }\PYG{n+nx}{\PYGZus{}adjust\PYGZus{}orientation}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{error}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{angle}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{pixels}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{mask}\PYG{+w}{ }\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{w\PYGZus{}min}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{h\PYGZus{}min}\PYG{p}{)}\PYG{o}{:}
+
+\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}obstacleInFront}\PYG{o}{:}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{None}
+
+\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{moveToTurnPosition}\PYG{o}{:}
+\PYG{+w}{    }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}move}\PYG{p}{(}\PYG{n+nx}{error}\PYG{p}{)}
+\PYG{+w}{    }\PYG{k}{return}
+
+\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}making\PYGZus{}turn}\PYG{o}{:}
+\PYG{+w}{    }\PYG{n+nx}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}error\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{error}\PYG{p}{)}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{error}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mf}{60}\PYG{+w}{ }\PYG{n+nx}{or}\PYG{+w}{ }\PYG{n+nx}{error}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{60}\PYG{o}{:}
+\PYG{+w}{        }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{stop}\PYG{p}{()}
+\PYG{+w}{        }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}making\PYGZus{}turn}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{False}
+\PYG{+w}{    }\PYG{k}{return}
+
+\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}making\PYGZus{}u\PYGZus{}turn}\PYG{o}{:}
+\PYG{+w}{    }\PYG{n+nx}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}error\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{error}\PYG{p}{)}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{error}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mf}{60}\PYG{+w}{ }\PYG{n+nx}{or}\PYG{+w}{ }\PYG{n+nx}{error}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{60}\PYG{o}{:}
+\PYG{+w}{        }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{stop}\PYG{p}{()}
+\PYG{+w}{        }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}making\PYGZus{}u\PYGZus{}turn}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{False}
+\PYG{+w}{    }\PYG{k}{return}
+
+\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{w\PYGZus{}min}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mf}{100}\PYG{+w}{ }\PYG{n+nx}{and}\PYG{+w}{ }\PYG{n+nx}{h\PYGZus{}min}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mf}{100}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{    }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}move\PYGZus{}forward}\PYG{p}{()}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{None}
+
+\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{pixels}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}black\PYGZus{}pixels}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}black\PYGZus{}pixels}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}threshold}\PYG{p}{))}\PYG{+w}{ }\PYG{n+nx}{and}\PYG{+w}{  }\PYG{p}{(}\PYG{n+nx}{pixels}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}black\PYGZus{}pixels}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}black\PYGZus{}pixels}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}threshold}\PYG{p}{))}\PYG{o}{:}
+\PYG{+w}{    }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}move}\PYG{p}{(}\PYG{n+nx}{error}\PYG{p}{)}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{None}
+
+\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{pixels}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}black\PYGZus{}pixels}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}black\PYGZus{}pixels}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}threshold}\PYG{p}{))}\PYG{o}{:}
+
+\PYG{+w}{    }\PYG{n+nx}{left\PYGZus{}pixels}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{right\PYGZus{}pixels}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{onLeft}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{onRight}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{check\PYGZus{}side\PYGZus{}pixels}\PYG{p}{(}\PYG{n+nx}{mask}\PYG{p}{)}
+
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{onLeft}\PYG{+w}{ }\PYG{n+nx}{or}\PYG{+w}{ }\PYG{n+nx}{onRight}\PYG{o}{:}
+\PYG{+w}{        }\PYG{n+nx}{top\PYGZus{}pixels\PYGZus{}remaining}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{top\PYGZus{}pixels\PYGZus{}side}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{bottom\PYGZus{}pixels\PYGZus{}side}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{onTop}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{hastoStop}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{check\PYGZus{}straight\PYGZus{}pixels}\PYG{p}{(}\PYG{n+nx}{mask}\PYG{p}{)}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{hastoStop}\PYG{+w}{ }\PYG{o}{:}
+\PYG{+w}{            }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{needMakeDecision}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{True}
+\PYG{+w}{            }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{junction\PYGZus{}decision}\PYG{p}{(}\PYG{n+nx}{onLeft}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{onRight}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{onTop}\PYG{p}{)}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{top\PYGZus{}pixels\PYGZus{}remaining}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{+w}{ }\PYG{o}{:}
+\PYG{+w}{                    }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}move\PYGZus{}forward}\PYG{p}{()}
+\PYG{+w}{                }\PYG{k}{return}\PYG{+w}{ }\PYG{p}{[}\PYG{n+nx}{left\PYGZus{}pixels}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{right\PYGZus{}pixels}\PYG{p}{,}\PYG{n+nx}{top\PYGZus{}pixels\PYGZus{}remaining}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{top\PYGZus{}pixels\PYGZus{}side}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{bottom\PYGZus{}pixels\PYGZus{}side}\PYG{p}{]}
+
+\PYG{+w}{            }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}move\PYGZus{}forward}\PYG{p}{()}
+\PYG{+w}{            }\PYG{k}{return}\PYG{+w}{ }\PYG{p}{[}\PYG{n+nx}{left\PYGZus{}pixels}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{right\PYGZus{}pixels}\PYG{p}{,}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{l+m+mf}{0}\PYG{p}{]}
+
+\PYG{+w}{        }\PYG{n+nx}{elif}\PYG{+w}{ }\PYG{n+nx}{pixels}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}black\PYGZus{}pixels}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}black\PYGZus{}pixels}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}threshold}\PYG{p}{))}\PYG{o}{:}
+\PYG{+w}{            }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}move}\PYG{p}{(}\PYG{n+nx}{error}\PYG{p}{)}
+\PYG{+w}{            }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{None}
+
+\PYG{+w}{        }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}move}\PYG{p}{(}\PYG{n+nx}{error}\PYG{p}{)}
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{None}
+\end{Verbatim}

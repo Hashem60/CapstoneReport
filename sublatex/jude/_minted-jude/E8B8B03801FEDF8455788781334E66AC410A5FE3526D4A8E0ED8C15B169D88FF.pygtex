@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{export}\PYG{+w}{ }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{core}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{create}\PYG{p}{((}\PYG{n+nx}{set}\PYG{p}{,}\PYG{n+nx}{get}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{(\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{connectedSocket}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nx}{connectedRos}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nx}{menu}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Remote\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nx}{menuOpened}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nx}{socket}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kc}{null}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nx}{cameraData}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kc}{null}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nx}{camera\PYGZus{}qr\PYGZus{}data}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kc}{null}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nx}{speed}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nx}{mapData}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kc}{null}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nx}{gear}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nx}{zone}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kc}{null}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nx}{station}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kc}{null}\PYG{p}{,}
+
+\end{Verbatim}

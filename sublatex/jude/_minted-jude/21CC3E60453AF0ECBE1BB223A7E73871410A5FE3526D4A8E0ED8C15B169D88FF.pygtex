@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYG{n+nx}{def}\PYG{+w}{ }\PYG{n+nx}{update\PYGZus{}map\PYGZus{}from\PYGZus{}scan}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{robot\PYGZus{}position}\PYG{+w}{ }\PYG{n+nx}{is}\PYG{+w}{ }\PYG{n+nx}{None}\PYG{+w}{ }\PYG{n+nx}{or}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{robot\PYGZus{}rotation}\PYG{+w}{ }\PYG{n+nx}{is}\PYG{+w}{ }\PYG{n+nx}{None}\PYG{o}{:}
+\PYG{+w}{       }\PYG{k}{return}
+\PYG{+w}{    }\PYG{n+nx}{yaw}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{get\PYGZus{}yaw\PYGZus{}from\PYGZus{}quaternion}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{robot\PYGZus{}rotation}\PYG{p}{)}
+
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{range\PYGZus{}val}\PYG{+w}{ }\PYG{o+ow}{in}\PYG{+w}{ }\PYG{n+nx}{enumerate}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{latest\PYGZus{}scan}\PYG{p}{.}\PYG{n+nx}{ranges}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{range\PYGZus{}val}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{latest\PYGZus{}scan}\PYG{p}{.}\PYG{n+nx}{range\PYGZus{}min}\PYG{+w}{ }\PYG{n+nx}{or}\PYG{+w}{ }\PYG{n+nx}{range\PYGZus{}val}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{latest\PYGZus{}scan}\PYG{p}{.}\PYG{n+nx}{range\PYGZus{}max}\PYG{o}{:}
+\PYG{+w}{            }\PYG{k}{continue}\PYG{+w}{  }\PYG{err}{\PYGZsh{}}\PYG{+w}{ }\PYG{n+nx}{Skip}\PYG{+w}{ }\PYG{n+nx}{invalid}\PYG{+w}{ }\PYG{n+nx}{range}\PYG{+w}{ }\PYG{n+nx}{values}
+
+\PYG{+w}{  }\PYG{n+nx}{angle}\PYG{o}{=}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{latest\PYGZus{}scan}\PYG{p}{.}\PYG{n+nx}{angle\PYGZus{}min}\PYG{o}{+}\PYG{n+nx}{i}\PYG{o}{*}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{latest\PYGZus{}scan}\PYG{p}{.}\PYG{n+nx}{angle\PYGZus{}increment}
+
+\PYG{+w}{        }\PYG{n+nx}{endpoint\PYGZus{}x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{robot\PYGZus{}position}\PYG{p}{.}\PYG{n+nx}{x}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{range\PYGZus{}val}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nx}{np}\PYG{p}{.}\PYG{n+nx}{cos}\PYG{p}{(}\PYG{n+nx}{yaw}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{angle}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n+nx}{endpoint\PYGZus{}y}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{robot\PYGZus{}position}\PYG{p}{.}\PYG{n+nx}{y}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{range\PYGZus{}val}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nx}{np}\PYG{p}{.}\PYG{n+nx}{sin}\PYG{p}{(}\PYG{n+nx}{yaw}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{angle}\PYG{p}{)}
+
+\PYG{+w}{        }\PYG{n+nx}{endpoint\PYGZus{}x\PYGZus{}pixel}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kr}{int}\PYG{p}{((}\PYG{n+nx}{endpoint\PYGZus{}x}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{map\PYGZus{}origin\PYGZus{}x}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{map\PYGZus{}resolution}\PYG{p}{)}
+
+\PYG{+w}{        }\PYG{n+nx}{endpoint\PYGZus{}y\PYGZus{}pixel}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kr}{int}\PYG{p}{((}\PYG{n+nx}{endpoint\PYGZus{}y}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{map\PYGZus{}origin\PYGZus{}y}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{map\PYGZus{}resolution}\PYG{p}{)}
+
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n+nx}{endpoint\PYGZus{}x\PYGZus{}pixel}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{map\PYGZus{}width}\PYG{+w}{ }\PYG{n+nx}{and}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n+nx}{endpoint\PYGZus{}y\PYGZus{}pixel}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{map\PYGZus{}height}\PYG{o}{:}
+
+\PYG{+w}{                }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{map\PYGZus{}image}\PYG{p}{[}\PYG{n+nx}{endpoint\PYGZus{}y\PYGZus{}pixel}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{endpoint\PYGZus{}x\PYGZus{}pixel}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}
+
+\end{Verbatim}

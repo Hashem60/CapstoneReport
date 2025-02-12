@@ -1,0 +1,44 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYG{k}{async}\PYG{+w}{ }\PYG{n+nx}{def}\PYG{+w}{ }\PYG{n+nx}{taskCallback}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{sid}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{task}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{        }\PYG{n+nx}{t}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{TaskData}\PYG{p}{()}
+\PYG{+w}{        }\PYG{n+nx}{t}\PYG{p}{.}\PYG{n+nx}{task\PYGZus{}name}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{task}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}task\PYGZsq{}}\PYG{p}{][}\PYG{l+s+s2}{\PYGZdq{}task\PYGZus{}name\PYGZdq{}}\PYG{p}{]}
+\PYG{+w}{        }\PYG{n+nx}{t}\PYG{p}{.}\PYG{n+nx}{params}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{  }\PYG{p}{[}\PYG{n+nx}{Param}\PYG{p}{(}\PYG{n+nx}{zone}\PYG{o}{=}\PYG{n+nx}{key}\PYG{p}{,}\PYG{n+nx}{type}\PYG{o}{=}\PYG{n+nx}{value}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n+nx}{key}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{value}\PYG{+w}{ }\PYG{o+ow}{in}\PYG{+w}{ }\PYG{n+nx}{task}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}task\PYGZsq{}}\PYG{p}{][}\PYG{l+s+s2}{\PYGZdq{}params\PYGZdq{}}\PYG{p}{].}\PYG{n+nx}{items}\PYG{p}{()]}
+\PYG{+w}{        }\PYG{n+nx}{rospy}\PYG{p}{.}\PYG{n+nx}{wait\PYGZus{}for\PYGZus{}service}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}robot\PYGZus{}task\PYGZsq{}}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n+nx}{robot\PYGZus{}task}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{rospy}\PYG{p}{.}\PYG{n+nx}{ServiceProxy}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}robot\PYGZus{}task\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{robotTask}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n+nx}{robot\PYGZus{}task}\PYG{p}{.}\PYG{n+nx}{wait\PYGZus{}for\PYGZus{}service}\PYG{p}{(}\PYG{l+m+mf}{10}\PYG{p}{)}
+\PYG{+w}{        }\PYG{k}{try}\PYG{o}{:}
+\PYG{+w}{            }\PYG{n+nx}{response}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{robot\PYGZus{}task}\PYG{p}{(}\PYG{n+nx}{t}\PYG{p}{)}
+\PYG{+w}{            }\PYG{n+nx}{print}\PYG{p}{(}\PYG{n+nx}{response}\PYG{p}{)}
+\PYG{+w}{            }\PYG{k}{await}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{sio}\PYG{p}{.}\PYG{n+nx}{emit}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}task\PYGZus{}response\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}response\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{response}\PYG{p}{.}\PYG{n+nx}{message}\PYG{p}{\PYGZcb{},}\PYG{+w}{ }\PYG{n+nx}{to}\PYG{o}{=}\PYG{n+nx}{sid}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n+nx}{except}\PYG{+w}{ }\PYG{n+nx}{rospy}\PYG{p}{.}\PYG{n+nx}{ServiceException}\PYG{+w}{ }\PYG{k+kr}{as}\PYG{+w}{ }\PYG{n+nx}{exc}\PYG{o}{:}
+\PYG{+w}{            }\PYG{n+nx}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Service did not process request: \PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{str}\PYG{p}{(}\PYG{n+nx}{exc}\PYG{p}{))}
+
+\PYG{+w}{    }\PYG{n+nx}{def}\PYG{+w}{ }\PYG{n+nx}{run\PYGZus{}async\PYGZus{}taskFinished}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{,}\PYG{n+nx}{output}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{        }\PYG{k}{try}\PYG{o}{:}
+\PYG{+w}{            }\PYG{n+nx}{loop}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{asyncio}\PYG{p}{.}\PYG{n+nx}{new\PYGZus{}event\PYGZus{}loop}\PYG{p}{()}
+\PYG{+w}{            }\PYG{n+nx}{asyncio}\PYG{p}{.}\PYG{n+nx}{set\PYGZus{}event\PYGZus{}loop}\PYG{p}{(}\PYG{n+nx}{loop}\PYG{p}{)}
+\PYG{+w}{            }\PYG{n+nx}{loop}\PYG{p}{.}\PYG{n+nx}{run\PYGZus{}until\PYGZus{}complete}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{taskFinished}\PYG{p}{(}\PYG{n+nx}{output}\PYG{p}{))}
+\PYG{+w}{        }\PYG{n+nx}{except}\PYG{+w}{ }\PYG{n+nx}{Exception}\PYG{+w}{ }\PYG{k+kr}{as}\PYG{+w}{ }\PYG{n+nx}{e}\PYG{o}{:}
+\PYG{+w}{            }\PYG{n+nx}{rospy}\PYG{p}{.}\PYG{n+nx}{logerr}\PYG{p}{(}\PYG{n+nx}{f}\PYG{l+s+s2}{\PYGZdq{}Error before proccessing and emitting taskFinished: \PYGZob{}e\PYGZcb{}\PYGZdq{}}\PYG{p}{)}
+
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{taskMessageResponse}\PYG{p}{(}\PYG{n+nx}{True}\PYG{p}{)}
+
+\PYG{+w}{    }\PYG{k}{async}\PYG{+w}{ }\PYG{n+nx}{def}\PYG{+w}{ }\PYG{n+nx}{taskFinished}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{output}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{        }\PYG{k}{await}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{sio}\PYG{p}{.}\PYG{n+nx}{emit}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}task\PYGZus{}response\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}response\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{output}\PYG{p}{.}\PYG{n+nx}{message}\PYG{p}{\PYGZcb{})}
+
+\PYG{+w}{    }\PYG{n+nx}{def}\PYG{+w}{ }\PYG{n+nx}{run\PYGZus{}async\PYGZus{}mappingOutput}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{,}\PYG{n+nx}{output}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{        }\PYG{k}{try}\PYG{o}{:}
+\PYG{+w}{            }\PYG{n+nx}{loop}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{asyncio}\PYG{p}{.}\PYG{n+nx}{new\PYGZus{}event\PYGZus{}loop}\PYG{p}{()}
+\PYG{+w}{            }\PYG{n+nx}{asyncio}\PYG{p}{.}\PYG{n+nx}{set\PYGZus{}event\PYGZus{}loop}\PYG{p}{(}\PYG{n+nx}{loop}\PYG{p}{)}
+\PYG{+w}{            }\PYG{n+nx}{loop}\PYG{p}{.}\PYG{n+nx}{run\PYGZus{}until\PYGZus{}complete}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{mappingOutput}\PYG{p}{(}\PYG{n+nx}{output}\PYG{p}{))}
+\PYG{+w}{        }\PYG{n+nx}{except}\PYG{+w}{ }\PYG{n+nx}{Exception}\PYG{+w}{ }\PYG{k+kr}{as}\PYG{+w}{ }\PYG{n+nx}{e}\PYG{o}{:}
+\PYG{+w}{            }\PYG{n+nx}{rospy}\PYG{p}{.}\PYG{n+nx}{logerr}\PYG{p}{(}\PYG{n+nx}{f}\PYG{l+s+s2}{\PYGZdq{}Error before proccessing and emitting taskFinished: \PYGZob{}e\PYGZcb{}\PYGZdq{}}\PYG{p}{)}
+
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{mappingOutputResponse}\PYG{p}{(}\PYG{n+nx}{True}\PYG{p}{)}
+
+\PYG{+w}{    }\PYG{k}{async}\PYG{+w}{ }\PYG{n+nx}{def}\PYG{+w}{ }\PYG{n+nx}{mappingOutput}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{output}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{        }\PYG{n+nx}{print}\PYG{p}{(}\PYG{n+nx}{output}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n+nx}{data}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}location\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{n+nx}{kv}\PYG{p}{.}\PYG{n+nx}{location}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}x\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{kv}\PYG{p}{.}\PYG{n+nx}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}y\PYGZdq{}}\PYG{o}{:}\PYG{n+nx}{kv}\PYG{p}{.}\PYG{n+nx}{y}\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n+nx}{kv}\PYG{+w}{ }\PYG{o+ow}{in}\PYG{+w}{ }\PYG{n+nx}{output}\PYG{p}{.}\PYG{n+nx}{locations}\PYG{p}{]}
+\PYG{+w}{        }\PYG{n+nx}{print}\PYG{p}{(}\PYG{n+nx}{data}\PYG{p}{)}
+\PYG{+w}{        }\PYG{k}{await}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{sio}\PYG{p}{.}\PYG{n+nx}{emit}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}mapping\PYGZus{}output\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}locations\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{data}\PYG{p}{\PYGZcb{})}
+\end{Verbatim}

@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{updateAngular}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{ros}\PYG{o}{::}\PYG{n}{Time}\PYG{+w}{ }\PYG{n}{current\PYGZus{}time}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{ros}\PYG{o}{::}\PYG{n}{Time}\PYG{o}{::}\PYG{n}{now}\PYG{p}{();}
+\PYG{+w}{        }\PYG{n}{ros}\PYG{o}{::}\PYG{n}{Duration}\PYG{+w}{ }\PYG{n}{time\PYGZus{}since\PYGZus{}update}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{current\PYGZus{}time}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{last\PYGZus{}update\PYGZus{}time}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{waiting\PYGZus{}to\PYGZus{}interpolate}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{time\PYGZus{}since\PYGZus{}update}\PYG{p}{.}\PYG{n}{toSec}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{n}{wait\PYGZus{}duration}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{c+c1}{// Start interpolation after waiting period}
+\PYG{+w}{                }\PYG{n}{angular\PYGZus{}start}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{az}\PYG{p}{;}
+\PYG{+w}{                }\PYG{n}{interpolation\PYGZus{}start\PYGZus{}time}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{current\PYGZus{}time}\PYG{p}{;}
+\PYG{+w}{                }\PYG{n}{angular\PYGZus{}interpolating}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{true}\PYG{p}{;}
+\PYG{+w}{                }\PYG{n}{waiting\PYGZus{}to\PYGZus{}interpolate}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{false}\PYG{p}{;}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{angular\PYGZus{}interpolating}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{ros}\PYG{o}{::}\PYG{n}{Duration}\PYG{+w}{ }\PYG{n}{time\PYGZus{}since\PYGZus{}start}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{current\PYGZus{}time}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{interpolation\PYGZus{}start\PYGZus{}time}\PYG{p}{;}
+\PYG{+w}{            }\PYG{k+kt}{float}\PYG{+w}{ }\PYG{n}{t}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{time\PYGZus{}since\PYGZus{}start}\PYG{p}{.}\PYG{n}{toSec}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n}{interpolation\PYGZus{}duration}\PYG{p}{;}
+
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{t}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{l+m+mf}{1.0}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n}{az}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Stop interpolation after duration}
+\PYG{+w}{                }\PYG{n}{angular\PYGZus{}interpolating}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{false}\PYG{p}{;}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n}{az}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{angular\PYGZus{}start}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{p}{(}\PYG{l+m+mf}{1.0}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{t}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// Linearly interpolate towards zero}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nx}{def}\PYG{+w}{ }\PYG{n+nx}{check\PYGZus{}side\PYGZus{}pixels}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{mask}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{        }\PYG{n+nx}{onLeft}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{False}
+\PYG{+w}{        }\PYG{n+nx}{onRight}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{False}
+\PYG{+w}{        }\PYG{n+nx}{height}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{width}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{mask}\PYG{p}{.}\PYG{n+nx}{shape}
+\PYG{+w}{        }\PYG{n+nx}{middle\PYGZus{}start}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{width}\PYG{+w}{ }\PYG{c+c1}{// 2) \PYGZhy{} (self.\PYGZus{}middle\PYGZus{}width // 2)}
+\PYG{+w}{        }\PYG{n+nx}{middle\PYGZus{}end}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{width}\PYG{+w}{ }\PYG{c+c1}{// 2) + (self.\PYGZus{}middle\PYGZus{}width // 2)}
+\PYG{+w}{        }\PYG{n+nx}{middle\PYGZus{}mask}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{np}\PYG{p}{.}\PYG{n+nx}{zeros\PYGZus{}like}\PYG{p}{(}\PYG{n+nx}{mask}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n+nx}{middle\PYGZus{}mask}\PYG{p}{[}\PYG{o}{:}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{middle\PYGZus{}start}\PYG{o}{:}\PYG{n+nx}{middle\PYGZus{}end}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{255}
+\PYG{+w}{        }\PYG{n+nx}{masked\PYGZus{}binary}\PYG{o}{=}\PYG{n+nx}{cv2}\PYG{p}{.}\PYG{n+nx}{bitwise\PYGZus{}and}\PYG{p}{(}\PYG{n+nx}{mask}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{cv2}\PYG{p}{.}\PYG{n+nx}{bitwise\PYGZus{}not}\PYG{p}{(}\PYG{n+nx}{middle\PYGZus{}mask}\PYG{p}{))}
+\PYG{+w}{        }\PYG{n+nx}{left\PYGZus{}half}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{masked\PYGZus{}binary}\PYG{p}{[}\PYG{o}{:}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{:}\PYG{n+nx}{width}\PYG{+w}{ }\PYG{c+c1}{// 2]}
+\PYG{+w}{        }\PYG{n+nx}{right\PYGZus{}half}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{masked\PYGZus{}binary}\PYG{p}{[}\PYG{o}{:}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{width}\PYG{+w}{ }\PYG{c+c1}{// 2:]}
+\PYG{+w}{        }\PYG{n+nx}{left\PYGZus{}pixels}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{np}\PYG{p}{.}\PYG{n+nx}{sum}\PYG{p}{(}\PYG{n+nx}{left\PYGZus{}half}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mf}{255}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n+nx}{right\PYGZus{}pixels}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{np}\PYG{p}{.}\PYG{n+nx}{sum}\PYG{p}{(}\PYG{n+nx}{right\PYGZus{}half}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mf}{255}\PYG{p}{)}
+
+\PYG{+w}{        }\PYG{n+nx}{threshold\PYGZus{}lr}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}black\PYGZus{}pixels}\PYG{+w}{ }\PYG{c+c1}{// 3) \PYGZhy{} 20}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{left\PYGZus{}pixels}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{threshold\PYGZus{}lr}\PYG{+w}{ }\PYG{o}{:}
+\PYG{+w}{            }\PYG{n+nx}{onLeft}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{True}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{right\PYGZus{}pixels}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{threshold\PYGZus{}lr}\PYG{o}{:}
+\PYG{+w}{            }\PYG{n+nx}{onRight}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{True}
+
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{left\PYGZus{}pixels}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{right\PYGZus{}pixels}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{onLeft}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{onRight}
+\end{Verbatim}

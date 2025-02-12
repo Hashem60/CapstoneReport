@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYG{n+nx}{def}\PYG{+w}{ }\PYG{n+nx}{\PYGZus{}check\PYGZus{}qr}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{decoded\PYGZus{}text}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{not}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}processQrCode}\PYG{+w}{ }\PYG{o}{:}
+\PYG{+w}{      }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}processQrCode}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{True}
+\PYG{+w}{      }\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{decoded\PYGZus{}text}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}None\PYGZdq{}}\PYG{+w}{ }\PYG{n+nx}{or}\PYG{+w}{ }\PYG{n+nx}{decoded\PYGZus{}text}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]}\PYG{+w}{ }\PYG{n+nx}{is}\PYG{+w}{ }\PYG{n+nx}{None}\PYG{o}{:}
+\PYG{+w}{          }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}processQrCode}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{False}
+\PYG{+w}{          }\PYG{k}{return}
+\PYG{+w}{      }\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{decoded\PYGZus{}text}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}lastQrCode}\PYG{o}{:}
+\PYG{+w}{          }\PYG{k}{if}\PYG{+w}{ }\PYG{n+nx}{len}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{qrcodes}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{o}{:}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{decoded\PYGZus{}text}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n+nx}{list}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{qrcodes}\PYG{p}{.}\PYG{n+nx}{keys}\PYG{p}{())[}\PYG{l+m+mf}{0}\PYG{p}{])}\PYG{o}{:}
+\PYG{+w}{                }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}processQrCode}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{False}
+\PYG{+w}{                }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}task\PYGZus{}finished}\PYG{p}{(}\PYG{n+nx}{message}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}Mapping process finished\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{                }\PYG{k}{return}
+\PYG{+w}{          }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{hasDetectedQrRecently}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{False}
+\PYG{+w}{          }\PYG{n+nx}{position}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}calculate\PYGZus{}distance}\PYG{p}{(}\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{robot\PYGZus{}pose}\PYG{p}{)}
+\PYG{+w}{          }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{qrcodes}\PYG{p}{[}\PYG{n+nx}{decoded\PYGZus{}text}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{position}
+\PYG{+w}{          }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}lastQrCode}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{decoded\PYGZus{}text}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]}
+\PYG{+w}{          }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}processQrCode}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{False}
+\PYG{+w}{      }\PYG{n+nx}{self}\PYG{p}{.}\PYG{n+nx}{\PYGZus{}processQrCode}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{False}
+
+\end{Verbatim}
