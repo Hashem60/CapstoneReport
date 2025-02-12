@@ -40,6 +40,16 @@ L.~Shengfang and H.~Xingzhe, ``Research on the agv based robot system used in su
 \bibitem{CCPA}
 {California State Legislature}, ``{California Consumer Privacy Act (CCPA)}.'' California Civil Code 1798.100 et seq., 2018.
 
+\bibitem{groover2016automation}
+M.~P. Groover, {\em Automation, production systems, and computer-integrated manufacturing}.
+\newblock Pearson Education India, 2016.
+
+\bibitem{jazar2019road}
+R.~N. Jazar and R.~N. Jazar, ``Road dynamics,'' {\em Advanced Vehicle Dynamics}, pp.~297--350, 2019.
+
+\bibitem{ashby1994materials}
+M.~F. Ashby, ``Materials selection in mechanical design,'' {\em Metallurgia Italiana}, vol.~86, pp.~475--475, 1994.
+
 \bibitem{cservenak2018further}
 {\'A}.~Cserven{\'a}k, ``Further development of an agv control system,'' in {\em Vehicle and Automotive Engineering 2: Proceedings of the 2nd VAE2018, Miskolc, Hungary}, pp.~376--384, Springer, 2018.
 
@@ -54,16 +64,6 @@ L.~Engineering, ``Autonomous guided vehicles (agv),'' 2024.
 \bibitem{AMC_AGV_Benefits}
 A.~M. Controls, ``Servo drives for agvs: Top 5 benefits,'' 2024.
 \newblock Accessed: 2025-02-07.
-
-\bibitem{groover2016automation}
-M.~P. Groover, {\em Automation, production systems, and computer-integrated manufacturing}.
-\newblock Pearson Education India, 2016.
-
-\bibitem{jazar2019road}
-R.~N. Jazar and R.~N. Jazar, ``Road dynamics,'' {\em Advanced Vehicle Dynamics}, pp.~297--350, 2019.
-
-\bibitem{ashby1994materials}
-M.~F. Ashby, ``Materials selection in mechanical design,'' {\em Metallurgia Italiana}, vol.~86, pp.~475--475, 1994.
 
 \bibitem{ros_website}
 {ROS Community}, ``Robot operating system (ros).'' \url{https://www.ros.org/}, 2025.

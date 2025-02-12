@@ -1,0 +1,51 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{Remote}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{props}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n+nx}{sendDirection}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{changeGear}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{gear}\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{core}\PYG{p}{()}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{gearref}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{React}\PYG{p}{.}\PYG{n+nx}{createRef}\PYG{p}{()}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{onReset}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{e}\PYG{p}{)\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{sendDirection}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}STOP\PYGZdq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{switchGear}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{e}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{e}\PYG{p}{.}\PYG{n+nx}{preventDefault}\PYG{p}{()}
+\PYG{+w}{        }\PYG{n+nx}{changeGear}\PYG{p}{()}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{n+nx}{useEffect}\PYG{p}{(()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{gearref}\PYG{p}{.}\PYG{n+nx}{current}\PYG{p}{.}\PYG{n+nx}{checked}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{gear}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{\PYGZcb{},}\PYG{+w}{ }\PYG{p}{[}\PYG{n+nx}{gear}\PYG{p}{])}
+\PYG{k}{return}\PYG{+w}{ }\PYG{p}{(}
+\PYG{o}{\PYGZlt{}}\PYG{n+nx}{div}\PYG{+w}{ }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}w\PYGZhy{}full h\PYGZhy{}full overflow\PYGZhy{}hidden flex flex\PYGZhy{}row bg\PYGZhy{}slate\PYGZhy{}800\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{  }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{section}\PYG{+w}{ }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}w\PYGZhy{}1/2 p\PYGZhy{}2\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{div}\PYG{+w}{ }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}w\PYGZhy{}full h\PYGZhy{}2/3 flex flex\PYGZhy{}col items\PYGZhy{}center}
+\PYG{l+s+s2}{    border rounded\PYGZhy{}lg overflow\PYGZhy{}hidden\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{      }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{Camera}\PYG{o}{/\PYGZgt{}}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{err}{/div\PYGZgt{}}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{div}\PYG{+w}{ }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}w\PYGZhy{}full h\PYGZhy{}[calc((100\PYGZpc{}/3)\PYGZhy{}8px)]}
+\PYG{l+s+s2}{    border rounded\PYGZhy{}lg mt\PYGZhy{}2 flex flex\PYGZhy{}row\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{      }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{div}\PYG{+w}{ }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{} w\PYGZhy{}1/4 h\PYGZhy{}full flex items\PYGZhy{}center justify\PYGZhy{}center\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{        }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{label}\PYG{+w}{ }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}switch\PYGZhy{}label mr\PYGZhy{}1\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n+nx}{A}\PYG{o}{\PYGZlt{}}\PYG{err}{/label\PYGZgt{}}
+\PYG{+w}{          }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{label}\PYG{+w}{ }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}switch\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{            }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{input}\PYG{+w}{ }\PYG{n+nx}{type}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}checkbox\PYGZdq{}}\PYG{+w}{ }\PYG{n+nx}{name}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}switch\PYGZdq{}}
+\PYG{+w}{            }\PYG{n+nx}{id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}switch\PYGZdq{}}\PYG{+w}{ }\PYG{n+nx}{ref}\PYG{o}{=}\PYG{p}{\PYGZob{}}\PYG{n+nx}{gearref}\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{n+nx}{value}\PYG{o}{=}\PYG{p}{\PYGZob{}}\PYG{n+nx}{gear}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{n+nx}{onClick}\PYG{o}{=}\PYG{p}{\PYGZob{}}\PYG{n+nx}{switchGear}\PYG{p}{\PYGZcb{}}\PYG{o}{/\PYGZgt{}}
+\PYG{+w}{              }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{span}\PYG{+w}{ }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}slider round\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{err}{/span\PYGZgt{}}
+\PYG{+w}{          }\PYG{o}{\PYGZlt{}}\PYG{err}{/label\PYGZgt{}}
+\PYG{+w}{        }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{label}\PYG{+w}{ }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}switch\PYGZhy{}label ml\PYGZhy{}1\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n+nx}{M}\PYG{o}{\PYGZlt{}}\PYG{err}{/label\PYGZgt{}}
+\PYG{+w}{      }\PYG{o}{\PYGZlt{}}\PYG{err}{/div\PYGZgt{}}
+\PYG{+w}{      }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{div}\PYG{+w}{ }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}circle\PYGZhy{}section flex items\PYGZhy{}center justify\PYGZhy{}center  w\PYGZhy{}2/4 h\PYGZhy{}full\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{        }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{div}\PYG{+w}{ }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}circle\PYGZhy{}container relative \PYGZdq{}}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{          }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{button}\PYG{+w}{ }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}center\PYGZhy{}circle\PYGZdq{}}\PYG{+w}{ }\PYG{n+nx}{onClick}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n+nx}{onReset}\PYG{p}{\PYGZcb{}}\PYG{o}{\PYGZgt{}}\PYG{n+nx}{r}\PYG{o}{\PYGZlt{}}\PYG{err}{/button\PYGZgt{}}
+\PYG{+w}{            }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{RemoteButton}\PYG{+w}{ }\PYG{n+nx}{direction}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}UP\PYGZdq{}}\PYG{o}{/\PYGZgt{}}
+\PYG{+w}{            }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{RemoteButton}\PYG{+w}{ }\PYG{n+nx}{direction}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}DOWN\PYGZdq{}}\PYG{o}{/\PYGZgt{}}
+\PYG{+w}{            }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{RemoteButton}\PYG{+w}{ }\PYG{n+nx}{direction}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}LEFT\PYGZdq{}}\PYG{o}{/\PYGZgt{}}
+\PYG{+w}{            }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{RemoteButton}\PYG{+w}{ }\PYG{n+nx}{direction}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}RIGHT\PYGZdq{}}\PYG{o}{/\PYGZgt{}}
+\PYG{+w}{        }\PYG{o}{\PYGZlt{}}\PYG{err}{/div\PYGZgt{}}
+\PYG{+w}{      }\PYG{o}{\PYGZlt{}}\PYG{err}{/div\PYGZgt{}}
+\PYG{+w}{      }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{div}\PYG{+w}{ }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{} w\PYGZhy{}1/4 h\PYGZhy{}full\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n+nx}{Speed}\PYG{o}{/\PYGZgt{}\PYGZlt{}}\PYG{err}{/div\PYGZgt{}}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{err}{/div\PYGZgt{}}
+\PYG{+w}{  }\PYG{o}{\PYGZlt{}}\PYG{err}{/section\PYGZgt{}}
+\PYG{+w}{  }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{section}\PYG{+w}{ }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}w\PYGZhy{}1/2 flex items\PYGZhy{}center justify\PYGZhy{}center p\PYGZhy{}2\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{div}\PYG{+w}{  }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}w\PYGZhy{}full h\PYGZhy{}full border rounded\PYGZhy{}lg flex flex\PYGZhy{}col}
+\PYG{l+s+s2}{    items\PYGZhy{}center relative overflow\PYGZhy{}hidden\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{      }\PYG{o}{\PYGZlt{}}\PYG{n+nb}{Map}\PYG{+w}{ }\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{err}{/Map\PYGZgt{}}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{err}{/div\PYGZgt{}}
+\PYG{+w}{            }\PYG{o}{\PYGZlt{}}\PYG{err}{/section\PYGZgt{}}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{err}{/div\PYGZgt{}}
+\PYG{+w}{    }\PYG{p}{);}
+\PYG{p}{\PYGZcb{};}
+\PYG{k}{export}\PYG{+w}{ }\PYG{k}{default}\PYG{+w}{ }\PYG{n+nx}{Remote}\PYG{p}{;}
+\end{Verbatim}

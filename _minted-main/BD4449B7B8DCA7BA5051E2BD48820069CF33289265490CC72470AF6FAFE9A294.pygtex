@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+c1}{\PYGZsh{} Register event handlers}
+\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{sio}\PYG{o}{.}\PYG{n}{on}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}connect\PYGZdq{}}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{onConnect}\PYG{p}{)}
+\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{sio}\PYG{o}{.}\PYG{n}{on}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}disconnect\PYGZdq{}}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{onDisconnect}\PYG{p}{)}
+\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{sio}\PYG{o}{.}\PYG{n}{on}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}moveDirection\PYGZdq{}}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{movement}\PYG{p}{)}
+\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{sio}\PYG{o}{.}\PYG{n}{on}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}message\PYGZdq{}}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{message}\PYG{p}{)}
+\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{sio}\PYG{o}{.}\PYG{n}{on}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}robot\PYGZus{}task\PYGZdq{}}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{taskCallback}\PYG{p}{)}
+\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{sio}\PYG{o}{.}\PYG{n}{on}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}robot\PYGZus{}gear\PYGZdq{}}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{gearCallback}\PYG{p}{)}
+\end{Verbatim}

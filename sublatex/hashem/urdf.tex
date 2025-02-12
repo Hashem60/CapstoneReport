@@ -368,9 +368,11 @@ type="joint_state_publisher"/>
     here:
     \begin{figure}[ht]
         \centering
-        \includegraphics{sublatex/hashem/img/robot1.jpg}
+        \includegraphics[width=\textwidth]{img/roborRvz.jpg}
         \caption{A visualization of a robot model with Rviz}
+
     \end{figure}
+    \newpage
 \subsection{Interacting with joints in Rviz}
 In the previous version of ROS, the GUI of \texttt{joint\_state\_publisher} was enabled
 thanks to a ROS parameter called \texttt{use\_gui}. To start the GUI in the launch file, this
@@ -389,7 +391,7 @@ publisher_gui" type="joint_state_publisher_gui" />
 
 We can include this node in the launch file using the following statement. The limits of
 pan-and-tilt should be mentioned inside the joint tag:
-
+\newpage
 \begin{minted}{xml}
 <joint name="platform_lift_joint" type="prismatic">
     <origin xyz="0.0 0.0 ${base_hight / 2}" rpy="0.0 0.0 0.0"/>
@@ -410,7 +412,7 @@ The following screenshot shows the user interface that is used to interact with 
 joints:
 \begin{figure}[ht]
     \centering
-    \includegraphics{sublatex/hashem/img/link1.jpg}
+    \includegraphics[width=\textwidth]{img/robotjoints.png}
     \caption{The joint level of the platform lifting mechanism}
     \end{figure}
     In this user interface, we can use the sliders to set the desired joint values. The basic
