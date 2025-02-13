@@ -69,6 +69,9 @@ A.~M. Controls, ``Servo drives for agvs: Top 5 benefits,'' 2024.
 {ROS Community}, ``Robot operating system (ros).'' \url{https://www.ros.org/}, 2025.
 \newblock Accessed: 2023-10-12.
 
+\bibitem{ros_urdf_xml}
+R.~Wiki, ``urdf/xml - ros wiki,'' 2023.
+
 \bibitem{koenig2004design}
 N.~Koenig and A.~Howard, ``Design and use paradigms for gazebo, an open-source multi-robot simulator,'' in {\em IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, (Sendai, Japan), pp.~2149--2154, IEEE, Sep 2004.
 
@@ -94,9 +97,6 @@ OGRE3D, ``Object-oriented graphics rendering engine.'' \url{http://www.ogre3d.or
 
 \bibitem{lera2014mobile}
 F.~R. Lera, F.~C. Garcia, G.~Esteban, and V.~Matellan, ``Mobile robot performance in robotics challenges: Analyzing a simulated indoor scenario and its translation to real-world,'' in {\em Proc. 2014 Second International Conference on Artificial Intelligence, Modelling and Simulation}, pp.~149--154, 2014.
-
-\bibitem{ros_urdf_xml}
-R.~Wiki, ``urdf/xml - ros wiki,'' 2023.
 
 \bibitem{groover2019fundamentals}
 M.~P. Groover, ``Fundamentals of modern manufacturing materials,'' 2019.
