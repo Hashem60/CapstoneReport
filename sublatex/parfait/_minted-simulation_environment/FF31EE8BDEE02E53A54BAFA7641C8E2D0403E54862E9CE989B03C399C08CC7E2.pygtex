@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }Install\PYG{+w}{ }Gazebo\PYG{+w}{ }ROS\PYG{+w}{ }Packages\PYG{+w}{ }\PYG{o}{(}includes\PYG{+w}{ }sensor\PYG{+w}{ }plugins\PYG{+w}{ }and\PYG{+w}{ }control\PYG{+w}{ }integration\PYG{o}{)}:
+\PYG{+w}{  }sudo\PYG{+w}{ }apt\PYG{+w}{ }install\PYG{+w}{ }ros\PYGZhy{}noetic\PYGZhy{}gazebo\PYGZhy{}ros\PYGZhy{}pkgs\PYG{+w}{ }ros\PYGZhy{}noetic\PYGZhy{}gazebo\PYGZhy{}ros\PYGZhy{}control
+
+\end{Verbatim}

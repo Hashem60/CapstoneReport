@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }Install\PYG{+w}{ }Gazebo\PYG{+w}{ }ROS\PYG{+w}{ }Packages\PYG{+w}{ }\PYG{o}{(}includes\PYG{+w}{ }sensor\PYG{+w}{ }plugins\PYG{+w}{ }and\PYG{+w}{ }control\PYG{+w}{ }integration\PYG{o}{)}:
+\PYG{+w}{  }sudo\PYG{+w}{ }apt\PYG{+w}{ }install\PYG{+w}{ }ros\PYGZhy{}noetic\PYGZhy{}gazebo\PYGZhy{}ros\PYGZhy{}pkgs\PYG{+w}{ }ros\PYGZhy{}noetic\PYGZhy{}gazebo\PYGZhy{}ros\PYGZhy{}control
+\PYG{+w}{  }Install\PYG{+w}{ }Robot\PYG{+w}{ }State\PYG{+w}{ }and\PYG{+w}{ }Joint\PYG{+w}{ }State\PYG{+w}{ }Publishers:
+\PYG{+w}{  }sudo\PYG{+w}{ }apt\PYG{+w}{ }install\PYG{+w}{ }ros\PYGZhy{}noetic\PYGZhy{}robot\PYGZhy{}state\PYGZhy{}publisher\PYG{+w}{ }ros\PYGZhy{}noetic\PYGZhy{}joint\PYGZhy{}state\PYGZhy{}publisher
+\PYG{+w}{  }Install\PYG{+w}{ }ROS\PYG{+w}{ }Control\PYG{+w}{ }\PYG{o}{(}\PYG{k}{if}\PYG{+w}{ }you\PYG{+w}{ }plan\PYG{+w}{ }to\PYG{+w}{ }simulate\PYG{+w}{ }controllers/actuators\PYG{o}{)}:
+\PYG{+w}{  }sudo\PYG{+w}{ }apt\PYG{+w}{ }install\PYG{+w}{ }ros\PYGZhy{}noetic\PYGZhy{}ros\PYGZhy{}control
+
+
+\end{Verbatim}

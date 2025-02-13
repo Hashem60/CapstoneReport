@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }sudo\PYG{+w}{ }apt\PYG{+w}{ }install\PYG{+w}{ }ros\PYGZhy{}noetic\PYGZhy{}gazebo\PYGZhy{}ros\PYGZhy{}pkgs\PYG{+w}{ }ros\PYGZhy{}noetic\PYGZhy{}gazebo\PYGZhy{}ros\PYGZhy{}control
+
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Publish a position command to the joint controller topic}
+rostopic\PYG{+w}{ }pub\PYG{+w}{ }/position\PYGZus{}joint\PYGZus{}controller/command\PYG{+w}{ }std\PYGZus{}msgs/Float64\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}data: 1.0\PYGZdq{}}
+\end{Verbatim}

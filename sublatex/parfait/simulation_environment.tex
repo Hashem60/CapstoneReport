@@ -988,10 +988,83 @@ without needing to modify the main model files.
 
 \subsection{Control and sensor Integration} 
 
-You should be able to do something about this 
+in order to simulate the sensors reading from an outside world inside a simulation environment, Gazebo offers limited plugins for ROS that we can use such as:
+Camera - Multicamera - Depth Camera - GPU Laser - Laser - IMU - and more.
+you can find more Gazebo plugins in https://classic.gazebosim.org/tutorials ,
+here is an example of how to integrate a  sensor in the simulation environment:
+\begin{figure}[h!]
+  \begin{minted}{xml}
+<robot>
+  ... robot description ...
+  <link name="sensor_link">
+    ... link description ...
+  </link>
+  <gazebo reference="sensor_link">
+    <sensor type="camera" name="camera1">
+      ... sensor parameters ...
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        ... plugin parameters ..
+      </plugin>
+    </sensor>
+  </gazebo>
+</robot>
+\end{minted}
+\caption{Sensor integration in URDF} 
+  \end{figure}
 
-\section{Validation of the simulation}
-
-\section{Challenges and Solutions} 
+the \texttt{<gazebo>} tag is added to the URDF in order to initiae the pliginz between ROS and Gazebo.
+its worth mentioening that the gazebo package should be installed on ROS if not the Gazebo tag won be recognised by ROS, for noetic distribution (\cref{gazebo ROS packages installation})
+\begin{figure}[h!]
   
+  \begin{minted}{bash}
+    # Install Gazebo ROS Packages (includes sensor plugins and control integration):
+    sudo apt install ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control
+    # Install Robot State and Joint State Publishers:
+    sudo apt install ros-noetic-robot-state-publisher ros-noetic-joint-state-publisher
+    # Install ROS Control (if you plan to simulate controllers/actuators):
+    sudo apt install ros-noetic-ros-control
+  \end{minted} 
+  \caption{Gazebo ROS packages installation}
+  \label{gazebo ROS packages installation}
+\end{figure}
+\newpage
+beside the sensors gazebo also provide plugins to control the actuators like \emph{Differential Drive}
+but duo to limitation of number of actuators that gazebo plugins supports there is another method and that is writing a ymal file forr the simulation.
+in this way by publishing geometry message on the joint we can control the robot in the simulation environment.(check \cref{tags}):
+\begin{figure}
+  \centering
+  \begin{minted}{yaml}
+# Define a controller for controlling a joint by position.
+# You can give any name to the controller. In this example, we call it "position_joint_controller".
+position_joint_controller:
+# Specify the type of controller.
+# Here, we use the JointPositionController from the position_controllers package,
+# which commands a joint based on the desired position.
+type: position_controllers/JointPositionController
+
+# Specify the joint this controller will manage.
+# Replace 'platform_lift_joint' with the exact name of your joint as defined in your robot's URDF or SDF.
+joint: platform_lift_joint
+
+# Configure the PID gains for the controller.
+# 'p' is the proportional gain, which reacts to the current error.
+# 'i' is the integral gain, which reacts to the accumulation of past errors.
+# 'd' is the derivative gain, which reacts to the rate of change of the error.
+pid: {p: 100.0, i: 0.01, d: 10.0}
+\end{minted}
+\caption{Controller configuration file}
+\label{yaml}
+\end{figure}
+
+  the codes in \cref{yaml} is a configuration file for the controller that will be used to control the joint in the simulation environment.
+  it will creat a topic in this case\\ \texttt{/position\_joint\_controller/command} that will be used to control the joint by publishing on the topic.
+  we can write a script or even publish directly on the topic via bash terminal to control the joint.
+  \begin{figure}
+    \centering
+    \begin{minted}{bash}
+# Publish a position command to the joint controller topic
+rostopic pub /position_joint_controller/command std_msgs/Float64 "data: 1.0"
+    \end{minted}
+    \caption{Publishing a position command to the joint controller}
+  \end{figure}
 \end{document}

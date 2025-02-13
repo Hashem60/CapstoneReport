@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYG{n+nt}{position\PYGZus{}joint\PYGZus{}controller}\PYG{p}{:}
+\PYG{+w}{  }\PYG{n+nt}{type}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{position\PYGZus{}controllers/JointPositionController}
+\PYG{+w}{  }\PYG{n+nt}{joint}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{platform\PYGZus{}lift\PYGZus{}joint}\PYG{+w}{ }\PYG{c+c1}{\PYGZsh{} Replace with the exact name of your prismatic joint}
+\PYG{+w}{  }\PYG{n+nt}{pid}\PYG{p}{:}\PYG{+w}{ }\PYG{p+pIndicator}{\PYGZob{}}\PYG{n+nt}{p}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nv}{100.0}\PYG{p+pIndicator}{,}\PYG{n+nt}{ i}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nv}{0.01}\PYG{p+pIndicator}{,}\PYG{n+nt}{ d}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nv}{10.0}\PYG{p+pIndicator}{\PYGZcb{}}
+\end{Verbatim}
