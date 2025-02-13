@@ -143,8 +143,7 @@ can see two example scripts.
 ROS nodes.
 \item \textbf{msg:} This folder contains custom message definitions.
 \item \textbf{srv:} This folder contains the services definitions.
-\item \textbf{action:} This folder contains the action files. We will learn more about these kinds
-of files in the next chapter.
+\item \textbf{action:} This folder contains the action files.
 \item \textbf{package.xml:} This is the package manifest file of this package.
 \item \textbf{CMakeLists.txt:} This file contains the directives to compile the package.
     
@@ -328,7 +327,7 @@ The following command helps view the message header of a particular message:
 \end{minted}
 This will give you an output like the preceding example's message header. We will look
 at the \texttt{rosmsg} command and how to work with custom message definitions later in this
-chapter.
+chapter(\cref{message}).
 \newpage
 \section{The ROS services}
 ROS services are a type of request/response communication between ROS nodes. One node will send a request and wait until it gets a response from the other. Similar to the message definitions when using the .msg file, we must define the service definition in another file called .\texttt{srv}, which must be kept inside the \texttt{srv} subdirectory of the package.
@@ -420,7 +419,7 @@ There is a rosbash tool for introspecting ROS nodes. The \texttt{rosnode} comman
 some example nodes that use the roscpp client and discuss how
 ROS nodes that use functionalities such ROS topics, service, messages, and actionlib
 work.
-\section{ROS messages}
+\section{ROS messages}\label{message}
 messages are simple data structures that contain field types. ROS messages support standard primitive data types and arrays of primitive types.
 
 We can access a message definition using the following method. For example, to access std\_msgs/msg/String.msg when we are using the roscpp client, we must include std\_msgs/String.h for the string message definition.
