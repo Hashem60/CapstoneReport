@@ -30,6 +30,8 @@
 \usepackage{minted}
 \usepackage{circuitikz}
 \usepackage{siunitx}
+\usepackage{xstring}
+\usepackage{fmtcount} % For converting numbers to words
 
 \usepackage{subfiles} % Add this line
 
@@ -56,16 +58,55 @@
 \newcommand{\reportplace}{Nicosia, NORTH CYPRUS}
 \newcommand{\logo}{\includegraphics[width=6cm]{doc/logo.png}}
 
-\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{5}
 % Customize section headings
+
+\newcommand{\capitalizefirst}[1]{%
+    \StrLeft{#1}{1}[\firstletter]% Extract the first letter
+    \StrGobbleLeft{#1}{1}[\restletters]% Extract the rest of the letters
+    \MakeUppercase{\firstletter}\lowercase{\restletters}% Capitalize the first letter and lowercase the rest
+}
+
+% Redefine \chapter to make everything uppercase and centered
+\titleformat{\chapter}[display]
+    {\normalfont\bfseries\centering} % Center alignment and bold font
+    {\MakeUppercase{\chaptertitlename\ \NUMBERstring{chapter}}} % Uppercase "CHAPTER ONE" % Uppercase "CHAPTER 1"
+    {1pt} % Space between chapter number and title
+    {\MakeUppercase} % Uppercase the chapter title
+
+% Adjust spacing around the chapter title
+\titlespacing*{\chapter}{0pt}{50pt}{40pt} % {left}{before}{after}
+
 \titleformat{\section}{\normalfont\fontsize{14}{18}\bfseries\uppercase}{\thesection}{1em}{} % 14 pt, bold, uppercase
-\titleformat{\subsection}{\normalfont\fontsize{12}{14}\bfseries}{\thesubsection}{1em}{} % 12 pt, bold
+\titleformat{\subsection}{\normalfont\fontsize{12}{14}\bfseries\lowercase}{\thesubsection}{1em}{\capitalizefirst} % 12 pt, bold
 % Define subsubsection formatting
 \titleformat{\subsubsection}
     {\normalfont\fontsize{12}{14}\selectfont\raggedright} % 12pt, left-aligned
     {\thesubsubsection\quad} % Label (e.g., "1.1.1") with a small space after it
     {0em} % No additional space between label and title
     {\uline} % Underline the title text (using ulem)
+
+% Redefine \paragraph to behave like a standalone section
+\titleformat{\paragraph}
+    {\normalfont\fontsize{12}{14}} % Formatting: 12pt, bold
+    {\theparagraph} % Label (e.g., "1.1.1.1")
+    {1em} % Space between label and title
+    {} % Additional formatting (empty here)
+
+% Redefine \subparagraph to behave like a standalone section
+\titleformat{\subparagraph}
+    {\normalfont\fontsize{12}{14}} % Formatting: 12pt, bold
+    {\thesubparagraph} % Label (e.g., "1.1.1.1.1")
+    {1em} % Space between label and title
+    {} % Additional formatting (empty here)
+
+% Ensure \paragraph and \subparagraph start on a new line
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+\renewcommand{\emph}[1]{\textit{#1}}
+
 
 \onehalfspacing % Set line spacing to 1.5
 \justifying % Justify tex

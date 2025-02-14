@@ -1,8 +1,8 @@
 \documentclass[../../main]{subfiles}
 \begin{document}
 \lstset{language=XML}
-\section{URDF}
-\section{Understanding robot modeling using URDF}
+
+\section{robot modeling using URDF}
 The Unified Robot Description Format (URDF) is an XML file format used to describe the physical properties of a robot in robotics applications, in particular within the Robot Operating System (ROS) ecosystem. It specifies the robot structure (links, joints, sensors and actuators etc.)
 
 URDF can represent the kinematic and dynamic description of the robot, the visual
@@ -218,7 +218,7 @@ By prioritizing minimalistic shapes (cylinders for rotational elements, boxes fo
 and logical joint configurations (two continuous, one prismatic, and four fixed), the design achieves 
 computational efficiency while retaining fidelity to the robot’s core mechanical and sensing capabilities.
 
-\subsection{Understanding robot modeling using xacro}
+\subsection{robot modeling using xacro}
 The flexibility of URDF reduces when we work with complex robot models. Some of
 the main features that URDF is missing include simplicity, reusability, modularity, and
 programmability.
@@ -275,7 +275,8 @@ changing the values in each one:
 
 We can use the value of the variable by replacing the hardcoded value with the following
 definition:
-\begin{minted}{xml}
+\begin{figure}[h!]
+  \begin{minted}{xml}
     <link name="base_link">
       <visual>
         <geometry>
@@ -285,11 +286,12 @@ definition:
           <material name="green"/>
       </visual>
 \end{minted}
-
+  \end{figure}
+\newpage
 Here, the  value 0.9, is replaced with "{base\_length}", and "0.85" is
 replaced with "{base\_width}".
 
-\subsection{Using the math expression}
+\subsection{math expression in xacro}
 We can build mathematical expressions inside \${} using basic operations such as +, -, *,
 /, unary minus, and parentheses. Exponentiation and modulus are not supported yet. The
 following is a simple math expression used inside the code:
@@ -305,11 +307,12 @@ following is a simple math expression used inside the code:
     </visual>
 \end{minted}
 
-\subsection{Using macros}
+\subsection{xacro macros}
 One of the main features of xacro is that it supports macros. We can use xacro to reduce
 the length of complex definitions. Here is a xacro definition we used in our code to
-specify inertial values:
-\begin{minted}{xml}
+specify inertial values,
+\begin{figure}[h!]
+  \begin{minted}{xml}
     <xacro:macro name="box_inertia" params="m l w h xyz rpy">
     <inertial>
        <origin xyz="${xyz}" rpy="${rpy}"/>
@@ -318,6 +321,7 @@ specify inertial values:
     </inertial>
    </xacro:macro>
 \end{minted}
+\end{figure}
 Here, the macro is named box\_inertia, and its parameters are \{m ,l ,w ,h ,xyz ,rpy\}. we can pass these parameters as a vaues or as a xacro property:
 \begin{minted}{xml}
 <xacro:box_inertia m="5.0" l="${2*base_length}" w="${2*base_width}" h="${2*base_hight}" xyz="0.0 0.0 ${base_hight/2.0}" rpy="0.0 0.0 0.0"/>
@@ -366,7 +370,7 @@ type="joint_state_publisher"/>
     \end{minted}
     If everything works correctly, we will get a pan-and-tilt mechanism in RViz, as shown
     here:
-    \begin{figure}[ht]
+    \begin{figure}[h!]
         \centering
         \includegraphics[width=\textwidth]{img/roborRvz.jpg}
         \caption{A visualization of a robot model with Rviz}

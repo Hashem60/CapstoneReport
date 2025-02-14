@@ -1426,8 +1426,64 @@ through the \emph{\_get\_yaw} method. This combination of movement
 control and obstacle avoidance ensures efficient and accurate navigation
 in dynamic environments.
 
-
+\begin{figure}[h!]
   \begin{minted}{python}
+  def contour_obstacle(self):
+        self._contourningStep += 1 
+        if self.timer:
+            self.timer.shutdown()  
+        self.stop()  # Stop the robot
+        
+        if self._contourningStep == 1:
+            rospy.loginfo("Contouring obstacle: Step 1")
+            self.turn_angle(90)  
+            self.contour_obstacle()
+        elif self._contourningStep == 2:
+            rospy.loginfo("Contouring obstacle: Step 2")
+            self._move_forward()  
+            while not self.is_obstacle_behind():
+                rospy.sleep(0.1)
+            self.turn_angle(-90)  # Turn right 90°
+            self.contour_obstacle()
+        elif self._contourningStep == 3:
+            rospy.loginfo("Contouring obstacle: Step 3")
+            self._move_forward()  
+            while not self.is_obstacle_behind():
+                rospy.sleep(0.1)
+            self.turn_angle(-90)  
+            self.contour_obstacle()
+        elif self._contourningStep == 4:
+            rospy.loginfo("Contouring obstacle: Step 4")
+            self._move_forward()  
+            self._turnSide = "left"
+            self.moveToTurnPosition = True
+            self._obstacleInFront = False
+\end{minted}
+\caption{Obstacle avoidance procedure}
+\end{figure}
+\begin{figure}[h!]
+  \begin{minted}{python}
+  def is_obstacle_behind(self):
+        if self.scan_data is None:
+            return False  
+        robot_length = 0.52  
+        obstacle_distance_threshold = robot_
+        sector_start_angle = np.deg2rad(225)  # 225 degrees
+        sector_end_angle = np.deg2rad(270)   # 270 degrees
+        angle_increment = self.scan_data.angle_increment
+        num_ranges = len(self.scan_data.ranges)
+        start_index = int((sector_start_angle - self.scan_data.angle_min) / angle_increment)
+        end_index = int((sector_end_angle - self.scan_data.angle_min) / angle_increment)
+        min_distance = float('inf')
+        for i in range(start_index, end_index):
+            if 0 < self.scan_data.ranges[i] < min_distance:
+                min_distance = self.scan_data.ranges[i]
+        print(f"min distance : {min_distance}")
+        return min_distance > obstacle_distance_threshold and min_distance < (obstacle_distance_threshold + 0.5)
+\end{minted}
+\caption{Function checking if the robot overpass the obstacle}
+\end{figure}
+\begin{minted}{python}
   def check_for_obstacles(self, event):
     if self.scan_data is None or len(self.scan_data.ranges) == 0:
       return  
@@ -1463,66 +1519,8 @@ print("Checking for obstacles using LIDAR data")
         self._obstacleChecker = 0  
         rospy.loginfo("No obstacle detected. Moving.")
 \end{minted}
-
-
-\begin{figure}
-  \begin{minted}{python}
-  def contour_obstacle(self):
-        self._contourningStep += 1 
-        if self.timer:
-            self.timer.shutdown()  
-        self.stop()  # Stop the robot
-        
-        if self._contourningStep == 1:
-            rospy.loginfo("Contouring obstacle: Step 1")
-            self.turn_angle(90)  
-            self.contour_obstacle()
-        elif self._contourningStep == 2:
-            rospy.loginfo("Contouring obstacle: Step 2")
-            self._move_forward()  
-            while not self.is_obstacle_behind():
-                rospy.sleep(0.1)
-            self.turn_angle(-90)  # Turn right 90°
-            self.contour_obstacle()
-        elif self._contourningStep == 3:
-            rospy.loginfo("Contouring obstacle: Step 3")
-            self._move_forward()  
-            while not self.is_obstacle_behind():
-                rospy.sleep(0.1)
-            self.turn_angle(-90)  
-            self.contour_obstacle()
-        elif self._contourningStep == 4:
-            rospy.loginfo("Contouring obstacle: Step 4")
-            self._move_forward()  
-            self._turnSide = "left"
-            self.moveToTurnPosition = True
-            self._obstacleInFront = False
-\end{minted}
-\caption{Obstacle avoidance procedure}
-\end{figure}
 \captionof{figure}{Obstacle Detection}\label{judFig26}
-\begin{figure}
-  \begin{minted}{python}
-  def is_obstacle_behind(self):
-        if self.scan_data is None:
-            return False  
-        robot_length = 0.52  
-        obstacle_distance_threshold = robot_
-        sector_start_angle = np.deg2rad(225)  # 225 degrees
-        sector_end_angle = np.deg2rad(270)   # 270 degrees
-        angle_increment = self.scan_data.angle_increment
-        num_ranges = len(self.scan_data.ranges)
-        start_index = int((sector_start_angle - self.scan_data.angle_min) / angle_increment)
-        end_index = int((sector_end_angle - self.scan_data.angle_min) / angle_increment)
-        min_distance = float('inf')
-        for i in range(start_index, end_index):
-            if 0 < self.scan_data.ranges[i] < min_distance:
-                min_distance = self.scan_data.ranges[i]
-        print(f"min distance : {min_distance}")
-        return min_distance > obstacle_distance_threshold and min_distance < (obstacle_distance_threshold + 0.5)
-\end{minted}
-\caption{Function checking if the robot overpass the obstacle}
-\end{figure}
+
 \newpage
 The image processing component of the system is designed to enhance the
 robot\textquotesingle s navigation and interaction capabilities by
@@ -2198,10 +2196,7 @@ task is marked as complete, and a signal (\emph{fsignal}) is emitted to
 notify the system. This ensures that other components are aware of the
 task's completion and can take appropriate action.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
 \paragraph{How It Works}
-
 \emph{Initialization:}\\
 The Carrying class initializes by calling the parent class's constructor
 and setting up the task parameters. It prepares the robot for the
@@ -2378,7 +2373,7 @@ def junction_decision(self, onLeft, onRight, onTop):
 \end{minted}
 % \caption{Junction Decision Function Of Carrying Process}
 \captionof{figure}{Junction Decision Function Of Carrying Process}\label{judeFig37}
-\newpage
+
 \emph{Task Completion:}
 Once all goals have been reached, the task is marked as complete, and
 the~\emph{fsignal}~is emitted to notify the system. The parent class's

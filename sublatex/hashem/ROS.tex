@@ -487,7 +487,7 @@ Terminal:
     rosbag play -h
 \end{minted}
 There is a GUI tool that we can use to handle how bag files are recorded and played back called \texttt{rqt\_bag}. To learn more about \texttt{rqt\_bag}, go to \url{https://wiki.ros.org/rqt_bag}.
-\newpage
+
 \section{The ROS master}
 The ROS master is much like a DNS server, in that it associates unique names and IDs to the ROS elements that are active in our system. When any node starts in the ROS system, it will start looking for the ROS master and register the name of the node in it. So, the ROS master has the details of all the nodes currently running on the ROS system. When any of the node's details change, it will generate a callback and update the node with the latest details. These node details are useful for connecting each node.
 
@@ -504,7 +504,7 @@ World} message and the subscriber node subscribing to this topic:
 \begin{figure}[ht]
     \centering
     \includegraphics{img/helloWorld.jpg}
-    \caption{Communication between the ROS master and Hello World publisher and subscriber}
+    \caption[ROS Communication Overview]{Communication between the ROS master and Hello World publisher and subscriber}
     \label{fig:helloWorld}
 \end{figure}
 When the publisher node starts advertising the \texttt{Hello World} message in a particular
