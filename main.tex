@@ -38,17 +38,20 @@
 \subfile{outro}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+\appendix
 \centering
 \chapter*{\hfil APPENDIX \hfil}
+\addcontentsline{toc}{chapter}{Appendix} % Add "Appendix" to the ToC
 \justifying
 \subfile{sublatex/Gregoire/appendGregoire}
-\subfile{sublatex/parfait/appenparfait}
+\subfileinclude{sublatex/parfait/appenparfait}
 \subfile{sublatex/hashem/appendhashem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\newpage
 %\chapter*{REFERENCES}
 \nocite{*} % Add this line to include all references in the bib file
 \bibliography{references}
+\addcontentsline{toc}{section}{Bibliography} % Add "Bibliography" to the ToC
 
 
 \end{document}
