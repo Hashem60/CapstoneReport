@@ -205,7 +205,58 @@ system, charge system, safety system,
 communication system and console make
 up an AGV system. \cite{shengfang2006research}. This report examines the design aspects and considerations for this type of robot, providing readers with key insights into the technologies commonly utilized in this field. 
 
+\section{Key Technologies in AGV Development}
 
+\subsection{Navigation Systems}
+Modern AGVs employ various navigation techniques, including:
+\begin{itemize}
+    \item \textbf{Laser-guided navigation}: Uses LiDAR sensors to detect reflectors and map the environment.
+    \item \textbf{Vision-based navigation}: Utilizes cameras and computer vision algorithms for path planning and obstacle avoidance.
+    \item \textbf{Inertial navigation}: Relies on gyroscopes and accelerometers for position tracking.
+    \item \textbf{Natural feature navigation}: Uses environmental features (e.g., walls, racks) for localization without predefined markers.
+\end{itemize}
+
+\subsection{Localization and Mapping}
+Simultaneous Localization and Mapping (SLAM) algorithms are widely used for real-time environment mapping and AGV positioning. SLAM integrates data from sensors like LiDAR, cameras, and ultrasonic sensors to create accurate maps.
+
+\subsection{Path Planning and Control}
+AGVs use algorithms such as A*, Dijkstra's, or Rapidly-exploring Random Trees (RRT) for optimal path planning. Advanced control systems ensure smooth motion and collision avoidance.
+
+\subsection{Communication and Coordination}
+Multi-AGV systems rely on wireless communication protocols (e.g., Wi-Fi, 5G) and centralized or decentralized control strategies to coordinate tasks and avoid conflicts.
+
+\section{Applications of AGVs}
+AGVs are widely used in various industries:
+\begin{itemize}
+    \item \textbf{Manufacturing}: For transporting raw materials, components, and finished products.
+    \item \textbf{Warehousing}: For order picking, inventory management, and goods transportation.
+    \item \textbf{Healthcare}: For delivering medical supplies and meals in hospitals.
+    \item \textbf{Agriculture}: For automated harvesting and crop monitoring.
+\end{itemize}
+
+\section{Challenges and Limitations}
+Despite their advantages, AGVs face several challenges:
+\begin{itemize}
+    \item \textbf{High Initial Costs}: The development and deployment of AGVs require significant investment in hardware and software.
+    \item \textbf{Dynamic Environments}: AGVs struggle in unstructured or highly dynamic environments with moving obstacles.
+    \item \textbf{Battery Life and Charging}: Limited battery capacity and the need for frequent charging can disrupt operations.
+    \item \textbf{Safety Concerns}: Ensuring safe interaction with human workers and other equipment is critical.
+\end{itemize}
+
+\section{Recent Trends and Innovations}
+\begin{itemize}
+    \item \textbf{Integration with AI and Machine Learning}: AGVs are increasingly leveraging AI for predictive maintenance, adaptive navigation, and task optimization.
+    \item \textbf{Collaborative AGVs}: Development of AGVs that can work alongside humans (cobots) is gaining traction.
+    \item \textbf{Swarm Robotics}: Research is exploring the use of multiple AGVs working collaboratively in a decentralized manner.
+    \item \textbf{Autonomous Mobile Robots (AMRs)}: AGVs are evolving into AMRs with higher autonomy and flexibility.
+\end{itemize}
+
+\section{Notable Research and Case Studies}
+\begin{itemize}
+    \item \textbf{Research on SLAM for AGVs}: Studies have focused on improving SLAM algorithms for better accuracy and robustness in dynamic environments.
+    \item \textbf{Energy-Efficient AGVs}: Research has explored energy-saving techniques, such as regenerative braking and optimized path planning.
+    \item \textbf{Human-AGV Interaction}: Studies have investigated intuitive interfaces and safety protocols for human-AGV collaboration.
+\end{itemize}
 
 % \begin{figure}[h]
 %     \centering

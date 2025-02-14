@@ -47,6 +47,7 @@
 \@namedef{PYG@tok@gr}{\def\PYG@tc##1{\textcolor[rgb]{0.67,0.00,0.00}{##1}}}
 \@namedef{PYG@tok@ge}{\let\PYG@it=\textit}
 \@namedef{PYG@tok@gs}{\let\PYG@bf=\textbf}
+\@namedef{PYG@tok@ges}{\let\PYG@bf=\textbf\let\PYG@it=\textit}
 \@namedef{PYG@tok@gp}{\def\PYG@tc##1{\textcolor[rgb]{0.33,0.33,0.33}{##1}}}
 \@namedef{PYG@tok@go}{\def\PYG@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
 \@namedef{PYG@tok@gt}{\def\PYG@tc##1{\textcolor[rgb]{0.67,0.00,0.00}{##1}}}

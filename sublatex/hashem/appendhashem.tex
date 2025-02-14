@@ -1,0 +1,120 @@
+\documentclass[../../main]{subfiles}
+\begin{document}
+
+\section*{ROS Packages for URDF, Gazebo, Navigation, and Communication}
+
+% Start the longtable environment
+\begin{longtable}{|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{4cm}|p{7cm}|}
+\caption{List of Useful ROS Packages for Robotics Development} \label{tab:ros_packages} \\
+
+% Header for the first page
+\hline
+\textbf{Category} & \textbf{Package Name} & \textbf{Description} \\
+\hline
+\endfirsthead
+
+% Header for subsequent pages
+\multicolumn{3}{c}%
+{{\tablename\ \thetable{} -- continued from previous page}} \\
+\hline
+\textbf{Category} & \textbf{Package Name} & \textbf{Description} \\
+\hline
+\endhead
+
+% Footer for all pages except the last
+\hline
+\multicolumn{3}{r}{{Continued on next page}} \\
+\endfoot
+
+% Footer for the last page
+\hline
+\endlastfoot
+
+% URDF Packages
+URDF & urdf & Core package for defining robots in URDF format. \\
+URDF & xacro & XML macro language for simplifying URDF files. \\
+URDF & robot\_state\_publisher & Publishes the state of the robot to tf. \\
+URDF & joint\_state\_publisher & Publishes joint states for simulating joint movements. \\
+URDF & kdl\_parser & Parses URDF into KDL trees for kinematic calculations. \\
+URDF & srdf & Semantic Robot Description Format for MoveIt!. \\
+
+% Gazebo Packages
+Gazebo & gazebo\_ros\_pkgs & ROS integration with Gazebo. \\
+Gazebo & gazebo\_plugins & Plugins for sensors like cameras, lasers, and IMUs. \\
+Gazebo & gazebo\_ros\_control & Integrates ROS control with Gazebo. \\
+Gazebo & hector\_gazebo\_plugins & Additional plugins for GPS, sonar, and IMU sensors. \\
+Gazebo & ros\_control & Framework for controlling robots in simulation and real hardware. \\
+Gazebo & controller\_manager & Manages controllers for joints in Gazebo. \\
+Gazebo & effort\_controllers & Effort-based controllers for joints. \\
+Gazebo & position\_controllers & Position-based controllers for joints. \\
+Gazebo & velocity\_controllers & Velocity-based controllers for joints. \\
+
+% Navigation Packages
+Navigation & move\_base & Core package for navigation stack, responsible for global and local path planning. \\
+Navigation & amcl & Adaptive Monte Carlo Localization for 2D pose estimation. \\
+Navigation & gmapping & SLAM algorithm using laser scans. \\
+Navigation & cartographer & Advanced SLAM library supporting 2D and 3D mapping. \\
+Navigation & navigation & Full ROS Navigation stack. \\
+Navigation & global\_planner & Global path planner (e.g., A*, Dijkstra). \\
+Navigation & local\_planner & Local path planner (e.g., DWA, TEB). \\
+Navigation & teb\_local\_planner & Timed Elastic Band local planner for dynamic environments. \\
+Navigation & costmap\_2d & 2D costmap representation for obstacle avoidance. \\
+Navigation & dwa\_local\_planner & Dynamic Window Approach for local path planning. \\
+Navigation & nav\_msgs & Messages related to navigation (e.g., Odometry, Path). \\
+
+% Communication Packages
+Communication & rospy & Python client library for ROS. \\
+Communication & roscpp & C++ client library for ROS. \\
+Communication & std\_msgs & Standard message types (e.g., Float32, String, Bool). \\
+Communication & sensor\_msgs & Messages for sensor data (e.g., LaserScan, Image, Imu). \\
+Communication & geometry\_msgs & Messages for geometry-related data (e.g., Pose, Twist, Point). \\
+Communication & tf / tf2 & Transform library for managing coordinate frames. \\
+Communication & actionlib & Action server/client for long-running tasks. \\
+Communication & message\_filters & Synchronizes multiple topics based on timestamps. \\
+Communication & rosserial & Communicate with microcontrollers over serial. \\
+Communication & rosbridge\_suite & WebSocket-based communication for web-based interfaces. \\
+Communication & rosapi & Provides REST API access to ROS topics, services, and parameters. \\
+
+% Manipulation and Motion Planning Packages
+Manipulation & moveit & Motion planning framework for robotic arms. \\
+Manipulation & moveit\_core & Core components of MoveIt! (planning, kinematics, etc.). \\
+Manipulation & moveit\_ros & ROS integration for MoveIt!. \\
+Manipulation & moveit\_commander & Python interface for MoveIt!. \\
+Manipulation & trac\_ik & Inverse Kinematics solver that works well with MoveIt!. \\
+Manipulation & moveit\_visual\_tools & Tools for visualizing motion planning in RViz. \\
+Manipulation & grasp\_generator & Generates grasps for robotic manipulators. \\
+
+% Visualization Packages
+Visualization & rviz & 3D visualization tool for ROS. \\
+Visualization & rviz\_plugin\_tutorials & Tutorials for creating custom RViz plugins. \\
+Visualization & rviz\_imu\_plugin & Plugin for visualizing IMU data in RViz. \\
+Visualization & rviz\_satellite & Plugin for visualizing satellite imagery in RViz. \\
+
+% Sensors and Perception Packages
+Sensors & laser\_geometry & Converts laser scans into point clouds. \\
+Sensors & image\_transport & Handles image transport (e.g., compressed images). \\
+Sensors & camera\_info\_manager & Manages camera calibration information. \\
+Sensors & depth\_image\_proc & Processes depth images (e.g., from RGB-D cameras). \\
+Sensors & pcl\_ros & ROS integration with Point Cloud Library (PCL) for 3D perception. \\
+Sensors & octomap & 3D occupancy grid mapping for collision avoidance. \\
+Sensors & rtabmap\_ros & Real-Time Appearance-Based Mapping for SLAM. \\
+Sensors & aruco\_ros & Detects ArUco markers for augmented reality and localization. \\
+
+% Control and Dynamics Packages
+Control & control\_toolbox & Provides PID controllers and other control utilities. \\
+Control & realtime\_tools & Tools for real-time control in ROS. \\
+Control & trajectory\_msgs & Messages for defining trajectories (e.g., JointTrajectory). \\
+Control & joint\_trajectory\_controller & Controller for executing joint trajectories. \\
+Control & gazebo\_ros\_force\_system & Applies forces to objects in Gazebo. \\
+
+% Other Useful Packages
+Other & dynamic\_reconfigure & Allows dynamic reconfiguration of node parameters at runtime. \\
+Other & diagnostic\_updater & Monitors the health of ROS nodes and publishes diagnostic messages. \\
+Other & robot\_localization & State estimation package that fuses data from multiple sensors. \\
+Other & slam\_toolbox & Flexible SLAM solution with support for online and offline mapping. \\
+Other & rosbag & Records and plays back ROS messages for debugging and testing. \\
+Other & rosparam\_shortcuts & Simplifies loading parameters from the parameter server. \\
+
+\end{longtable}
+
+\end{document}
