@@ -77,7 +77,7 @@ proprietary robotic applications to ROS.
 Now that we know why it is convenient to study ROS, we can start introducing its core
 concepts. There are mainly three levels in ROS: the filesystem level, the computation graph
 level, and the community level. We will briefly have a look at each level.
-
+\newpage
 \section{the ROS filesystem level}
 ROS is more than a development framework. We can refer to ROS as a meta-OS, since
 it offers not only tools and libraries but even OS-like functions, such as hardware
@@ -91,26 +91,26 @@ following diagram:
 \end{figure}
 Here are the explanations for each block in the filesystem:
 \begin{itemize}
-\item  \textbf{Packages:} The ROS packages are a central element of the ROS software. They
+\item  \emph{Packages:} The ROS packages are a central element of the ROS software. They
     contain one or more ROS programs (nodes), libraries, configuration files, and so
     on, which are organized together as a single unit. Packages are the atomic build and
     release items in the ROS software.
-\item  \textbf{Package manifest:} The package manifest file is inside a package and contains
+\item  \emph{Package manifest:} The package manifest file is inside a package and contains
     information about the package, author, license, dependencies, compilation flags,
     and so on. The package.xml file inside the ROS package is the manifest file of
     that package.
-\item  \textbf{Metapackages:} The term metapackage refers to one or more related packages that
+\item  \emph{Metapackages:} The term metapackage refers to one or more related packages that
     can be loosely grouped. In principle, metapackages are virtual packages that don't
     contain any source code or typical files usually found in packages.
-\item  \textbf{Metapackages manifest:} The metapackage manifest is similar to the package
+\item  \emph{Metapackages manifest:} The metapackage manifest is similar to the package
     manifest, with the difference being that it might include packages inside it as
     runtime dependencies and declare an export tag.
-\item  \textbf{Messages (.msg):} We can define a custom message inside the msg folder inside
+\item  \emph{Messages (.msg):} We can define a custom message inside the msg folder inside
     a package (my\_package/msg/MyMessageType.msg). The extension of the
     message file is .msg.
-\item  \textbf{Services (.srv):} The reply and request data types can be defined inside the srv
+\item  \emph{Services (.srv):} The reply and request data types can be defined inside the srv
     folder inside the package (my\_package/srv/MyServiceType.srv).
-\item  \textbf{Repositories:} Most of the ROS packages are maintained using a Version Control
+\item  \emph{Repositories:} Most of the ROS packages are maintained using a Version Control
     System (VCS) such as Git, Subversion (SVN), or Mercurial (hg). A set of files
     placed on a VCS represents a repository.
 \end{itemize}
@@ -131,53 +131,54 @@ The typical structure of a ROS package is shown here:
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{config:} All configuration files that are used in this ROS package are kept in this
+    \item \emph{config:} All configuration files that are used in this ROS package are kept in this
     folder. This folder is created by the user and it is a common practice to name the
     folder config as this is where we keep the configuration files.
-    \item \textbf{include/package\_name:} This folder consists of headers and libraries that we
+    \item \emph{include/package\_name:} This folder consists of headers and libraries that we
     need to use inside the package.
     script: This folder contains executable Python scripts. In the block diagram, we
 can see two example scripts.
-\item \textbf{src:} This folder stores the C++ source codes.
-\item \textbf{launch:} This folder contains the launch files that are used to launch one or more
+\item \emph{src:} This folder stores the C++ source codes.
+\item \emph{launch:} This folder contains the launch files that are used to launch one or more
 ROS nodes.
-\item \textbf{msg:} This folder contains custom message definitions.
-\item \textbf{srv:} This folder contains the services definitions.
-\item \textbf{action:} This folder contains the action files.
-\item \textbf{package.xml:} This is the package manifest file of this package.
-\item \textbf{CMakeLists.txt:} This file contains the directives to compile the package.
+\item \emph{msg:} This folder contains custom message definitions.
+\item \emph{srv:} This folder contains the services definitions.
+\item \emph{action:} This folder contains the action files.
+\item \emph{package.xml:} This is the package manifest file of this package.
+\item \emph{CMakeLists.txt:} This file contains the directives to compile the package.
     
 \end{itemize}
 We need to know some commands for creating, modifying, and working with ROS
 packages. Here are some of the commands we can use to work with ROS packages:
 \begin{itemize}
-\item \textbf{catkin\_create\_pkg:} This command is used to create a new package.
-\item \textbf{rospack:} This command is used to get information about the package in the
+\item \emph{catkin\_create\_pkg:} This command is used to create a new package.
+\item \emph{rospack:} This command is used to get information about the package in the
 filesystem.
-\item \textbf{catkin\_make:} This command is used to build the packages in the workspace.
-\item \textbf{rosdep:} This command will install the system dependencies required for this
+\item \emph{catkin\_make:} This command is used to build the packages in the workspace.
+\item \emph{rosdep:} This command will install the system dependencies required for this
 package.
 \end{itemize}
 To work with packages, ROS provides a bash-like command called rosbash \\
 (http://wiki.ros.org/rosbash), which can be used to navigate and manipulate the
 ROS\\
 package. Here are some of the rosbash commands:
+
 \begin{itemize}
     \item
-    \textbf{roscd:} This command is used to change the current directory using a
+    \emph{roscd:} This command is used to change the current directory using a
       package name, stack name, or a special location. If we give the
       argument a package name, it will switch to that package folder.
     \item
-    \textbf{roscp:} This command is used to copy a file from a package.
+    \emph{roscp:} This command is used to copy a file from a package.
     \item
-    \textbf{rosed:} This command is used to edit a file using the vim editor.
+    \emph{rosed:} This command is used to edit a file using the vim editor.
     \item
-    \textbf{rosrun:} This command is used to run an executable inside a package.
+    \emph{rosrun:} This command is used to run an executable inside a package.
     \end{itemize}
     The definition of package.xml in a typical package is shown in the following
     code:
-        
-        \begin{minted}{xml}
+        \begin{codebox}[]{ Typical ROS Package.xml}    
+            \begin{minted}{xml}
             <?xml version="1.0"?>
             <package>
             <name>hello world</name>
@@ -194,22 +195,24 @@ package. Here are some of the rosbash commands:
             <export>
             </export> </package>
         \end{minted}
+    \end{codebox}
 
         The package.xml file also contains information about the compilation.\\ The \texttt{<build\_
         depend></build\_depend>} tag includes the packages that are necessary for building
         the source code of the package. The packages inside the \texttt{<run\_depend></run\_
         depend>} tags are necessary for running the package node at runtime.
-        \
 \section{ROS metapackages}
 Metapackages are specialized packages that require only one file; that is, a package.xml
 file.
 Metapackages simply group a set of multiple packages as a single logical package. In the
 package.xml file, the metapackage contains an export tag, as shown here:
-\begin{minted}{xml}
+\begin{codebox}[]{Defining a ROS Metapackage with the package.xml File}
+    \begin{minted}{xml}
     <export>
     <metapackage/>
     </export>
 \end{minted}
+    \end{codebox}
 Also, in metapackages, there are no \texttt{<buildtool\_depend>} dependencies for catkin;
 there are only \texttt{<run\_depend>} dependencies, which are the packages that are grouped
 inside the metapackage.\\
@@ -217,16 +220,21 @@ inside the metapackage.\\
 The ROS navigation stack is a good example of somewhere that contains metapackages. If
 ROS and its navigation package are installed, we can try using the following command by
 switching to the navigation metapackage folder:
-\begin{minted}{bash}
-    roscd navigation
+\begin{codebox}[]{Navigating to the ROS Navigation Metapackage with roscd}
+    \begin{minted}{bash}
+        roscd navigation
     \end{minted}
+    \end{codebox}
     Open package.xml using your text editor (gedit, in the following case):
-    \begin{minted}{xml}
+
+    \begin{codebox}[]{Opening the package.xml File Using a Text Editor }
+        \begin{minted}{xml}
     gedit package.xml
         \end{minted}
-    \newpage
+        \end{codebox}
+
         This is a lengthy file; here is a stripped-down version of it:
-\begin{figure}[ht]
+\begin{codebox}[]{Structure of the package.xml metapackage}
         \begin{minted}{xml}
             <?xml version="1.0"?>
             <package>
@@ -246,8 +254,9 @@ switching to the navigation metapackage folder:
             </export>
             </package>
         \end{minted}
-        \caption{Structure of the package.xml metapackage}
-    \end{figure}
+        % \caption{Structure of the package.xml metapackage}
+    \end{codebox}
+
     This file contains several pieces of information about the package, such as a brief
 description, its dependencies, and the package version.
 
@@ -264,15 +273,17 @@ split into field types and field names. The field type is the data type of the t
 message, while the field name is the name of it.
 
 Here is an example of message definitions:
-\begin{minted}{bash}
-    int32 number
-\end{minted}
-\begin{minted}{bash}
-    string name
-\end{minted}
-\begin{minted}{bash}
-    float32 speed
-\end{minted}
+\begin{codebox}[]{Example of ROS Message Definitions: Fields and Data Types}
+    \begin{minted}{bash}
+        int32 number
+    \end{minted}
+    \begin{minted}{bash}
+        string name
+    \end{minted}
+    \begin{minted}{bash}
+        float32 speed
+    \end{minted}
+    \end{codebox}
 Here, the first part is the field type and the second is the field name. The field type is
 the data type, and the field name can be used to access the value from the message. For
 example, we can use msg.number to access the value of the number from the message.
@@ -310,6 +321,7 @@ Here is a table showing some of the built-in field types that we can use in our 
 \end{table}
 
 ROS provides a set of complex and more structured message files that are designed to cover a specific application's necessity, such as exchanging common geometrical (geometry\_msgs) or sensor (sensor\_msgs) information. These messages are composed of different primitive types. A special type of ROS message is called a message header. This header can carry information, such as time, frame of reference or frame\_id, and sequence number. Using the header, we will get numbered messages and more clarity about which component is sending the current message. The header information is mainly used to send data such as robot joint transforms. Here is the definition of the header:
+\begin{codebox}[]{ROS Message Header: Sequence, Timestamp, and Frame ID}
 \begin{minted}{bash}
     uint32 seq
 \end{minted}
@@ -319,6 +331,7 @@ ROS provides a set of complex and more structured message files that are designe
 \begin{minted}{bash}
     string frame_id
 \end{minted}
+\end{codebox}
 
 The rosmsg command tool can be used to inspect the message header and the field types.
 The following command helps view the message header of a particular message:
@@ -328,18 +341,22 @@ The following command helps view the message header of a particular message:
 This will give you an output like the preceding example's message header. We will look
 at the \texttt{rosmsg} command and how to work with custom message definitions later in this
 chapter(\cref{message}).
-\newpage
+
 \section{The ROS services}
 ROS services are a type of request/response communication between ROS nodes. One node will send a request and wait until it gets a response from the other. Similar to the message definitions when using the .msg file, we must define the service definition in another file called .\texttt{srv}, which must be kept inside the \texttt{srv} subdirectory of the package.
 
 An example service description format is as follows:
-\begin{minted}[style=default]{bash}
-    #Request message type
-    string req
-    ---
-    #Response message type
-    string res
-\end{minted}
+
+\begin{codebox}[]{ROS Services: Request and Response}
+    
+    \begin{minted}[style=default]{bash}
+        #Request message type
+        string req
+        ---
+        #Response message type
+        string res
+    \end{minted}
+    \end{codebox}
 The first section is the message type of the request, which is separated by ---, while the
 next section contains the message type of the response. In these examples, both Request
 and Response are strings.
@@ -483,9 +500,14 @@ Here are the commands for recording and playing back a bag file:
 \end{itemize}
 The full, detailed list of commands can be found by using the following command in a
 Terminal:
-\begin{minted}{bash}
-    rosbag play -h
-\end{minted}
+
+\begin{codebox}[]{ROS Bag Files: Recording and Playing Back Topic Data}
+    
+    \begin{minted}{bash}
+        rosbag play -h
+    \end{minted}
+    \end{codebox}
+
 There is a GUI tool that we can use to handle how bag files are recorded and played back called \texttt{rqt\_bag}. To learn more about \texttt{rqt\_bag}, go to \url{https://wiki.ros.org/rqt_bag}.
 
 \section{The ROS master}
@@ -615,10 +637,11 @@ Before running any ROS nodes, we should start the ROS master and the ROS paramet
 The rosout node will collect log messages from other ROS nodes and store them in a log file, and will also re-broadcast the collected log message to another topic. The /rosout topic is published by ROS nodes using ROS client libraries such as roscpp and rospy, and this topic is subscribed by the rosout node, which rebroadcasts the message in another topic called /rosout\_agg. This topic contains an aggregate stream of log messages. The roscore command should be run as a prerequisite to running any ROS nodes. The following screenshot shows the messages that are printed when we run the roscore command in a Terminal.
 
 Use the following command to run \texttt{roscore} on a Linux Terminal:
-
-\begin{minted}{bash}
-    roscore
-\end{minted}
+\begin{codebox}[]{Starting the ROS Master}    
+    \begin{minted}{bash}
+        roscore
+    \end{minted}
+\end{codebox}
 
 After running this command, we will see the following text in the Linux Terminal:
 \begin{figure}[ht]
@@ -636,8 +659,9 @@ After running this command, we will see the following text in the Linux Terminal
 \end{itemize}
 
 The following is the content of \texttt{roscore.xml}:
-
-\begin{minted}{xml}
+\begin{codebox}[]{Output of the roscore Command and the Structure of roscore.xml}
+    
+    \begin{minted}{xml}
     <launch>
         <group ns="/">
             <param name="rosversion" command="rosversion roslaunch" />
@@ -646,6 +670,7 @@ The following is the content of \texttt{roscore.xml}:
         </group>
     </launch>
 \end{minted}
+    \end{codebox}
 
 When the \texttt{roscore} command is executed, initially, the command checks the command-line argument for a new port number for \texttt{rosmaster}. If it gets the port number, it will start listening to the new port number; otherwise, it will use the default port. This port number and the \texttt{roscore.xml} launch file will be passed to the \texttt{roslaunch} system. The \texttt{roslaunch} system is implemented in a Python module; it will parse the port number and launch the \texttt{roscore.xml} file.
 
@@ -659,42 +684,59 @@ The \texttt{rosversion} and \texttt{rosdistro} parameters store the output of th
 \subsection{Checking the roscore command's output}
 Let's check out the ROS topics and ROS parameters that are created after running roscore. The following command will list the active topics in the Terminal:
 
-\begin{minted}{bash}
-    rostopic list
-\end{minted}
+\begin{codebox}[]{Listing Active Topics After Running the roscore Command}    
+    \begin{minted}{bash}
+        rostopic list
+    \end{minted}
+    \end{codebox}
 
 The list of topics is as follows, as per our discussion of the rosout node's subscribe /rosout topic. This contains all the log messages from the ROS nodes. /rosout\_agg will rebroadcast the log messages:
 
-\begin{minted}{bash}
-    /rosout
-    /rosout_agg
-\end{minted}
+\begin{codebox}[]{Active Topics After Running roscore: /rosout and /rosout\_agg}    
+    \begin{minted}{bash}
+        /rosout
+        /rosout_agg
+    \end{minted}
+    \end{codebox}
 
 The following command lists the parameters that are available when running roscore. The following command is used to list the active ROS parameter:
 
-\begin{minted}{bash}
-    rosparam list
-\end{minted}
+\begin{codebox}[]{Listing Active ROS Parameters After Running roscore}    
+    \begin{minted}{bash}
+        rosparam list
+    \end{minted}
+    \end{codebox}
 
 These parameters are mentioned here; they provide the ROS distribution name, version, the address of the roslaunch server, and run\_id, where run\_id is a unique ID associated with a particular run of roscore:
-
-\begin{minted}{bash}
-    /rosdistro
-    /roslaunch/uris/host_robot_virtualbox_51189
-    /rosversion
-    /run_id
-\end{minted}
+\begin{codebox}[]{ROS Parameters Available After Running roscore}
+    
+    \begin{minted}{bash}
+        /rosdistro
+        /roslaunch/uris/host_robot_virtualbox_51189
+        /rosversion
+        /run_id
+    \end{minted}
+    \end{codebox}
 
 The list of ROS services that's generated when running roscore can be checked by using the following command:
 
-\begin{minted}{bash}
-    rosservice list
-\end{minted}
+\begin{codebox}[]{Listing ROS Services Generated by roscore}
+    \begin{minted}{bash}
+        rosservice list
+    \end{minted}
+    \end{codebox}
+
 The list of services that are running is as follows:
-\begin{minted}{bash}
-    /rosout/get_loggers
-    /rosout/set_logger_level
-\end{minted}
+
+\begin{codebox}[]{Active ROS Services After Running roscore}
+    
+    \begin{minted}{bash}
+        /rosout/get_loggers
+        /rosout/set_logger_level
+    \end{minted}
+    \end{codebox}
+
+
 These ROS services are generated for each ROS node, and they are used to set the logging
 levels.
 \end{document}

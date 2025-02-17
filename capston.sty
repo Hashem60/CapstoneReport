@@ -20,7 +20,7 @@
 \usepackage{cleveref}
 \usepackage{listings}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
-\usepackage{tcolorbox} % For alternating background colors
+\usepackage[most]{tcolorbox} % For alternating background colors
 \usepackage{color}
 \usepackage{booktabs}
 \usepackage{colortbl}
@@ -33,6 +33,9 @@
 \usepackage{xstring}
 \usepackage{fmtcount} % For converting numbers to words
 \usepackage{appendix} % For managing appendices
+\tcbuselibrary{breakable} % Required for breakable tcolorboxes
+\tcbuselibrary{listings}  
+\usepackage{tocloft}         % For creating custom lists
 
 \usepackage{subfiles} % Add this line
 
@@ -149,22 +152,52 @@
 %     literate={\ =}{{\textcolor{backcolour}{=}}}1 % Color "=" without spaces
 % }
 
+% \setminted{
+%     linenos=true,          % Enable line numbers
+%     fontsize=\small,       % Set font size
+%     frame=single,           % Add a frame around the code
+%     framesep=2mm,          % Space between frame and code
+%     framerule=1pt,
+%     breakanywhere=true,    % Allow breaking at any character
+%     breaklines=true,       % Wrap long lines
+%     baselinestretch=1.2,   % Line spacing
+%     bgcolor=white,     % Background color
+%     tabsize=4              % Tab size
+% }
+
 \setminted{
-    linenos=true,          % Enable line numbers
-    fontsize=\small,       % Set font size
-    frame=single,           % Add a frame around the code
-    framesep=2mm,          % Space between frame and code
-    framerule=1pt,
-    breakanywhere=true,    % Allow breaking at any character
-    breaklines=true,       % Wrap long lines
-    baselinestretch=1.2,   % Line spacing
-    bgcolor=white,     % Background color
-    tabsize=4              % Tab size
+    linenos=false,           % Enable line numbers
+    fontsize=\small,        % Set font size
+    breakanywhere=true,     % Allow breaking at any character
+    breaklines=true,        % Wrap long lines
+    baselinestretch=1.2,    % Line spacing
+    tabsize=4               % Tab size
+    % bgcolor and frame options are removed because tcolorbox handles them
 }
 \usemintedstyle{pastie}   % Use the "monokai" style
 
+\newtcolorbox[auto counter, number within=section]{codebox}[2][]{
+    colback=white,          % Background color
+    colframe=black,         % Frame color
+    boxrule=1pt,            % Frame thickness
+    arc=2pt,                % Rounded corners
+    breakable,              % Allow page breaks
+    enhanced,               % Enhanced features
+    title={Code Block \thetcbcounter: #2}, % Title with automatic numbering
+    attach boxed title to top left={yshift=-2mm}, % Title placement
+    label={#1},             % Label for referencing
+    before upper={\addcontentsline{cod}{codeblocks}{\protect\numberline{\thetcbcounter}#2}}, % Add to List of Code Blocks
+    #1                      % Optional arguments
+}
 
+% Customize cleveref to use "Code Block" for tcolorbox references
+\crefname{tcb@cnt@codebox}{code block}{code blocks}
+\Crefname{tcb@cnt@codebox}{Code Block}{Code Blocks}
 
+\newcommand{\listofcodeblocksname}{List of Code Blocks}
+\newlistof{codeblocks}{cod}{\listofcodeblocksname}
 
-
+% Customize the appearance of the List of Code Blocks
+\setlength{\cftcodeblocksnumwidth}{3.5em} % Increase space for numbers (e.g., "1.1")
+\setlength{\cftcodeblocksindent}{1.5em} % Adjust indentation of entries
 

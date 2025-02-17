@@ -268,7 +268,7 @@ Additionally, the application\textquotesingle s process state was
 maintained using \emph{processState}. To facilitate state updates,
 setter functions like \emph{setmenu} and \emph{setmenuOpened} were
 implemented, allowing for specific property modifications.
-\begin{figure}[h!]
+\begin{codebox}[]{All states of core element with their default value}
 \begin{minted}{js}
 export const core = create((set,get) => 
 ({ connectedSocket : false,
@@ -285,8 +285,8 @@ export const core = create((set,get) =>
     station : null,}))
 
 \end{minted}
-\caption{All states of core element with their default value}
-\end{figure}
+% \caption{All states of core element with their default value}
+\end{codebox}
 \emph{WebSocket} integration was implemented using Socket.IO to enable
 real-time communication between the frontend and backend. The
 \emph{initializeSocket} function was developed to establish a connection
@@ -297,13 +297,13 @@ listened for real-time data streams, including \emph{camera\_feed,
 camera\_qr\_feed, map\_feed, speed, gear\_state, task\_response,
 mapping\_output,} and \emph{processState}, allowing for seamless data
 exchange and synchronization across the application.
-\begin{figure}[h!]
+\begin{codebox}[]{socket connection}
   \begin{minted}{js}
   const socket = io('http://localhost:5000');
   set({ socket });
 \end{minted}
-\caption{socket connection}
-\end{figure}
+% \caption{socket connection}
+\end{codebox}
 
 
 Real-time data handling was implemented to ensure seamless updates and
@@ -317,7 +317,7 @@ properties accordingly. Task responses from the backend were displayed
 using react-hot-toast, providing instant user feedback and enhancing the
 overall user experience.
 
-\begin{figure}
+\begin{codebox}[]{socket connection}
   \begin{minted}{js}
 camera_feed : async function(data){
         set({cameraData : data.image})
@@ -329,8 +329,8 @@ camera_feed : async function(data){
         set({mapData : data.image})
     },
 \end{minted}
-\caption{socket connection}
-\end{figure}
+% \caption{socket connection}
+\end{codebox}
 he frontend and backend. The \emph{sendTask} function was
 implemented to transmit task sequences, such as loading and unloading,
 to the backend via WebSocket. Task data, including \emph{task\_name} and
@@ -349,7 +349,7 @@ processed data was then stored in the state variables zone and station,
 enabling seamless integration with the UI for real-time visualization
 and interaction.
 
-\begin{figure}[h!]
+\begin{codebox}[]{}
   \begin{minted}{js}
 serialize : async function(locations){
       let lcs = [], st = []
@@ -389,9 +389,8 @@ serialize : async function(locations){
       set({station : st})
     },
 \end{minted}
+\end{codebox}
 
-\end{figure}
-\newpage
 Gear control was managed through the \emph{changeGear} function,
 allowing the robot's gear state to toggle between \emph{automatic} and
 \emph{manual} modes. To ensure safe operation, gear changes were
@@ -417,7 +416,7 @@ and responsiveness. Additionally, the system provided a robust
 foundation for task management, mapping, and robot control, ensuring a
 smooth and intuitive user experience while maintaining high performance
 and reliability.
-
+\newpage
 \subsubsection{App Component}
 
 the root App component serves as the entry point for the application.
@@ -443,37 +442,37 @@ ensures a smooth user experience, keeping users informed and engaged
 during the connection process and throughout their interactions with the
 system. This structure not only enhances performance but also improves
 the overall user interface, making it responsive and intuitive. See
-\cref{judFig9} for implementation.
+()\cref{judFig9}) for implementation.
 
-\begin{figure}[h!]
+\begin{codebox}[label=judFig9]{App Component}
   \begin{minted}{js}
 function App() {
-  const {initializeSocket, connectedSocket, connectedRos}= core()
-  useEffect(function(){
-    initializeSocket()
-  },[initializeSocket])
+  const { initializeSocket, connectedSocket, connectedRos } = core();
 
-  if(!(connectedSocket  )){
-    return <Loarder/>
+  useEffect(() => {
+    initializeSocket();
+  }, [initializeSocket]);
+
+  if (!connectedSocket) {
+    return <Loarder />;
   }
 
   return (
     <BrowserRouter>
-    <div className="flex flex-row w-full h-full">
+      <div className="flex flex-row w-full h-full">
         <SideBar />
         <MainLayout />
-    </div>
-    <Toaster></Toaster>
+      </div>
+      <Toaster />
     </BrowserRouter>
   );
 }
 
 export default App;
-
 \end{minted}
-\caption{App Component}
-\label{judFig9}
-\end{figure}
+% \caption{App Component}
+% \label{judFig9}
+\end{codebox}
 
 \subsubsection{MainLayout Component}
 
@@ -505,7 +504,8 @@ structure enhanced the overall user experience, providing consistent and
 responsive design elements across the application, while also ensuring
 that users are kept informed during the socket connection process.
 
-\begin{figure}
+\newpage
+\begin{codebox}[label=judFig10]{MainLayout Component}
 \begin{minted}{js}
 const MainLayout = () => {
     const { connectedSocket, menuOpened } = core();
@@ -527,9 +527,9 @@ const MainLayout = () => {
 };
 export default MainLayout;
 \end{minted}
-\caption{MainLayout Component}
-\label{judFig10}
-\end{figure}
+% \caption{MainLayout Component}
+% \label{judFig10}
+\end{codebox}
 
 \subsubsection{Remote Component}
 
@@ -547,7 +547,7 @@ functionality leverages \emph{React\textquotesingle s useEffect} and
 responsive and dynamic UI updates are ensured, adapting seamlessly to
 user interactions and state changes. See code below for implementation.
 
-
+\begin{codebox}[]{}
   \begin{minted}{js}
 const Remote = (props) => {
     const {sendDirection, changeGear, gear} = core()
@@ -599,6 +599,7 @@ return (
 };
 export default Remote;
 \end{minted}
+\end{codebox}
 
 
 \subsubsection{Camera Component}
@@ -618,7 +619,7 @@ object URLs when the component unmounted or the camera data changed. The
 component was styled using CSS to ensure the camera feed was responsive
 and fit seamlessly within the layout.
 
-\begin{figure}
+\begin{codebox}[label=judFig12]{UseEffect which update camera image each render}
   \begin{minted}{js}
 useEffect(function(){
         if(cam === "front"){
@@ -645,10 +646,10 @@ useEffect(function(){
         }
     },[cameraData, camera_qr_data])
   \end{minted}
-\caption{UseEffect which update camera image each render}
-\label{judFig12}
-\end{figure}
-\newpage
+% \caption{UseEffect which update camera image each render}
+% \label{judFig12}
+\end{codebox}
+
 \subsubsection{Map Component}
 
 This component displays and interact with a dynamic map interface.
@@ -663,7 +664,8 @@ updates. CSS transformations (scale) were applied to enable smooth
 zooming transitions, and floating zoom buttons were designed for an
 intuitive user experience, styled with CSS for a modern look.
 
-
+\begin{codebox}[]{}
+  
   \begin{minted}{js}
   const zoomIn = () => {
         setZoom((prevZoom) => Math.min(prevZoom + 0.1, 7)); // Max zoom 7x
@@ -701,6 +703,7 @@ intuitive user experience, styled with CSS for a modern look.
     }, [mapData]);
 
 \end{minted}
+\end{codebox}
 
 
 
@@ -724,8 +727,9 @@ functionality and dynamically display available zones. The component was
 styled using CSS and Tailwind CSS to achieve a clean and responsive
 design, ensuring a smooth and intuitive user experience while
 efficiently managing tasks within the application.
-
-\begin{minted}{js}
+\begin{codebox}[]{}
+  
+  \begin{minted}{js}
 const set = () => {
         if (params.length === 6) return toast.error("You can't load and unload more than 6 times");
         if (selected === "") return toast.error("Select a zone");
@@ -754,24 +758,25 @@ const set = () => {
         setSelected("");
     };
 \end{minted}
+\end{codebox}
 
 
 
-\section{ROS}
+\section{Robot Control Framework}
 The Robot Operating System (ROS) serves as the robot\textquotesingle s
 main controller, managing all operations seamlessly at all times and
 facilitating communication with the GUI.
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=\textwidth]{img/image022.png}
+\includegraphics[width=0.9\textwidth]{img/image022.png}
 \caption{general architecture}
 \label{judFig15}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=\textwidth]{img/image024.jpg}
+\includegraphics[width=0.9\textwidth]{img/image024.jpg}
 \caption{general architecture}
 \end{figure}
 
@@ -786,7 +791,7 @@ facilitates real-time data streaming, robot control, and task
 management, ensuring smooth and efficient communication between the
 backend and frontend (see \cref{judFig15}).
 
-\begin{figure}[h!]
+\begin{codebox}[label=judFig16]{API initial value}
   \begin{minted}{python}
   class ie_API_Server:
     def __init__(self):
@@ -810,9 +815,9 @@ backend and frontend (see \cref{judFig15}).
         self.sio.on("robot_task", self.taskCallback)
         self.sio.on("robot_gear", self.gearCallback)
 \end{minted}
-\caption{API initial value}
-\label{judFig16}
-\end{figure}
+% \caption{API initial value}
+% \label{judFig16}
+\end{codebox}
 
 The node integrates~\emph{WebSocket
 communication}~using~\emph{Socket.IO}, establishing a real-time,
@@ -821,8 +826,8 @@ to connect, disconnect, and interact with the robot in real time. The
 WebSocket connection is the backbone of the system, enabling instant
 data exchange and control commands between the frontend and the ROS
 backend.
-\newpage
-\begin{figure}[h!]
+
+\begin{codebox}[label=judFig17]{API initial value}
   \begin{minted}{python}
   # Register event handlers
 self.sio.on("connect", self.onConnect)
@@ -832,9 +837,9 @@ self.sio.on("message", self.message)
 self.sio.on("robot_task", self.taskCallback)
 self.sio.on("robot_gear", self.gearCallback)
 \end{minted}
-\caption{API initial value}
-\label{judFig17}
-\end{figure}
+% \caption{API initial value}
+% \label{judFig17}
+\end{codebox}
 
 For~\emph{real-time data streaming}, the node subscribes to various ROS
 topics to capture and process critical information. It subscribes
@@ -883,52 +888,60 @@ updates to the frontend in real time. This ensures users are always
 aware of the robot's operational status, enabling better decision-making
 and control.
 
-
+\begin{codebox}[]{}
   \begin{minted}{python}
   async def taskCallback(self, sid, task):
-        t = TaskData()
-        t.task_name = task['task']["task_name"]
-        t.params =  [Param(zone=key,type=value) for key, value in task['task']["params"].items()]
-        rospy.wait_for_service('robot_task')
-        robot_task = rospy.ServiceProxy('robot_task', robotTask)
-        robot_task.wait_for_service(10)
-        try:
-            response = robot_task(t)
-            print(response)
-            await self.sio.emit("task_response", {"response": response.message}, to=sid)
-        except rospy.ServiceException as exc:
-            print("Service did not process request: " + str(exc))   
+    t = TaskData()
+    t.task_name = task['task']["task_name"]
+    t.params = [
+        Param(zone=key, type=value) 
+        for key, value in task['task']["params"].items()
+    ]
+    rospy.wait_for_service('robot_task')
+    robot_task = rospy.ServiceProxy('robot_task', robotTask)
+    robot_task.wait_for_service(10)
+    try:
+        response = robot_task(t)
+        print(response)
+        await self.sio.emit(
+            "task_response", 
+            {"response": response.message}, 
+            to=sid
+        )
+    except rospy.ServiceException as exc:
+        print("Service did not process request: " + str(exc))
 
-    def run_async_taskFinished(self,output):
-        try:
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            loop.run_until_complete(self.taskFinished(output))
-        except Exception as e:
-            rospy.logerr(f"Error before proccessing and emitting taskFinished: {e}")
+def run_async_taskFinished(self, output):
+    try:
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        loop.run_until_complete(self.taskFinished(output))
+    except Exception as e:
+        rospy.logerr(f"Error before proccessing and emitting taskFinished: {e}")
+    return taskMessageResponse(True)
 
-        return taskMessageResponse(True)
-    
-    async def taskFinished(self, output):
-        await self.sio.emit("task_response", {"response": output.message})
+async def taskFinished(self, output):
+    await self.sio.emit("task_response", {"response": output.message})
 
-    def run_async_mappingOutput(self,output):
-        try:
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            loop.run_until_complete(self.mappingOutput(output))
-        except Exception as e:
-            rospy.logerr(f"Error before proccessing and emitting taskFinished: {e}")
+def run_async_mappingOutput(self, output):
+    try:
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        loop.run_until_complete(self.mappingOutput(output))
+    except Exception as e:
+        rospy.logerr(f"Error before proccessing and emitting taskFinished: {e}")
+    return mappingOutputResponse(True)
 
-        return mappingOutputResponse(True)
-    
-    async def mappingOutput(self, output):
-        print(output)
-        data = [{"location" :kv.location, "x": kv.x, "y":kv.y} for kv in output.locations]
-        print(data)
-        await self.sio.emit("mapping_output", {"locations": data})
+async def mappingOutput(self, output):
+    print(output)
+    data = [
+        {"location": kv.location, "x": kv.x, "y": kv.y} 
+        for kv in output.locations
+    ]
+    print(data)
+    await self.sio.emit("mapping_output", {"locations": data})
 \end{minted}
-
+\end{codebox}
 
 \subsubsection{movementController}
 
@@ -1037,7 +1050,10 @@ and angular velocity components. Publishes the calculated speed to the
   between states to prevent abrupt movements.
 \end{itemize}
 
-\begin{figure}
+
+  \begin{codebox}{Gear shift}
+  
+  
   \begin{minted}{cpp}
   bool changeGear (ie_communication::robotGear::Request &req, ie_communication::robotGear::Response &res){
     movedata.gear = req.state;
@@ -1063,10 +1079,10 @@ and angular velocity components. Publishes the calculated speed to the
     return true;
 }
 \end{minted}
-\caption{Gear shift}
-\end{figure}
+\end{codebox}
 
-\begin{figure}
+
+\begin{codebox}{Linear interpolation}
   \begin{minted}{cpp}
   void updateAngular() {
         ros::Time current_time = ros::Time::now();
@@ -1096,10 +1112,10 @@ and angular velocity components. Publishes the calculated speed to the
     }
 
 \end{minted}
-\caption{Linear interpolation}
-\end{figure}
-
-
+\end{codebox}
+% \noindent
+% \captionof{figure}{Cmd\_vel structure}\label{judeFig21}
+\begin{codebox}[label=judeFig21]{Cmd\_vel structure}
   \begin{minted}{cpp}
   struct cmd_vel {
     int gear = 0;
@@ -1173,9 +1189,9 @@ and angular velocity components. Publishes the calculated speed to the
 };
 
 \end{minted}
+\end{codebox}
 % \caption{Cmd\_vel structure}
-\noindent
-\captionof{figure}{Cmd\_vel structure}\label{judeFig21}
+
 
 
 
@@ -1194,7 +1210,7 @@ then publishes the processed feeds to two ROS
 topics:~\emph{camera\_feed}~for the primary camera feed
 and~\emph{camera\_qr\_code\_feed}~for the secondary camera feed. This
 ensures that downstream nodes or applications have access to the
-necessary camera data for their respective tasks, see \cref{judeFig21} for
+necessary camera data for their respective tasks, see (\cref{judeFig21}) for
 implementation.
 
 The node also incorporates~\emph{camera state management}~to ensure
@@ -1232,10 +1248,9 @@ managing and streaming real-time camera data within the ROS ecosystem.
 Its design ensures that downstream applications receive the necessary
 camera feeds promptly and accurately, making it an essential component
 for systems that rely on real-time visual data.
-
-
-  \begin{minted}{python}
-  import rospy
+\begin{codebox}[label=judFig22]{CameraProcess node}
+\begin{minted}{python}
+import rospy
 from ie_communication.srv import camState, camStateResponse
 import cv2
 from cv_bridge import CvBridge
@@ -1283,8 +1298,9 @@ class CameraController:
         except Exception as e:
             rospy.logerr(f"Error publishing image from cam2 feed: {e}")
 \end{minted}
+\end{codebox}
 % \caption{CameraProcess node}
-\captionof{figure}{CameraProcess node}\label{judFig22}
+% \captionof{figure}{CameraProcess node}\label{judFig22}
 
 
 \subsubsection{map\_process}
@@ -1302,7 +1318,7 @@ integrates QR code positions by reading them from an SQLite database
 displayed on the map as blue rectangles, providing a comprehensive view
 of the environment.
 
-\begin{figure}
+\begin{codebox}[]{Update Map from Scan Function}
   \begin{minted}{python}
   def update_map_from_scan(self):
     if self.robot_position is None or self.robot_rotation is None:
@@ -1327,10 +1343,9 @@ of the environment.
                 self.map_image[endpoint_y_pixel, endpoint_x_pixel] = 0
 
 \end{minted}
-\caption{Update Map from Scan Function}
-\end{figure}
+% \caption{Update Map from Scan Function}
+\end{codebox}
 
-\newpage
 The node generates a~\emph{2D map image}~that includes several key
 elements: obstacles derived from laser scan data (represented as black
 pixels), the robot's current position (shown as a red circle) and
@@ -1352,6 +1367,7 @@ Its robust processing and integration capabilities ensure accurate and
 up-to-date map generation, making it a vital component for navigation
 and visualization tasks in the ROS ecosystem.
 
+\begin{codebox}[label=judeFig24]{Function Drawing Map}
 
   \begin{minted}{js}
   def process_scan(self):
@@ -1388,9 +1404,8 @@ and visualization tasks in the ROS ecosystem.
         cv2.imwrite(output_path, map_image_color)
         self.send_image(output_path)
 \end{minted}
-% \caption{Function Drawing Map}
-\captionof{figure}{Function Drawing Map}\label{judeFig24}
-
+% \captionof{figure}{Function Drawing Map}\label{judeFig24}
+\end{codebox}
 \subsection{Classes}
 
 \subsubsection{Task}
@@ -1426,7 +1441,7 @@ through the \emph{\_get\_yaw} method. This combination of movement
 control and obstacle avoidance ensures efficient and accurate navigation
 in dynamic environments.
 
-\begin{figure}[h!]
+\begin{codebox}[]{Obstacle avoidance procedure}
   \begin{minted}{python}
   def contour_obstacle(self):
         self._contourningStep += 1 
@@ -1459,9 +1474,10 @@ in dynamic environments.
             self.moveToTurnPosition = True
             self._obstacleInFront = False
 \end{minted}
-\caption{Obstacle avoidance procedure}
-\end{figure}
-\begin{figure}[h!]
+% \caption{Obstacle avoidance procedure}
+\end{codebox}
+
+\begin{codebox}[]{Function checking if the robot overpass the obstacle}
   \begin{minted}{python}
   def is_obstacle_behind(self):
         if self.scan_data is None:
@@ -1481,8 +1497,11 @@ in dynamic environments.
         print(f"min distance : {min_distance}")
         return min_distance > obstacle_distance_threshold and min_distance < (obstacle_distance_threshold + 0.5)
 \end{minted}
-\caption{Function checking if the robot overpass the obstacle}
-\end{figure}
+% \caption{Function checking if the robot overpass the obstacle}
+\end{codebox}
+
+\begin{codebox}[label=judFig26]{Obstacle Detection}
+  
 \begin{minted}{python}
   def check_for_obstacles(self, event):
     if self.scan_data is None or len(self.scan_data.ranges) == 0:
@@ -1519,9 +1538,11 @@ print("Checking for obstacles using LIDAR data")
         self._obstacleChecker = 0  
         rospy.loginfo("No obstacle detected. Moving.")
 \end{minted}
-\captionof{figure}{Obstacle Detection}\label{judFig26}
+% \captionof{figure}{Obstacle Detection}\label{judFig26}
+\end{codebox}
 
-\newpage
+
+
 The image processing component of the system is designed to enhance the
 robot\textquotesingle s navigation and interaction capabilities by
 subscribing to multiple camera topics, such as\\
@@ -1631,6 +1652,8 @@ on the detected line configuration, the robot decides whether to turn
 left, right, or move forward. The method then publishes velocity
 commands to the \emph{/cmd\_vel} topic to adjust the robot's movement.
 
+\begin{codebox}[label=judeFig28]{Adjust Orientation Function}
+
 \begin{minted}{python}
     def _adjust_orientation(self, error, angle, pixels, mask , w_min, h_min):
         if self._obstacleInFront:
@@ -1674,7 +1697,9 @@ commands to the \emph{/cmd\_vel} topic to adjust the robot's movement.
         self._move(error)
         return None
 \end{minted}
-\captionof{figure}{Adjust Orientation Function}\label{judeFig28}
+% \captionof{figure}{Adjust Orientation Function}\label{judeFig28}
+\end{codebox}
+
 
 The \emph{check\_side\_pixels} method checks the number of black pixels
 on the left and right sides of the image to detect junctions or turns.
@@ -1687,7 +1712,7 @@ right sides, along with flags indicating whether a turn is detected.
 This information is used \emph{by \_adjust\_orientation} to make
 decisions at junctions.
 
-\begin{figure}
+\begin{codebox}[]{Check Side Pixels Function}
 \begin{minted}{python}
 def check_side_pixels(self, mask):
     onLeft = False
@@ -1723,8 +1748,8 @@ def check_side_pixels(self, mask):
     return left_pixels, right_pixels, onLeft, onRight
 
 \end{minted}
-\caption{Check Side Pixels Function}
-\end{figure}
+% \caption{Check Side Pixels Function}
+\end{codebox}
 
 The \emph{check\_straight\_pixels} method checks the number of black
 pixels in the top and bottom halves of the image to detect straight
@@ -1738,7 +1763,8 @@ should move forward. The method returns the number of black pixels in
 the top and bottom halves, along with flags indicating whether the robot
 should stop or move forward.
 
-\newpage
+\begin{codebox}[label=judeFig30]{Check Straight Pixels Function}
+
 \begin{minted}{python}
 def check_straight_pixels(self, mask):
     onTop = False
@@ -1785,7 +1811,9 @@ def check_straight_pixels(self, mask):
 
 \end{minted}
 %\caption{Check Straight Pixels Function}
-\captionof{figure}{Check Straight Pixels Function}\label{judeFig30}
+% \captionof{figure}{Check Straight Pixels Function}\label{judeFig30}
+\end{codebox}
+
 
 Together, these methods form a robust navigation system that allows the
 robot to follow lines accurately and make informed decisions at
@@ -2052,7 +2080,7 @@ detections, the method compares the new QR code with the last detected
 one (\emph{self.\_lastQrCode}). If the QR code has already been
 recorded, it is ignored, ensuring that only unique QR codes are stored.
 
-\begin{figure}
+\begin{codebox}[]{Mapping Qr Code Checker}
   \begin{minted}{js}
   def _check_qr(self, decoded_text):
     if not self._processQrCode :
@@ -2074,8 +2102,8 @@ recorded, it is ignored, ensuring that only unique QR codes are stored.
       self._processQrCode = False
 
 \end{minted}
-\caption{Mapping Qr Code Checker}
-\end{figure}
+% \caption{Mapping Qr Code Checker}
+\end{codebox}
 
 \emph{Junction Navigation}
 
@@ -2095,7 +2123,7 @@ junction detected:
   unmapped.
 \end{itemize}
 
-\begin{figure}
+\begin{codebox}[]{Junction decision of mapping class}
   \begin{minted}{python}
 def junction_decision(self, onLeft, onRight, onTop):
     tm = 3
@@ -2112,8 +2140,8 @@ def junction_decision(self, onLeft, onRight, onTop):
         self.moveToTurnPosition = True
 
 \end{minted}
-\caption{Junction decision of mapping class}
-\end{figure}
+% \caption{Junction decision of mapping class}
+\end{codebox}
 
 \emph{Task Completion}
 
@@ -2272,7 +2300,7 @@ execute the chosen action, such as turning left, turning right, or
 moving forward. This ensures the robot's movements are precise and
 aligned with the navigation strategy.
 
-
+\begin{codebox}[label=judeFig37]{Junction Decision Function Of Carrying Process}
 \begin{minted}{python}
 def junction_decision(self, onLeft, onRight, onTop):
     print("Making decision")
@@ -2372,8 +2400,8 @@ def junction_decision(self, onLeft, onRight, onTop):
             rospy.logerr("The robot is stuck : doesn't know what to do")
 \end{minted}
 % \caption{Junction Decision Function Of Carrying Process}
-\captionof{figure}{Junction Decision Function Of Carrying Process}\label{judeFig37}
-
+% \captionof{figure}{Junction Decision Function Of Carrying Process}\label{judeFig37}  
+\end{codebox}
 \emph{Task Completion:}
 Once all goals have been reached, the task is marked as complete, and
 the~\emph{fsignal}~is emitted to notify the system. The parent class's
@@ -2438,7 +2466,7 @@ system is ready for the next task.
   to implement complex navigation logic.
 \end{itemize}
 
-\begin{figure}
+\begin{codebox}[]{Adjust Orientation Function of Carrying Class}
   \begin{minted}{python}
 def _adjust_orientation(self, error, angle, pixels, mask, w_min, h_min):
         
@@ -2457,10 +2485,10 @@ def _adjust_orientation(self, error, angle, pixels, mask, w_min, h_min):
                 return super()._adjust_orientation(error, angle, pixels, mask, w_min, h_min)
 
 \end{minted}
-\caption{Adjust Orientation Function of Carrying Class}
-\end{figure}
+% \caption{Adjust Orientation Function of Carrying Class}
+\end{codebox}
 
-\begin{figure}[h!]
+\begin{codebox}[]{Lift function}
   \begin{minted}{python}
 def _lift(self, duration=3):
     current = self._params[self._currentTask]
@@ -2489,8 +2517,8 @@ def _lift(self, duration=3):
         self.stop()
         self._task_finished(message="All goals have been reached")
 \end{minted}
-\caption{Lift function}
-\end{figure}
+% \caption{Lift function}
+\end{codebox}
 
 \begin{figure}[h!]
 \centering

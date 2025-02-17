@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{App}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n+nx}{initializeSocket}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{connectedSocket}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{connectedRos}\PYG{p}{\PYGZcb{}}\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{core}\PYG{p}{()}
+\PYG{+w}{  }\PYG{n+nx}{useEffect}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{()\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{initializeSocket}\PYG{p}{()}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{},[}\PYG{n+nx}{initializeSocket}\PYG{p}{])}
+
+\PYG{+w}{  }\PYG{k}{if}\PYG{p}{(}\PYG{o}{!}\PYG{p}{(}\PYG{n+nx}{connectedSocket}\PYG{+w}{  }\PYG{p}{))\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{Loarder}\PYG{o}{/\PYGZgt{}}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{k}{return}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{BrowserRouter}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{div}\PYG{+w}{ }\PYG{n+nx}{className}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}flex flex\PYGZhy{}row w\PYGZhy{}full h\PYGZhy{}full\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{        }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{SideBar}\PYG{+w}{ }\PYG{o}{/\PYGZgt{}}
+\PYG{+w}{        }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{MainLayout}\PYG{+w}{ }\PYG{o}{/\PYGZgt{}}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{err}{/div\PYGZgt{}}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{Toaster}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{err}{/Toaster\PYGZgt{}}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{err}{/BrowserRouter\PYGZgt{}}
+\PYG{+w}{  }\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{export}\PYG{+w}{ }\PYG{k}{default}\PYG{+w}{ }\PYG{n+nx}{App}\PYG{p}{;}
+\end{Verbatim}

@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{\PYGZus{}adjust\PYGZus{}orientation}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{error}\PYG{p}{,} \PYG{n}{angle}\PYG{p}{,} \PYG{n}{pixels}\PYG{p}{,} \PYG{n}{mask}\PYG{p}{,} \PYG{n}{w\PYGZus{}min}\PYG{p}{,} \PYG{n}{h\PYGZus{}min}\PYG{p}{):}
+
+        \PYG{k}{if} \PYG{o+ow}{not} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{isLifting} \PYG{p}{:}
+            \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{moveToLiftPosition}\PYG{p}{:}
+                \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}distanceToLifePosition}\PYG{p}{()} \PYG{o}{\PYGZgt{}} \PYG{l+m+mf}{0.005}\PYG{p}{:}
+                    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}move}\PYG{p}{(}\PYG{n}{error}\PYG{p}{)}
+                    \PYG{k}{return} \PYG{k+kc}{None}
+                \PYG{k}{else}\PYG{p}{:}
+                    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Lift position reached\PYGZdq{}}\PYG{p}{)}
+                    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{stop}\PYG{p}{()}
+                    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{isLifting} \PYG{o}{=} \PYG{k+kc}{True}
+                    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}lift}\PYG{p}{()}
+                \PYG{k}{return} \PYG{k+kc}{None}
+            \PYG{k}{else}\PYG{p}{:}
+                \PYG{k}{return} \PYG{n+nb}{super}\PYG{p}{()}\PYG{o}{.}\PYG{n}{\PYGZus{}adjust\PYGZus{}orientation}\PYG{p}{(}\PYG{n}{error}\PYG{p}{,} \PYG{n}{angle}\PYG{p}{,} \PYG{n}{pixels}\PYG{p}{,} \PYG{n}{mask}\PYG{p}{,} \PYG{n}{w\PYGZus{}min}\PYG{p}{,} \PYG{n}{h\PYGZus{}min}\PYG{p}{)}
+
+\end{Verbatim}

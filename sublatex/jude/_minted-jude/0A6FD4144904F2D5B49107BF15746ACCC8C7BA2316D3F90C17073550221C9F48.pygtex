@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{\PYGZus{}lift}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{duration}\PYG{o}{=}\PYG{l+m+mi}{3}\PYG{p}{):}
+    \PYG{n}{current} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}params}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}currentTask}\PYG{p}{]}
+    \PYG{n}{liftType} \PYG{o}{=} \PYG{n}{current}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}type\PYGZdq{}}\PYG{p}{]}
+    \PYG{n}{start} \PYG{o}{=} \PYG{l+m+mi}{0} \PYG{k}{if} \PYG{n}{liftType} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}Loading\PYGZdq{}} \PYG{k}{else} \PYG{l+m+mi}{1}
+    \PYG{n}{end} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{k}{if} \PYG{n}{liftType} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}Loading\PYGZdq{}} \PYG{k}{else} \PYG{l+m+mi}{0}
+
+    \PYG{n}{start\PYGZus{}time} \PYG{o}{=} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Time}\PYG{o}{.}\PYG{n}{now}\PYG{p}{()}
+    \PYG{n}{end\PYGZus{}time} \PYG{o}{=} \PYG{n}{start\PYGZus{}time} \PYG{o}{+} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Duration}\PYG{o}{.}\PYG{n}{from\PYGZus{}sec}\PYG{p}{(}\PYG{n}{duration}\PYG{p}{)}
+    \PYG{n}{rate} \PYG{o}{=} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Rate}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{)}
+    \PYG{k}{while} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Time}\PYG{o}{.}\PYG{n}{now}\PYG{p}{()} \PYG{o}{\PYGZlt{}} \PYG{n}{end\PYGZus{}time} \PYG{o+ow}{and} \PYG{o+ow}{not} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{is\PYGZus{}shutdown}\PYG{p}{():}
+        \PYG{n}{current\PYGZus{}time} \PYG{o}{=} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Time}\PYG{o}{.}\PYG{n}{now}\PYG{p}{()}
+        \PYG{n}{elapsed} \PYG{o}{=} \PYG{p}{(}\PYG{n}{current\PYGZus{}time} \PYG{o}{\PYGZhy{}} \PYG{n}{start\PYGZus{}time}\PYG{p}{)}\PYG{o}{.}\PYG{n}{to\PYGZus{}sec}\PYG{p}{()}
+        \PYG{n}{fraction} \PYG{o}{=} \PYG{n}{elapsed} \PYG{o}{/} \PYG{n}{duration}
+        \PYG{n}{fraction} \PYG{o}{=} \PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{fraction}\PYG{p}{,} \PYG{l+m+mf}{1.0}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Fixed the missing parenthesis here}
+        \PYG{n}{current\PYGZus{}value} \PYG{o}{=} \PYG{n}{start} \PYG{o}{+} \PYG{n}{fraction} \PYG{o}{*} \PYG{p}{(}\PYG{n}{end} \PYG{o}{\PYGZhy{}} \PYG{n}{start}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{liftPub}\PYG{o}{.}\PYG{n}{publish}\PYG{p}{(}\PYG{n}{current\PYGZus{}value}\PYG{p}{)}
+        \PYG{n}{rate}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{()}
+
+    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{liftPub}\PYG{o}{.}\PYG{n}{publish}\PYG{p}{(}\PYG{n}{end}\PYG{p}{)}
+    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{isLifting} \PYG{o}{=} \PYG{k+kc}{False}
+    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{moveToLiftPosition} \PYG{o}{=} \PYG{k+kc}{False}
+
+    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}currentTask} \PYG{o}{+=} \PYG{l+m+mi}{1}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}currentTask} \PYG{o}{==} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}params}\PYG{p}{)):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{stop}\PYG{p}{()}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}task\PYGZus{}finished}\PYG{p}{(}\PYG{n}{message}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}All goals have been reached\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

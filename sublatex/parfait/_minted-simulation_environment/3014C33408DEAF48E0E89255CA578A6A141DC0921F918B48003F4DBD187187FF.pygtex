@@ -1,0 +1,32 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{      }\PYG{c+cp}{\PYGZlt{}?xml version=\PYGZsq{}1.0\PYGZsq{}?\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}sdf}\PYG{+w}{ }\PYG{n+na}{version=}\PYG{l+s}{\PYGZsq{}1.7\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}model}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}qr\PYGZus{}code\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}link}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}link\PYGZus{}0\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}pose\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/pose\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}visual}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}visual\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}pose\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/pose\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}geometry\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}box\PYGZgt{}}
+\PYG{+w}{                  }\PYG{n+nt}{\PYGZlt{}size\PYGZgt{}}0.05\PYG{+w}{ }0.05\PYG{+w}{ }0.001\PYG{n+nt}{\PYGZlt{}/size\PYGZgt{}}\PYG{+w}{  }\PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} Increase size of the box \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}/box\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}/geometry\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}material\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}lighting\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/lighting\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}script\PYGZgt{}}
+\PYG{+w}{                  }\PYG{n+nt}{\PYGZlt{}uri\PYGZgt{}}model://qr\PYGZus{}code/materials/scripts\PYG{n+nt}{\PYGZlt{}/uri\PYGZgt{}}
+\PYG{+w}{                  }\PYG{n+nt}{\PYGZlt{}uri\PYGZgt{}}model://qr\PYGZus{}code/materials/textures\PYG{n+nt}{\PYGZlt{}/uri\PYGZgt{}}
+\PYG{+w}{                  }\PYG{n+nt}{\PYGZlt{}name\PYGZgt{}}qr\PYGZus{}code\PYGZus{}content\PYG{n+nt}{\PYGZlt{}/name\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}/script\PYGZgt{}}
+\PYG{+w}{                }\PYG{n+nt}{\PYGZlt{}shader}\PYG{+w}{ }\PYG{n+na}{type=}\PYG{l+s}{\PYGZsq{}pixel\PYGZsq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}/material\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}transparency\PYGZgt{}}0\PYG{n+nt}{\PYGZlt{}/transparency\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}cast\PYGZus{}shadows\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/cast\PYGZus{}shadows\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}/visual\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}/link\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}static\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/static\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}allow\PYGZus{}auto\PYGZus{}disable\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/allow\PYGZus{}auto\PYGZus{}disable\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}/model\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}/sdf\PYGZgt{}}
+
+\end{Verbatim}

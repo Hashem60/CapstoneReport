@@ -3,33 +3,33 @@
 \begin{document}
 \section{SIMULATION ENVIRONMENT}
 \lstset{language=XML}
-\section{Introduction to the Simulation Environment}
+\subsection{Introduction to the Simulation Environment}
 In developing a control strategy for mobile robots such as Automated Guided Vehicles (AGVs),
 simulation plays a crucial role in testing software components, robot behavior, and control algorithms across various environments. 
 Before physically building the robotic system, running a simulation provides a risk-free and cost-effective approach to refining 
 its design and functionality. By simulating the robot's behavior in a controlled virtual environment, different algorithms can 
 be tested and optimized to ensure efficient navigation, obstacle avoidance, and perception without the risk of hardware damage. 
 
-The simulation environment was built using the \textbf{Robot Operating System (ROS)} 
-and the \textbf{Gazebo} simulator, with the \texttt{gazebo\_ros} 
+The simulation environment was built using the \emph{Robot Operating System (ROS)} 
+and the \emph{Gazebo} simulator, with the \texttt{gazebo\_ros} 
 package. \texttt{RViz} was utilized for real-time visualization of sensor data and robot trajectories, 
 while \texttt{OpenCV} handled computer vision tasks such as \textit{line following} and \textit{QR code detection}. The following sections provide 
 detailed insights into their implementation and role in the project.\\
 % the next paragraph needs to be revised 
 \newpage
-\section{Tools and Framework}
-\subsection{Gazebo}
+\subsection{Tools and Framework}
+\subsubsection{Gazebo}
 
 Gazebo was initially developed in 2002 to facilitate the simulation of ground robot applications in both indoor and outdoor environments \cite{koenig2004design}. 
 Over the years, it has evolved into a mature open-source project widely adopted by the global robotics community for various applications. 
 Gazebo follows a modular architecture, incorporating four key components essential for robot simulation:
 
 \begin{itemize}
-    \item \textbf{Physics Engine Support} – Gazebo integrates multiple physics engines to handle collision detection, contact dynamics, and reaction forces between rigid bodies.
-    \item \textbf{Sensor Simulation} – It provides a comprehensive library of commonly used robotic sensors, including cameras, LiDAR, sonar, GPS, and IMUs, 
+    \item \emph{Physics Engine Support} – Gazebo integrates multiple physics engines to handle collision detection, contact dynamics, and reaction forces between rigid bodies.
+    \item \emph{Sensor Simulation} – It provides a comprehensive library of commonly used robotic sensors, including cameras, LiDAR, sonar, GPS, and IMUs, 
     along with configurable noise models for realistic sensor emulation.
-    \item \textbf{Multiple Interfaces} – The simulator supports various interfaces for programmatic interaction, including C++ for developing plugins.
-    \item \textbf{Graphical User Interface (GUI)} – Gazebo features an interactive 3D environment that enables users to visualize and manipulate the simulated world in real-time.
+    \item \emph{Multiple Interfaces} – The simulator supports various interfaces for programmatic interaction, including C++ for developing plugins.
+    \item \emph{Graphical User Interface (GUI)} – Gazebo features an interactive 3D environment that enables users to visualize and manipulate the simulated world in real-time.
 \end{itemize}
 
 \begin{figure}[H]
@@ -69,7 +69,7 @@ This plugin facilitates bi-directional communication through ROS topics, service
 cameras, and IMUs—to be published as ROS messages while also enabling ROS-based velocity and trajectory commands to control simulated robots. 
 Additionally, the plugin supports \texttt{ros\_control}, making it possible to implement position, velocity, and effort controllers, 
 which are essential for tuning PID loops before testing them on real actuators.
-
+\begin{codebox}[]{}
 \begin{minted}{xml}
     <launch>
   <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
@@ -95,27 +95,28 @@ urdf/turtlebot3_$(arg model).urdf.xacro" />
   $(arg y_pos) -z $(arg z_pos) -param robot_description" />
 </launch>
 \end{minted}
-The provided example demonstrates how the \textbf{ROS Plugin for Gazebo} enables the spawning and control of a robot model 
-within a simulated environment, enabling \textbf{smooth and efficient integration} with the \textbf{Robot Operating System (ROS)}. 
-The launch file initializes an empty \textbf{Gazebo} world and loads a robot model described in a 
-\textbf{URDF (Unified Robot Description Format)} file using the \texttt{spawn\_model} node from the \texttt{gazebo\_ros} package. 
+\end{codebox}
+The provided example demonstrates how the \emph{ROS Plugin for Gazebo} enables the spawning and control of a robot model 
+within a simulated environment, enabling \emph{smooth and efficient integration} with the \emph{Robot Operating System (ROS)}. 
+The launch file initializes an empty \emph{Gazebo} world and loads a robot model described in a 
+\emph{URDF (Unified Robot Description Format)} file using the \texttt{spawn\_model} node from the \texttt{gazebo\_ros} package. 
 Additionally, the \texttt{robot\_state\_publisher} node is included to publish the robot’s joint states, 
-ensuring that its transformations can be visualized and utilized in \textbf{ROS-based frameworks} such as \textbf{MoveIt} or \textbf{RViz}. 
-This integration allows developers to test \textbf{robot behaviors, sensor data integration, and control algorithms} in a virtual environment 
+ensuring that its transformations can be visualized and utilized in \emph{ROS-based frameworks} such as \emph{MoveIt} or \emph{RViz}. 
+This integration allows developers to test \emph{robot behaviors, sensor data integration, and control algorithms} in a virtual environment 
 before deploying them on physical hardware.  
 
-It facilitates bi-directional communication through \textbf{ROS topics, services, and actions}, 
-enabling sensor data from Gazebo—such as \textbf{LiDAR, cameras, and IMUs}—to be published as \textbf{ROS messages} 
-while also allowing \textbf{ROS-based velocity and trajectory commands} to control simulated robots. 
-Additionally, the plugin supports \textbf{ros\_control}, enabling the implementation of \textbf{position, velocity, and effort controllers}, 
-which are essential for tuning \textbf{PID loops} before applying them to real actuators.  
+It facilitates bi-directional communication through \emph{ROS topics, services, and actions}, 
+enabling sensor data from Gazebo—such as \emph{LiDAR, cameras, and IMUs}—to be published as \emph{ROS messages} 
+while also allowing \emph{ROS-based velocity and trajectory commands} to control simulated robots. 
+Additionally, the plugin supports \emph{ros\_control}, enabling the implementation of \emph{position, velocity, and effort controllers}, 
+which are essential for tuning \emph{PID loops} before applying them to real actuators.  
 
-This specific example shows a \textbf{ROS launch file} that spawns a \textbf{TurtleBot3} model shown\\ ~\cref{TurtleBot3 in empty world} in an empty \textbf{Gazebo} simulation environment. 
-This file provides flexibility by allowing users to specify the \textbf{TurtleBot3 model type} (\texttt{burger}, \texttt{waffle}, or \texttt{waffle\_pi}) 
-and configure the \textbf{robot's initial position}. It also sets critical simulation parameters, 
-such as \textbf{enabling GUI rendering, synchronizing ROS time with Gazebo simulation time, 
+This specific example shows a \emph{ROS launch file} that spawns a \emph{TurtleBot3} model shown\\ ~\cref{TurtleBot3 in empty world} in an empty \emph{Gazebo} simulation environment. 
+This file provides flexibility by allowing users to specify the \emph{TurtleBot3 model type} (\texttt{burger}, \texttt{waffle}, or \texttt{waffle\_pi}) 
+and configure the \emph{robot's initial position}. It also sets critical simulation parameters, 
+such as \emph{enabling GUI rendering, synchronizing ROS time with Gazebo simulation time, 
 and dynamically loading the robot’s description} based on the selected model type. 
-The launch file ensures a well-structured simulation environment where \textbf{robotic software, motion planning, and perception algorithms} 
+The launch file ensures a well-structured simulation environment where \emph{robotic software, motion planning, and perception algorithms} 
 can be tested under realistic conditions. 
 
 \begin{figure}[H]
@@ -129,30 +130,30 @@ The Gazebo Graphical User Interface (GUI) provides an interactive environment fo
 One of the key features of the GUI is the set of side tabs, which organize various tools and functionalities. Among these, the left side pannel that appears \cref{Left side pannel} World, Insert, 
 and Layers tabs are particularly important for managing the simulation environment and objects within it.
 
-The \textbf{World Tab} in Gazebo’s GUI allows users to manage and configure the 
+The \emph{World Tab} in Gazebo’s GUI allows users to manage and configure the 
 properties of the simulation world, providing several options for modifying the 
-environment settings. Users can adjust the \textbf{gravity settings} to control the 
-strength of gravity in the simulation, select the \textbf{physics engine} (such as 
-\textbf{ODE}, \textbf{Bullet}, or \textbf{DART}) to determine the level of simulation 
-fidelity and performance, and customize \textbf{time and weather conditions}, including 
+environment settings. Users can adjust the \emph{gravity settings} to control the 
+strength of gravity in the simulation, select the \emph{physics engine} (such as 
+\emph{ODE}, \emph{Bullet}, or \emph{DART}) to determine the level of simulation 
+fidelity and performance, and customize \emph{time and weather conditions}, including 
 factors like sunlight, fog, and rain. Additionally, the World tab provides detailed 
-information about the models within the simulation, including their \textbf{joints} and 
-\textbf{links}. Users can visualize and modify the connections between different parts 
+information about the models within the simulation, including their \emph{joints} and 
+\emph{links}. Users can visualize and modify the connections between different parts 
 of a robot or object, defining how they move and interact with each other. The 
-\textbf{links} represent rigid bodies, while \textbf{joints} define the relative motion 
+\emph{links} represent rigid bodies, while \emph{joints} define the relative motion 
 between those bodies, such as revolute, prismatic, or fixed joints. This tab plays a 
 crucial role in fine-tuning the simulation environment and robot behavior, ensuring that 
 the simulation behaves as expected for the application at hand. It is an essential tool 
 for accurately replicating real-world conditions and testing robotic systems in varied 
 scenarios.
 
-The \textbf{Insert Tab} allows users to add various objects and 
+The \emph{Insert Tab} allows users to add various objects and 
 components to the simulation environment. Users can insert robot models, lights, 
 sensors, and even other world elements, which helps populate the simulation for 
 testing and development. Additionally, the tab makes it easy to add custom plugins 
 or adjust the robot's attributes in the virtual world.
 
-The \textbf{Layers Tab} provides control over the visibility of 
+The \emph{Layers Tab} provides control over the visibility of 
 different elements within the simulation. Users can toggle the visibility of models, 
 sensors, and other objects in the scene to focus on specific parts of the simulation. 
 This helps streamline the workspace, especially when dealing with complex environments 
@@ -166,17 +167,17 @@ and large-scale simulations.
 \end{figure}
 
 The lower part of the Gazebo GUI displayed in \cref{Lower part} provides critical real-time simulation information 
-and performance metrics. One of the most important features is the \textbf{Real-Time 
+and performance metrics. One of the most important features is the \emph{Real-Time 
 Factor (RTF)}, which indicates the ratio between real-time and simulated time. This 
 factor helps users determine how efficiently the simulation is running, with values 
 close to 1.0 indicating that the simulation is running in real-time. If the RTF is 
 greater than 1.0, it suggests that the simulation is running faster than real time, 
 while a value less than 1.0 indicates that it is running slower.
 
-In addition to RTF, it also displays \textbf{Sim Time}, which 
+In addition to RTF, it also displays \emph{Sim Time}, which 
 shows the simulation's elapsed time. This is useful for tracking the progression of 
-events in the simulation and synchronizing it with other systems. The \textbf{Real Iterations} 
-and \textbf{Sim Iterations} counters provide insight into the number of iterations performed 
+events in the simulation and synchronizing it with other systems. The \emph{Real Iterations} 
+and \emph{Sim Iterations} counters provide insight into the number of iterations performed 
 by the simulation per second for real-time and simulated time, respectively. Monitoring 
 these values helps users assess the efficiency of the simulation and diagnose performance 
 issues if the simulation is not proceeding as expected.
@@ -190,23 +191,23 @@ issues if the simulation is not proceeding as expected.
 
 The top part of the Gazebo GUI (\cref{Top part}) provides several essential controls and information 
 related to the simulation’s overall operation. At the top-left corner, users will find the 
-\textbf{File} menu, which includes options to open, save, and manage Gazebo worlds. 
+\emph{File} menu, which includes options to open, save, and manage Gazebo worlds. 
 It also allows users to load and save configurations, and set preferences for simulation 
 settings. 
 
 In addition, the top part of the GUI provides options for manipulating the lighting 
-within the simulation. Users can select from \textbf{Point}, \textbf{Spot}, and 
-\textbf{Directional} lights to illuminate different parts of the world. Point lights 
+within the simulation. Users can select from \emph{Point}, \emph{Spot}, and 
+\emph{Directional} lights to illuminate different parts of the world. Point lights 
 emit light in all directions from a single point, Spot lights create a focused beam 
 of light, and Directional lights simulate sunlight, casting parallel rays in a 
 specific direction. This allows for realistic and customizable lighting in the 
 simulation environment. 
 
-The \textbf{Selection Light} tool enables users to adjust the lighting between 
+The \emph{Selection Light} tool enables users to adjust the lighting between 
 two or more objects in the simulation, offering more control over how objects are 
 illuminated and how shadows are cast in the environment. 
 
-Moreover, the GUI allows users to switch between different \textbf{perspective views}, 
+Moreover, the GUI allows users to switch between different \emph{perspective views}, 
 such as top-down, side, or camera views, to inspect and interact with the simulation 
 from different angles. 
 
@@ -221,18 +222,18 @@ Right-clicking on an object in the Gazebo simulation environment brings up a con
 menu that allows users to perform a variety of actions to interact with and manipulate the object. 
 The options available in this menu include:
 
-1. \textbf{Move To}: This option allows users to move a selected object to a specified location 
+1. \emph{Move To}: This option allows users to move a selected object to a specified location 
 in the simulation world. After selecting this option, users can click on a point in the world to 
 which the object will be moved, making it easier to position objects accurately within the 
 environment.
 
-2. \textbf{Follow}: The Follow option enables users to make the camera follow a particular 
+2. \emph{Follow}: The Follow option enables users to make the camera follow a particular 
 object in the simulation. When this option is activated, the camera will automatically track 
 the movement of the selected object, allowing users to observe its behavior from a fixed 
 perspective, which can be useful when testing robot movements or simulating dynamic 
 scenarios.
 
-3. \textbf{Edit}: The Edit option opens a set of interactive tools that allow users to modify 
+3. \emph{Edit}: The Edit option opens a set of interactive tools that allow users to modify 
 the properties of the selected object, such as its position, orientation, size, and material 
 properties.
 
@@ -243,14 +244,14 @@ properties.
 \label{Seesaw} % Unique label for referencing
 \end{figure}
 
-4. \textbf{Apply Force/Torque}: This option gives users the ability to apply a force or 
+4. \emph{Apply Force/Torque}: This option gives users the ability to apply a force or 
 torque to the selected object, which is especially useful for testing how the object reacts 
 under various physical conditions.\cref{Seesaw} shows how users can specify the direction, magnitude, and duration 
 of the applied force or torque, allowing for controlled experiments on the object’s behavior 
 within the simulated environment.
 \newpage
 \subsection{RViz}
-\textbf{RViz} (ROS Visualization) is an open-source 3D visualization tool that provides real-time graphical representations of robotic systems. 
+\emph{RViz} (ROS Visualization) is an open-source 3D visualization tool that provides real-time graphical representations of robotic systems. 
 
 \begin{figure}[H]
     \centering
@@ -296,7 +297,6 @@ of the virtual testing environment. The following subsections detail the impleme
 of the robot model, world design, and control and sensor integration, outlining how each 
 component contributes to achieving a high-fidelity simulation.
 
-\subsection{Robot Model ( URDF/SDF )}
 \subsection{World Design} 
 
 \begin{figure}[H]
@@ -309,8 +309,8 @@ component contributes to achieving a high-fidelity simulation.
 
 The simulation environment was designed to replicate the competition layout in \cref{Teknofest competition real map layout} as closely as possible. 
 The terrain was constructed using custom models to accurately mimic the competition area, incorporating key features such as a 
-\textbf{white wooden floor}, \textbf{black lines for path following}, \textbf{platforms for load dynamics}, 
-\textbf{obstacles}, and \textbf{friction variations} to simulate real-world conditions. 
+\emph{white wooden floor}, \emph{black lines for path following}, \emph{platforms for load dynamics}, 
+\emph{obstacles}, and \emph{friction variations} to simulate real-world conditions. 
 
 In Gazebo, this entire environment is saved as a world file, which includes all the models, textures, 
 and configurations necessary to recreate the simulation. The world file is written in the Simulation Description Format (SDF), 
@@ -335,9 +335,10 @@ the models, their properties, and the environment settings.
 Designed to replicate the competition area closely the world contains custom models were created to represent key elements of the space,
 ensuring that the robot's interaction with its surroundings is as realistic as possible. Key components of the environment layout include the following:
 
-\begin{itemize}
-    \item \textbf{Flooring and Pathways:} A \textbf{white wooden floor} was chosen to resemble the actual competition floor, 
-    providing a surface with consistent friction properties for the robot to interact with. The \textbf{black lines for path 
+
+    \paragraph{Flooring and Pathways:}
+    A \emph{white wooden floor} was chosen to resemble the actual competition floor, 
+    providing a surface with consistent friction properties for the robot to interact with. The \emph{black lines for path 
     following} were added on the white floor according to the competition specifications, acting as markers for the robot's autonomous 
     navigation algorithms to follow.
 
@@ -354,40 +355,45 @@ ensuring that the robot's interaction with its surroundings is as realistic as p
     orientation, without affecting the rest of the simulation environment. This modular 
     approach makes it easier to tweak the lines for different test scenarios, ensuring 
     flexibility and quick adjustments during development and testing.
-    
-    \begin{minted}{xml}
-        ...
-        <wall_time>1738074256 296636706</wall_time>
-        <iterations>117145</iterations>
-        <model name='black_line'>
-          <pose>0 0 0.06 0 -0 0</pose>
-          <scale>1 1 1</scale>
-          <link name='line_link'>
-            <pose>0 0 0.06 0 -0 0</pose>
-            <velocity>0 0 0 0 -0 0</velocity>
-            <acceleration>0 0 0 0 -0 0</acceleration>
-            <wrench>0 0 0 0 -0 0</wrench>
-          </link>
-        </model>
-        <model name='black_line_clone'>
-          <pose>0 2.33333 0.06 0 -0 0</pose>
-          <scale>1 1 1</scale>
-          <link name='line_link'>
-            <pose>0 2.33333 0.06 0 -0 0</pose>
-            <velocity>0 0 0 0 -0 0</velocity>
-            <acceleration>0 0 0 0 -0 0</acceleration>
-            <wrench>0 0 0 0 -0 0</wrench>
-          </link>
-        </model>
-        <model name='black_line_clone_0'>
-          <pose>0 4.666 0.06 0 -0 0</pose>
-          <scale>1 1 1</scale>
-          ...
+    \begin{codebox}[]{}
+      \begin{minted}{xml}
+...
+<wall_time>1738074256 296636706</wall_time>
+<iterations>117145</iterations>
+
+<model name='black_line'>
+  <pose>0 0 0.06 0 -0 0</pose>
+  <scale>1 1 1</scale>
+  <link name='line_link'>
+    <pose>0 0 0.06 0 -0 0</pose>
+    <velocity>0 0 0 0 -0 0</velocity>
+    <acceleration>0 0 0 0 -0 0</acceleration>
+    <wrench>0 0 0 0 -0 0</wrench>
+  </link>
+</model>
+
+<model name='black_line_clone'>
+  <pose>0 2.33333 0.06 0 -0 0</pose>
+  <scale>1 1 1</scale>
+  <link name='line_link'>
+    <pose>0 2.33333 0.06 0 -0 0</pose>
+    <velocity>0 0 0 0 -0 0</velocity>
+    <acceleration>0 0 0 0 -0 0</acceleration>
+    <wrench>0 0 0 0 -0 0</wrench>
+  </link>
+</model>
+
+<model name='black_line_clone_0'>
+  <pose>0 4.666 0.06 0 -0 0</pose>
+  <scale>1 1 1</scale>
+  ...
+</model>
     \end{minted}
+  \end{codebox}
 
     Additionally, QR code tags were placed at key locations, such as loading/unloading points, stations, and before 
     turns, to provide the robot with precise location information.
-
+    
     \begin{figure}[H]
         \centering
     \includegraphics[width=\textwidth]{fig/qr_code_tag.png}
@@ -412,8 +418,9 @@ Additionally, the \texttt{<visual>} tag defines how the floor appears in the sim
 with the material set to a white color to represent the wooden floor's appearance. 
 
 \newpage
-
-\begin{minted}{xml}
+\begin{codebox}[]{}
+  
+  \begin{minted}{xml}
     <model name='wooden_floor'>
     <static>1</static>
     <pose>0 0 0.01 0 -0 0</pose>
@@ -456,13 +463,14 @@ with the material set to a white color to represent the wooden floor's appearanc
       <kinematic>0</kinematic>
     </link>
   </model>
-  
 \end{minted}
+\end{codebox}
 
-    \item \textbf{Obstacles and Load Platforms:} The environment includes various \textbf{obstacles} such as walls and 
-    dynamic objects, designed to challenge the robot's obstacle avoidance and path planning abilities. 
-    \textbf{Platforms for load dynamics} were added to simulate loading and unloading points, where the robot needs to 
-    deliver or pick up objects, mimicking the tasks required during the competition.
+\paragraph{Obstacles and Load Platforms:}
+The environment includes various \emph{obstacles} such as walls and 
+dynamic objects, designed to challenge the robot's obstacle avoidance and path planning abilities. 
+\emph{Platforms for load dynamics} were added to simulate loading and unloading points, where the robot needs to 
+deliver or pick up objects, mimicking the tasks required during the competition.
     
     \begin{figure}[H]
         \centering
@@ -508,8 +516,9 @@ compared to the visual model to improve computational efficiency while maintaini
 collision responses. The platform's legs also incorporate both \texttt{<collision>} and \texttt{<inertial>} properties, 
 allowing them to contribute to the overall stability of the structure while ensuring that the physics engine correctly 
 simulates interactions such as impacts, weight distribution, and external forces acting on the table.  
-
-\begin{minted}{xml}
+\begin{codebox}[]{}
+  
+  \begin{minted}{xml}
     <model name='platform'>
       <link name='table_surface'>
         <inertial>
@@ -550,8 +559,10 @@ simulates interactions such as impacts, weight distribution, and external forces
         </collision>
         ...
 \end{minted}
-\newpage  
-\begin{minted}{xml}
+\end{codebox}
+
+\begin{codebox}[]{}
+  \begin{minted}{xml}
         ... 
         <visual name='surface_visual'>
           <pose>0 0 0.367 0 -0 0</pose>
@@ -569,10 +580,12 @@ simulates interactions such as impacts, weight distribution, and external forces
           </material>
         </visual>
         ...
-
 \end{minted}
-
-\begin{minted}{xml}
+\end{codebox}
+\newpage
+\begin{codebox}[]{}
+  
+  \begin{minted}{xml}
       ...
       <link name='front_left_leg'>
         <inertial>
@@ -643,7 +656,8 @@ simulates interactions such as impacts, weight distribution, and external forces
             <ixz>0</ixz>
         ...
 \end{minted}
-    \newpage
+\end{codebox}
+
     Ad hoardings and obstacles were incorporated into the environment using a simple yet effective approach. 
     A cube shape was used to create the basic geometry of these objects, with their dimensions adjusted to meet the specific requirements of the simulation. 
     Textures were applied to the cubes to give them the appearance of real-world hoardings and obstacles, 
@@ -659,7 +673,9 @@ simulates interactions such as impacts, weight distribution, and external forces
     These lines demonstrate how the hoardings models were assigned the name \texttt{cube\_test} during the individual SDF design phase of the world. 
     The code defines the geometry, textures, and physical properties for the hoardings.
 
-\begin{minted}{xml}
+\begin{codebox}[]{}
+  
+  \begin{minted}{xml}
     ...
     model name='cube_test_clone_clone'>
       <link name='link_0'>
@@ -758,14 +774,18 @@ simulates interactions such as impacts, weight distribution, and external forces
       <allow_auto_disable>1</allow_auto_disable>
       <pose>-6.06431 0.045196 0.46 0 -0 0</pose>
       <enable_wind>0</enable_wind>
-     </model>
-     ...
+      </model>
+      ...
 \end{minted}
+\end{codebox}
+
 The design of the QR codes followed a similar approach to most other models in the 
 world. Each QR code was represented by a textured cube, with textures made to 
 resemble the unique images that contain the right location information.
 \newpage
-    \begin{minted}{xml}
+\begin{codebox}[label=SDF code]{}
+  
+  \begin{minted}{xml}
       <?xml version='1.0'?>
       <sdf version='1.7'>
         <model name='qr_code'>
@@ -797,12 +817,13 @@ resemble the unique images that contain the right location information.
       </sdf>
     
     \end{minted}
-
-The above SDF code represents the individual model of the QR code. It contains 
-only visual information and does not define any physical properties, as the QR 
-code is used for location identification within the simulation. The model is defined 
-as static to prevent movement and includes a texture that simulates the unique QR 
-code image.
+  \end{codebox}
+    \newpage
+    The \cref{SDF code} represents the individual model of the QR code. It contains 
+    only visual information and does not define any physical properties, as the QR 
+    code is used for location identification within the simulation. The model is defined 
+    as static to prevent movement and includes a texture that simulates the unique QR 
+    code image.
 
 To simplify the referencing of points on the map in \cref{Teknofest competition real map layout}, the area was divided into several
 well-defined zones. This subdivision facilitates the robot's movement management by
@@ -813,12 +834,12 @@ These QR codes serve as essential reference markers, enabling the robot’s loca
 system to determine its exact position and adjust its trajectory accordingly.
 
 \begin{itemize}
-\item \textbf{Station 1:} Located between corners 1 and 4, this zone represents station 1.
-\item \textbf{Station 2:} Located between corners 2 and 3, this zone corresponds to station 2.
-\item \textbf{Zone A:} Contains the loading/unloading point A.
-\item \textbf{Zone B:} Contains the loading/unloading point B.
-\item \textbf{Zone C:} Contains the loading/unloading point C.
-\item \textbf{Zone D:} Contains the loading/unloading point D.
+\item \emph{Station 1:} Located between corners 1 and 4, this zone represents station 1.
+\item \emph{Station 2:} Located between corners 2 and 3, this zone corresponds to station 2.
+\item \emph{Zone A:} Contains the loading/unloading point A.
+\item \emph{Zone B:} Contains the loading/unloading point B.
+\item \emph{Zone C:} Contains the loading/unloading point C.
+\item \emph{Zone D:} Contains the loading/unloading point D.
 \end{itemize}
 
 The QR code's content is specified using a \texttt{material} element in the SDF model. 
@@ -829,132 +850,88 @@ the QR code images.
 
 By separating the texture definition into the \texttt{qr\_code\_contents.material} 
 file, it allows for easy updates and maintenance of the QR codes used in the simulation 
-without needing to modify the main model files. 
+without needing to modify the main model files.
+\newpage
+\begin{codebox}[]{}  
+  \begin{minted}{cpp}
+...
+{
+  texture_unit { texture intersection_zone_c_station_1.png }
+}
+}
 
-    \begin{minted}{cpp}
-      ...
-      {
-        texture_unit
-        {
-          texture intersection_zone_c_station_1.png
-        }
-      }
+material intersection_zone_c_station_2 {
+  technique {
+    pass {
+      texture_unit { texture intersection_zone_c_station_2.png }
     }
   }
-  
-  material intersection_zone_c_station_2
-  {
-    technique
-    {
-      pass
-      {
-        texture_unit
-        {
-          texture intersection_zone_c_station_2.png
-        }
-      }
+}
+
+material intersection_zone_d_station_1 {
+  technique {
+    pass {
+      texture_unit { texture intersection_zone_d_station_1.png }
     }
   }
-  
-  material intersection_zone_d_station_1
-  {
-    technique
-    {
-      pass
-      {
-        texture_unit
-        {
-          texture intersection_zone_d_station_1.png
-        }
-      }
+}
+
+material intersection_zone_d_station_2 {
+  technique {
+    pass {
+      texture_unit { texture intersection_zone_d_station_2.png }
     }
   }
-  
-  material intersection_zone_d_station_2
-  {
-    technique
-    {
-      pass
-      {
-        texture_unit
-        {
-          texture intersection_zone_d_station_2.png
-        }
-      }
+}
+
+material intersection_zone_x_station_1 {
+  technique {
+    pass {
+      texture_unit { texture intersection_zone_x_station_1.png }
     }
   }
-  
-  material intersection_zone_x_station_1
-  {
-    technique
-    {
-      pass
-      {
-        texture_unit
-        {
-          texture intersection_zone_x_station_1.png
-        }
-      }
+}
+
+material intersection_zone_x_station_2 {
+  technique {
+    pass {
+      texture_unit { texture intersection_zone_x_station_2.png }
     }
   }
-  
-  material intersection_zone_x_station_2
-  {
-    technique
-    {
-      pass
-      {
-        texture_unit
-        {
-          texture intersection_zone_x_station_2.png
-        }
-      }
+}
+
+material intersection_zone_y_station_1 {
+  technique {
+    pass {
+      texture_unit { texture intersection_zone_y_station_1.png }
     }
   }
-  
-  material intersection_zone_y_station_1
-  {
-    technique
-    {
-      pass
-      {
-        texture_unit
-        {
-          texture intersection_zone_y_station_1.png
-        }
-      }
+}
+
+material intersection_zone_y_station_2 {
+  technique {
+    pass {
+      texture_unit { texture intersection_zone_y_station_2.png }
     }
   }
-  
-  material intersection_zone_y_station_2
-  {
-    technique
-    {
-      pass
-      {
-        texture_unit
-        {
-          texture intersection_zone_y_station_2.png
-        }
-      }
-    }
-  }
-  ...
+}
+...
 \end{minted}
+\end{codebox}
 
 
-    \begin{figure}[H]
+\begin{figure}[H]
       \centering
-  \includegraphics[width=0.4\textwidth]{fig/intersection_zone_c_station_2.png}
-  \caption{Qr code tag placed at the intersection of line of the zone C and the station 2 }
-  \label{Qr code tag example} % Unique label for referencing
-  \end{figure}
+      \includegraphics[width=0.4\textwidth]{fig/intersection_zone_c_station_2.png}
+      \caption{Qr code tag placed at the intersection of line of the zone C and the station 2 }
+      \label{Qr code tag example} % Unique label for referencing
+    \end{figure}
 
 
-    \item \textbf{Random Clutter Generation:} Procedural generation methods were used to add \textbf{random clutter}, 
+    \paragraph{Random Clutter Generation:} Procedural generation methods were used to add \emph{random clutter}, 
     simulating items or obstacles that may appear unpredictably, requiring the robot to adapt to ever-changing environments. 
     
-    \item \textbf{Real-World Simulation Features:} External environmental factors such as wind were not simulated,  
+    \paragraph{Real-World Simulation Features:} External environmental factors such as wind were not simulated,  
     as the competition setting assumes an indoor environment.  
     Basic ambient and directional lighting were configured to ensure  
     consistent visibility for sensor-based perception tasks.  
@@ -984,7 +961,7 @@ without needing to modify the main model files.
 \caption{Effect of lighting conditions in simulation environment}
 \label{Competition area with good lighting} % Unique label for referencing
 \end{figure}
-   \end{itemize}
+
 
 \subsection{Control and sensor Integration} 
 
@@ -992,7 +969,9 @@ in order to simulate the sensors reading from an outside world inside a simulati
 Camera - Multicamera - Depth Camera - GPU Laser - Laser - IMU - and more.
 you can find more Gazebo plugins in https://classic.gazebosim.org/tutorials ,
 here is an example of how to integrate a  sensor in the simulation environment:
-\begin{figure}[h!]
+
+\newpage
+\begin{codebox}[]{Sensor integration in URDF}
   \begin{minted}{xml}
 <robot>
   ... robot description ...
@@ -1009,13 +988,13 @@ here is an example of how to integrate a  sensor in the simulation environment:
   </gazebo>
 </robot>
 \end{minted}
-\caption{Sensor integration in URDF} 
-  \end{figure}
+% \caption{Sensor integration in URDF} 
+  \end{codebox}
 
 the \texttt{<gazebo>} tag is added to the URDF in order to initiae the pliginz between ROS and Gazebo.
 its worth mentioening that the gazebo package should be installed on ROS if not the Gazebo tag won be recognised by ROS, for noetic distribution (\cref{gazebo ROS packages installation})
-\begin{figure}[h!]
-  
+
+\begin{codebox}[label=gazebo ROS packages installation]{Gazebo ROS packages installation}
   \begin{minted}{bash}
     # Install Gazebo ROS Packages (includes sensor plugins and control integration):
     sudo apt install ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control
@@ -1024,15 +1003,15 @@ its worth mentioening that the gazebo package should be installed on ROS if not 
     # Install ROS Control (if you plan to simulate controllers/actuators):
     sudo apt install ros-noetic-ros-control
   \end{minted} 
-  \caption{Gazebo ROS packages installation}
-  \label{gazebo ROS packages installation}
-\end{figure}
-\newpage
+  % \caption{Gazebo ROS packages installation}
+  % \label{gazebo ROS packages installation}
+\end{codebox}
+
 beside the sensors gazebo also provide plugins to control the actuators like \emph{Differential Drive}
 but duo to limitation of number of actuators that gazebo plugins supports there is another method and that is writing a ymal file forr the simulation.
 in this way by publishing geometry message on the joint we can control the robot in the simulation environment.(check \cref{tags}):
-\begin{figure}
-  \centering
+\newpage
+\begin{codebox}[label=yaml]{Controller configuration file}
   \begin{minted}{yaml}
 # Define a controller for controlling a joint by position.
 # You can give any name to the controller. In this example, we call it "position_joint_controller".
@@ -1052,19 +1031,19 @@ joint: platform_lift_joint
 # 'd' is the derivative gain, which reacts to the rate of change of the error.
 pid: {p: 100.0, i: 0.01, d: 10.0}
 \end{minted}
-\caption{Controller configuration file}
-\label{yaml}
-\end{figure}
+% \caption{Controller configuration file}
+% \label{yaml}
+\end{codebox}
 
   the codes in \cref{yaml} is a configuration file for the controller that will be used to control the joint in the simulation environment.
   it will creat a topic in this case\\ \texttt{/position\_joint\_controller/command} that will be used to control the joint by publishing on the topic.
   we can write a script or even publish directly on the topic via bash terminal to control the joint.
-  \begin{figure}
-    \centering
+
+  \begin{codebox}[]{Publishing a position command to the joint controller}
     \begin{minted}{bash}
 # Publish a position command to the joint controller topic
 rostopic pub /position_joint_controller/command std_msgs/Float64 "data: 1.0"
     \end{minted}
-    \caption{Publishing a position command to the joint controller}
-  \end{figure}
+    % \caption{Publishing a position command to the joint controller}
+  \end{codebox}
 \end{document}

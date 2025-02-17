@@ -1,0 +1,43 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{    def \PYGZus{}adjust\PYGZus{}orientation(self, error, angle, pixels, mask , w\PYGZus{}min, h\PYGZus{}min):}
+\PYG{x}{        if self.\PYGZus{}obstacleInFront:}
+\PYG{x}{            return None}
+\PYG{x}{        if self.moveToTurnPosition:}
+\PYG{x}{            self.\PYGZus{}move(error)}
+\PYG{x}{            return}
+\PYG{x}{        if self.\PYGZus{}making\PYGZus{}turn:}
+\PYG{x}{            print(\PYGZdq{}error\PYGZdq{}, error)}
+\PYG{x}{            if error \PYGZlt{} 60 or error \PYGZgt{} \PYGZhy{}60:}
+\PYG{x}{                self.stop()}
+\PYG{x}{                self.\PYGZus{}making\PYGZus{}turn = False}
+\PYG{x}{            return}
+\PYG{x}{        if self.\PYGZus{}making\PYGZus{}u\PYGZus{}turn:}
+\PYG{x}{            print(\PYGZdq{}error\PYGZdq{}, error)}
+\PYG{x}{            if error \PYGZlt{} 60 or error \PYGZgt{} \PYGZhy{}60:}
+\PYG{x}{                self.stop()}
+\PYG{x}{                self.\PYGZus{}making\PYGZus{}u\PYGZus{}turn = False}
+\PYG{x}{            return}
+\PYG{x}{        if (w\PYGZus{}min \PYGZlt{} 100 and h\PYGZus{}min \PYGZlt{} 100):}
+\PYG{x}{            self.\PYGZus{}move\PYGZus{}forward()}
+\PYG{x}{            return None}
+\PYG{x}{        if (pixels \PYGZlt{}= self.\PYGZus{}black\PYGZus{}pixels + (self.\PYGZus{}black\PYGZus{}pixels * self.\PYGZus{}threshold)) and  (pixels \PYGZgt{}= self.\PYGZus{}black\PYGZus{}pixels \PYGZhy{} (self.\PYGZus{}black\PYGZus{}pixels * self.\PYGZus{}threshold)):}
+\PYG{x}{            self.\PYGZus{}move(error)}
+\PYG{x}{            return None}
+\PYG{x}{        if pixels \PYGZgt{} (self.\PYGZus{}black\PYGZus{}pixels + (self.\PYGZus{}black\PYGZus{}pixels * self.\PYGZus{}threshold)):}
+\PYG{x}{            left\PYGZus{}pixels, right\PYGZus{}pixels, onLeft, onRight = self.check\PYGZus{}side\PYGZus{}pixels(mask)}
+\PYG{x}{            if onLeft or onRight:}
+\PYG{x}{                top\PYGZus{}pixels\PYGZus{}remaining, top\PYGZus{}pixels\PYGZus{}side, bottom\PYGZus{}pixels\PYGZus{}side, onTop, hastoStop = self.check\PYGZus{}straight\PYGZus{}pixels(mask)}
+\PYG{x}{                if hastoStop:}
+\PYG{x}{                    self.needMakeDecision = True}
+\PYG{x}{                    self.junction\PYGZus{}decision(onLeft, onRight, onTop)}
+\PYG{x}{                    if top\PYGZus{}pixels\PYGZus{}remaining == 0:}
+\PYG{x}{                        self.\PYGZus{}move\PYGZus{}forward()}
+\PYG{x}{                    return [left\PYGZus{}pixels, right\PYGZus{}pixels, top\PYGZus{}pixels\PYGZus{}remaining, top\PYGZus{}pixels\PYGZus{}side, bottom\PYGZus{}pixels\PYGZus{}side]}
+\PYG{x}{                self.\PYGZus{}move\PYGZus{}forward()}
+\PYG{x}{                return [left\PYGZus{}pixels, right\PYGZus{}pixels, 0, 0, 0]}
+\PYG{x}{            elif pixels \PYGZlt{} (self.\PYGZus{}black\PYGZus{}pixels \PYGZhy{} (self.\PYGZus{}black\PYGZus{}pixels * self.\PYGZus{}threshold)):}
+\PYG{x}{                self.\PYGZus{}move(error)}
+\PYG{x}{                return None}
+\PYG{x}{        self.\PYGZus{}move(error)}
+\PYG{x}{        return None}
+\end{Verbatim}

@@ -1,0 +1,35 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{  def process\PYGZus{}scan(self):}
+\PYG{x}{        self.map\PYGZus{}image.fill(255)}
+
+\PYG{x}{        robot\PYGZus{}x\PYGZus{}pixel = int((self.robot\PYGZus{}position.x \PYGZhy{} self.map\PYGZus{}origin\PYGZus{}x) / self.map\PYGZus{}resolution)}
+\PYG{x}{        robot\PYGZus{}y\PYGZus{}pixel = int((self.robot\PYGZus{}position.y \PYGZhy{} self.map\PYGZus{}origin\PYGZus{}y) / self.map\PYGZus{}resolution)}
+
+\PYG{x}{        if not (0 \PYGZlt{}= robot\PYGZus{}x\PYGZus{}pixel \PYGZlt{} self.map\PYGZus{}width and 0 \PYGZlt{}= robot\PYGZus{}y\PYGZus{}pixel \PYGZlt{} self.map\PYGZus{}height):}
+\PYG{x}{            return}
+\PYG{x}{      self.update\PYGZus{}map\PYGZus{}from\PYGZus{}scan()}
+\PYG{x}{      map\PYGZus{}image\PYGZus{}color=cv2.cvtColor(self.map\PYGZus{}image, cv2.COLOR\PYGZus{}GRAY2BGR)}
+
+\PYG{x}{      if len(self.path\PYGZus{}history) \PYGZgt{} 1:}
+\PYG{x}{          for i in range(1, len(self.path\PYGZus{}history)):}
+\PYG{x}{                cv2.line(map\PYGZus{}image\PYGZus{}color, self.path\PYGZus{}history[i \PYGZhy{} 1], self.path\PYGZus{}history[i], (0, 255, 0), 2)}
+
+\PYG{x}{      for qr\PYGZus{}x, qr\PYGZus{}y in self.qr\PYGZus{}code\PYGZus{}positions:}
+\PYG{x}{          qr\PYGZus{}x\PYGZus{}pixel=int((qr\PYGZus{}x\PYGZhy{}self.map\PYGZus{}origin\PYGZus{}x)/ self.map\PYGZus{}resolution)}
+\PYG{x}{          qr\PYGZus{}y\PYGZus{}pixel=int((qr\PYGZus{}y\PYGZhy{}self.map\PYGZus{}origin\PYGZus{}y)/ self.map\PYGZus{}resolution)}
+\PYG{x}{            if 0 \PYGZlt{}= qr\PYGZus{}x\PYGZus{}pixel \PYGZlt{} self.map\PYGZus{}width and 0 \PYGZlt{}= qr\PYGZus{}y\PYGZus{}pixel \PYGZlt{} self.map\PYGZus{}height:}
+\PYG{x}{                cv2.rectangle(map\PYGZus{}image\PYGZus{}color,}
+\PYG{x}{(qr\PYGZus{}x\PYGZus{}pixel \PYGZhy{} self.qr\PYGZus{}code\PYGZus{}size, qr\PYGZus{}y\PYGZus{}pixel \PYGZhy{} self.qr\PYGZus{}code\PYGZus{}size),(qr\PYGZus{}x\PYGZus{}pixel + self.qr\PYGZus{}code\PYGZus{}size, qr\PYGZus{}y\PYGZus{}pixel + self.qr\PYGZus{}code\PYGZus{}size),(255, 0, 0), \PYGZhy{}1)}
+
+\PYG{x}{        cv2.circle(map\PYGZus{}image\PYGZus{}color, (robot\PYGZus{}x\PYGZus{}pixel, robot\PYGZus{}y\PYGZus{}pixel), 5, (0, 0, 255), \PYGZhy{}1)}
+\PYG{x}{        yaw = self.get\PYGZus{}yaw\PYGZus{}from\PYGZus{}quaternion(self.robot\PYGZus{}rotation)}
+\PYG{x}{        robot\PYGZus{}x\PYGZus{}end = robot\PYGZus{}x\PYGZus{}pixel + int(np.cos(yaw) * 10)}
+\PYG{x}{        robot\PYGZus{}y\PYGZus{}end = robot\PYGZus{}y\PYGZus{}pixel + int(np.sin(yaw) * 10)}
+\PYG{x}{        cv2.line(map\PYGZus{}image\PYGZus{}color, (robot\PYGZus{}x\PYGZus{}pixel, robot\PYGZus{}y\PYGZus{}pixel), (robot\PYGZus{}x\PYGZus{}end, robot\PYGZus{}y\PYGZus{}end), (0, 255, 0), 2)}
+
+\PYG{x}{        map\PYGZus{}image\PYGZus{}color = np.flipud(map\PYGZus{}image\PYGZus{}color)}
+\PYG{x}{        map\PYGZus{}image\PYGZus{}color = cv2.rotate(map\PYGZus{}image\PYGZus{}color, cv2.ROTATE\PYGZus{}90\PYGZus{}COUNTERCLOCKWISE)}
+\PYG{x}{        output\PYGZus{}path = \PYGZdq{}/tmp/robot\PYGZus{}map\PYGZus{}with\PYGZus{}position.png\PYGZdq{}}
+\PYG{x}{        cv2.imwrite(output\PYGZus{}path, map\PYGZus{}image\PYGZus{}color)}
+\PYG{x}{        self.send\PYGZus{}image(output\PYGZus{}path)}
+\end{Verbatim}

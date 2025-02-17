@@ -16,15 +16,16 @@ and the color; it can even import a 3D mesh to represent the robot link. We can
 also provide the dynamic properties of the link, such as the inertial matrix and the
 collision properties.
 The syntax is as follows:
-\\
-% 
-\begin{minted}{xml}
+
+\begin{codebox}[]{Defining a Robot Link in URDF}
+  \begin{minted}{xml}
     <link name="<name of the link>">
         <inertial>...........</inertial>
         <visual> ............</visual>
         <collision>..........</collision>
     </link>
 \end{minted}
+  \end{codebox}
 The following is a representation of a single link. The Visual section represents the
 real link of the robot, and the area surrounding the real link is the Collision section.
 The Collision section encapsulates the real link to detect a collision before hitting
@@ -41,9 +42,8 @@ dynamics of the joint and set the limits of the joint movement and its velocity.
 joint tag supports the different types of joints, such as \emph{revolute, continuous,
 prismatic, fixed, floating,} and \emph{planar}.
 The syntax is as follows:
-\\
-
-\begin{minted}{xml}
+\begin{codebox}[]{Defining a Robot joint in URDF}
+  \begin{minted}{xml}
     <joint name="<name of the joint>">
     <parent link="link1"/>
     <child link="link2"/>
@@ -52,6 +52,7 @@ The syntax is as follows:
     <limit effort = ..../>
     </joint>
 \end{minted}
+\end{codebox}
 A URDF joint is formed between two links; the first is called the Parent link, and the
 second is called the Child link. Note that a single joint can have a single parent and
 multiple children at the same time. The following is an illustration of a joint and its links:
@@ -66,15 +67,16 @@ This tag encapsulates the entire robot model that can be represented using
 URDF. Inside the robot tag, we can define the name of the robot, the links, and the
 joints of the robot.
 The syntax is as follows:
-\\
 
-\begin{minted}{xml}
+\begin{codebox}[]{Defining a Robot Model in URDF}
+  \begin{minted}{xml}
     <robot name="<name of the robot>">
     <link> ...... </link>
     <joint> ....... </joint>
     <joint> ........</joint>
     </robot>
 \end{minted}
+  \end{codebox}
 A robot model consists of connected links and joints. Here is a visualization of the
 robot model:
 \begin{figure}[ht]
@@ -88,13 +90,14 @@ This tag is used when we include the simulation parameters of the
 Gazebo simulator inside the URDF. We can use this tag to include gazebo plugins,
 gazebo material properties, and more. The following shows an example that uses
 gazebo tags:
-\\
 
-\begin{minted}{xml}
+\begin{codebox}[]{Defining Gazebo Material Properties in URDF }
+  \begin{minted}{xml}
     <gazebo reference="link_1">
     <material>Gazebo/Black</material>
     </gazebo>
 \end{minted}
+  \end{codebox}
 You can find more about URDF tags at \href{http://wiki.ros.org/urdf/XML}{wiki.ros}\cite{ros_urdf_xml}. We are now
 ready to use the elements listed earlier to create a new robot from scratch. In the next
 section, we are going to create a new ROS package containing a description of the different
@@ -107,13 +110,14 @@ well as the collision properties of the link.
 Good robot simulations can be obtained only if the robot dynamic parameters (for
 instance, its mass, inertia, and more) are correctly specified in the urdf file. In the
 following code, we include these parameters as part of the base\_link:
-
-\begin{minted}{xml}
+\begin{codebox}[]{Defining Physical and Collision Properties for a Robot Link in URDF}
+  
+  \begin{minted}{xml}
     <link name="base_link">
     ...
     <collision>
       <geometry>
-         <box size="0.9 0.85 0.5"/>
+          <box size="0.9 0.85 0.5"/>
       </geometry>
         <origin xyz="0.0 0.0 0.025" rpy="0.0 0.0 0.0"/>
     </collision>
@@ -121,15 +125,17 @@ following code, we include these parameters as part of the base\_link:
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <mass value="35"/>
     <inertia ixx="3.2" ixy="0.0" ixz="0.0" iyy="4" iyz="0.0" izz="$3.9"/>
- </inertial>  </link>
+    </inertial>  </link>
 \end{minted}
+  \end{codebox}
 
 \subsection{Transmission:}
 \emph{transmission} tag is used to model the relationship between a robot's joints and actuators 
 (such as motors, servos, or other mechanical devices that provide motion). 
 It defines how power or motion is transferred from an actuator to a joint in the robot's structure.
 The <transmission> tag usually works with <joint> and <actuator> tags to specify how an actuator controls the motion of the robot's joints:
-\begin{minted}{xml}
+\begin{codebox}[]{Modeling Joint-Actuator in URDF with "transmission"}
+  \begin{minted}{xml}
     <robot name="example_robot">
 
     <!-- Define the joint -->
@@ -139,16 +145,15 @@ The <transmission> tag usually works with <joint> and <actuator> tags to specify
       <axis xyz="0 0 1"/>
       <limit effort="10.0" velocity="1.0" lower="-1.57" upper="1.57"/>
     </joint>
-  
     <!-- Define the transmission -->
     <transmission name="trans_1">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="joint_1"/>
       <actuator name="motor_1">
-        <mechanicalReduction>100.0</mechanicalReduction>  <!-- Gear ratio -->
+                     <!-- Gear ratio -->
+        <mechanicalReduction>100.0</mechanicalReduction>
       </actuator>
     </transmission>
-  
     <!-- Define the actuator (motor) -->
     <gazebo>
       <plugin name="motor_1_plugin" filename="libgazebo_motor_plugin.so">
@@ -156,10 +161,9 @@ The <transmission> tag usually works with <joint> and <actuator> tags to specify
         <max_power>100.0</max_power>
       </plugin>
     </gazebo>
-  
   </robot>
-  
 \end{minted}
+  \end{codebox}
 \lstinline!<joint>!: The joint joint\_1 connects the base\_link to link\_1 and allows rotational movement. 
 It has limits on effort and velocity.
 \lstinline!<transmission>!: The transmission trans\_1 links joint\_1 to the actuator (motor motor\_1). It uses the SimpleTransmission type.
@@ -197,7 +201,7 @@ It has limits on effort and velocity.
 \end{tcolorbox}
 \caption{Essential Dependencies for Simulating a URDF in Gazebo}  % Caption outside the box
 \end{table}
-
+\newpage
 \section{Creating URDF model}
 After learning about URDF and its important tags, we can start some basic modeling
 using URDF.
@@ -235,16 +239,18 @@ Robot modeling using xacro meets all of these conditions. Some of the main featu
 xacro are as follows:
 
 \begin{itemize}
-    \item \textbf{Simplify URDF:} xacro is a cleaned-up version of URDF. It creates macros inside the robot description and reuses the macros. This can reduce the code length. Also, it can include macros from other files and make the code simpler, more readable, and more modular.
-    \item \textbf{Programmability:} The xacro language supports a simple programming statement in its description. There are variables, constants, mathematical expressions, conditional statements, and more that make the description more intelligent and efficient.
+    \item \emph{Simplify URDF:} xacro is a cleaned-up version of URDF. It creates macros inside the robot description and reuses the macros. This can reduce the code length. Also, it can include macros from other files and make the code simpler, more readable, and more modular.
+    \item \emph{Programmability:} The xacro language supports a simple programming statement in its description. There are variables, constants, mathematical expressions, conditional statements, and more that make the description more intelligent and efficient.
 \end{itemize}
 
 Instead of .urdf, we need to use the .xacro extension for xacro files.
 Here is an explanation of the xacro code:
-\begin{minted}{xml}
+\begin{codebox}[]{XML Syntax with Xacro Extensions}
+  \begin{minted}{xml}
     <?xml version="1.0"?>
     <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_robot">
 \end{minted}
+  \end{codebox}
 These lines specify a namespace that is needed in all xacro files to parse the xacro file.
 After specifying the namespace, we need to add the name of the xacro file. In the next section.
 
@@ -257,25 +263,24 @@ values and then replacing them.
 An example of using properties is given here. We declare the length and radius of the
 base link and the pan link. So, it will be easy to change the dimension here rather than
 changing the values in each one:
-
-\begin{minted}{xml}
+\begin{codebox}[]{Xacro Properties to Define Reusable Values for Robot Dimensions}
+  \begin{minted}{xml}
     <!-- body value -->
     <xacro:property name="base_length" value="0.9" />
     <xacro:property name="base_width" value="0.85" />
     <xacro:property name="base_hight" value="0.5" />
-    
     <!-- Wheel values -->
     <xacro:property name="wheel_r" value="0.15" />
     <xacro:property name="wheel_length" value="0.05" />
-    
     <!-- Lidar values  -->
     <xacro:property name="lidar_r" value="0.1" />
     <xacro:property name="lidar_l" value="0.05" />
 \end{minted}
+\end{codebox}
 
 We can use the value of the variable by replacing the hardcoded value with the following
-definition:
-\begin{figure}[h!]
+definition(\cref{xacro in urdf}):
+\begin{codebox}[label=xacro in urdf]{}
   \begin{minted}{xml}
     <link name="base_link">
       <visual>
@@ -286,17 +291,17 @@ definition:
           <material name="green"/>
       </visual>
 \end{minted}
-  \end{figure}
-\newpage
-Here, the  value 0.9, is replaced with "{base\_length}", and "0.85" is
-replaced with "{base\_width}".
+  \end{codebox}
+
+Here(\cref{xacro in urdf}), the value 0.9, is replaced with "{base\_length}", and "0.85" is
+replaced with \\"{base\_width}".
 
 \subsection{math expression in xacro}
 We can build mathematical expressions inside \${} using basic operations such as +, -, *,
 /, unary minus, and parentheses. Exponentiation and modulus are not supported yet. The
 following is a simple math expression used inside the code:
-
-\begin{minted}{xml}
+\begin{codebox}[]{Math Expressions in Xacro}
+  \begin{minted}{xml}
     <link name="platform_link">
     <visual>
       <geometry>
@@ -306,12 +311,13 @@ following is a simple math expression used inside the code:
         <material name="green"/>
     </visual>
 \end{minted}
+\end{codebox}
 
 \subsection{xacro macros}
 One of the main features of xacro is that it supports macros. We can use xacro to reduce
 the length of complex definitions. Here is a xacro definition we used in our code to
 specify inertial values,
-\begin{figure}[h!]
+\begin{codebox}[label=xacro macro]{Xacro Macros}
   \begin{minted}{xml}
     <xacro:macro name="box_inertia" params="m l w h xyz rpy">
     <inertial>
@@ -321,25 +327,30 @@ specify inertial values,
     </inertial>
    </xacro:macro>
 \end{minted}
-\end{figure}
-Here, the macro is named box\_inertia, and its parameters are \{m ,l ,w ,h ,xyz ,rpy\}. we can pass these parameters as a vaues or as a xacro property:
-\begin{minted}{xml}
+\end{codebox}
+Here(\cref{xacro macro}), the macro is named box\_inertia, and its parameters are \{m ,l ,w ,h ,xyz ,rpy\}. we can pass these parameters as a vaues or as a xacro property(\cref{xacro macro result}):
+\begin{codebox}[label=xacro macro result]{}
+  \begin{minted}{xml}
 <xacro:box_inertia m="5.0" l="${2*base_length}" w="${2*base_width}" h="${2*base_hight}" xyz="0.0 0.0 ${base_hight/2.0}" rpy="0.0 0.0 0.0"/>
 \end{minted}
+  \end{codebox}
 
 \subsection{Including other xacro files}
 We can extend the capabilities of the robot xacro by including the xacro definition of
 sensors using the xacro:include tag. The following code snippet shows how to include
 a sensor definition in the robot xacro:
-\begin{minted}{xml}
+\begin{codebox}[]{Including External Xacro Files to Extend Robot Model Definitions}
+  \begin{minted}{xml}
 <xacro:include filename="$(find ros_robot_pkg)/urdf/definition.xacro"/>
 \end{minted}
+  \end{codebox}
 Here, we include a xacro file to call the definitions and the constants. 
-
+\newpage
 \section{Visualizing the 3D robot model in RViz}
 After designing the URDF, we can view it on RViz.
 We can create a launch file and put the following code into the launch folder:
-\begin{minted}{xml}
+\begin{codebox}[label=Rviz launch]{Launch File for Visualizing a 3D Robot Model in RViz}
+  \begin{minted}{xml}
 <launch>
 <param name="robot_description" command="$(find xacro)/xacro $(find the_pkg_name)/.../my_robot.urdf.xacro" />
 <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
@@ -352,7 +363,8 @@ type="joint_state_publisher"/>
         args="diff_drive_controller" /> 
 </launch>
     \end{minted}
-    The \texttt{<launch>} tag is the root tag that defines the entire launch file. All the nodes and parameters that need to be launched are specified within this tag.
+  \end{codebox}
+in \cref{Rviz launch} The \texttt{<launch>} tag is the root tag that defines the entire launch file. All the nodes and parameters that need to be launched are specified within this tag.
 
     The \texttt{<param>} tag sets the \texttt{robot\_description} parameter, which specifies the URDF or XACRO file that contains the robot’s description. In this case, the \texttt{command} attribute runs the \texttt{xacro} tool to process the \texttt{my\_robot.urdf.xacro} file located in the package specified by \texttt{the\_pkg\_name}.
     
@@ -364,17 +376,19 @@ type="joint_state_publisher"/>
     
     Finally, the \texttt{<node>} tag for the \texttt{controller\_spawner} node is responsible for spawning and managing robot controllers. The node is part of the \texttt{controller\_manager} package, and the \texttt{spawner} executable is used to spawn a controller, in this case, \texttt{diff\_drive\_controller}. The \texttt{respawn} attribute is set to \texttt{false}, so the node will not automatically respawn if it crashes. The \texttt{output} attribute ensures that the output from the node is printed to the screen.
     
-    We can launch the model using the following command:
-    \begin{minted}{bash}
+    We can launch the model using the following command(\cref{launch rviz}):
+    \begin{codebox}[label=launch rviz]{}
+      \begin{minted}{bash}
         roslaunch the_pkg_name launch_file_name.launch
-    \end{minted}
-    If everything works correctly, we will get a pan-and-tilt mechanism in RViz, as shown
-    here:
+      \end{minted}
+      \end{codebox}
+    If everything works correctly, we will get the robot in RViz, as shown
+    here(\cref{A visualization of a robot model with Rviz}):
     \begin{figure}[h!]
         \centering
-        \includegraphics[width=\textwidth]{img/roborRvz.jpg}
+        \includegraphics[width=\textwidth]{img/roborRvz1.jpg}
         \caption{A visualization of a robot model with Rviz}
-
+\label{A visualization of a robot model with Rviz}
     \end{figure}
     \newpage
 \subsection{Interacting with joints in Rviz}
@@ -388,37 +402,45 @@ parameter.
 We can see that an extra GUI came along with RViz; it contains sliders to control the
 Whell joints and the lifting platform joint. This GUI is called the Joint State Publisher Gui node and
 belongs to the \texttt{joint\_state\_publisher\_gui} package:
-\begin{minted}{xml}
+\begin{codebox}[]{Joint State Publisher GUI in RViz}
+  \begin{minted}{xml}
 <node name="joint_state_publisher_gui" pkg="joint_state_
 publisher_gui" type="joint_state_publisher_gui" />
 \end{minted}
+  \end{codebox}
 
 We can include this node in the launch file using the following statement. The limits of
 pan-and-tilt should be mentioned inside the joint tag:
-\newpage
-\begin{minted}{xml}
+
+\begin{codebox}[label=Prismatic Joint with Motion Limits in URDF for RViz Interaction]{Prismatic Joint with Motion Limits in URDF for RViz Interaction}
+  \begin{minted}{xml}
 <joint name="platform_lift_joint" type="prismatic">
     <origin xyz="0.0 0.0 ${base_hight / 2}" rpy="0.0 0.0 0.0"/>
     <parent link="base_link"/>
     <child link="platform_lift_link"/>
     <axis xyz="0 0 1"/> <!-- Movement along the Z-axis -->
     <!-- Motion range and limits -->
-     <limit lower="0.0" upper="${base_hight/2}" effort="50" velocity="1.0"/> 
+    <limit lower="0.0" upper="${base_hight/2}" effort="50" velocity="1.0"/> 
 </joint>
 \end{minted}
+\end{codebox}
+\newpage
 
-The \text{<limit>} tag defines the limits of effort, velocity, and angle. In this scenario,
+In \cref{Prismatic Joint with Motion Limits in URDF for RViz Interaction} the \text{<limit>} tag defines the limits of effort, velocity, and angle. In this scenario,
 effort is the maximum force supported by this joint, expressed in Newton; lower
 and upper indicate the lower and upper limits of the joint, in radians for the revolute
 joint and in meters for the prismatic joints. velocity is the maximum joint velocity
 expressed in m/s.
+
 The following screenshot shows the user interface that is used to interact with the robot
 joints:
-\begin{figure}[ht]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{img/robotjoints.png}
+    \includegraphics[width=\textwidth]{img/roborRvz.jpg}
     \caption{The joint level of the platform lifting mechanism}
     \end{figure}
+
+
     In this user interface, we can use the sliders to set the desired joint values. The basic
     elements of a urdf file have been discussed. In the next section, we will add additional
     physical elements to our robot model.

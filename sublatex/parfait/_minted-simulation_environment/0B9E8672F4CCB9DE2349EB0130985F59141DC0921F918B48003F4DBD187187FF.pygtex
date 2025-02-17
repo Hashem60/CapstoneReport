@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nt}{\PYGZlt{}robot\PYGZgt{}}
+\PYG{+w}{  }...\PYG{+w}{ }robot\PYG{+w}{ }description\PYG{+w}{ }...
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}link}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}sensor\PYGZus{}link\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{    }...\PYG{+w}{ }link\PYG{+w}{ }description\PYG{+w}{ }...
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}/link\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}gazebo}\PYG{+w}{ }\PYG{n+na}{reference=}\PYG{l+s}{\PYGZdq{}sensor\PYGZus{}link\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}sensor}\PYG{+w}{ }\PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}camera\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}camera1\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{      }...\PYG{+w}{ }sensor\PYG{+w}{ }parameters\PYG{+w}{ }...
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}plugin}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}camera\PYGZus{}controller\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{filename=}\PYG{l+s}{\PYGZdq{}libgazebo\PYGZus{}ros\PYGZus{}camera.so\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{        }...\PYG{+w}{ }plugin\PYG{+w}{ }parameters\PYG{+w}{ }..
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}/plugin\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}/sensor\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}/gazebo\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}/robot\PYGZgt{}}
+\end{Verbatim}

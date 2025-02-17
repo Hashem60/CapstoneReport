@@ -1,0 +1,41 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{    \PYGZlt{}model name=\PYGZsq{}platform\PYGZsq{}\PYGZgt{}}
+\PYG{x}{      \PYGZlt{}link name=\PYGZsq{}table\PYGZus{}surface\PYGZsq{}\PYGZgt{}}
+\PYG{x}{        \PYGZlt{}inertial\PYGZgt{}}
+\PYG{x}{          \PYGZlt{}mass\PYGZgt{}13.98\PYGZlt{}/mass\PYGZgt{}}
+\PYG{x}{          \PYGZlt{}inertia\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}ixx\PYGZgt{}0.1\PYGZlt{}/ixx\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}ixy\PYGZgt{}0\PYGZlt{}/ixy\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}ixz\PYGZgt{}0\PYGZlt{}/ixz\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}iyy\PYGZgt{}0.1\PYGZlt{}/iyy\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}iyz\PYGZgt{}0\PYGZlt{}/iyz\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}izz\PYGZgt{}0.1\PYGZlt{}/izz\PYGZgt{}}
+\PYG{x}{          \PYGZlt{}/inertia\PYGZgt{}}
+\PYG{x}{          \PYGZlt{}pose\PYGZgt{}0 0 0 0 \PYGZhy{}0 0\PYGZlt{}/pose\PYGZgt{}}
+\PYG{x}{        \PYGZlt{}/inertial\PYGZgt{}}
+\PYG{x}{        \PYGZlt{}collision name=\PYGZsq{}surface\PYGZus{}collision\PYGZsq{}\PYGZgt{}}
+\PYG{x}{          \PYGZlt{}pose\PYGZgt{}0 0 0.367 0 \PYGZhy{}0 0\PYGZlt{}/pose\PYGZgt{}}
+\PYG{x}{          \PYGZlt{}geometry\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}box\PYGZgt{}}
+\PYG{x}{              \PYGZlt{}size\PYGZgt{}1.1 0.95 0.03\PYGZlt{}/size\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}/box\PYGZgt{}}
+\PYG{x}{          \PYGZlt{}/geometry\PYGZgt{}}
+\PYG{x}{          \PYGZlt{}surface\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}friction\PYGZgt{}}
+\PYG{x}{              \PYGZlt{}ode\PYGZgt{}}
+\PYG{x}{                \PYGZlt{}mu\PYGZgt{}1\PYGZlt{}/mu\PYGZgt{}}
+\PYG{x}{                \PYGZlt{}mu2\PYGZgt{}1\PYGZlt{}/mu2\PYGZgt{}}
+\PYG{x}{              \PYGZlt{}/ode\PYGZgt{}}
+\PYG{x}{              \PYGZlt{}torsional\PYGZgt{}}
+\PYG{x}{                \PYGZlt{}ode/\PYGZgt{}}
+\PYG{x}{              \PYGZlt{}/torsional\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}/friction\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}contact\PYGZgt{}}
+\PYG{x}{              \PYGZlt{}ode/\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}/contact\PYGZgt{}}
+\PYG{x}{            \PYGZlt{}bounce/\PYGZgt{}}
+\PYG{x}{          \PYGZlt{}/surface\PYGZgt{}}
+\PYG{x}{          \PYGZlt{}max\PYGZus{}contacts\PYGZgt{}10\PYGZlt{}/max\PYGZus{}contacts\PYGZgt{}}
+\PYG{x}{        \PYGZlt{}/collision\PYGZgt{}}
+\PYG{x}{        ...}
+\end{Verbatim}

@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{def \PYGZus{}adjust\PYGZus{}orientation(self, error, angle, pixels, mask, w\PYGZus{}min, h\PYGZus{}min):}
+
+\PYG{x}{        if not self.isLifting :}
+\PYG{x}{            if self.moveToLiftPosition:}
+\PYG{x}{                if self.\PYGZus{}distanceToLifePosition() \PYGZgt{} 0.005:}
+\PYG{x}{                    self.\PYGZus{}move(error)}
+\PYG{x}{                    return None}
+\PYG{x}{                else:}
+\PYG{x}{                    print(\PYGZdq{}Lift position reached\PYGZdq{})}
+\PYG{x}{                    self.stop()}
+\PYG{x}{                    self.isLifting = True}
+\PYG{x}{                    self.\PYGZus{}lift()}
+\PYG{x}{                return None}
+\PYG{x}{            else:}
+\PYG{x}{                return super().\PYGZus{}adjust\PYGZus{}orientation(error, angle, pixels, mask, w\PYGZus{}min, h\PYGZus{}min)}
+
+\end{Verbatim}

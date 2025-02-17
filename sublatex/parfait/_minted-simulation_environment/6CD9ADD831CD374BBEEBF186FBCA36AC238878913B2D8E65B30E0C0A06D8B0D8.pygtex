@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{    \PYGZsh{} Install Gazebo ROS Packages (includes sensor plugins and control integration):}
+\PYG{x}{    sudo apt install ros\PYGZhy{}noetic\PYGZhy{}gazebo\PYGZhy{}ros\PYGZhy{}pkgs ros\PYGZhy{}noetic\PYGZhy{}gazebo\PYGZhy{}ros\PYGZhy{}control}
+\PYG{x}{    \PYGZsh{} Install Robot State and Joint State Publishers:}
+\PYG{x}{    sudo apt install ros\PYGZhy{}noetic\PYGZhy{}robot\PYGZhy{}state\PYGZhy{}publisher ros\PYGZhy{}noetic\PYGZhy{}joint\PYGZhy{}state\PYGZhy{}publisher}
+\PYG{x}{    \PYGZsh{} Install ROS Control (if you plan to simulate controllers/actuators):}
+\PYG{x}{    sudo apt install ros\PYGZhy{}noetic\PYGZhy{}ros\PYGZhy{}control}
+\end{Verbatim}

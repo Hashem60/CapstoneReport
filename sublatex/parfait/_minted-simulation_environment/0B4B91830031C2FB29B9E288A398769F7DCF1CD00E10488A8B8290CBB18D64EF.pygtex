@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{        }...
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}visual}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZsq{}surface\PYGZus{}visual\PYGZsq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}pose\PYGZgt{}}0\PYG{+w}{ }0\PYG{+w}{ }0.367\PYG{+w}{ }0\PYG{+w}{ }\PYGZhy{}0\PYG{+w}{ }0\PYG{n+nt}{\PYGZlt{}/pose\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}geometry\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}box\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}size\PYGZgt{}}1.1\PYG{+w}{ }0.95\PYG{+w}{ }0.03\PYG{n+nt}{\PYGZlt{}/size\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}/box\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}/geometry\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}material\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}script\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}uri\PYGZgt{}}model://platform/materials/scripts\PYG{n+nt}{\PYGZlt{}/uri\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}uri\PYGZgt{}}model://platform/materials/textures\PYG{n+nt}{\PYGZlt{}/uri\PYGZgt{}}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZlt{}name\PYGZgt{}}stainless\PYGZus{}steel\PYGZus{}texture\PYG{n+nt}{\PYGZlt{}/name\PYGZgt{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZlt{}/script\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}/material\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}/visual\PYGZgt{}}
+\PYG{+w}{        }...
+\end{Verbatim}

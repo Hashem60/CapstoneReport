@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{    \PYGZlt{}link name=\PYGZdq{}\PYGZlt{}name of the link\PYGZgt{}\PYGZdq{}\PYGZgt{}}
+\PYG{x}{        \PYGZlt{}inertial\PYGZgt{}...........\PYGZlt{}/inertial\PYGZgt{}}
+\PYG{x}{        \PYGZlt{}visual\PYGZgt{} ............\PYGZlt{}/visual\PYGZgt{}}
+\PYG{x}{        \PYGZlt{}collision\PYGZgt{}..........\PYGZlt{}/collision\PYGZgt{}}
+\PYG{x}{    \PYGZlt{}/link\PYGZgt{}}
+\end{Verbatim}
