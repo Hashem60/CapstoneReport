@@ -75,10 +75,10 @@ APPROVED BY: \\[4em]
 }
 \newpage
 
-\pagenumbering{Roman}
+\pagenumbering{roman}
 
 
-\chapter*{\hfill ACKNOWLEDGEMENTS \hfill}
+\chapter*{ACKNOWLEDGEMENTS}
 
 \justifying % Justify text
 We extend our heartfelt appreciation to everyone who contributed to the success of this project. First and foremost, we express our deepest gratitude to \textbf{Asst. Prof. Dr. ZİYA DEREBOYLU} and \textbf{Asst. Prof. Dr. ALİ SHEFIK} for their invaluable guidance, continuous support, and encouragement throughout the project. Their expertise and insights were instrumental in overcoming challenges and ensuring the project's progress.
@@ -93,6 +93,27 @@ Finally, we would like to thank the organizers of the Teknofest Aerospace and Te
 
 This project is a testament to the collective effort and support of everyone involved. Thank you all for being part of this journey.
 \newpage
+\centering
+\section*{\hfill github repository \hfill}
+\justifying % Justify text
+you can access the project repository by scanning the QR code below or by clicking on the link below.
+you will find the pdf files of the project as well as the \LaTeX \ file and the source code of the project.
+
+\begin{figure*}[h]
+    \centering
+    \begin{tikzpicture}
+        % Adjust gradient background size to match QR code
+        % \shade[left color=blue!30, right color=red!30] (-6,-6) rectangle (6,6); % 3cm × 3cm
+        
+        % Explicitly resize the QR code to 3cm × 3cm
+        \node at (0,0) {\resizebox{10cm}{6cm}{\qrcode{https://github.com/Hashem60/CapstoneReport}}};
+        
+        % Resize logo to match (e.g., 20% of QR code size)
+        \node at (0,0) {\includegraphics[width=3cm]{doc/logo.png}}; % Adjust width as needed
+      \end{tikzpicture}
+    \caption*{Scan the QR code to access the project repository}
+\end{figure*}
+    \newpage
 \centering
 \chapter*{\hfil ABSTRACT \hfil}
 \justifying

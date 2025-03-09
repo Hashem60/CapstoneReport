@@ -2,7 +2,7 @@
 
 \begin{document}
 
-\section{Electrical System Design}
+\subsection{Electrical System Design}
 
 At the core of an AGV’s electrical system are power management, motor control, 
 and communication networks, all of which must be carefully designed to meet 
@@ -16,7 +16,7 @@ network of embedded controllers, sensors, and communication modules to
 process data in real time, enabling obstacle detection, localization, and 
 coordination a central control system.
 
-\section{Power Supply and Distribution System}
+\subsection{Power Supply and Distribution System}
 
 At the heart of the AGV's electrical design lies the 
 power supply and distribution system, which serves as the backbone 
@@ -46,7 +46,7 @@ The following section explores the key components of the AGV's
 power supply and distribution system, their functions, and how 
 they contribute to the overall efficiency and reliability of the vehicle.
 
-\subsubsection{Power distribution architecture (System architecture)}
+\paragraph{Power distribution architecture (System architecture)}
 
 A well-structured power distribution network minimizes voltage drops and energy 
 losses, directly contributing to longer operating times and reduced 
@@ -288,7 +288,7 @@ TP-Link TL-WR840N router, enabling remote access and control
 via a connected PC, which facilitates real-time monitoring 
 and decision-making.
 
-\subsubsection{Battery Management System (BMS)}
+\paragraph{Battery Management System (BMS)}
 
 The \textbf{BMS} is integrated to monitor and manage the battery's health, 
 ensuring safe and reliable operation. It oversees critical parameters such as voltage, current, and temperature,
@@ -299,7 +299,7 @@ Additionally, the BMS in this system includes a charging system that complies wi
 which supports an \textbf{AGM Battery} with a nominal voltage of \textbf{12VDC} and a charging current of \textbf{10A}.
 
 
-\subsection{Battery System}
+\subsubsection{Battery System}
 
 Battery selection is a key factor in the efficiency and reliability of an AGV system. 
 Among the available options, Absorbent Glass Mat (AGM) and Gel (GEL) batteries, 
@@ -329,7 +329,7 @@ AGM batteries are selected for this application. The competition specifies the f
 \end{figure}
 
 
-\subsection{Voltage Regulation}
+\subsubsection{Voltage Regulation}
 
 The AGV's electrical system contains various components operating 
 at different voltage levels, making voltage regulation and 
@@ -525,7 +525,7 @@ Protection circuits and fuses are also integrated to safeguard sensitive
 components from voltage spikes, short circuits, and other electrical faults, 
 enhancing the overall safety and durability of the AGV.
 
-\section{Motor Control System}
+\subsection{Motor Control System}
 
 The performance and reliability of automated guided vehicles (AGVs) are deeply rooted in the precision and efficiency of
 their motor control systems\cite{cservenak2018further}. At the heart of these systems lies the electrical design, which governs the interaction 
@@ -543,42 +543,42 @@ The motor alone cannot achieve optimal operation without the integration of a so
 The motor driver acts as the intermediary between the power supply and the motor, regulating voltage and current to ensure 
 smooth and efficient operation. It interprets control signals and translates them into precise commands.
 
-\subsection{Motors and actuators}
+\subsubsection{Motors and actuators}
 
 The choice of motor depends on several factors, including torque requirements, speed, wheel size, load capacity, operating voltage, and environmental conditions. Below, we discuss the key considerations for motor selection in AGV applications.
 
-\paragraph{Torque and Speed Requirements}
+\subparagraph{Torque and Speed Requirements}
 The motor must generate sufficient torque to move the AGV and its payload efficiently, overcoming rolling resistance and any potential obstacles. Simultaneously, it should achieve the desired speed without compromising torque. For instance, AGVs operating in environments with frequent stops and starts may require motors with high torque at low speeds, while those used in long-distance transportation may prioritize higher speed capabilities.
 
-\paragraph{Wheel Size and Load Capacity}
+\subparagraph{Wheel Size and Load Capacity}
 The size and weight of the AGV wheels directly influence motor selection. Larger wheels and heavier payloads demand motors with higher torque and power ratings. Additionally, the motor must be capable of handling the AGV's maximum load capacity without overheating or losing efficiency.
 
-\paragraph{Operating Voltage}
+\subparagraph{Operating Voltage}
 The motor's operating voltage must align with the AGV's power supply system. Common voltage options include 12V, 24V, and 48V. It is essential to choose a voltage that is both compatible with the AGV's design and readily available for the intended application.
 
-\paragraph{Motor Types}
+\subparagraph{Motor Types}
 The two most common motor types for AGVs are DC motors and brushless DC (BLDC) motors. DC motors are cost-effective and straightforward, making them suitable for simpler applications. On the other hand, BLDC motors offer superior efficiency, longer lifespan, and smoother operation, making them ideal for more demanding AGV tasks. The choice between these motor types depends on the specific requirements of the AGV, such as precision, durability, and control complexity.
 
-\paragraph{Control System Compatibility}
+\subparagraph{Control System Compatibility}
 The selected motor must integrate seamlessly with the AGV's control system. This includes compatibility with communication protocols and interfaces, such as PWM (Pulse Width Modulation) for speed control or CAN bus for advanced communication. Ensuring compatibility is crucial for achieving precise control and coordination with other AGV subsystems.
 
-\paragraph{Encoders and Feedback Mechanisms}
+\subparagraph{Encoders and Feedback Mechanisms}
 For AGVs requiring high precision and accurate path correction, motors equipped with encoders or feedback mechanisms are highly recommended. Encoders provide real-time data on the motor's position and speed, enabling closed-loop control and improved navigation accuracy. This feature is particularly important for AGVs operating in dynamic or complex environments.
 
-\paragraph{Environmental Considerations}
+\subparagraph{Environmental Considerations}
 The operating environment plays a significant role in motor selection. AGVs operating in harsh conditions, such as dusty or moist environments, require motors with appropriate protection ratings (e.g., IP65 or higher). Additionally, motors should be selected based on their ability to withstand temperature variations and mechanical stress.
 
-\paragraph{Energy Efficiency}
+\subparagraph{Energy Efficiency}
 Energy efficiency is a critical factor, especially for AGVs that operate for extended periods or rely on battery power. Motors with high efficiency reduce power consumption, extend battery life, and lower operational costs. BLDC motors, for example, are known for their energy-efficient performance compared to traditional DC motors.
 
-\paragraph{Cost and Availability}
+\subparagraph{Cost and Availability}
 While selecting a motor, it is essential to balance performance requirements with budget constraints. Consider not only the initial cost of the motor but also its availability, maintenance requirements, and long-term reliability. Consulting with manufacturers and industry experts can help identify cost-effective solutions without compromising performance.
 
-\subsubsection{Traction unit motors and linear actuator}
+\paragraph{Traction unit motors and linear actuator}
 
 
     
-\paragraph{P Series Nema 23 Closed Loop Stepper Motor with Electromagnetic
+\subparagraph{P Series Nema 23 Closed Loop Stepper Motor with Electromagnetic
     Brake (2Nm):}
     
     The traction system of the automated guided vehicle (AGV)  
@@ -682,10 +682,10 @@ and minimizing mechanical wear.
 
 
 
-\subsubsection{Motor Drivers and Controllers}
+\paragraph{Motor Drivers and Controllers}
 
 
-\paragraph{Closed Loop Stepper Driver V4.1 CL57T:}
+\subparagraph{Closed Loop Stepper Driver V4.1 CL57T:}
 
 The \textbf{Closed Loop Stepper Driver V4.1 CL57T} has been selected 
 to complement the \textbf{Nema 23 Closed Loop Stepper Motor}, 
@@ -789,7 +789,7 @@ visibility but also streamline troubleshooting and diagnostics, minimizing downt
     \label{Stepper motor driver } % Unique label for referencing
 \end{figure}
 
-\paragraph{BTS7960B 40 Amp Motor Driver Board}
+\subparagraph{BTS7960B 40 Amp Motor Driver Board}
 
 The BTS7960B 40A Motor Driver Board is selected for its capability to control 
 high-power motors, making it ideal for the AGV’s linear actuator. 
@@ -864,12 +864,12 @@ Supporting currents up to 40A, it ensures reliable performance in demanding appl
     
 \newpage
 
-\subsubsection{Motor Feedback and Braking Systems}
+\paragraph{Motor Feedback and Braking Systems}
 For precise control and safety, the AGV's motors are equipped with encoders and brakes. 
 The two primary motors feature optical incremental encoders and power-off brakes, 
 ensuring accurate feedback and reliable stopping mechanisms.
 
-\paragraph{Encoder Specifications}
+\subparagraph{Encoder Specifications}
 The motors utilize optical incremental encoders with the following specifications:
 
 
@@ -890,7 +890,7 @@ The motors utilize optical incremental encoders with the following specification
 These encoders provide high-resolution feedback on motor position and speed, 
 enabling precise control and navigation for the AGV.
 
-\paragraph{Brake Specifications}
+\subparagraph{Brake Specifications}
 The motors are equipped with power-off brakes, which engage automatically in the event of a power failure, 
 ensuring the AGV remains stationary. The brake specifications are as follows:
 
@@ -922,7 +922,7 @@ he fast response time of 50ms guarantees quick engagement, enhancing safety duri
 
 The encoder feedback is integrated into the AGV's control system, enabling real-time monitoring and adjustment of motor performance. The brakes are designed to work seamlessly with the power supply, ensuring immediate activation during emergencies or power loss.
 
-\section{Sensors}
+\subsection{Sensors}
 Various sensors, such as LiDAR, cameras, and infrared sensors, are utilized for
 navigation, obstacle detection, and localization.
 
@@ -932,7 +932,7 @@ perception. These sensors work together to enhance the robot's
 autonomy, safety, and efficiency. The following sensors are integrated 
 into the system:
 
-\subsection{VL53L0X (Time-of-Flight Distance Sensor)}
+\subsubsection{VL53L0X (Time-of-Flight Distance Sensor)}
 
 The VL53L0X time-of-flight (ToF) distance sensors  play an important role in enhancing 
 the AGV's perception of its immediate surrounding in an operational perspective. 
@@ -949,7 +949,7 @@ a lifted platform that obstructs the LiDAR's field of view, the ToF sensors take
 \end{figure}
 
 
-\subsection{Weight Sensor - Load Sensor 50Kg}
+\subsubsection{Weight Sensor - Load Sensor 50Kg}
 
 This sensor provides accurate and continuous monitoring of the load on the AGV.
 
@@ -998,7 +998,7 @@ output signals from the load cellin \cref{Load cell}, ensuring accurate and reli
 \end{figure}
 
 
-\subsection{RPLIDAR - 360}
+\subsubsection{RPLIDAR - 360}
 
 The RPLIDAR sensor provides comprehensive environmental mapping, making it indispensable for AGV navigation 
 from an electrical control perspective. With its ability to deliver high-accuracy, real-time 360-degree
@@ -1012,7 +1012,7 @@ scanning, the RPLIDAR enables the AGV to perceive its surroundings with exceptio
 \end{figure}
 
 
-\subsection{Camera HUSKYLENS}
+\subsubsection{Camera HUSKYLENS}
 
 The \textbf{HUSKYLENS} vision sensor enhances the AGV’s performance 
 used for \textbf{object detection and line following}. 
@@ -1027,7 +1027,7 @@ motor speed, direction, and trajectory.
 \end{figure}
 
 
-\subsection{IMU Sensor}
+\subsubsection{IMU Sensor}
 
 The Inertial Measurement Unit (IMU)  is used for achieving precise positioning and movement control in automated guided vehicles (AGVs)
 The MPU9255 integrates a 3-axis gyroscope, 3-axis accelerometer, and 3-axis magnetometer, providing comprehensive data on angular velocity, 
@@ -1041,7 +1041,7 @@ ensuring low-latency data transmission while minimizing power consumption—a ke
     \label{IMU} % Unique label for referencing
 \end{figure}
 
-\subsection{Barcode Scanner GM65}
+\subsubsection{Barcode Scanner GM65}
 
 \begin{figure}[H]
     \centering
@@ -1050,7 +1050,7 @@ ensuring low-latency data transmission while minimizing power consumption—a ke
     \label{Qr code scanner} % Unique label for referencing
 \end{figure}
 
-\subsection{QTRX-HD-11RC}
+\subsubsection{QTRX-HD-11RC}
 
 \begin{figure}[H]
     \centering
@@ -1060,7 +1060,7 @@ ensuring low-latency data transmission while minimizing power consumption—a ke
 \end{figure}
 
 
-\section{Microcontroller and Communication}
+\subsection{Microcontroller and Communication}
 
 When selecting a microcontroller (MCU), several key factors must be 
 considered to ensure it meets the demands of the system. One of the 
@@ -1081,7 +1081,7 @@ accommodate all necessary connections. Many of these devices
 operate using different communication protocols, such as I2C, 
 SPI, and UART.
 
-\subsection{Microcontroller and Embedded computer integration}
+\subsubsection{Microcontroller and Embedded computer integration}
 
 The AGV's microcontroller and communication system form the backbone 
 of its control and data exchange capabilities, ensuring efficient 
@@ -1095,7 +1095,7 @@ with a Linux operating system, it hosts all necessary
 decision-making, sensor data processing, and trajectory planning.
 
 
-\subsubsection{Raspberry Pi 4}
+\paragraph{Raspberry Pi 4}
 
 \begin{figure}[H]
     \centering
@@ -1122,7 +1122,7 @@ the ESP32 handling time-sensitive data acquisition and the Raspberry
 Pi performing higher-level processing and integration into the ROS 
 framework.
 
-\subsubsection{ESP32-S3-DevKitC-1}
+\paragraph{ESP32-S3-DevKitC-1}
 
 \begin{figure}[H]
     \centering
@@ -1131,7 +1131,7 @@ framework.
     \label{ESP32-S3-DevKitC-1} % Unique label for referencing
 \end{figure}
 
-\subsubsection{RS232 to Bluetooth Series Adapter}
+\paragraph{RS232 to Bluetooth Series Adapter}
 RS232 to Bluetooth Series Adapter
 \begin{figure}[H]
     \centering
@@ -1140,7 +1140,7 @@ RS232 to Bluetooth Series Adapter
     \label{RS232 to Bluetooth Series Adapter} % Unique label for referencing
 \end{figure}
 
-\subsubsection{TP-Link TL-WR840N}
+\paragraph{TP-Link TL-WR840N}
 \begin{itemize}
     \item The \textbf{TP-Link TL-WR840N} is utilized as an access point 
     to facilitate communication between the control unit (PC) and the 
@@ -1165,7 +1165,7 @@ traction systems while maintaining operational efficiency and safety.
 
 
 % \newpage
-% \section{usefull part}
+% \subsection{usefull part}
 % \begin{figure}[h!]
 %     \centering
 %     \begin{circuitikz}[scale=1.2, transform shape,american voltages]

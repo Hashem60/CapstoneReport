@@ -1,6 +1,6 @@
 \documentclass[../../main]{subfiles}
 \begin{document}
-\section{ROS}
+\subsection{ROS}
 The Robot Operating System (ROS) is a set of software libraries and tools that help you build robot applications. 
 From drivers to state-of-the-art algorithms, and with powerful developer tools, \cite{ros_website}
 To effectively approach ROS programming, it's essential to first understand the foundational concepts of ROS and its package management system. 
@@ -13,7 +13,7 @@ In the subsequent sections, we will explore the following topics:
 \item  ROS computation graph level.
 \item  ROS community level.
 \end{itemize}
-\section*{Technical requirements}
+\subsection*{Technical requirements}
 To follow this chapter, the only thing you need is a 
 standard computer running \href{https://releases.ubuntu.com/20.04/}{Ubuntu 20.04 LTS} or a Debian 10 GNU/Linux 
 distribution.
@@ -23,7 +23,7 @@ distribution.
     \caption{Ubuntu 20.04}
 \end{figure}
 \newpage
-\section{Why ROS?}\cite{joseph2018mastering}
+\subsection{Why ROS?}\cite{joseph2018mastering}
 \emph{Robot Operating System (ROS)} is a flexible framework that provides various tools and
 libraries for writing robotic software. It offers several powerful features to help developers
 in tasks such as message passing, distributed computing, code reusing, and implementing
@@ -34,7 +34,7 @@ to establish a standard way to program robots while offering off-the-shelf softw
 components that can be easily integrated with custom robotic applications. There are
 many reasons to choose ROS as a programming framework, and some of them are as
 follows:
-\subsection{High-end capabilities:}ROS comes with ready-to-use functionalities. For example,
+\subsubsection{High-end capabilities:}ROS comes with ready-to-use functionalities. For example,
     the \\\emph{Simultaneous Localization and Mapping (SLAM)} and \emph{Adaptive Monte
     Carlo Localization (AMCL)} packages in ROS can be used for having autonomous
     navigation in mobile robots, while the \lstinline!MoveIt! package can be used for motion
@@ -42,24 +42,24 @@ follows:
     robot software without any hassle. In several cases, these packages are enough for
     having core robotics tasks on different platforms. Also, these capabilities are highly
     configurable; we can fine-tune each one using various parameters.
-\subsection{Tons of tools:} The ROS ecosystem is packed with tons of tools for debugging,
+\subsubsection{Tons of tools:} The ROS ecosystem is packed with tons of tools for debugging,
     visualizing, and having a simulation. The tools, such as \emph{rqt\_gui, RViz}, and \emph{Gazebo},
     are some of the strongest open source tools for debugging, visualization, and
     simulation. A software framework that has this many tools is very rare.
-\subsection{Support for high-end sensors and actuators:} ROS allows us to use different device
+\subsubsection{Support for high-end sensors and actuators:} ROS allows us to use different device
     drivers and the interface packages of various sensors and actuators in robotics. Such
     high-end sensors include 3D LIDAR, laser scanners, depth sensors, actuators, and
     more. We can interface these components with ROS without any hassle.
-\subsection{Inter-platform operability:} The ROS message-passing middleware allows
+\subsubsection{Inter-platform operability:} The ROS message-passing middleware allows
     communication between different programs. In ROS, this middleware is known
     as nodes. These nodes can be programmed in any language that has ROS client
     libraries. We can write high-haveance nodes in C++ or C and other nodes in Python
     or Java.
-\subsection{Modularity:}One of the issues that can occur in most standalone robotic
+\subsubsection{Modularity:}One of the issues that can occur in most standalone robotic
     applications is that if any of the threads of the main code crash, the entire robot
     application can stop. In ROS, the situation is different; we are writing different
     nodes for each process, and if one node crashes, the system can still work.
-\subsection{Concurrent resource handling:} Handling a hardware resource via more than two
+\subsubsection{Concurrent resource handling:} Handling a hardware resource via more than two
 processes is always a headache. Imagine that we want to process an image from a
 camera for face detection and motion detection; we can either write the code as a
 single entity that can do both, or we can write a single-threaded piece of code for
@@ -78,7 +78,7 @@ Now that we know why it is convenient to study ROS, we can start introducing its
 concepts. There are mainly three levels in ROS: the filesystem level, the computation graph
 level, and the community level. We will briefly have a look at each level.
 \newpage
-\section{the ROS filesystem level}
+\subsection{the ROS filesystem level}
 ROS is more than a development framework. We can refer to ROS as a meta-OS, since
 it offers not only tools and libraries but even OS-like functions, such as hardware
 abstraction, package management, and a developer toolchain. Like a real operating
@@ -122,7 +122,7 @@ going to create in the upcoming sections:
     \caption{List of files inside the package}
 \end{figure}
 
-\section{ROS packages}
+\subsection{ROS packages}
 The typical structure of a ROS package is shown here:
 \begin{figure}[ht]
     \centering
@@ -201,7 +201,7 @@ package. Here are some of the rosbash commands:
         depend></build\_depend>} tag includes the packages that are necessary for building
         the source code of the package. The packages inside the \texttt{<run\_depend></run\_
         depend>} tags are necessary for running the package node at runtime.
-\section{ROS metapackages}
+\subsection{ROS metapackages}
 Metapackages are specialized packages that require only one file; that is, a package.xml
 file.
 Metapackages simply group a set of multiple packages as a single logical package. In the
@@ -260,7 +260,7 @@ switching to the navigation metapackage folder:
     This file contains several pieces of information about the package, such as a brief
 description, its dependencies, and the package version.
 
-\section{ROS messages}
+\subsection{ROS messages}
 ROS nodes can write or read data of various types. These different types of data are
 described using a simplified message description language, also called ROS messages.
 These data type descriptions can be used to generate source code for the appropriate
@@ -342,7 +342,7 @@ This will give you an output like the preceding example's message header. We wil
 at the \texttt{rosmsg} command and how to work with custom message definitions later in this
 chapter(\cref{message}).
 
-\section{The ROS services}
+\subsection{The ROS services}
 ROS services are a type of request/response communication between ROS nodes. One node will send a request and wait until it gets a response from the other. Similar to the message definitions when using the .msg file, we must define the service definition in another file called .\texttt{srv}, which must be kept inside the \texttt{srv} subdirectory of the package.
 
 An example service description format is as follows:
@@ -360,7 +360,7 @@ An example service description format is as follows:
 The first section is the message type of the request, which is separated by ---, while the
 next section contains the message type of the response. In these examples, both Request
 and Response are strings.
-\section{the ROS computation graph level}
+\subsection{the ROS computation graph level}
 Computation in ROS is done using a network of ROS nodes. This computation network is called the computation graph. The main concepts in the computation graph are ROS \textbf{nodes}, \textbf{master}, \textbf{parameter server}, \textbf{messages}, \textbf{topics}, \textbf{services}, and \textbf{bags}. Each concept in the graph is contributed to this graph in different ways.
 
 The ROS communication-related packages, including core client libraries, such as roscpp and rospython, and the implementation of concepts, such as topics, nodes, parameters, and services, are included in a stack called ros\_comm (http://wiki.ros.org/ros\_comm).
@@ -374,7 +374,7 @@ The ros\_comm stack contains the ROS communication middleware packages, and thes
     \caption{Structure of the ROS graph layer}
 \end{figure}
 \newpage
-\subsection{Nodes}
+\subsubsection{Nodes}
 Nodes are the processes that have computation. Each ROS node is written
 using ROS client libraries. Using client library APIs, we can implement different
 ROS functionalities, such as the communication methods between nodes, which
@@ -382,17 +382,17 @@ is particularly useful when the different nodes of our robot must exchange
 information between them. One of the aims of ROS nodes is to build simple
 processes rather than a large process with all the desired functionalities. Being
 simple structures, ROS nodes are easy to debug.
-\subsection{Master}
+\subsubsection{Master}
 The ROS master provides the name registration and lookup processes for
 the rest of the nodes. Nodes will not be able to find each other, exchange messages,
 or invoke services without a ROS master. In a distributed system, we should run
 the master on one computer; then, the other remote nodes can find each other by
 communicating with this master.
-\subsection{Parameter server}
+\subsubsection{Parameter server}
 The parameter server allows you to store data in a central
 location. All the nodes can access and modify these values. The parameter server is
 part of the ROS master.
-\subsection{Topics}
+\subsubsection{Topics}
 Each message in ROS is transported using named buses called topics. When
 a node sends a message through a topic, then we can say the node is publishing a
 topic. When a node receives a message through a topic, then we can say that the
@@ -401,7 +401,7 @@ aware of each other's existence. We can even subscribe to a topic that might not
 have any publisher. In short, the production of information and its consumption are
 decoupled. Each topic has a unique name, and any node can access this topic and
 send data through it so long as they have the right message type.
-\subsection{Logging}
+\subsubsection{Logging}
 ROS provides a logging system for storing data, such as sensor data,
 which can be difficult to collect but is necessary for developing and testing robot
 algorithms. These are known as bagfiles. Bagfiles are very useful features when we're
@@ -415,7 +415,7 @@ The following graph shows how the nodes communicate with each other using topics
     \caption{Graph of communication between nodes using topics}
 \end{figure}
 The topics are represented by rectangles, while the nodes are represented by ellipses. The messages and parameters are not included in this graph. These kinds of graphs can be generated using a tool called \textbf{rqt\_graph} (http://wiki.ros.org/rqt\_graph).
-\section{ROS nodes}
+\subsection{ROS nodes}
 ROS nodes have computations using ROS client libraries such as \texttt{roscpp} and \texttt{rospy}. A robot might contain many nodes; for example, one node processes camera images, one node handles serial data from the robot, one node can be used to compute odometry, and so on.
 
 Using nodes can make the system fault-tolerant. Even if a node crashes, an entire robot system can still work. Nodes also reduce complexity and increase debug-ability compared to monolithic code because each node is handling only a single function.
@@ -436,7 +436,7 @@ There is a rosbash tool for introspecting ROS nodes. The \texttt{rosnode} comman
 some example nodes that use the roscpp client and discuss how
 ROS nodes that use functionalities such ROS topics, service, messages, and actionlib
 work.
-\section{ROS messages}\label{message}
+\subsection{ROS messages}\label{message}
 messages are simple data structures that contain field types. ROS messages support standard primitive data types and arrays of primitive types.
 
 We can access a message definition using the following method. For example, to access std\_msgs/msg/String.msg when we are using the roscpp client, we must include std\_msgs/String.h for the string message definition.
@@ -452,7 +452,7 @@ ROS has a built-in tool called \texttt{rosmmsg} for gathering information about 
     \item \texttt{rosmmsg packages [package\_1] [package\_2]}: This lists all packages that contain messages.
 \end{itemize}
 \newpage
-\section{ROS topics}
+\subsection{ROS topics}
 Using topics, the ROS communication is unidirectional. Differently, if we want a direct
 request/response communication, we need to implement ROS services.
 The ROS nodes communicate with topics using a TCP/IP-based transport known as \textbf{TCPROS}. This method is the default transport method used in ROS. Another type of communication is \textbf{UDPROS}, which has low latency and loose transport and is only suited for teleoperations.
@@ -468,7 +468,7 @@ The ROS topic tool can be used to gather information about ROS topics. Here is t
     \item \textbf{rostopic type /topic}: This will display the message type of the given topic.
 \end{itemize}
 
-\section{ROS services}
+\subsection{ROS services}
 In ROS services, one node acts as a ROS server in which the service client can request the service from the server. If the server completes the service routine, it will send the results to the service client. For example, consider a node that can provide the sum of two numbers that has been received as input while implementing this functionality through an ROS service. The other nodes of our system might request the sum of two numbers via this service. In this situation, topics are used to stream continuous data flows.
 
 The ROS service definition can be accessed by the following method. For example, \texttt{my\_package/srv/Image.srv} can be accessed by \texttt{my\_package/Image}.
@@ -487,7 +487,7 @@ Let's explain how to use the rosservice tool to gather information about the run
     \item \textbf{rosservice uri /service}: This tool will print the service's ROSRPC URI.
 \end{itemize}
 
-\section{ROS bagfiles}
+\subsection{ROS bagfiles}
 
 The \textbf{rosbag} command is used to work with rosbag files. A bag file in ROS is used for storing ROS message data that's streamed by topics. The .bag extension is used to represent a bag file.
 
@@ -510,7 +510,7 @@ Terminal:
 
 There is a GUI tool that we can use to handle how bag files are recorded and played back called \texttt{rqt\_bag}. To learn more about \texttt{rqt\_bag}, go to \url{https://wiki.ros.org/rqt_bag}.
 
-\section{The ROS master}
+\subsection{The ROS master}
 The ROS master is much like a DNS server, in that it associates unique names and IDs to the ROS elements that are active in our system. When any node starts in the ROS system, it will start looking for the ROS master and register the name of the node in it. So, the ROS master has the details of all the nodes currently running on the ROS system. When any of the node's details change, it will generate a callback and update the node with the latest details. These node details are useful for connecting each node.
 
 When a node starts publishing to a topic, the node will give the details of the topic, such as its name and data type, to the ROS master. The ROS master will check whether any other nodes are subscribed to the same topic. If any nodes are subscribed to the same topic, the ROS master will share the node details of the publisher to the subscriber node. After getting the node details, these two nodes will be connected. After connecting to the two nodes, the ROS master has no role in controlling them. We might be able to stop either the publisher node or the subscriber node according to our requirements. If we stop any nodes, they will check in with the ROS master once again. This same method is used for the ROS services.
@@ -535,7 +535,7 @@ node is subscribing to the same topic. If no nodes are subscribing to the same t
 time, both nodes will remain unconnected. If the publisher and subscriber nodes run at
 the same time, the ROS master will exchange the details of the publisher to the subscriber,
 and they will connect and exchange data through ROS topics.
-\section{ROS parameter}
+\subsection{ROS parameter}
 When programming a robot, we might have to define robot parameters to tune
 our control algorithm, such as the robot controller gains P, I, and D of a standard
 proportional integral derivative controller. When the number of parameters increases,
@@ -578,7 +578,7 @@ The \texttt{rosparam} tool is used to get and set the ROS parameter from the com
 These parameters can be changed dynamically when you're executing a node that uses these parameters by using the \textbf{dynamic\_reconfigure} package (\url{http://wiki.ros.org/dynamic_reconfigure}).
 
 \newpage
-\section{ROS distributions}
+\subsection{ROS distributions}
 ROS updates are released with new ROS distributions. A new distribution of ROS is composed of an updated version of its core software and a set of new/updated ROS packages. ROS follows the same release cycle as the Ubuntu Linux distribution: a new version of ROS is released every 6 months. Typically, for each Ubuntu LTS version, an \textbf{LTS} version of ROS is released. \textbf{Long Term Support (LTS)} and means that the released software will be maintained for a long time (5 years in the case of ROS and Ubuntu).
 
 \begin{table}[h!]
@@ -625,7 +625,7 @@ ROS updates are released with new ROS distributions. A new distribution of ROS i
 \caption{ROS Distributions Table}
 \end{table}
 \newpage
-\section{Running the ROS master and the ROS parameter
+\subsection{Running the ROS master and the ROS parameter
 server}
 Before running any ROS nodes, we should start the ROS master and the ROS parameter server. We can start the ROS master and the ROS parameter server by using a single command called \textbf{roscore}, which will start the following programs:
 \begin{itemize}
@@ -681,7 +681,7 @@ The \texttt{rosversion} and \texttt{rosdistro} parameters store the output of th
 
 \texttt{rosmaster} and the parameter server are executed inside \texttt{roslaunch} modules via the \texttt{ROS\_MASTER\_URI} address. This happens inside the \texttt{roslaunch} Python module.\\ \texttt{ROS\_MASTER\_URI} is a combination of the IP address and port that \texttt{rosmaster} is going to listen to. The port number can be changed according to the given port number in the \texttt{roscore} command.
 
-\subsection{Checking the roscore command's output}
+\subsubsection{Checking the roscore command's output}
 Let's check out the ROS topics and ROS parameters that are created after running roscore. The following command will list the active topics in the Terminal:
 
 \begin{codebox}[]{Listing Active Topics After Running the roscore Command}    

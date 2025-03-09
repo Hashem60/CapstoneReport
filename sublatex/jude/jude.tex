@@ -30,7 +30,7 @@ implementation of the robot\textquotesingle s control system, QR code
 recognition, navigation algorithms, and communication between ROS and
 the web interface.
 
-\section{Problem Formulation}
+\subsection{Problem Formulation}
 
 The key engineering challenges we addressed through programming were:
 
@@ -49,9 +49,9 @@ The key engineering challenges we addressed through programming were:
   web-based user interface.
 \end{enumerate}
 
-\section{Engineering Problem-Solving}
+\subsection{Engineering Problem-Solving}
 
-\subsection{Navigation System (Line Following and junction detection Algorithm)}
+\subsubsection{Navigation System (Line Following and junction detection Algorithm)}
 
 The robot needed to detect and follow a black line accurately. To
 achieve this, I explored two potential solutions:
@@ -80,7 +80,7 @@ in real-world applications. I implemented an algorithm using
   movement accordingly.
 \end{itemize}
 
-\subsection{Load and Unload Point Detection (QR Code Scanning)}
+\subsubsection{Load and Unload Point Detection (QR Code Scanning)}
 
 To recognize loading and unloading points, I implemented a \emph{QR code
 detection system} using \emph{QReader library} for detecting and
@@ -89,7 +89,7 @@ decoding QR codes.
 The system was designed to extract location data from QR codes and send
 it to the navigation system to adjust the robot's path.
 
-\subsection{Communication Between ROS and Web Interface}
+\subsubsection{Communication Between ROS and Web Interface}
 
 Since ROS does not natively communicate with web technologies, I
 implemented a \emph{real-time communication system} using a
@@ -100,7 +100,7 @@ interface.
 This setup allowed users to monitor the robot's status and send commands
 through a web-based interface built with \emph{React.js.}
 
-\subsection{Application of Theoretical and Applied Knowledge}
+\subsubsection{Application of Theoretical and Applied Knowledge}
 The work applied key theoretical and practical knowledge across multiple
 domains. Computer vision and image processing techniques were utilized
 for line detection and QR code recognition, ensuring accurate navigation
@@ -118,7 +118,7 @@ programming solutions for the industrial robot, ensuring accurate
 navigation, QR code recognition, and seamless communication between the
 robot and the web interface.
 
-\section{User Interface}
+\subsection{User Interface}
 The UI is structured into modular React components, each dedicated to
 displaying specific robot-related information. These components
 dynamically consume state from the \emph{Zustand core}, ensuring
@@ -139,7 +139,7 @@ progress. Interactive gear control is featured, with process-state
 validation to prevent gear changes during active tasks, ensuring safe
 and efficient operation throughout the system.
 
-\subsection{Design Hierarchy}
+\subsubsection{Design Hierarchy}
 
 The application follows a structured GUI hierarchy where the \emph{App}
 component serves as the central entry point, interacting with a
@@ -161,7 +161,7 @@ visually represented in \cref{judFig1} below.
     \label{judFig1}
     \end{figure}
     
-    \subsection{Output}
+    \subsubsection{Output}
     The graphical user interface of the robot, segmented into several
     functional areas for ease of operation:
     
@@ -248,9 +248,9 @@ visually represented in \cref{judFig1} below.
     \label{judFig4}
     \end{figure}
     
-    \subsection{Codes and background implementation}
+    \subsubsection{Codes and background implementation}
     
-    \subsubsection{Core Store Implementation -- The Most Important Element}
+    \paragraph{Core Store Implementation -- The Most Important Element}
 
     a centralized state management system using \emph{Zustand} to handle
 application state, WebSocket communication, and real-time data updates.
@@ -417,7 +417,7 @@ foundation for task management, mapping, and robot control, ensuring a
 smooth and intuitive user experience while maintaining high performance
 and reliability.
 \newpage
-\subsubsection{App Component}
+\paragraph{App Component}
 
 the root App component serves as the entry point for the application.
 
@@ -474,7 +474,7 @@ export default App;
 % \label{judFig9}
 \end{codebox}
 
-\subsubsection{MainLayout Component}
+\paragraph{MainLayout Component}
 
 This component manages the main content area and routing logic. See
 \cref{judFig10} for implementation.
@@ -531,7 +531,7 @@ export default MainLayout;
 % \label{judFig10}
 \end{codebox}
 
-\subsubsection{Remote Component}
+\paragraph{Remote Component}
 
 Remote component serves as the central interface for remote control
 functionality.
@@ -602,7 +602,7 @@ export default Remote;
 \end{codebox}
 
 
-\subsubsection{Camera Component}
+\paragraph{Camera Component}
 
 The Camera component displays live camera feeds and enable camera
 switching functionality.
@@ -650,7 +650,7 @@ useEffect(function(){
 % \label{judFig12}
 \end{codebox}
 
-\subsubsection{Map Component}
+\paragraph{Map Component}
 
 This component displays and interact with a dynamic map interface.
 included integrating a base64-encoded map image (\emph{mapData}) to
@@ -707,7 +707,7 @@ intuitive user experience, styled with CSS for a modern look.
 
 
 
-\subsubsection{Task Component}
+\paragraph{Task Component}
 
 the Task component manages task creation and submission for the
 application. It is responsible for managing task creation and submission
@@ -762,7 +762,7 @@ const set = () => {
 
 
 
-\section{Robot Control Framework}
+\subsection{Robot Control Framework}
 The Robot Operating System (ROS) serves as the robot\textquotesingle s
 main controller, managing all operations seamlessly at all times and
 facilitating communication with the GUI.
@@ -780,9 +780,9 @@ facilitating communication with the GUI.
 \caption{general architecture}
 \end{figure}
 
-\subsection{Nodes}
+\subsubsection{Nodes}
 
-\subsubsection{ie\_API\_Server}
+\paragraph{ie\_API\_Server}
 
 This node serves as a critical bridge between the ROS (Robot Operating
 System) ecosystem and a frontend application, leveraging
@@ -943,7 +943,7 @@ async def mappingOutput(self, output):
 \end{minted}
 \end{codebox}
 
-\subsubsection{movementController}
+\paragraph{movementController}
 
 This node manages the robot's movement in both \emph{manual} and
 \emph{autonomous} modes. It processes control commands, handles gear
@@ -1196,7 +1196,7 @@ and angular velocity components. Publishes the calculated speed to the
 
 
 
-\subsubsection{CameraController}
+\paragraph{CameraController}
 
 This node functions as a~\emph{camera feed manager}, playing a crucial
 role in subscribing to raw camera feeds, processing them, and publishing
@@ -1303,7 +1303,7 @@ class CameraController:
 % \captionof{figure}{CameraProcess node}\label{judFig22}
 
 
-\subsubsection{map\_process}
+\paragraph{map\_process}
 
 This node is responsible for processing laser scan data, robot position,
 and QR code positions to generate and publish a dynamic map for
@@ -1406,9 +1406,9 @@ and visualization tasks in the ROS ecosystem.
 \end{minted}
 % \captionof{figure}{Function Drawing Map}\label{judeFig24}
 \end{codebox}
-\subsection{Classes}
+\subsubsection{Classes}
 
-\subsubsection{Task}
+\paragraph{Task}
 
 The Task class is a base class that encapsulates common functionality
 for robot tasks, such as: Robot \emph{control} (movement, turning,
@@ -1625,7 +1625,7 @@ This integration ensures efficient data flow and real-time control,
 enabling the robot to perform complex tasks with precision and
 reliability.
 
-\paragraph{Navigation system}
+\subparagraph{Navigation system}
 
 \emph{The navigation system} is composed of three key functions:
 \emph{\_adjust\_orientation}, \emph{check\_side\_pixels}, and
@@ -1825,7 +1825,7 @@ ensures the robot can navigate complex environments with precision and
 reliability, adapting its behavior based on the detected line and
 junction configurations.
 
-\paragraph{Interaction Between Methods:}
+\subparagraph{Interaction Between Methods:}
 Line Following: The \emph{\_adjust\_orientation} method uses
 \emph{check\_side\_pixels} and \emph{check\_straight\_pixels} to
 determine if the robot is at a junction or should continue following the
@@ -1850,7 +1850,7 @@ navigate junctions and reach goal zones.
 \label{judeFig31}
 \end{figure}
 \newpage
-\paragraph{Example Scenario}
+\subparagraph{Example Scenario}
 
 \begin{itemize}
 \item
@@ -1898,7 +1898,7 @@ navigate junctions and reach goal zones.
 
 \newpage
 
-\paragraph{Essentials parameters}
+\subparagraph{Essentials parameters}
 
 The parameters (\emph{self.param, self.\_black\_pixels,
 self.\_sideBlackPixels, self.\_threshold, self.\_middle\_width,
@@ -1952,7 +1952,7 @@ Determined through testing to balance safety and efficiency. A smaller
 value could risk collisions, while a larger value could cause
 unnecessary detours.
 
-\paragraph{How These Values Were Determined:}
+\subparagraph{How These Values Were Determined:}
 
 \begin{itemize}
 \item
@@ -1974,7 +1974,7 @@ unnecessary detours.
   in longer detours.
 \end{itemize}
 
-\paragraph{Child Classes: Mapping and Carrying}
+\subparagraph{Child Classes: Mapping and Carrying}
 
 The child classes (Mapping and Carrying) will extend the Task class to
 implement task-specific logic.
@@ -1984,7 +1984,7 @@ codes, and building a map.
 
 \emph{Carrying}: Focuses on transporting items between specified zones.
 
-\subsubsection{Mapping}
+\paragraph{Mapping}
 
 The~\emph{Mapping class}~is designed to explore the environment, detect
 QR codes, and store their positions in a database. It inherits from
@@ -2041,7 +2041,7 @@ detailed information for debugging and maintenance. Additionally, the
 class ensures that the database connection is properly closed,
 preventing resource leaks and ensuring data integrity.
 
-\paragraph{How It Works}
+\subparagraph{How It Works}
 
 The~\emph{Mapping class}~operates through a well-defined workflow that
 ensures systematic environment exploration, QR code detection, and data
@@ -2163,7 +2163,7 @@ is called to wrap up the task. This method performs several key actions:
   next task.
 \end{enumerate}
 
-\paragraph{Impact on the System}
+\subparagraph{Impact on the System}
 
 The Mapping class enables the robot to \emph{autonomously explore its
 environment}, \emph{detect QR codes}, and \emph{store their positions}
@@ -2173,7 +2173,7 @@ control and obstacle avoidance, demonstrating the power of
 ensures \emph{persistent storage} of mapping data, enabling other tasks
 (e.g., carrying) to use this information.
 
-\subsubsection{Carrying}
+\paragraph{Carrying}
 
 The~\emph{Carrying class}~is a specialized child class of the~\emph{Task
 class}, designed to handle the transportation of items between specified
@@ -2184,7 +2184,7 @@ the Task class---such as robot control, obstacle avoidance, and line
 following---the Carrying class focuses on implementing logic tailored to
 item transportation tasks.
 
-\paragraph{Key Features and Functionality}
+\subparagraph{Key Features and Functionality}
 
 \emph{Task Initialization:}\\
 The Carrying class initializes by accepting a list of tasks (params)
@@ -2224,7 +2224,7 @@ task is marked as complete, and a signal (\emph{fsignal}) is emitted to
 notify the system. This ensures that other components are aware of the
 task's completion and can take appropriate action.
 
-\paragraph{How It Works}
+\subparagraph{How It Works}
 \emph{Initialization:}\\
 The Carrying class initializes by calling the parent class's constructor
 and setting up the task parameters. It prepares the robot for the
@@ -2408,7 +2408,7 @@ the~\emph{fsignal}~is emitted to notify the system. The parent class's
 cleanup methods are called to ensure resources are released and the
 system is ready for the next task.
 
-\paragraph{Interaction Between Methods}
+\subparagraph{Interaction Between Methods}
 
 \begin{itemize}
 \item
@@ -2432,7 +2432,7 @@ system is ready for the next task.
   \end{itemize}
 \end{itemize}
 
-\paragraph{Example Scenario}
+\subparagraph{Example Scenario}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2453,7 +2453,7 @@ system is ready for the next task.
   goal zone.
 \end{enumerate}
 \newpage
-\paragraph{Impact on the System}
+\subparagraph{Impact on the System}
 
 \begin{itemize}
 \item
