@@ -1,7 +1,7 @@
 \documentclass[../../main]{subfiles}
 
 \begin{document}
-
+\section{Electrical design}
 \subsection{Electrical System Design}
 
 At the core of an AGV’s electrical system are power management, motor control, 
@@ -352,21 +352,28 @@ components require the same voltage and draw significant current, multiple
 LM2596 regulators are placed in parallel to increase the current supply 
 capacity(Table\ref{LM2596 Voltage Regulator Specifications}).
 
-\begin{figure} 
+\begin{figure}[p] % [p] forces the figure to be placed on a dedicated page
     \centering
-    \includegraphics[width=0.7\textheight]{fig/lm2576.pdf}
-    \caption{ Fixed Output Voltage Version Typical Application Diagram}
-    \label{LM2596 Fixed Output Voltage} 
+    \includegraphics[width=\textwidth]{fig/lm2576.pdf}
+    \caption{Fixed Output Voltage Version Typical Application Diagram}
+    \label{fig:LM2596_Fixed_Output_Voltage} 
 \end{figure}
 
-\begin{figure} 
+\begin{figure}[p]
     \centering
-    \includegraphics[width=0.7\textheight]{fig/lm2576_module_adj.pdf}
+    \includegraphics[width=\textwidth]{fig/lm2576_module_adj.pdf}
     \caption{1.2-V to 55-V Adjustable 3-A Power Supply With Low Output Ripple}
-    \label{LM2596 Adjustable Output Voltage} 
+    \label{fig:LM2596_Adjustable_Output_Voltage} 
 \end{figure}
 
-\begin{figure}[H]
+\clearpage % Ensures the figures appear together on a new page
+
+
+
+\newpage
+
+
+\begin{figure}[h!]
     \centering
 \includegraphics[width=0.5\textwidth]{fig/voltage_regulator.jpg}
 \caption{LM2596 Voltage Regulator}
@@ -439,30 +446,6 @@ used to step up the voltage to the necessary levels.
     \label{tab:boost-converter-specs} % Label for referencing
 \end{table}
     
-% \begin{table}[h!]
-%     \centering
-%     \begin{tabular}{|>{\bfseries}l|p{10cm}|} % Two columns with vertical lines
-%     \hline
-%     Features: & 
-%     Flexible DC input voltage range from \texttt{10V} to \texttt{60V}; 
-%     Adjustable output voltage from \texttt{12V} to \texttt{90V} for versatile applications; 
-%     Maximum output current of \texttt{20A} for reliable power supply; 
-%     Built with high-power \texttt{100V/210A} low resistance MOS for efficiency; 
-%     Reverse input protection with MOS for added safety; 
-%     Low voltage protection to prevent damage from over-discharge; 
-%     Thickened heat sink and intelligent cooling fan for optimal heat dissipation. \\ \hline
-%     Specifications: & 
-%     Power: \texttt{1500W}; 
-%     Current: \texttt{30A}; 
-%     Input Voltage Range: \texttt{10V - 60V}; 
-%     Output Voltage Range: \texttt{12V - 90V}; 
-%     Maximum Output Current: \texttt{20A}. \\ \hline
-%     Package Includes: & 
-%     \texttt{ 1 × Boost Converter Step-up Power Supply Module}. \\ \hline
-%     \end{tabular}
-%     \caption{DC-DC Constant Current Boost Converter Specifications and Features}
-%     \label{Stepper motor booster specifications} % Label for referencing
-% \end{table}
 
 \newpage
 \begin{figure}[H]
@@ -495,28 +478,7 @@ used to step up the voltage to the necessary levels.
     \label{Linear actuator booster specifications} % Label for referencing
     \end{table}
 
-% \begin{table}[htbp]
-%     \centering
-%     \begin{tabular}{|>{\bfseries}l|p{10cm}|} % Two columns with vertical lines
-%     \hline
-%     Features: & 
-%     Input Voltage: \texttt{5Vdc ~ 30Vdc}; 
-%     Buck-Boost (automatic boost/lower); 
-%     Output Voltage: \texttt{1.25Vdc ~ 30Vdc} (Adjustable); 
-%     Output Current: \texttt{10A (MAX)}. \\ \hline
-%     Specifications: & 
-%     Output Power: \texttt{150W}; 
-%     Conversion Efficiency: \texttt{90\% Max}; 
-%     Ripple and Noise: \texttt{200mVp-p}; 
-%     No-Load Current: \texttt{6mA typical}. \\ \hline
-%     Performance Metrics: & 
-%     Voltage Regulation: \texttt{± 0.5\%}; 
-%     Load Regulation: \texttt{± 0.5\%}; 
-%     Dynamic Response Rate: \texttt{300uS}. \\ \hline
-%     \end{tabular}
-%     \caption{Buck-Boost Converter Specifications}
-%     \label{Linear actuator booster specifications} % Label for referencing
-%     \end{table}
+\newpage
 
 The power distribution circuits are designed to efficiently deliver power to all 
 subsystems, including motors, sensors, controllers, and communication 

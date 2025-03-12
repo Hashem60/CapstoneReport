@@ -1,6 +1,6 @@
 \documentclass[../../main]{subfiles}
 \begin{document}
-\subsection{ROS}
+\section{Ros and Simulation}
 The Robot Operating System (ROS) is a set of software libraries and tools that help you build robot applications. 
 From drivers to state-of-the-art algorithms, and with powerful developer tools, \cite{ros_website}
 To effectively approach ROS programming, it's essential to first understand the foundational concepts of ROS and its package management system. 
@@ -677,7 +677,7 @@ When the \texttt{roscore} command is executed, initially, the command checks the
 In the \texttt{roscore.xml} file, we can see that the ROS parameters and nodes are encapsulated in a group XML tag with a \texttt{/} namespace. The group XML tag indicates that all the nodes inside this tag have the same settings.
 
 
-The \texttt{rosversion} and \texttt{rosdistro} parameters store the output of the \texttt{rosversion roslaunch} and \texttt{rosversion -d} commands using the \texttt{command} tag, which is a part of the ROS param tag. The \texttt{command} tag will execute the command mentioned in it and store the output of the command in these two parameters.
+The \texttt{rosversion} and \texttt{rosdistro} parameters store the output of the \\ \texttt{rosversion roslaunch} and \texttt{rosversion -d} commands using the \texttt{command} tag, which is a part of the ROS param tag. The \texttt{command} tag will execute the command mentioned in it and store the output of the command in these two parameters.
 
 \texttt{rosmaster} and the parameter server are executed inside \texttt{roslaunch} modules via the \texttt{ROS\_MASTER\_URI} address. This happens inside the \texttt{roslaunch} Python module.\\ \texttt{ROS\_MASTER\_URI} is a combination of the IP address and port that \texttt{rosmaster} is going to listen to. The port number can be changed according to the given port number in the \texttt{roscore} command.
 

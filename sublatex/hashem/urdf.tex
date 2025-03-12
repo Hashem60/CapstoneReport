@@ -134,6 +134,7 @@ following code, we include these parameters as part of the base\_link:
 (such as motors, servos, or other mechanical devices that provide motion). 
 It defines how power or motion is transferred from an actuator to a joint in the robot's structure.
 The <transmission> tag usually works with <joint> and <actuator> tags to specify how an actuator controls the motion of the robot's joints:
+
 \begin{codebox}[]{Modeling Joint-Actuator in URDF with "transmission"}
   \begin{minted}{xml}
     <robot name="example_robot">
@@ -166,7 +167,7 @@ The <transmission> tag usually works with <joint> and <actuator> tags to specify
   \end{codebox}
 \lstinline!<joint>!: The joint joint\_1 connects the base\_link to link\_1 and allows rotational movement. 
 It has limits on effort and velocity.
-\lstinline!<transmission>!: The transmission trans\_1 links joint\_1 to the actuator (motor motor\_1). It uses the SimpleTransmission type.
+\lstinline!<transmission>!: The transmission trans\_1 links joint\_1 to the actuator (motor motor\_1). It uses the SimpleTransmission type.\\
 \lstinline!<mechanicalReduction>!: The actuator has a gear reduction of 100:1, meaning for every 100 rotations of the motor, the joint will rotate once.
 \lstinline!<actuator>!: This specifies the motor (motor\_1) that will control joint\_1.
 \lstinline!<gazebo>!: This block includes a Gazebo plugin (libgazebo\_motor\_plugin.so) to simulate the motor’s behavior in a Gazebo simulation environment, with specific motor properties like motor\_type and max\_power.

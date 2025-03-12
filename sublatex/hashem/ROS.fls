@@ -1,0 +1,10 @@
+PWD c:/Users/me/Documents/CapstoneReport
+INPUT c:/texlive/2024/texmf.cnf
+INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT c:/Users/me/Documents/CapstoneReport/sublatex/hashem/ROS.tex
+OUTPUT sublatex/hashem/ROS.log
+INPUT c:/texlive/2024/texmf-dist/tex/latex/subfiles/subfiles.cls
+INPUT c:/texlive/2024/texmf-dist/tex/latex/subfiles/subfiles.cls
+INPUT c:/texlive/2024/texmf-dist/tex/latex/import/import.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/import/import.sty

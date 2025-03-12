@@ -1870,7 +1870,7 @@ navigate junctions and reach goal zones.
   the turn position), and turn to the choosen direction (see \cref{judeFig32}
   The robot turns to the chosen direction).
 \item
-  Navigating a Complex Path: The robot uses a combination \emph{of
+  Navigating a Complex Path: The robot uses a combination of \\ \emph{
   check\_side\_pixels, check\_straight\_pixels,} and
   \emph{junction\_decision} to navigate through multiple junctions and
   reach its goal.
@@ -1900,7 +1900,7 @@ navigate junctions and reach goal zones.
 
 \subparagraph{Essentials parameters}
 
-The parameters (\emph{self.param, self.\_black\_pixels,
+The parameters \\ (\emph{self.param, self.\_black\_pixels,
 self.\_sideBlackPixels, self.\_threshold, self.\_middle\_width,
 self.distanceToQr, and obstacle\_distance\_threshold}) are critical to
 the functionality of the Task class. These values were carefully tuned
@@ -1970,7 +1970,7 @@ unnecessary detours.
   and different obstacle configurations) to ensure robustness.
 \item
   Trade-Offs: Some parameters required trade-offs. For example: A larger
-  \emph{obstacle\_distance\_threshold} increases safety but may result
+  \\ \emph{obstacle\_distance\_threshold} increases safety but may result
   in longer detours.
 \end{itemize}
 
@@ -2072,7 +2072,7 @@ record new QR codes.
 
 QR code detection is handled by the~\emph{\_check\_qr}~method. When a QR
 code is detected, the method processes it by converting its position to
-global coordinates using the~\emph{\_calculate\_distance}~function. This
+global coordinates using the \\ \emph{\_calculate\_distance}~function. This
 ensures that the QR code's location is accurately recorded relative to
 the robot's environment. The detected QR code and its position are then
 stored in the~\emph{self.qrcodes}~dictionary. To prevent duplicate
@@ -2285,7 +2285,7 @@ whether it corresponds to a~\emph{goal zone}~or an~\emph{intersection}:
   unloading. This marks a key milestone in the task.
 \item
   If the QR code is an~\emph{intersection}, the robot uses
-  the~\emph{\_chooseSide~}or~\emph{\_chooseSideToGo}~method to determine
+  the~\emph{\_chooseSide~}or~\emph{\_chooseSideToGo} method to determine
   the best direction to reach the goal zone. These methods calculate the
   optimal path based on the robot's current position, the goal zone's
   location, and the available routes.
