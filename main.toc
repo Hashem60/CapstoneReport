@@ -312,15 +312,15 @@
 \contentsline {subsubsection}{\numberline {4.4.5.2}dynamic-objects-and-movements}{199}{subsubsection.4.4.5.2}%
 \contentsline {subsection}{\numberline {4.4.6}simulating-sensor-data}{200}{subsection.4.4.6}%
 \contentsline {subsubsection}{\numberline {4.4.6.1}a.-sensor-data-processing-load}{200}{subsubsection.4.4.6.1}%
-\contentsline {subsubsection}{\numberline {4.4.6.2}real-time-sensor-fusion}{200}{subsubsection.4.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.4.6.2}Real-time-sensor-fusion}{200}{subsubsection.4.4.6.2}%
 \contentsline {subsection}{\numberline {4.4.7}algorithmic-constraints}{200}{subsection.4.4.7}%
-\contentsline {subsubsection}{\numberline {4.4.7.1}a.-computational-cost-of-slam}{200}{subsubsection.4.4.7.1}%
-\contentsline {subsubsection}{\numberline {4.4.7.2}b.-path-planning-and-decision-making}{201}{subsubsection.4.4.7.2}%
-\contentsline {subsection}{\numberline {4.4.8}simulation-Software-limitations}{201}{subsection.4.4.8}%
-\contentsline {subsubsection}{\numberline {4.4.8.1}simulation-engine-efficiency}{201}{subsubsection.4.4.8.1}%
-\contentsline {subsubsection}{\numberline {4.4.8.2}parallelization-and-multithreading}{201}{subsubsection.4.4.8.2}%
-\contentsline {subsection}{\numberline {4.4.9}simulating-Real-Time-Constraints}{202}{subsection.4.4.9}%
-\contentsline {subsubsection}{\numberline {4.4.9.1}real-time-control-vs.-simulation-speed}{202}{subsubsection.4.4.9.1}%
+\contentsline {subsubsection}{\numberline {4.4.7.1}Computational-cost-of-slam}{200}{subsubsection.4.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.4.7.2}path planning and decision making}{201}{subsubsection.4.4.7.2}%
+\contentsline {subsection}{\numberline {4.4.8}Simulation Software limitations}{201}{subsection.4.4.8}%
+\contentsline {subsubsection}{\numberline {4.4.8.1}Simulation Engine Efficiency}{201}{subsubsection.4.4.8.1}%
+\contentsline {subsubsection}{\numberline {4.4.8.2}Parallelization And Multithreading}{201}{subsubsection.4.4.8.2}%
+\contentsline {subsection}{\numberline {4.4.9}Simulating-Real-Time-Constraints}{202}{subsection.4.4.9}%
+\contentsline {subsubsection}{\numberline {4.4.9.1}Real Time Control vs. Simulation Speed}{202}{subsubsection.4.4.9.1}%
 \contentsline {subsection}{\numberline {4.4.10}Problem Formulation}{203}{subsection.4.4.10}%
 \contentsline {subsection}{\numberline {4.4.11}Engineering Problem-Solving}{203}{subsection.4.4.11}%
 \contentsline {subsubsection}{\numberline {4.4.11.1}Navigation System (Line Following and junction detection Algorithm)}{203}{subsubsection.4.4.11.1}%
