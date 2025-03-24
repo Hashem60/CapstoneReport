@@ -268,9 +268,9 @@
 \contentsline {subsubsection}{\numberline {4.3.16.1}Checking the roscore command's output}{146}{subsubsection.4.3.16.1}%
 \contentsline {subsection}{\numberline {4.3.17}robot modeling using URDF}{148}{subsection.4.3.17}%
 \contentsline {subsubsection}{\numberline {4.3.17.1}link:}{148}{subsubsection.4.3.17.1}%
-\contentsline {subsubsection}{\numberline {4.3.17.2}joint:}{149}{subsubsection.4.3.17.2}%
-\contentsline {subsubsection}{\numberline {4.3.17.3}robot:}{150}{subsubsection.4.3.17.3}%
-\contentsline {subsubsection}{\numberline {4.3.17.4}gazebo:}{151}{subsubsection.4.3.17.4}%
+\contentsline {subsubsection}{\numberline {4.3.17.2}Joint:}{149}{subsubsection.4.3.17.2}%
+\contentsline {subsubsection}{\numberline {4.3.17.3}Robot:}{150}{subsubsection.4.3.17.3}%
+\contentsline {subsubsection}{\numberline {4.3.17.4}Gazebo:}{151}{subsubsection.4.3.17.4}%
 \contentsline {subsubsection}{\numberline {4.3.17.5}Adding physical and collision properties to a URDF model}{151}{subsubsection.4.3.17.5}%
 \contentsline {subsubsection}{\numberline {4.3.17.6}Transmission:}{152}{subsubsection.4.3.17.6}%
 \contentsline {subsection}{\numberline {4.3.18}Creating URDF model}{154}{subsection.4.3.18}%
@@ -278,8 +278,8 @@
 \contentsline {subsubsection}{\numberline {4.3.18.2}Using properties}{155}{subsubsection.4.3.18.2}%
 \contentsline {subsubsection}{\numberline {4.3.18.3}math expression in xacro}{156}{subsubsection.4.3.18.3}%
 \contentsline {subsubsection}{\numberline {4.3.18.4}xacro macros}{156}{subsubsection.4.3.18.4}%
-\contentsline {subsubsection}{\numberline {4.3.18.5}Including other xacro files}{157}{subsubsection.4.3.18.5}%
-\contentsline {subsection}{\numberline {4.3.19}Visualizing the 3D robot model in RViz}{158}{subsection.4.3.19}%
+\contentsline {subsubsection}{\numberline {4.3.18.5}Including Other Xacro Files}{157}{subsubsection.4.3.18.5}%
+\contentsline {subsection}{\numberline {4.3.19}Visualizing the 3D Robot Model in RViz}{158}{subsection.4.3.19}%
 \contentsline {subsubsection}{\numberline {4.3.19.1}Interacting with joints in Rviz}{160}{subsubsection.4.3.19.1}%
 \contentsline {subsection}{\numberline {4.3.20}Simulation Environment}{162}{subsection.4.3.20}%
 \contentsline {subsubsection}{\numberline {4.3.20.1}Introduction to the Simulation Environment}{162}{subsubsection.4.3.20.1}%

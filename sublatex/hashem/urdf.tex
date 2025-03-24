@@ -36,7 +36,7 @@ the real link:
 \caption{A visualization of the URDF link\cite{joseph2018mastering}}
 \end{figure}
 
-\subsubsection{joint:}
+\subsubsection{Joint:}
 The \emph{joint} tag represents a robot joint. We can specify the kinematics and
 dynamics of the joint and set the limits of the joint movement and its velocity. The
 joint tag supports the different types of joints, such as \emph{revolute, continuous,
@@ -62,7 +62,7 @@ multiple children at the same time. The following is an illustration of a joint 
     \caption{A visualization of the URDF joint\cite{joseph2018mastering}}
 \end{figure}
 
-\subsubsection{robot:}
+\subsubsection{Robot:}
 This tag encapsulates the entire robot model that can be represented using
 URDF. Inside the robot tag, we can define the name of the robot, the links, and the
 joints of the robot.
@@ -85,7 +85,7 @@ robot model:
     \caption{A visualization of a robot model with joints and links\cite{joseph2018mastering}}
 \end{figure}
 
-\subsubsection{gazebo:}
+\subsubsection{Gazebo:}
 This tag is used when we include the simulation parameters of the
 Gazebo simulator inside the URDF. We can use this tag to include gazebo plugins,
 gazebo material properties, and more. The following shows an example that uses
@@ -336,7 +336,7 @@ Here(\cref{xacro macro}), the macro is named box\_inertia, and its parameters ar
 \end{minted}
   \end{codebox}
 
-\subsubsection{Including other xacro files}
+\subsubsection{Including Other Xacro Files}
 We can extend the capabilities of the robot xacro by including the xacro definition of
 sensors using the xacro:include tag. The following code snippet shows how to include
 a sensor definition in the robot xacro:
@@ -347,7 +347,7 @@ a sensor definition in the robot xacro:
   \end{codebox}
 Here, we include a xacro file to call the definitions and the constants. 
 \newpage
-\subsection{Visualizing the 3D robot model in RViz}
+\subsection{Visualizing the 3D Robot Model in RViz}
 After designing the URDF, we can view it on RViz.
 We can create a launch file and put the following code into the launch folder:
 \begin{codebox}[label=Rviz launch]{Launch File for Visualizing a 3D Robot Model in RViz}
