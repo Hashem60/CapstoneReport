@@ -1,0 +1,24 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+  \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{update\PYGZus{}map\PYGZus{}from\PYGZus{}scan}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{robot\PYGZus{}position} \PYG{o+ow}{is} \PYG{k+kc}{None} \PYG{o+ow}{or} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{robot\PYGZus{}rotation} \PYG{o+ow}{is} \PYG{k+kc}{None}\PYG{p}{:}
+       \PYG{k}{return}
+    \PYG{n}{yaw} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{get\PYGZus{}yaw\PYGZus{}from\PYGZus{}quaternion}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{robot\PYGZus{}rotation}\PYG{p}{)}
+
+    \PYG{k}{for} \PYG{n}{i}\PYG{p}{,} \PYG{n}{range\PYGZus{}val} \PYG{o+ow}{in} \PYG{n+nb}{enumerate}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{latest\PYGZus{}scan}\PYG{o}{.}\PYG{n}{ranges}\PYG{p}{)}\PYG{p}{:}
+        \PYG{k}{if} \PYG{n}{range\PYGZus{}val} \PYG{o}{\PYGZlt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{latest\PYGZus{}scan}\PYG{o}{.}\PYG{n}{range\PYGZus{}min} \PYG{o+ow}{or} \PYG{n}{range\PYGZus{}val} \PYG{o}{\PYGZgt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{latest\PYGZus{}scan}\PYG{o}{.}\PYG{n}{range\PYGZus{}max}\PYG{p}{:}
+            \PYG{k}{continue}  \PYG{c+c1}{\PYGZsh{} Skip invalid range values}
+
+  \PYG{n}{angle}\PYG{o}{=}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{latest\PYGZus{}scan}\PYG{o}{.}\PYG{n}{angle\PYGZus{}min}\PYG{o}{+}\PYG{n}{i}\PYG{o}{*} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{latest\PYGZus{}scan}\PYG{o}{.}\PYG{n}{angle\PYGZus{}increment}
+
+        \PYG{n}{endpoint\PYGZus{}x} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{robot\PYGZus{}position}\PYG{o}{.}\PYG{n}{x} \PYG{o}{+} \PYG{n}{range\PYGZus{}val} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{n}{yaw} \PYG{o}{+} \PYG{n}{angle}\PYG{p}{)}
+        \PYG{n}{endpoint\PYGZus{}y} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{robot\PYGZus{}position}\PYG{o}{.}\PYG{n}{y} \PYG{o}{+} \PYG{n}{range\PYGZus{}val} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{yaw} \PYG{o}{+} \PYG{n}{angle}\PYG{p}{)}
+
+        \PYG{n}{endpoint\PYGZus{}x\PYGZus{}pixel} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{p}{(}\PYG{n}{endpoint\PYGZus{}x} \PYG{o}{\PYGZhy{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{map\PYGZus{}origin\PYGZus{}x}\PYG{p}{)} \PYG{o}{/} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{map\PYGZus{}resolution}\PYG{p}{)}
+
+        \PYG{n}{endpoint\PYGZus{}y\PYGZus{}pixel} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{p}{(}\PYG{n}{endpoint\PYGZus{}y} \PYG{o}{\PYGZhy{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{map\PYGZus{}origin\PYGZus{}y}\PYG{p}{)} \PYG{o}{/} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{map\PYGZus{}resolution}\PYG{p}{)}
+
+        \PYG{k}{if} \PYG{l+m+mi}{0} \PYG{o}{\PYGZlt{}}\PYG{o}{=} \PYG{n}{endpoint\PYGZus{}x\PYGZus{}pixel} \PYG{o}{\PYGZlt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{map\PYGZus{}width} \PYG{o+ow}{and} \PYG{l+m+mi}{0} \PYG{o}{\PYGZlt{}}\PYG{o}{=} \PYG{n}{endpoint\PYGZus{}y\PYGZus{}pixel} \PYG{o}{\PYGZlt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{map\PYGZus{}height}\PYG{p}{:}
+
+                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{map\PYGZus{}image}\PYG{p}{[}\PYG{n}{endpoint\PYGZus{}y\PYGZus{}pixel}\PYG{p}{,} \PYG{n}{endpoint\PYGZus{}x\PYGZus{}pixel}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}
+
+\end{MintedVerbatim}

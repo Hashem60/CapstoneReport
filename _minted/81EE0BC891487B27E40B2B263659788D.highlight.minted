@@ -1,0 +1,26 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n+nx}{useEffect}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{(}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{cam}\PYG{+w}{ }\PYG{o}{===}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}front\PYGZdq{}}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{cameraData}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{imageUrl}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{data:image/png;base64,}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{cameraData}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{`}
+\PYG{+w}{                }\PYG{n+nx}{imgRef}\PYG{p}{.}\PYG{n+nx}{current}\PYG{p}{.}\PYG{n+nx}{src}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{imageUrl}\PYG{p}{;}
+
+\PYG{+w}{                }\PYG{c+c1}{// Clean up the object URL when component is unmounted}
+\PYG{+w}{                }\PYG{k}{return}\PYG{+w}{ }\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nx}{URL}\PYG{p}{.}\PYG{n+nx}{revokeObjectURL}\PYG{p}{(}\PYG{n+nx}{imageUrl}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{cam}\PYG{+w}{ }\PYG{o}{===}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}back\PYGZdq{}}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{camera\PYGZus{}qr\PYGZus{}data}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{imageUrl}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{data:image/png;base64,}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{camera\PYGZus{}qr\PYGZus{}data}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{`}
+\PYG{+w}{                }\PYG{n+nx}{imgRef}\PYG{p}{.}\PYG{n+nx}{current}\PYG{p}{.}\PYG{n+nx}{src}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{imageUrl}\PYG{p}{;}
+
+\PYG{+w}{                }\PYG{c+c1}{// Clean up the object URL when component is unmounted}
+\PYG{+w}{                }\PYG{k}{return}\PYG{+w}{ }\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nx}{URL}\PYG{p}{.}\PYG{n+nx}{revokeObjectURL}\PYG{p}{(}\PYG{n+nx}{imageUrl}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{p}{[}\PYG{n+nx}{cameraData}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{camera\PYGZus{}qr\PYGZus{}data}\PYG{p}{]}\PYG{p}{)}
+\end{MintedVerbatim}

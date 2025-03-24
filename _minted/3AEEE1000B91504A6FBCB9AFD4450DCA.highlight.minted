@@ -1,0 +1,19 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+  \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{is\PYGZus{}obstacle\PYGZus{}behind}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+        \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scan\PYGZus{}data} \PYG{o+ow}{is} \PYG{k+kc}{None}\PYG{p}{:}
+            \PYG{k}{return} \PYG{k+kc}{False}
+        \PYG{n}{robot\PYGZus{}length} \PYG{o}{=} \PYG{l+m+mf}{0.52}
+        \PYG{n}{obstacle\PYGZus{}distance\PYGZus{}threshold} \PYG{o}{=} \PYG{n}{robot\PYGZus{}}
+        \PYG{n}{sector\PYGZus{}start\PYGZus{}angle} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{deg2rad}\PYG{p}{(}\PYG{l+m+mi}{225}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} 225 degrees}
+        \PYG{n}{sector\PYGZus{}end\PYGZus{}angle} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{deg2rad}\PYG{p}{(}\PYG{l+m+mi}{270}\PYG{p}{)}   \PYG{c+c1}{\PYGZsh{} 270 degrees}
+        \PYG{n}{angle\PYGZus{}increment} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scan\PYGZus{}data}\PYG{o}{.}\PYG{n}{angle\PYGZus{}increment}
+        \PYG{n}{num\PYGZus{}ranges} \PYG{o}{=} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scan\PYGZus{}data}\PYG{o}{.}\PYG{n}{ranges}\PYG{p}{)}
+        \PYG{n}{start\PYGZus{}index} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{p}{(}\PYG{n}{sector\PYGZus{}start\PYGZus{}angle} \PYG{o}{\PYGZhy{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scan\PYGZus{}data}\PYG{o}{.}\PYG{n}{angle\PYGZus{}min}\PYG{p}{)} \PYG{o}{/} \PYG{n}{angle\PYGZus{}increment}\PYG{p}{)}
+        \PYG{n}{end\PYGZus{}index} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{p}{(}\PYG{n}{sector\PYGZus{}end\PYGZus{}angle} \PYG{o}{\PYGZhy{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scan\PYGZus{}data}\PYG{o}{.}\PYG{n}{angle\PYGZus{}min}\PYG{p}{)} \PYG{o}{/} \PYG{n}{angle\PYGZus{}increment}\PYG{p}{)}
+        \PYG{n}{min\PYGZus{}distance} \PYG{o}{=} \PYG{n+nb}{float}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{inf}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+        \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{start\PYGZus{}index}\PYG{p}{,} \PYG{n}{end\PYGZus{}index}\PYG{p}{)}\PYG{p}{:}
+            \PYG{k}{if} \PYG{l+m+mi}{0} \PYG{o}{\PYGZlt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scan\PYGZus{}data}\PYG{o}{.}\PYG{n}{ranges}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{\PYGZlt{}} \PYG{n}{min\PYGZus{}distance}\PYG{p}{:}
+                \PYG{n}{min\PYGZus{}distance} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scan\PYGZus{}data}\PYG{o}{.}\PYG{n}{ranges}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{min distance : }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{min\PYGZus{}distance}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+        \PYG{k}{return} \PYG{n}{min\PYGZus{}distance} \PYG{o}{\PYGZgt{}} \PYG{n}{obstacle\PYGZus{}distance\PYGZus{}threshold} \PYG{o+ow}{and} \PYG{n}{min\PYGZus{}distance} \PYG{o}{\PYGZlt{}} \PYG{p}{(}\PYG{n}{obstacle\PYGZus{}distance\PYGZus{}threshold} \PYG{o}{+} \PYG{l+m+mf}{0.5}\PYG{p}{)}
+\end{MintedVerbatim}

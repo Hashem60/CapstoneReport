@@ -69,7 +69,7 @@ This plugin facilitates bi-directional communication through ROS topics, service
 cameras, and IMUs—to be published as ROS messages while also enabling ROS-based velocity and trajectory commands to control simulated robots. 
 Additionally, the plugin supports \texttt{ros\_control}, making it possible to implement position, velocity, and effort controllers, 
 which are essential for tuning PID loops before testing them on real actuators.
-\begin{codebox}[]{}
+\begin{codebox}[]{TurtleBot3 in Gazebo with Customizable Parameters}
 \begin{minted}{xml}
     <launch>
   <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
@@ -355,7 +355,7 @@ ensuring that the robot's interaction with its surroundings is as realistic as p
     orientation, without affecting the rest of the simulation environment. This modular 
     approach makes it easier to tweak the lines for different test scenarios, ensuring 
     flexibility and quick adjustments during development and testing.
-    \begin{codebox}[]{}
+    \begin{codebox}[]{Creates multiple black line patterns in the simulation environment.}
       \begin{minted}{xml}
 ...
 <wall_time>1738074256 296636706</wall_time>
@@ -418,7 +418,7 @@ Additionally, the \texttt{<visual>} tag defines how the floor appears in the sim
 with the material set to a white color to represent the wooden floor's appearance. 
 
 \newpage
-\begin{codebox}[]{}
+\begin{codebox}[]{wooden floor and a platform with collision and inertia.}
   
   \begin{minted}{xml}
     <model name='wooden_floor'>
@@ -516,7 +516,7 @@ compared to the visual model to improve computational efficiency while maintaini
 collision responses. The platform's legs also incorporate both \texttt{<collision>} and \texttt{<inertial>} properties, 
 allowing them to contribute to the overall stability of the structure while ensuring that the physics engine correctly 
 simulates interactions such as impacts, weight distribution, and external forces acting on the table.  
-\begin{codebox}[]{}
+\begin{codebox}[]{Defines the platform’s parameters.}
   
   \begin{minted}{xml}
     <model name='platform'>
@@ -561,7 +561,7 @@ simulates interactions such as impacts, weight distribution, and external forces
 \end{minted}
 \end{codebox}
 
-\begin{codebox}[]{}
+\begin{codebox}[]{Applies a stainless steel texture to the platform’s surface.}
   \begin{minted}{xml}
         ... 
         <visual name='surface_visual'>
@@ -583,7 +583,7 @@ simulates interactions such as impacts, weight distribution, and external forces
 \end{minted}
 \end{codebox}
 \newpage
-\begin{codebox}[]{}
+\begin{codebox}[]{Constructs the front legs.}
   
   \begin{minted}{xml}
       ...
@@ -673,7 +673,7 @@ simulates interactions such as impacts, weight distribution, and external forces
     These lines demonstrate how the hoardings models were assigned the name \texttt{cube\_test} during the individual SDF design phase of the world. 
     The code defines the geometry, textures, and physical properties for the hoardings.
 
-\begin{codebox}[]{}
+\begin{codebox}[]{test model with physical properties.}
   
   \begin{minted}{xml}
     ...
@@ -783,7 +783,7 @@ The design of the QR codes followed a similar approach to most other models in t
 world. Each QR code was represented by a textured cube, with textures made to 
 resemble the unique images that contain the right location information.
 \newpage
-\begin{codebox}[label=SDF code]{}
+\begin{codebox}[label=SDF code]{Adds a QR code model as a thin box with a custom material.}
   
   \begin{minted}{xml}
       <?xml version='1.0'?>
@@ -852,7 +852,7 @@ By separating the texture definition into the \texttt{qr\_code\_contents.materia
 file, it allows for easy updates and maintenance of the QR codes used in the simulation 
 without needing to modify the main model files.
 \newpage
-\begin{codebox}[]{}  
+\begin{codebox}[]{Assigns materials to different intersection areas in the environment.}  
   \begin{minted}{cpp}
 ...
 {

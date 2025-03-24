@@ -1,0 +1,27 @@
+\contentsline {chapter}{\numberline {1}\hfil INTRODUCTION \hfil }{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}TEKNOFEST competition Rules}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1} Autonomous Operation}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Overload Warning}{1}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Charging Task}{2}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Obstacle Navigation}{2}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}QRCODE Labels}{2}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.1.6}Control Screen (GUI)}{2}{subsection.1.1.6}%
+\contentsline {subsection}{\numberline {1.1.7}No Manual Control}{2}{subsection.1.1.7}%
+\contentsline {subsection}{\numberline {1.1.8}Load Handling Display}{2}{subsection.1.1.8}%
+\contentsline {subsection}{\numberline {1.1.9}Mapping for Advanced Competitors}{2}{subsection.1.1.9}%
+\contentsline {section}{\numberline {1.2}DETAILS OF THE COMPETITION AREA}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Power Supply}{3}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Track Layout}{3}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Sample View of the Track}{4}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Load Handling Robot Specs \& Limits}{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Sample Scenario}{5}{section.1.4}%
+\contentsline {chapter}{\numberline {2}\hfil LITERATURE SURVEY \hfil }{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Key Technologies in AGV Development}{8}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Navigation Systems}{8}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Localization and Mapping}{8}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Path Planning and Control}{8}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Communication and Coordination}{9}{subsection.2.1.4}%
+\contentsline {section}{\numberline {2.2}Applications of AGVs}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Challenges and Limitations}{9}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Recent Trends and Innovations}{9}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Notable Research and Case Studies}{10}{section.2.5}%

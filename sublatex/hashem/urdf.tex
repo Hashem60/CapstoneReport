@@ -281,7 +281,7 @@ changing the values in each one:
 
 We can use the value of the variable by replacing the hardcoded value with the following
 definition(\cref{xacro in urdf}):
-\begin{codebox}[label=xacro in urdf]{}
+\begin{codebox}[label=xacro in urdf]{Defining the base link visually}
   \begin{minted}{xml}
     <link name="base_link">
       <visual>
@@ -330,7 +330,7 @@ specify inertial values,
 \end{minted}
 \end{codebox}
 Here(\cref{xacro macro}), the macro is named box\_inertia, and its parameters are \{m ,l ,w ,h ,xyz ,rpy\}. we can pass these parameters as a vaues or as a xacro property(\cref{xacro macro result}):
-\begin{codebox}[label=xacro macro result]{}
+\begin{codebox}[label=xacro macro result]{Defining box inertia with Xacro}
   \begin{minted}{xml}
 <xacro:box_inertia m="5.0" l="${2*base_length}" w="${2*base_width}" h="${2*base_hight}" xyz="0.0 0.0 ${base_hight/2.0}" rpy="0.0 0.0 0.0"/>
 \end{minted}
@@ -378,7 +378,7 @@ in \cref{Rviz launch} The \texttt{<launch>} tag is the root tag that defines the
     Finally, the \texttt{<node>} tag for the \texttt{controller\_spawner} node is responsible for spawning and managing robot controllers. The node is part of the \texttt{controller\_manager} package, and the \texttt{spawner} executable is used to spawn a controller, in this case, \texttt{diff\_drive\_controller}. The \texttt{respawn} attribute is set to \texttt{false}, so the node will not automatically respawn if it crashes. The \texttt{output} attribute ensures that the output from the node is printed to the screen.
     
     We can launch the model using the following command(\cref{launch rviz}):
-    \begin{codebox}[label=launch rviz]{}
+    \begin{codebox}[label=launch rviz]{Launching ROS package}
       \begin{minted}{bash}
         roslaunch the_pkg_name launch_file_name.launch
       \end{minted}

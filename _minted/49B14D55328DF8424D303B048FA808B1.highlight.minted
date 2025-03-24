@@ -1,0 +1,15 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}link}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}base\PYGZus{}link\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{    }...
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}collision}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}geometry}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{          }\PYG{n+nt}{\PYGZlt{}box}\PYG{+w}{ }\PYG{n+na}{size=}\PYG{l+s}{\PYGZdq{}0.9 0.85 0.5\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{      }\PYG{n+nt}{\PYGZlt{}/geometry\PYGZgt{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZlt{}origin}\PYG{+w}{ }\PYG{n+na}{xyz=}\PYG{l+s}{\PYGZdq{}0.0 0.0 0.025\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{rpy=}\PYG{l+s}{\PYGZdq{}0.0 0.0 0.0\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}/collision\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}inertial}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}origin}\PYG{+w}{ }\PYG{n+na}{xyz=}\PYG{l+s}{\PYGZdq{}0 0 0\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{rpy=}\PYG{l+s}{\PYGZdq{}0 0 0\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}mass}\PYG{+w}{ }\PYG{n+na}{value=}\PYG{l+s}{\PYGZdq{}35\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}inertia}\PYG{+w}{ }\PYG{n+na}{ixx=}\PYG{l+s}{\PYGZdq{}3.2\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{ixy=}\PYG{l+s}{\PYGZdq{}0.0\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{ixz=}\PYG{l+s}{\PYGZdq{}0.0\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{iyy=}\PYG{l+s}{\PYGZdq{}4\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{iyz=}\PYG{l+s}{\PYGZdq{}0.0\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{izz=}\PYG{l+s}{\PYGZdq{}\PYGZdl{}3.9\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}/inertial\PYGZgt{}}\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}/link\PYGZgt{}}
+\end{MintedVerbatim}

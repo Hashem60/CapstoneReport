@@ -1,0 +1,7 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}robot}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}\PYGZlt{}name of the robot\PYGZgt{}\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}link}\PYG{n+nt}{\PYGZgt{}}\PYG{+w}{ }......\PYG{+w}{ }\PYG{n+nt}{\PYGZlt{}/link\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}joint}\PYG{n+nt}{\PYGZgt{}}\PYG{+w}{ }.......\PYG{+w}{ }\PYG{n+nt}{\PYGZlt{}/joint\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}joint}\PYG{n+nt}{\PYGZgt{}}\PYG{+w}{ }........\PYG{n+nt}{\PYGZlt{}/joint\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}/robot\PYGZgt{}}
+\end{MintedVerbatim}

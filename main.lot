@@ -1,0 +1,30 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces List of Components and Their Costs}}{15}{table.3.1}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Parameters and their descriptions}}{31}{table.caption.13}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Component Details and Weights}}{34}{table.caption.16}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Forces acting on scissor lift components at various angles of operation}}{36}{table.caption.18}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Mechanical Advantage Analysis}}{37}{table.caption.19}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Height, angle, and platform length at different stages.}}{38}{table.caption.20}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Parameters, their relations, and corresponding values.}}{39}{table.caption.22}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Lift position, height, center of mass coordinates, and total mass.}}{40}{table.caption.23}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Instantaneous center (IC) locations and angular velocities at different positions.}}{42}{table.caption.24}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces Scissor Lift Velocity Measurements}}{43}{table.caption.25}%
+\contentsline {table}{\numberline {4.10}{\ignorespaces Actuator Cylinder Measurements}}{45}{table.caption.26}%
+\contentsline {table}{\numberline {4.11}{\ignorespaces Specifications of the Wheel}}{81}{table.caption.56}%
+\contentsline {table}{\numberline {4.12}{\ignorespaces LM2596 Voltage Regulator Specifications}}{103}{table.caption.69}%
+\contentsline {table}{\numberline {4.13}{\ignorespaces DC-DC Constant Current Boost Converter Specifications and Features}}{104}{table.caption.71}%
+\contentsline {table}{\numberline {4.14}{\ignorespaces Buck-Boost Converter Specifications}}{105}{table.caption.73}%
+\contentsline {table}{\numberline {4.15}{\ignorespaces Stepper Motor Specifications (Model: 23E1KBK20-20)}}{109}{table.caption.75}%
+\contentsline {table}{\numberline {4.16}{\ignorespaces Specifications of the linear actuator model JS-TGZ-U3}}{110}{table.caption.77}%
+\contentsline {table}{\numberline {4.17}{\ignorespaces Specifications of the Closed-Loop Stepper Driver}}{111}{table.caption.78}%
+\contentsline {table}{\numberline {4.18}{\ignorespaces Features and Specifications of the IBT-2 Motor Driver Module}}{113}{table.caption.81}%
+\contentsline {table}{\numberline {4.19}{\ignorespaces Encoder Specifications}}{113}{table.caption.82}%
+\contentsline {table}{\numberline {4.20}{\ignorespaces Electromagnetic Brake Specifications}}{114}{table.caption.83}%
+\contentsline {table}{\numberline {4.21}{\ignorespaces Primitive types and their serialization in C++ and Python.}}{133}{table.caption.101}%
+\contentsline {table}{\numberline {4.23}{\ignorespaces ROS Distributions Table}}{143}{table.caption.105}%
+\contentsline {table}{\numberline {4.24}{\ignorespaces Essential Dependencies for Simulating a URDF in Gazebo}}{153}{table.caption.110}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1}{\ignorespaces List of Useful ROS Packages for Robotics Development}}{270}{table.Alph0.1}%

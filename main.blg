@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: ieeetr.bst
+A level-1 auxiliary file: sublatex/parfait/realistic_constraints.aux
+A level-1 auxiliary file: sublatex/Opryrmi/Opryrmi.aux
+A level-1 auxiliary file: sublatex/Gregoire/Gregoire.aux
+A level-1 auxiliary file: sublatex/parfait/ECI.aux
+A level-1 auxiliary file: sublatex/hashem/ROS.aux
+A level-1 auxiliary file: sublatex/hashem/urdf.aux
+A level-1 auxiliary file: sublatex/parfait/simulation_environment.aux
+A level-1 auxiliary file: sublatex/felly/felly.aux
+A level-1 auxiliary file: sublatex/jude/jude.aux
+A level-1 auxiliary file: sublatex/parfait/appenparfait.aux
+Database file #1: references.bib
+Warning--entry type for "OrientalMotorAGV" isn't style-file defined
+--line 327 of file references.bib
+Warning--entry type for "LinEngineering_AGV" isn't style-file defined
+--line 345 of file references.bib
+Warning--entry type for "AMC_AGV_Benefits" isn't style-file defined
+--line 359 of file references.bib
+Warning--empty journal in groover2019fundamentals
+Warning--empty publisher in hibbeler2016
+You've used 47 entries,
+            1876 wiz_defined-function locations,
+            748 strings with 10360 characters,
+and the built_in function-call counts, 9650 in all, are:
+= -- 1000
+> -- 255
+< -- 0
++ -- 112
+- -- 65
+* -- 542
+:= -- 1309
+add.period$ -- 60
+call.type$ -- 47
+change.case$ -- 46
+chr.to.int$ -- 0
+cite$ -- 49
+duplicate$ -- 458
+empty$ -- 1087
+format.name$ -- 65
+if$ -- 2435
+int.to.chr$ -- 0
+int.to.str$ -- 47
+missing$ -- 28
+newline$ -- 161
+num.names$ -- 46
+pop$ -- 229
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 333
+stack$ -- 0
+substring$ -- 530
+swap$ -- 155
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 99
+width$ -- 49
+write$ -- 440
+(There were 5 warnings)

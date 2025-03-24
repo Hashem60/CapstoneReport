@@ -1,0 +1,39 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n+nx}{serialize}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k}{async}\PYG{+w}{ }\PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{locations}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{lcs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{st}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{p}{]}
+\PYG{+w}{      }\PYG{n+nx}{locations}\PYG{p}{.}\PYG{n+nx}{forEach}\PYG{p}{(}\PYG{n+nx}{location}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{nm}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{location}\PYG{p}{.}\PYG{n+nx}{location}\PYG{p}{.}\PYG{n+nx}{split}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{        }\PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{nm}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}intersection\PYGZdq{}}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{nm}\PYG{p}{[}\PYG{l+m+mf}{2}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}x\PYGZdq{}}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{n+nx}{nm}\PYG{p}{[}\PYG{l+m+mf}{2}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}y\PYGZdq{}}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{found}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{false}
+\PYG{+w}{            }\PYG{k}{for}\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{lcs}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{              }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{lcs}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{p}{.}\PYG{n+nx}{location}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n+nx}{nm}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{} \PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{nm}\PYG{p}{[}\PYG{l+m+mf}{2}\PYG{p}{]}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{found}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{true}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n+nx}{found}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{              }\PYG{n+nx}{lcs}\PYG{p}{.}\PYG{n+nx}{push}\PYG{p}{(}\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{location}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{nm}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{} \PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{nm}\PYG{p}{[}\PYG{l+m+mf}{2}\PYG{p}{]}\PYG{p}{,}
+\PYG{+w}{                }\PYG{n+nx}{x}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{location}\PYG{p}{.}\PYG{n+nx}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{y}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{location}\PYG{p}{.}\PYG{n+nx}{y}\PYG{p}{,}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{nm}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}station\PYGZdq{}}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{found}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{false}
+\PYG{+w}{            }\PYG{k}{for}\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{st}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{              }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{st}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{p}{.}\PYG{n+nx}{location}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n+nx}{nm}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{} \PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{nm}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{]}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{found}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{true}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n+nx}{found}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{              }\PYG{n+nx}{st}\PYG{p}{.}\PYG{n+nx}{push}\PYG{p}{(}\PYG{p}{\PYGZob{}}\PYG{n+nx}{location}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{nm}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{} \PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{nm}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{]}\PYG{p}{,}
+\PYG{+w}{              }\PYG{n+nx}{x}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{location}\PYG{p}{.}\PYG{n+nx}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{y}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{location}\PYG{p}{.}\PYG{n+nx}{y}\PYG{p}{,}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{      }\PYG{n+nx}{set}\PYG{p}{(}\PYG{p}{\PYGZob{}}\PYG{n+nx}{zone}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{lcs}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\PYG{+w}{      }\PYG{n+nx}{set}\PYG{p}{(}\PYG{p}{\PYGZob{}}\PYG{n+nx}{station}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{st}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{p}{,}
+\end{MintedVerbatim}

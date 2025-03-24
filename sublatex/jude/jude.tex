@@ -349,7 +349,7 @@ processed data was then stored in the state variables zone and station,
 enabling seamless integration with the UI for real-time visualization
 and interaction.
 
-\begin{codebox}[]{}
+\begin{codebox}[]{Serializing locations efficiently}
   \begin{minted}{js}
 serialize : async function(locations){
       let lcs = [], st = []
@@ -547,7 +547,7 @@ functionality leverages \emph{React\textquotesingle s useEffect} and
 responsive and dynamic UI updates are ensured, adapting seamlessly to
 user interactions and state changes. See code below for implementation.
 
-\begin{codebox}[]{}
+\begin{codebox}[]{Remote control interface for navigation}
   \begin{minted}{js}
 const Remote = (props) => {
     const {sendDirection, changeGear, gear} = core()
@@ -664,7 +664,7 @@ updates. CSS transformations (scale) were applied to enable smooth
 zooming transitions, and floating zoom buttons were designed for an
 intuitive user experience, styled with CSS for a modern look.
 
-\begin{codebox}[]{}
+\begin{codebox}[]{Smooth zoom control for images}
   
   \begin{minted}{js}
   const zoomIn = () => {
@@ -727,7 +727,7 @@ functionality and dynamically display available zones. The component was
 styled using CSS and Tailwind CSS to achieve a clean and responsive
 design, ensuring a smooth and intuitive user experience while
 efficiently managing tasks within the application.
-\begin{codebox}[]{}
+\begin{codebox}[]{Ensuring valid load/unload operations}
   
   \begin{minted}{js}
 const set = () => {
@@ -888,7 +888,7 @@ updates to the frontend in real time. This ensures users are always
 aware of the robot's operational status, enabling better decision-making
 and control.
 
-\begin{codebox}[]{}
+\begin{codebox}[]{Handling async ROS tasks efficiently}
   \begin{minted}{python}
   async def taskCallback(self, sid, task):
     t = TaskData()

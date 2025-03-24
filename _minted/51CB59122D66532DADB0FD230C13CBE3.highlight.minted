@@ -1,0 +1,19 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Define a controller for controlling a joint by position.}
+\PYG{c+c1}{\PYGZsh{} You can give any name to the controller. In this example, we call it \PYGZdq{}position\PYGZus{}joint\PYGZus{}controller\PYGZdq{}.}
+\PYG{n+nt}{position\PYGZus{}joint\PYGZus{}controller}\PYG{p}{:}
+\PYG{c+c1}{\PYGZsh{} Specify the type of controller.}
+\PYG{c+c1}{\PYGZsh{} Here, we use the JointPositionController from the position\PYGZus{}controllers package,}
+\PYG{c+c1}{\PYGZsh{} which commands a joint based on the desired position.}
+\PYG{n+nt}{type}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{position\PYGZus{}controllers/JointPositionController}
+
+\PYG{c+c1}{\PYGZsh{} Specify the joint this controller will manage.}
+\PYG{c+c1}{\PYGZsh{} Replace \PYGZsq{}platform\PYGZus{}lift\PYGZus{}joint\PYGZsq{} with the exact name of your joint as defined in your robot\PYGZsq{}s URDF or SDF.}
+\PYG{n+nt}{joint}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{platform\PYGZus{}lift\PYGZus{}joint}
+
+\PYG{c+c1}{\PYGZsh{} Configure the PID gains for the controller.}
+\PYG{c+c1}{\PYGZsh{} \PYGZsq{}p\PYGZsq{} is the proportional gain, which reacts to the current error.}
+\PYG{c+c1}{\PYGZsh{} \PYGZsq{}i\PYGZsq{} is the integral gain, which reacts to the accumulation of past errors.}
+\PYG{c+c1}{\PYGZsh{} \PYGZsq{}d\PYGZsq{} is the derivative gain, which reacts to the rate of change of the error.}
+\PYG{n+nt}{pid}\PYG{p}{:}\PYG{+w}{ }\PYG{p+pIndicator}{\PYGZob{}}\PYG{n+nt}{p}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nv}{100.0}\PYG{p+pIndicator}{,}\PYG{n+nt}{ i}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nv}{0.01}\PYG{p+pIndicator}{,}\PYG{n+nt}{ d}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nv}{10.0}\PYG{p+pIndicator}{\PYGZcb{}}
+\end{MintedVerbatim}

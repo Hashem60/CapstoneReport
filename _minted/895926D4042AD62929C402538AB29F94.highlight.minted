@@ -1,0 +1,52 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+  \PYG{k}{async} \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{taskCallback}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{sid}\PYG{p}{,} \PYG{n}{task}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{t} \PYG{o}{=} \PYG{n}{TaskData}\PYG{p}{(}\PYG{p}{)}
+    \PYG{n}{t}\PYG{o}{.}\PYG{n}{task\PYGZus{}name} \PYG{o}{=} \PYG{n}{task}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{task}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{task\PYGZus{}name}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]}
+    \PYG{n}{t}\PYG{o}{.}\PYG{n}{params} \PYG{o}{=} \PYG{p}{[}
+        \PYG{n}{Param}\PYG{p}{(}\PYG{n}{zone}\PYG{o}{=}\PYG{n}{key}\PYG{p}{,} \PYG{n+nb}{type}\PYG{o}{=}\PYG{n}{value}\PYG{p}{)}
+        \PYG{k}{for} \PYG{n}{key}\PYG{p}{,} \PYG{n}{value} \PYG{o+ow}{in} \PYG{n}{task}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{task}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{params}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{items}\PYG{p}{(}\PYG{p}{)}
+    \PYG{p}{]}
+    \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{wait\PYGZus{}for\PYGZus{}service}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{robot\PYGZus{}task}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{robot\PYGZus{}task} \PYG{o}{=} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{ServiceProxy}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{robot\PYGZus{}task}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{robotTask}\PYG{p}{)}
+    \PYG{n}{robot\PYGZus{}task}\PYG{o}{.}\PYG{n}{wait\PYGZus{}for\PYGZus{}service}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{)}
+    \PYG{k}{try}\PYG{p}{:}
+        \PYG{n}{response} \PYG{o}{=} \PYG{n}{robot\PYGZus{}task}\PYG{p}{(}\PYG{n}{t}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{response}\PYG{p}{)}
+        \PYG{k}{await} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{sio}\PYG{o}{.}\PYG{n}{emit}\PYG{p}{(}
+            \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{task\PYGZus{}response}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}
+            \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{response}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:} \PYG{n}{response}\PYG{o}{.}\PYG{n}{message}\PYG{p}{\PYGZcb{}}\PYG{p}{,}
+            \PYG{n}{to}\PYG{o}{=}\PYG{n}{sid}
+        \PYG{p}{)}
+    \PYG{k}{except} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{ServiceException} \PYG{k}{as} \PYG{n}{exc}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Service did not process request: }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{exc}\PYG{p}{)}\PYG{p}{)}
+
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{run\PYGZus{}async\PYGZus{}taskFinished}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{output}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{try}\PYG{p}{:}
+        \PYG{n}{loop} \PYG{o}{=} \PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{new\PYGZus{}event\PYGZus{}loop}\PYG{p}{(}\PYG{p}{)}
+        \PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{set\PYGZus{}event\PYGZus{}loop}\PYG{p}{(}\PYG{n}{loop}\PYG{p}{)}
+        \PYG{n}{loop}\PYG{o}{.}\PYG{n}{run\PYGZus{}until\PYGZus{}complete}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{taskFinished}\PYG{p}{(}\PYG{n}{output}\PYG{p}{)}\PYG{p}{)}
+    \PYG{k}{except} \PYG{n+ne}{Exception} \PYG{k}{as} \PYG{n}{e}\PYG{p}{:}
+        \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{logerr}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Error before proccessing and emitting taskFinished: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{e}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{taskMessageResponse}\PYG{p}{(}\PYG{k+kc}{True}\PYG{p}{)}
+
+\PYG{k}{async} \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{taskFinished}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{output}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{await} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{sio}\PYG{o}{.}\PYG{n}{emit}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{task\PYGZus{}response}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{response}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:} \PYG{n}{output}\PYG{o}{.}\PYG{n}{message}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{run\PYGZus{}async\PYGZus{}mappingOutput}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{output}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{try}\PYG{p}{:}
+        \PYG{n}{loop} \PYG{o}{=} \PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{new\PYGZus{}event\PYGZus{}loop}\PYG{p}{(}\PYG{p}{)}
+        \PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{set\PYGZus{}event\PYGZus{}loop}\PYG{p}{(}\PYG{n}{loop}\PYG{p}{)}
+        \PYG{n}{loop}\PYG{o}{.}\PYG{n}{run\PYGZus{}until\PYGZus{}complete}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{mappingOutput}\PYG{p}{(}\PYG{n}{output}\PYG{p}{)}\PYG{p}{)}
+    \PYG{k}{except} \PYG{n+ne}{Exception} \PYG{k}{as} \PYG{n}{e}\PYG{p}{:}
+        \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{logerr}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Error before proccessing and emitting taskFinished: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{e}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{mappingOutputResponse}\PYG{p}{(}\PYG{k+kc}{True}\PYG{p}{)}
+
+\PYG{k}{async} \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{mappingOutput}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{output}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{output}\PYG{p}{)}
+    \PYG{n}{data} \PYG{o}{=} \PYG{p}{[}
+        \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{location}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:} \PYG{n}{kv}\PYG{o}{.}\PYG{n}{location}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{x}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:} \PYG{n}{kv}\PYG{o}{.}\PYG{n}{x}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{y}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:} \PYG{n}{kv}\PYG{o}{.}\PYG{n}{y}\PYG{p}{\PYGZcb{}}
+        \PYG{k}{for} \PYG{n}{kv} \PYG{o+ow}{in} \PYG{n}{output}\PYG{o}{.}\PYG{n}{locations}
+    \PYG{p}{]}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{data}\PYG{p}{)}
+    \PYG{k}{await} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{sio}\PYG{o}{.}\PYG{n}{emit}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{mapping\PYGZus{}output}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{locations}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:} \PYG{n}{data}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\end{MintedVerbatim}

@@ -1,0 +1,98 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{junction\PYGZus{}decision}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{onLeft}\PYG{p}{,} \PYG{n}{onRight}\PYG{p}{,} \PYG{n}{onTop}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Making decision}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{hasDetectedQrRecently}\PYG{p}{)}
+    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{stop}\PYG{p}{(}\PYG{p}{)}
+    \PYG{n}{tm} \PYG{o}{=} \PYG{l+m+mi}{3}
+    \PYG{n}{current} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}params}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}currentTask}\PYG{p}{]}
+
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{hasDetectedQrRecently}\PYG{p}{:}  \PYG{c+c1}{\PYGZsh{} no qrCode has been scanned}
+        \PYG{k}{if} \PYG{n}{onLeft} \PYG{o+ow}{and} \PYG{p}{(}\PYG{o+ow}{not} \PYG{n}{onTop}\PYG{p}{)} \PYG{o+ow}{and} \PYG{p}{(}\PYG{o+ow}{not} \PYG{n}{onRight}\PYG{p}{)}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}turnSide} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{left}\PYG{l+s+s2}{\PYGZdq{}}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{moveToTurnPosition} \PYG{o}{=} \PYG{k+kc}{True}
+        \PYG{k}{elif} \PYG{n}{onRight} \PYG{o+ow}{and} \PYG{p}{(}\PYG{o+ow}{not} \PYG{n}{onTop}\PYG{p}{)} \PYG{o+ow}{and} \PYG{p}{(}\PYG{o+ow}{not} \PYG{n}{onLeft}\PYG{p}{)}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}turnSide} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{right}\PYG{l+s+s2}{\PYGZdq{}}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{moveToTurnPosition} \PYG{o}{=} \PYG{k+kc}{True}
+        \PYG{k}{elif} \PYG{n}{onTop}\PYG{p}{:}
+            \PYG{n}{tm} \PYG{o}{=} \PYG{l+m+mi}{2}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}move\PYGZus{}forward}\PYG{p}{(}\PYG{p}{)}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{timer} \PYG{o}{=} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Timer}\PYG{p}{(}\PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Duration}\PYG{p}{(}\PYG{n}{tm}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{resume\PYGZus{}processing}\PYG{p}{,} \PYG{n}{oneshot}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+        \PYG{k}{else}\PYG{p}{:}  \PYG{c+c1}{\PYGZsh{} if the robot can\PYGZsq{}t go straight, failed the task}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}task\PYGZus{}failed}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{The robot is stuck : should go straight}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+    \PYG{k}{elif} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}lastQrCode}\PYG{p}{:}  \PYG{c+c1}{\PYGZsh{} qrCode has been scanned}
+        \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}lastQrCode} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{qrcodes}\PYG{p}{:}
+            \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}isStationSide}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}lastQrCode}\PYG{p}{)}\PYG{p}{:}
+                \PYG{n}{tm} \PYG{o}{=} \PYG{l+m+mi}{2}
+                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}move\PYGZus{}forward}\PYG{p}{(}\PYG{p}{)}
+                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{timer} \PYG{o}{=} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Timer}\PYG{p}{(}\PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Duration}\PYG{p}{(}\PYG{n}{tm}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{resume\PYGZus{}processing}\PYG{p}{,} \PYG{n}{oneshot}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+            \PYG{k}{else}\PYG{p}{:}
+                \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{goal\PYGZus{}in\PYGZus{}db}\PYG{p}{:}
+                    \PYG{n}{current} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}params}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}currentTask}\PYG{p}{]}
+                    \PYG{n}{zArr} \PYG{o}{=} \PYG{n}{current}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{zone}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+                    \PYG{n}{goal} \PYG{o}{=} \PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{zArr}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZus{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{zArr}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZus{}center}\PYG{l+s+s2}{\PYGZdq{}}
+                    \PYG{n}{goalPos} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{qrcodes}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{goal}\PYG{p}{,} \PYG{p}{(}\PYG{k+kc}{None}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{)}\PYG{p}{)}
+                    \PYG{n}{side} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}chooseSideToGo}\PYG{p}{(}\PYG{n}{onTop}\PYG{p}{,} \PYG{n}{onRight}\PYG{p}{,} \PYG{n}{onLeft}\PYG{p}{,} \PYG{n}{goalPos}\PYG{p}{)}
+                    \PYG{k}{if} \PYG{n}{side} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{S}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+                        \PYG{n}{tm} \PYG{o}{=} \PYG{l+m+mi}{2}
+                        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}move\PYGZus{}forward}\PYG{p}{(}\PYG{p}{)}
+                        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{timer} \PYG{o}{=} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Timer}\PYG{p}{(}\PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Duration}\PYG{p}{(}\PYG{n}{tm}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{resume\PYGZus{}processing}\PYG{p}{,} \PYG{n}{oneshot}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+                    \PYG{k}{elif} \PYG{n}{side} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{R}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+                        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}turnSide} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{right}\PYG{l+s+s2}{\PYGZdq{}}
+                        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{moveToTurnPosition} \PYG{o}{=} \PYG{k+kc}{True}
+                    \PYG{k}{elif} \PYG{n}{side} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{L}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+                        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}turnSide} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{left}\PYG{l+s+s2}{\PYGZdq{}}
+                        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{moveToTurnPosition} \PYG{o}{=} \PYG{k+kc}{True}
+                    \PYG{k}{elif} \PYG{n}{side} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{B}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+                        \PYG{n}{tm} \PYG{o}{=} \PYG{l+m+mi}{6}
+                        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}U\PYGZus{}turn}\PYG{p}{(}\PYG{p}{)}
+                        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{timer} \PYG{o}{=} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Timer}\PYG{p}{(}\PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Duration}\PYG{p}{(}\PYG{n}{tm}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{resume\PYGZus{}processing}\PYG{p}{,} \PYG{n}{oneshot}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+                    \PYG{k}{elif} \PYG{n}{side} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{0}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+                        \PYG{k}{return}
+                \PYG{k}{else}\PYG{p}{:}
+                    \PYG{n}{intersections} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}getIntersection}\PYG{p}{(}\PYG{n}{current}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{zone}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+                    \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}lastQrCode} \PYG{o+ow}{in} \PYG{p}{[}\PYG{n}{intersections}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{n}{intersections}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{]}\PYG{p}{:}
+                        \PYG{k}{if} \PYG{n}{onLeft}\PYG{p}{:}
+                            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}turnSide} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{left}\PYG{l+s+s2}{\PYGZdq{}}
+                            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{moveToTurnPosition} \PYG{o}{=} \PYG{k+kc}{True}
+                        \PYG{k}{elif} \PYG{n}{onRight}\PYG{p}{:}
+                            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}turnSide} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{right}\PYG{l+s+s2}{\PYGZdq{}}
+                            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{moveToTurnPosition} \PYG{o}{=} \PYG{k+kc}{True}
+                        \PYG{k}{else}\PYG{p}{:}
+                            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}task\PYGZus{}failed}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{The robot is stuck : should turn}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+                    \PYG{k}{else}\PYG{p}{:}
+                        \PYG{k}{if} \PYG{n}{onLeft} \PYG{o+ow}{and} \PYG{p}{(}\PYG{o+ow}{not} \PYG{n}{onTop}\PYG{p}{)} \PYG{o+ow}{and} \PYG{p}{(}\PYG{o+ow}{not} \PYG{n}{onRight}\PYG{p}{)}\PYG{p}{:}
+                            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}turnSide} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{left}\PYG{l+s+s2}{\PYGZdq{}}
+                            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{moveToTurnPosition} \PYG{o}{=} \PYG{k+kc}{True}
+                        \PYG{k}{elif} \PYG{n}{onRight} \PYG{o+ow}{and} \PYG{p}{(}\PYG{o+ow}{not} \PYG{n}{onTop}\PYG{p}{)} \PYG{o+ow}{and} \PYG{p}{(}\PYG{o+ow}{not} \PYG{n}{onLeft}\PYG{p}{)}\PYG{p}{:}
+                            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}turnSide} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{right}\PYG{l+s+s2}{\PYGZdq{}}
+                            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{moveToTurnPosition} \PYG{o}{=} \PYG{k+kc}{True}
+                        \PYG{k}{else}\PYG{p}{:}
+                            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Not a corner, using shortest path}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+                            \PYG{n}{side} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}chooseSide}\PYG{p}{(}\PYG{n}{onTop}\PYG{p}{,} \PYG{n}{onRight}\PYG{p}{,} \PYG{n}{onLeft}\PYG{p}{,} \PYG{n}{intersections}\PYG{p}{)}
+                            \PYG{k}{if} \PYG{n}{side} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{S}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+                                \PYG{n}{tm} \PYG{o}{=} \PYG{l+m+mi}{2}
+                                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}move\PYGZus{}forward}\PYG{p}{(}\PYG{p}{)}
+                                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{timer} \PYG{o}{=} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Timer}\PYG{p}{(}\PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Duration}\PYG{p}{(}\PYG{n}{tm}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{resume\PYGZus{}processing}\PYG{p}{,} \PYG{n}{oneshot}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+                            \PYG{k}{elif} \PYG{n}{side} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{R}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+                                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}turnSide} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{right}\PYG{l+s+s2}{\PYGZdq{}}
+                                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{moveToTurnPosition} \PYG{o}{=} \PYG{k+kc}{True}
+                            \PYG{k}{elif} \PYG{n}{side} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{L}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+                                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}turnSide} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{left}\PYG{l+s+s2}{\PYGZdq{}}
+                                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{moveToTurnPosition} \PYG{o}{=} \PYG{k+kc}{True}
+                            \PYG{k}{elif} \PYG{n}{side} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{B}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+                                \PYG{n}{tm} \PYG{o}{=} \PYG{l+m+mi}{6}
+                                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}U\PYGZus{}turn}\PYG{p}{(}\PYG{p}{)}
+                                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{timer} \PYG{o}{=} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Timer}\PYG{p}{(}\PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Duration}\PYG{p}{(}\PYG{n}{tm}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{resume\PYGZus{}processing}\PYG{p}{,} \PYG{n}{oneshot}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+                            \PYG{k}{elif} \PYG{n}{side} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{0}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+                                \PYG{n}{tm} \PYG{o}{=} \PYG{l+m+mi}{6}
+                                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}U\PYGZus{}turn}\PYG{p}{(}\PYG{p}{)}
+                                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{timer} \PYG{o}{=} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Timer}\PYG{p}{(}\PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Duration}\PYG{p}{(}\PYG{n}{tm}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{resume\PYGZus{}processing}\PYG{p}{,} \PYG{n}{oneshot}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+                                \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{logerr}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Wrong direction}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+                                \PYG{k}{return}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n}{tm} \PYG{o}{=} \PYG{l+m+mi}{2}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}move\PYGZus{}forward}\PYG{p}{(}\PYG{p}{)}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{timer} \PYG{o}{=} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Timer}\PYG{p}{(}\PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Duration}\PYG{p}{(}\PYG{n}{tm}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{resume\PYGZus{}processing}\PYG{p}{,} \PYG{n}{oneshot}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+            \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{logerr}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{The robot is stuck : doesn}\PYG{l+s+s2}{\PYGZsq{}}\PYG{l+s+s2}{t know what to do}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\end{MintedVerbatim}

@@ -1,0 +1,9 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}joint}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}\PYGZlt{}name of the joint\PYGZgt{}\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}parent}\PYG{+w}{ }\PYG{n+na}{link=}\PYG{l+s}{\PYGZdq{}link1\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}child}\PYG{+w}{ }\PYG{n+na}{link=}\PYG{l+s}{\PYGZdq{}link2\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}calibration}\PYG{+w}{ }\PYG{err}{.}\PYG{err}{.}\PYG{err}{.}\PYG{err}{.}\PYG{+w}{ }\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}dynamics}\PYG{+w}{ }\PYG{n+na}{damping =}\PYG{+w}{ }\PYG{l+s}{..../}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}limit}\PYG{+w}{ }\PYG{n+na}{effort =}\PYG{+w}{ }\PYG{l+s}{..../}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZlt{}/joint\PYGZgt{}}
+\end{MintedVerbatim}

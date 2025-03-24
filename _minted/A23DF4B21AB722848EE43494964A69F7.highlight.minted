@@ -1,0 +1,16 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{junction\PYGZus{}decision}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{onLeft}\PYG{p}{,} \PYG{n}{onRight}\PYG{p}{,} \PYG{n}{onTop}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{tm} \PYG{o}{=} \PYG{l+m+mi}{3}
+    \PYG{k}{if} \PYG{n}{onTop}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{On top}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+    \PYG{n}{tm} \PYG{o}{=} \PYG{l+m+mi}{1}
+    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}move\PYGZus{}forward}\PYG{p}{(}\PYG{p}{)}
+    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{timer}\PYG{o}{=} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Timer}\PYG{p}{(}\PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Duration}\PYG{p}{(}\PYG{n}{tm}\PYG{p}{)}\PYG{p}{,}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{resume\PYGZus{}processing}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n}{onLeft}\PYG{p}{:}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}turnSide} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{left}\PYG{l+s+s2}{\PYGZdq{}}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{moveToTurnPosition} \PYG{o}{=} \PYG{k+kc}{True}
+    \PYG{k}{elif} \PYG{n}{onRight}\PYG{p}{:}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}turnSide} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{right}\PYG{l+s+s2}{\PYGZdq{}}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{moveToTurnPosition} \PYG{o}{=} \PYG{k+kc}{True}
+
+\end{MintedVerbatim}

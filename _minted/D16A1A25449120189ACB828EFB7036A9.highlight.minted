@@ -1,0 +1,25 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYG{k+kt}{bool}\PYG{+w}{ }\PYG{n+nf}{changeGear}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ie\PYGZus{}communication}\PYG{o}{:}\PYG{o}{:}\PYG{n}{robotGear}\PYG{o}{:}\PYG{o}{:}\PYG{n}{Request}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{req}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ie\PYGZus{}communication}\PYG{o}{:}\PYG{o}{:}\PYG{n}{robotGear}\PYG{o}{:}\PYG{o}{:}\PYG{n}{Response}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{res}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{movedata}\PYG{p}{.}\PYG{n}{gear}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{req}\PYG{p}{.}\PYG{n}{state}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{if}\PYG{p}{(}\PYG{n}{movedata}\PYG{p}{.}\PYG{n}{gear}\PYG{+w}{ }\PYG{o}{=}\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{The robot is in autonomous mode, manual control is disabled}\PYG{l+s}{\PYGZdq{}}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{endl}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{The robot is in manual mode, autonomous control is disabled}\PYG{l+s}{\PYGZdq{}}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{endl}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{n}{ros}\PYG{o}{:}\PYG{o}{:}\PYG{n}{NodeHandle}\PYG{+w}{ }\PYG{n}{n}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{ros}\PYG{o}{:}\PYG{o}{:}\PYG{n}{ServiceClient}\PYG{+w}{ }\PYG{n}{client}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{n}\PYG{p}{.}\PYG{n}{serviceClient}\PYG{o}{\PYGZlt{}}\PYG{n}{ie\PYGZus{}communication}\PYG{o}{:}\PYG{o}{:}\PYG{n}{robotGear}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{gear\PYGZus{}changed}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{ie\PYGZus{}communication}\PYG{o}{:}\PYG{o}{:}\PYG{n}{robotGear}\PYG{+w}{ }\PYG{n}{srv}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{n}{srv}\PYG{p}{.}\PYG{n}{request}\PYG{p}{.}\PYG{n}{state}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{movedata}\PYG{p}{.}\PYG{n}{gear}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k}{if}\PYG{p}{(}\PYG{n}{client}\PYG{p}{.}\PYG{n}{call}\PYG{p}{(}\PYG{n}{srv}\PYG{p}{)}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{ROS\PYGZus{}ERROR}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Failed to update the gear to GUI}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{n}{res}\PYG{p}{.}\PYG{n}{message}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{true}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nb}{true}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}
